@@ -23,10 +23,10 @@ const Header = () => {
     return (
         <>
             <header className=" sticky top-0 bg-white z-[1000] shadow shadow-dark-50/10">
-                <div className="w-full mx-auto bg-black py-5">
+                <div className="w-full mx-auto bg-black py-3">
                     <h6 className="w-11/12 mx-auto text-buttonColor text-sm"> TORONTO READY MIX</h6>
                 </div>
-                <div className="container gap-2 flex flex-wrap items-center justify-between">
+                <div className="container gap-2 py-2 flex flex-wrap items-center justify-between">
                     <a href="/">
                         <img src="/logo.png" alt="" className="max-w-[180px] w-full" />
                     </a>
@@ -54,8 +54,12 @@ const Header = () => {
                             Contact Us
                         </Link>
                     </nav>
-                    <IconButton variant="text" className="block md:hidden" onClick={openDrawer}>
-                        <FaBars className="text-3xl" />
+                    <IconButton
+                        variant="text"
+                        className="block  !text-white rounded-none  md:hidden"
+                        onClick={openDrawer}
+                    >
+                        <FaBars className="text-3xl !text-white" style={{ color: "white" }} />
                     </IconButton>
                 </div>
             </header>
