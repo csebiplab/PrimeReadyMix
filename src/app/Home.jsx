@@ -17,14 +17,18 @@ const Home = () => {
                 <div className="container">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5 py-10">
                         <div className="text-center md:text-left">
-                            <h1 className="font-bold text-5xl mb-1">
-                                Toronto Ready Mix Concrete Delivery
+                            <h1 className="font-bold text-4xl mb-1">
+                                Ready Mix & <br />
+                                Concrete Delivery <br />
+                                Toronto Ready Mix
                             </h1>
-                            <h4 className="text-dark-500 mt-4 text-lg md:text-2xl font-medium md:font-semibold">
+                            <h4 className="text-dark-500 mt-4 md:text-2xl text-[18px] font-semibold md:font-semibold">
                                 When it comes to reliable and trusted ready mix services in Toronto,
                                 there is no better choice than Prime Ready Mix.
                             </h4>
-                            <button className="btn my-4 !bg-buttonColor ">Get Your Estimate</button>
+                            <button className="btn !text-sm !py-3 !px-10 my-4 !bg-buttonColor ">
+                                Get Your Estimate
+                            </button>
                             {/* <img
                                 className="mx-auto w-3/4 md:w-full mt-4"
                                 style={{ transform: "rotateY(180deg) rotateZ(5deg)" }}
