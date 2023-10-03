@@ -34,7 +34,7 @@ const Header = () => {
                 </div>
                 <div className="container gap-2 py-2 flex flex-wrap items-center justify-between">
                     <a href="/">
-                        <img src="/logo.png" alt="" className="max-w-[180px] w-full" />
+                        <img src="/logo.png" alt="" className="max-w-[120px] w-full" />
                     </a>
                     <nav className="flex-grow hidden md:block">
                         {menu.map((item, key) => (

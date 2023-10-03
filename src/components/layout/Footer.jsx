@@ -9,13 +9,13 @@ import { site_info } from "../../site/info";
 
 const Footer = () => {
     return (
-        <footer className="py-14 bg-dark text-white">
-            <div className="container">
-                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-5">
-                    <div className="col-span-2">
+        <footer className="py-10 bg-dark text-white ">
+            <div className="w-11/12 mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-5 gap-5 justify-center items-start mx-auto">
+                    <div className="col-span-12 md:col-span-2 mx-auto">
                         <img
                             src="/logo.png"
-                            className="w-full max-w-[180px] bg-white mb-3 rounded-md mx-auto md:mx-0"
+                            className="w-full max-w-[120px] bg-white mb-3 rounded-md mx-auto md:mx-0"
                             alt=""
                         />
                         <p className="text-lg leading-relexed text-center md:text-left">
@@ -23,9 +23,11 @@ const Footer = () => {
                             bringing design, sourcing and management under one roof.
                         </p>
                     </div>
-                    <div className="text-lg">
-                        <h4 className="font-medium tracking-wider mb-2">Company</h4>
-                        <ul className="tracking-wide">
+                    <div className="text-lg col-span-12 md:col-span-1">
+                        <h4 className="font-medium tracking-wider mb-2 text-center md:text-start">
+                            Company
+                        </h4>
+                        <ul className="tracking-wide text-center md:text-start">
                             <li>
                                 <a href="http://" className="mb-1 text-white/70 hover:text-primary">
                                     FAQ
@@ -43,16 +45,28 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className="text-lg">
-                        <h4 className="font-medium tracking-wider mb-2">Services</h4>
-                        <ul className="tracking-wide">
-                            {/* <li><a href="http://" className="mb-1 text-white/70 hover:text-primary">Bathroom Remodeling</a></li>
-                <li><a href="http://" className="mb-1 text-white/70 hover:text-primary">Kitchen Remodeling</a></li> */}
+                    <div className="text-lg col-span-12 md:col-span-1">
+                        <h4 className="font-medium tracking-wider mb-2 text-center md:text-start">
+                            Services
+                        </h4>
+                        <ul className="tracking-wide text-center md:text-start">
+                            <li>
+                                <a href="http://" className="mb-1 text-white/70 hover:text-primary">
+                                    Bathroom Remodeling
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://" className="mb-1 text-white/70 hover:text-primary">
+                                    Kitchen Remodeling
+                                </a>
+                            </li>
                         </ul>
                     </div>
-                    <div className="text-lg">
-                        <h4 className="font-medium tracking-wider mb-2">Contacts</h4>
-                        <div className="flex gap-2 justify-between items-center">
+                    <div className="text-lg col-span-12 md:col-span-1">
+                        <h4 className="font-medium tracking-wider mb-2 text-center md:text-start">
+                            Contacts
+                        </h4>
+                        <div className="flex gap-2 justify-center md:justify-start items-center">
                             <a href="http://" target="_blank" rel="noopener noreferrer">
                                 <AiFillFacebook className="h-10 w-10" />
                             </a>
@@ -67,9 +81,9 @@ const Footer = () => {
                 </div>
                 <br />
                 <br />
-                <hr className="border-white/50 my-6" />
+                <hr className="border-white/50 " />
                 <br />
-                <p className="text-center text-lg flex items-center gap-2">
+                <p className="text-center text-lg flex items-center gap-2 justify-center">
                     <AiOutlineCopyrightCircle className="inline-block" />
                     Copyright 2021 | All rights Reserved
                 </p>
