@@ -9,6 +9,8 @@ import { Autoplay, Pagination } from "swiper/modules";
 import BottomServiceArea from "../components/common/BottomServiceArea";
 import ServicesSection from "../components/common/ServicesSection";
 import { contacts } from "../site/info";
+import { BsCheck2Square } from "react-icons/bs";
+import { FaRegWindowClose } from "react-icons/fa";
 
 const Home = () => {
     return (
@@ -125,6 +127,49 @@ const Home = () => {
                             Ready Mix stands as a beacon of quality and reliability in the Toronto
                             Ready Mix industry.
                         </p>
+                        {/* <div>
+                            <h2 className="font-bold text-2xl md:text-3xl lg:text-4xl my-5 text-center">
+                                Why Choose Prime Ready Mix?
+                            </h2>
+                        </div>
+                        <div className="flex flex-col md:flex-row justify-center items-center">
+                            <div>
+                                <h5 className="text-sm font-bold mt-5 mb-3">
+                                    Easy Renovation Experience
+                                </h5>
+                                {[
+                                    "All fixtures, materials, and labor included",
+                                    "Built by a local, vetted contractor",
+                                    "4 weeks average build",
+                                ].map((item, key) => (
+                                    <figure
+                                        key={key}
+                                        className=" mx-auto flex items-center justify-start mb-2 text-lg font-medium"
+                                    >
+                                        <FaRegWindowClose className="h-6 w-6 fill-primary mr-1" />
+                                        <p className=" text-sm">{item}</p>
+                                    </figure>
+                                ))}
+                            </div>
+                            <div>
+                                <h5 className="text-sm font-bold mt-5 mb-3">
+                                    Usual Renovation Experience
+                                </h5>
+                                {[
+                                    "All fixtures, materials, and labor included",
+                                    "Built by a local, vetted contractor",
+                                    "4 weeks average build",
+                                ].map((item, key) => (
+                                    <figure
+                                        key={key}
+                                        className=" mx-auto flex items-center justify-start mb-2 text-lg font-medium"
+                                    >
+                                        <BsCheck2Square className="h-6 w-6 fill-buttonColor mr-1" />
+                                        <p className=" text-sm">{item}</p>
+                                    </figure>
+                                ))}
+                            </div>
+                        </div> */}
                     </div>
                 </div>
             </section>
