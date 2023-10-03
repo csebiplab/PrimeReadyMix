@@ -5,9 +5,9 @@ import ProjectFrom from "../../app/contact-us/ProjectFrom";
 import { contacts, site_info } from "../../site/info";
 
 const BottomServiceArea = () => {
-  return (
-    <>
-      {/* <section
+    return (
+        <>
+            {/* <section
         className="pt-40 bg-cover bg-fixed bg-center"
         style={{
           backgroundImage:
@@ -60,9 +60,9 @@ const BottomServiceArea = () => {
           alt=""
         />
       </section> */}
-      <section className="py-8">
-        <div className="container">
-          {/* <div className="max-w-2xl text-center mx-auto">
+            <section className="py-8">
+                <div className="container">
+                    {/* <div className="max-w-2xl text-center mx-auto">
             <h1 className="mb-4">Our Service Areas</h1>
             <p className="text-xl font-medium mb-3">
               …serving the Greater Toronto Horseshoe Area for all your kitchen,
@@ -147,7 +147,7 @@ const BottomServiceArea = () => {
               ))}
             </div>
           </div> */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-12">
+                    {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-12">
             <div className="py-8">
               <h1 className="mb-4 text-3xl md:text-4xl lg:text-5xl">
               Drop us a line! <br /> Request a quote.
@@ -174,11 +174,11 @@ const BottomServiceArea = () => {
               <h3>Contact {site_info.name}</h3>
               <ProjectFrom />
             </div>
-          </div>
-        </div>
-      </section>
-    </>
-  );
+          </div> */}
+                </div>
+            </section>
+        </>
+    );
 };
 
 export default BottomServiceArea;

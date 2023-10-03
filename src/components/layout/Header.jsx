@@ -24,15 +24,15 @@ const Header = () => {
         <>
             <header className=" sticky top-0 bg-white z-[1000] shadow shadow-dark-50/10">
                 <div className="w-full mx-auto bg-black py-3">
-                    <h6 className="w-11/12 mx-auto text-buttonColor text-sm text-center md:text-left">
+                    <h6 className="w-11/12 mx-auto bg-black text-buttonColor text-sm text-center md:text-left">
                         {" "}
-                        <span>
-                            <i className="fa-solid fa-trowel-bricks mr-2 text-buttonColor "></i>
+                        <span className="bg-black">
+                            <i className="fa-solid fa-trowel-bricks mr-2 text-buttonColor bg-black"></i>
                         </span>
                         TORONTO READY MIX
                     </h6>
                 </div>
-                <div className="container gap-2 py-2 flex flex-wrap items-center justify-between">
+                <div className="w-11/12 md:w-10/12 mx-auto gap-2 py-2 flex flex-wrap items-center justify-between bg-white">
                     <a href="/">
                         <img src="/logo.png" alt="" className="max-w-[120px] w-full" />
                     </a>
@@ -65,7 +65,7 @@ const Header = () => {
                         className="block p-4 bg-[#33475B] !text-white rounded-none  md:hidden"
                         onClick={openDrawer}
                     >
-                        <i class="fa-solid fa-bars text-xl text-white"></i>
+                        <i class="fa-solid fa-bars text-xl bg-none text-white " />
                     </IconButton>
                 </div>
             </header>

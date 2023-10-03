@@ -9,8 +9,8 @@ import { site_info } from "../../site/info";
 
 const Footer = () => {
     return (
-        <footer className="py-10 bg-dark text-white ">
-            <div className="w-11/12 mx-auto">
+        <footer className="pt-10 bg-dark text-white ">
+            <div className="w-11/12 md:w-10/12 mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-5 gap-5 justify-center items-start mx-auto">
                     <div className="col-span-12 md:col-span-2 mx-auto">
                         <img
@@ -83,8 +83,8 @@ const Footer = () => {
                 <br />
                 <hr className="border-white/50 " />
                 <br />
-                <p className="text-center text-lg flex items-center gap-2 justify-center">
-                    <AiOutlineCopyrightCircle className="inline-block" />
+                <p className="text-center text-lg ">
+                    <i className="fa-regular fa-copyright mr-2"></i>
                     Copyright 2021 | All rights Reserved
                 </p>
                 <br />
