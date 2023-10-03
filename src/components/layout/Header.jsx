@@ -24,7 +24,13 @@ const Header = () => {
         <>
             <header className=" sticky top-0 bg-white z-[1000] shadow shadow-dark-50/10">
                 <div className="w-full mx-auto bg-black py-3">
-                    <h6 className="w-11/12 mx-auto text-buttonColor text-sm"> TORONTO READY MIX</h6>
+                    <h6 className="w-11/12 mx-auto text-buttonColor text-sm text-center md:text-left">
+                        {" "}
+                        <span>
+                            <i className="fa-solid fa-trowel-bricks mr-2 text-buttonColor "></i>
+                        </span>
+                        TORONTO READY MIX
+                    </h6>
                 </div>
                 <div className="container gap-2 py-2 flex flex-wrap items-center justify-between">
                     <a href="/">
@@ -56,10 +62,10 @@ const Header = () => {
                     </nav>
                     <IconButton
                         variant="text"
-                        className="block  !text-white rounded-none  md:hidden"
+                        className="block p-4 bg-[#33475B] !text-white rounded-none  md:hidden"
                         onClick={openDrawer}
                     >
-                        <FaBars className="text-3xl !text-white" style={{ color: "white" }} />
+                        <i class="fa-solid fa-bars text-xl text-white"></i>
                     </IconButton>
                 </div>
             </header>

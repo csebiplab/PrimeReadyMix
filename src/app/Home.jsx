@@ -19,7 +19,7 @@ const Home = () => {
                         <div className="text-center md:text-left">
                             <h1 className="font-bold text-4xl mb-1">
                                 Ready Mix & <br />
-                                Concrete Delivery <br />
+                                Concrete Delivery, <br />
                                 Toronto Ready Mix
                             </h1>
                             <h4 className="text-dark-500 mt-4 md:text-2xl text-[18px] font-semibold md:font-semibold">
