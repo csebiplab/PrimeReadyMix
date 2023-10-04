@@ -85,9 +85,15 @@ const DialogComponent = ({ open, handleOpen, setOpen }) => {
                         </Button>
                     </form>
                     <h3 className="text-sm font-semibold text-center text-black my-1">OR</h3>
-                    <Button size="md" className="bg-dark text-lg rounded-md my-0" color="black ">
-                        Make a call
-                    </Button>
+                    <a href="tel:+1 (647) 539-6755" className="w-full">
+                        <Button
+                            size="md"
+                            className="bg-dark w-full text-lg rounded-md my-0"
+                            color="black "
+                        >
+                            Make a call
+                        </Button>
+                    </a>
                 </CardBody>
             </Card>
         </Dialog>

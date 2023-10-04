@@ -58,7 +58,7 @@ const Header = () => {
                     </nav>
                     <nav className="gap-2 items-center hidden lg:flex">
                         <a
-                            href="tel:+"
+                            href="tel:+1 (647) 539-6755"
                             className="flex items-center justify-center gap-2 py-2 px-3 group"
                         >
                             <span className="h-9 w-9 rounded-full justify-center items-center bg-dark-50/10 flex group-hover:bg-dark">
@@ -116,7 +116,7 @@ const Header = () => {
                 </nav>
                 <nav className="gap-2 flex flex-col">
                     <a
-                        href="tel:+"
+                        href="tel:+1 (647) 539-6755"
                         className="flex items-center gap-2 py-2 px-3 group"
                         onClick={closeDrawer}
                     >

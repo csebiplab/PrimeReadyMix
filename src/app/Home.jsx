@@ -426,7 +426,6 @@ const Home = () => {
                             <a className="btn" href={`tel:${contacts.phone}`}>
                                 CALL NOW
                             </a>{" "}
-                            <span>{contacts.phone}</span>
                         </p>
                     </div>
                     <Swiper

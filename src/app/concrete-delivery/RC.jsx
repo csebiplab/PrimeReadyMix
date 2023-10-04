@@ -54,7 +54,7 @@ export function FAQsection() {
 
     return (
         <section className="py-10">
-            <div className="container">
+            <div className="w-11/12 md:w-10/12 mx-auto">
                 <div className="text-left md:text-center mb-5">
                     <h2 className="mb-3">
                         Frequently Asked Questions (FAQ)
@@ -137,7 +137,7 @@ const Services = () => {
     return (
         <main>
             <section className="py-10 relative">
-                <div className="container ">
+                <div className=" w-11/12 md:w-10/12 mx-auto ">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5 py-10 md:py-14">
                         <div className="">
                             <h2 className="font-semibold text-center md:text-left mb-10">
@@ -184,7 +184,7 @@ const Services = () => {
                         pauseOnMouseEnter: false,
                     }}
                     modules={[Autoplay]}
-                    className="relative md:!absolute mb-4 md:mb-0 top-0 right-0 h-full w-full md:w-[45%] max-h-64 md:max-h-full object-cover object-center"
+                    className="relative md:!absolute mb-4 md:mb-0 top-0 right-0 h-full w-11/12 md:w-[45%] max-h-64 md:max-h-full object-cover object-center"
                 >
                     {[
                         "https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/blob-0cdc476.png/:/cr=t:0.01%25,l:25.41%25,w:51.71%25,h:99.99%25/rs=w:365,h:365,cg:true,m",
@@ -202,7 +202,7 @@ const Services = () => {
                 </Swiper>
             </section>
             <section className="py-10">
-                <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="w-11/12 md:w-10/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div className="lg:col-span-2">
                         <h1 className="font-bold text-2xl md:text-5xl">
                             Frustrated with your outdated home?
@@ -233,7 +233,7 @@ const Services = () => {
                 </div>
             </section>
             <section className="py-10">
-                <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="w-11/12 md:w-10/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <img
                         src="https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/Truck-with-loader-3-2827-1024x609.jpeg/:/rs=w:600,cg:true,m"
                         alt=""
@@ -260,7 +260,7 @@ const Services = () => {
                 </div>
             </section>
             <section className="py-10">
-                <div className="container">
+                <div className="w-11/12 md:w-10/12 mx-auto">
                     <h2 className="text-center text-dark-400 mb-5">
                         Why Choose Us for{" "}
                         <span className="text-primary">Ready Mix Concrete Toronto</span>?
@@ -339,7 +339,7 @@ const Services = () => {
                 </div>
             </section>
             <section className="py-10">
-                <div className="container">
+                <div className="w-11/12 md:w-10/12 mx-auto">
                     <h2 className="text-center text-dark-400 mb-5">
                         How <span className="text-primary">We Solve</span> Your Construction
                         Problems
@@ -417,7 +417,7 @@ const Services = () => {
                 </div>
             </section>
             <section className="py-10">
-                <div className="container">
+                <div className="w-11/12 md:w-10/12 mx-auto">
                     <div className="mb-5 text-left md:text-center">
                         <h2 className=" text-dark-400  mb-2">
                             Preparing a <span className="text-primary">Customized Plan</span> for
@@ -572,7 +572,7 @@ const Services = () => {
                 </div>
             </section>
             <section className="py-10 relative">
-                <div className="container grid grid-cols-1 md:grid-cols-2">
+                <div className="w-11/12 md:w-10/12 mx-auto grid grid-cols-1 md:grid-cols-2">
                     <div className="">
                         <div className="mb-5">
                             <h2 className=" text-dark-400  mb-2">
@@ -687,7 +687,7 @@ const Services = () => {
                     alt=""
                     className="w-full md:w-[48%] h-full md:absolute top-0 left-0 object-cover object-center"
                 />
-                <div className="container grid grid-cols-1 md:grid-cols-2 gap-3 py-10">
+                <div className="w-11/12 md:w-10/12 mx-auto grid grid-cols-1 md:grid-cols-2 gap-3 py-10">
                     <div className="col-start-2">
                         <h2 className="mb-3">Skilled concrete suppliers</h2>
 
@@ -710,7 +710,7 @@ const Services = () => {
                 </div>
             </section>
             <section className="py-10 relative">
-                <div className="container grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="w-11/12 md:w-10/12 mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                         <h2 className="mb-5">
                             The Benefits of Choosing Us for Concrete Services in Toronto
@@ -799,7 +799,7 @@ const Services = () => {
           alt=""
           className="w-full md:w-[48%] h-full md:absolute top-0 right-0 object-cover object-center"
         />
-        <div className="container grid grid-cols-1 md:grid-cols-2 gap-3 py-10">
+        <div className="w-11/12 md:w-10/12 mx-auto grid grid-cols-1 md:grid-cols-2 gap-3 py-10">
           <div>
             <h1 className="mb-7">Ready To Start Your Bathroom Renovation?</h1>
             <div className="h-1 w-40 bg-primary mb-7" />
@@ -809,7 +809,7 @@ const Services = () => {
         </div>
       </section> */}
             <section className="py-10">
-                <div className="container">
+                <div className="w-11/12 md:w-10/12 mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                         <div className="">
                             <div className="mb-3">
