@@ -1,5 +1,6 @@
+"use client";
 import Services from "./RC";
 
-export default function() {
-  return <Services />
+export default function () {
+    return <Services />;
 }
