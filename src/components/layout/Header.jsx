@@ -11,8 +11,8 @@ const menu = [
         url: "/",
     },
     {
-        name: "Service",
-        url: "/services",
+        name: "Concrete delivery",
+        url: "/concrete-delivery",
     },
 ];
 
@@ -23,20 +23,29 @@ const Header = () => {
     return (
         <>
             <header className=" sticky top-0 bg-white z-[1000] shadow shadow-dark-50/10">
-                <div className="w-full mx-auto bg-black py-3">
-                    <h6 className="w-11/12 mx-auto bg-black text-buttonColor text-sm text-center md:text-left">
+                <div className="w-full mx-auto py-3 bg-pageBg">
+                    <h6 className="w-11/12 md:w-10/12 mx-auto  text-dark text-xs font-medium text-center md:text-left">
                         {" "}
-                        <span className="bg-black">
-                            <i className="fa-solid fa-trowel-bricks mr-2 text-buttonColor bg-black"></i>
+                        <span className="">
+                            <i className="fa-brands fa-canadian-maple-leaf mr-2 text-dark text-base "></i>
                         </span>
                         TORONTO READY MIX
                     </h6>
                 </div>
-                <div className="w-11/12 md:w-10/12 mx-auto gap-2 py-2 flex flex-wrap items-center justify-between bg-white sticky top-0">
+                <div className="w-11/12 md:w-10/12 mx-auto gap-2 py-2 flex  items-center justify-between bg-white sticky top-0">
                     <a href="/">
                         <img src="/logo.png" alt="" className="max-w-[120px] w-full" />
                     </a>
-                    <nav className="flex-grow hidden md:block">
+                    <a
+                        href="tel:+"
+                        className="flex items-center justify-center gap-2 py-2 px-3 group  lg:hidden"
+                    >
+                        <span className="h-9 w-9 rounded-full justify-center items-center bg-dark-50/10 flex group-hover:bg-dark">
+                            <FaPhone className="inline-block h-4 w-4 fill-dark group-hover:fill-white" />
+                        </span>
+                        <span className="text-sm font-bold text-primary">{contacts.phone}</span>
+                    </a>
+                    <nav className="flex-grow hidden lg:block">
                         {menu.map((item, key) => (
                             <Link
                                 href={item.url}
@@ -47,7 +56,7 @@ const Header = () => {
                             </Link>
                         ))}
                     </nav>
-                    <nav className="gap-2 items-center hidden md:flex">
+                    <nav className="gap-2 items-center hidden lg:flex">
                         <a
                             href="tel:+"
                             className="flex items-center justify-center gap-2 py-2 px-3 group"
@@ -65,7 +74,7 @@ const Header = () => {
                     </nav>
                     <IconButton
                         variant="text"
-                        className="block p-4 bg-[#33475B] !text-white rounded-none  md:hidden"
+                        className="block p-4 bg-[#33475B] !text-white rounded-none  lg:hidden"
                         onClick={openDrawer}
                     >
                         <i class="fa-solid fa-bars text-xl bg-none text-white " />
