@@ -48,8 +48,11 @@ const Header = () => {
                         ))}
                     </nav>
                     <nav className="gap-2 items-center hidden md:flex">
-                        <a href="tel:+" className="flex items-center gap-2 py-2 px-3 group">
-                            <span className="h-9 w-9 rounded-full justify-center items-center bg-dark-50/10 inline-block group-hover:bg-dark">
+                        <a
+                            href="tel:+"
+                            className="flex items-center justify-center gap-2 py-2 px-3 group"
+                        >
+                            <span className="h-9 w-9 rounded-full justify-center items-center bg-dark-50/10 flex group-hover:bg-dark">
                                 <FaPhone className="inline-block h-4 w-4 fill-dark group-hover:fill-white" />
                             </span>
                             <span className="text-xl font-semibold text-primary">
