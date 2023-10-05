@@ -21,9 +21,9 @@ const Home = () => {
 
     return (
         <main className="">
-            <section className="relative ">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-11/12 md:w-10/12 mx-auto mt-11">
-                    <div className="">
+            <section className="relative md:h-[40rem] flex items-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-11/12 md:w-10/12 mx-auto">
+                    <div className="mt-11">
                         <h1 className="font-bold text-4xl mb-1 leading-tight text-center md:text-left">
                             Ready Mix & <br />
                             Concrete Delivery, <br />

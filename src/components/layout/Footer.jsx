@@ -9,21 +9,21 @@ import { site_info } from "../../site/info";
 
 const Footer = () => {
     return (
-        <footer className="pt-10 bg-dark text-white ">
+        <footer className="pt-10 bg-[#1F2A35] text-white ">
             <div className="w-11/12 md:w-10/12 mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-5 gap-5 justify-center items-start mx-auto">
-                    <div className="col-span-12 md:col-span-2 mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-5 gap-5 justify-between items-start mx-auto">
+                    <div className="col-span-12 md:col-span-2 mx-auto justify-center md:justify-start">
                         <img
                             src="/prime-readymix-logo.png"
-                            className="w-full max-w-[120px] bg-white mb-3 rounded-md mx-auto md:mx-0"
+                            className="w-full max-w-[150px] bg-white mb-3 rounded-none mx-auto md:mx-0"
                             alt=""
                         />
-                        <p className="text-sm w-4/5 md:w-full mx-auto leading-relexed text-center md:text-left">
+                        <p className="text-sm md:w-4/5 leading-relexed text-center md:text-left">
                             {site_info.name} simplifies the process and costs of renovation by
                             bringing design, sourcing and management under one roof.
                         </p>
                     </div>
-                    <div className="text-lg col-span-12 md:col-span-1">
+                    <div className="text-lg font-medium col-span-12 md:col-span-1">
                         <h4 className="font-bold text-base tracking-wider mb-2 text-center md:text-start">
                             Company
                         </h4>
@@ -45,7 +45,7 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className="text-lg col-span-12 md:col-span-1">
+                    <div className="text-lg font-medium col-span-12 md:col-span-1">
                         <h4 className="font-bold text-base tracking-wider mb-2 text-center md:text-start">
                             Services
                         </h4>
@@ -62,11 +62,11 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className="text-lg col-span-12 md:col-span-1">
+                    <div className="text-lg font-medium col-span-12 md:col-span-1">
                         <h4 className="font-bold text-base tracking-wider mb-2 text-center md:text-start">
                             Contacts
                         </h4>
-                        <div className="flex gap-2 justify-center md:justify-start items-center">
+                        <div className="flex gap-3 md:gap-6 justify-center md:justify-start items-center">
                             <a href="http://" target="_blank" rel="noopener noreferrer">
                                 <AiFillFacebook className="h-5 md:h-8 w-5 md:w-8" />
                             </a>
@@ -83,10 +83,16 @@ const Footer = () => {
                 <br />
                 <hr className="border-white/50 " />
                 <br />
-                <p className="text-center text-sm font-extralight text-white/50 ">
-                    <i className="fa-regular fa-copyright mr-2"></i>
-                    Copyright 2021 | All rights Reserved
-                </p>
+                <div className="flex flex-col md:flex-row justify-between items-center w-full my-5">
+                    <h6 className="text-center text-sm font-extralight text-white/50 ">
+                        <i className="fa-regular fa-copyright mr-2"></i>
+                        Copyright 2021 | All rights Reserved
+                    </h6>
+
+                    <h6 className="text-center text-base font-normal text-white ">
+                        Privacy Policy
+                    </h6>
+                </div>
                 <br />
             </div>
         </footer>

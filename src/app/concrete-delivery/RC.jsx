@@ -1,5 +1,16 @@
 "use client";
-import { Accordion, AccordionBody, AccordionHeader } from "@material-tailwind/react";
+import {
+    Accordion,
+    AccordionBody,
+    AccordionHeader,
+    Button,
+    Card,
+    CardBody,
+    Input,
+    Option,
+    Select,
+    Textarea,
+} from "@material-tailwind/react";
 import { useState } from "react";
 import "swiper/css";
 import "swiper/css/autoplay";
@@ -186,7 +197,7 @@ const Services = () => {
                 </Swiper>
             </section>
             <section className="py-10">
-                <div className="w-11/12 md:w-10/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="w-11/12 md:w-10/12 mx-auto flex flex-col-reverse md:flex-row gap-8">
                     <div className="lg:col-span-2">
                         <h1 className="font-bold text-2xl md:text-5xl">
                             Frustrated with your outdated home?
@@ -212,7 +223,7 @@ const Services = () => {
                     <img
                         src="https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/blob-5fe5952.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:600,cg:true"
                         alt=""
-                        className="mx-auto w-2/3 md:w-full  aspect-square ring-4 ring-primary-600 ring-offset-4 rounded-full object-cover"
+                        className="mx-auto w-2/3 md:w-2/5 aspect-square ring-4 ring-primary-600 ring-offset-4 rounded-full object-cover"
                     />
                 </div>
             </section>
@@ -221,7 +232,7 @@ const Services = () => {
                     <img
                         src="https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/Truck-with-loader-3-2827-1024x609.jpeg/:/rs=w:600,cg:true,m"
                         alt=""
-                        className="mx-auto w-2/3 md:w-full aspect-square ring-4 ring-secondary ring-offset-4 rounded-full object-cover"
+                        className="mx-auto w-2/3 md:w-2/5 aspect-square ring-4 ring-secondary ring-offset-4 rounded-full object-cover"
                     />
                     <div className="lg:col-span-2">
                         <h2 className="font-bold text-2xl md:text-5xl">
@@ -658,11 +669,71 @@ const Services = () => {
                             achieving consistent and reliable results.
                         </p>
                     </div>
-                    <img
-                        src="https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/P85-side-e1663291233852.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1352,h:500,cg:true"
-                        alt=""
-                        className="sticky top-32 w-full"
-                    />
+                    <Card className="mx-auto w-full sticky top-32">
+                        <CardBody className="flex flex-col gap-1">
+                            <div>
+                                <h3 className="text-dark text-lg font-bolder text-center">
+                                    Get Your Free Estimate
+                                </h3>
+                                <h5 className="text-sm font-semibold text-center text-black my-3">
+                                    Design, Materials, Construction, Support
+                                </h5>
+                            </div>
+                            <form className="flex flex-col gap-5 font-xl w-full mt-6 mx-auto">
+                                <Input
+                                    size="lg"
+                                    className="text-2xl font-bold  bg-white"
+                                    label="Full Name"
+                                    required
+                                />
+                                <Input
+                                    size="lg"
+                                    className="text-2xl font-bold  bg-white"
+                                    label="Email"
+                                    required
+                                />
+                                <Input
+                                    size="lg"
+                                    // color="black"
+                                    className="text-2xl font-bold  bg-white"
+                                    label="Mobile"
+                                    required
+                                />
+                                <Select label="Project Budget" className="py-3 px-2  bg-white">
+                                    <Option>10,000 - 20,000</Option>
+                                    <Option>20,000 - 30,000</Option>
+                                    <Option>30,000 - 40,000</Option>
+                                    <Option>40,000 - 50,000</Option>
+                                    <Option>50,000+</Option>
+                                </Select>
+                                <Textarea
+                                    size="lg"
+                                    className="text-2xl font-bold  bg-white"
+                                    label="Project Description"
+                                    required
+                                />
+                                <Button
+                                    size="md"
+                                    className="bg-primary text-lg rounded-md my-0"
+                                    color="black"
+                                >
+                                    Get an estimate
+                                </Button>
+                            </form>
+                            <h3 className="text-sm font-semibold text-center text-black my-1">
+                                OR
+                            </h3>
+                            <a href="tel:+1 (647) 539-6755" className="w-full">
+                                <Button
+                                    size="md"
+                                    className="bg-dark w-full text-lg rounded-md my-0"
+                                    color="black "
+                                >
+                                    Make a call
+                                </Button>
+                            </a>
+                        </CardBody>
+                    </Card>
                 </div>
             </section>
             <section className="relative bg-dark-50/10">
@@ -777,21 +848,7 @@ const Services = () => {
                     />
                 </div>
             </section>
-            {/* <section className="relative bg-dark-50/10">
-        <img
-          src="/bathroom.jpg"
-          alt=""
-          className="w-full md:w-[48%] h-full md:absolute top-0 right-0 object-cover object-center"
-        />
-        <div className="w-11/12 md:w-10/12 mx-auto grid grid-cols-1 md:grid-cols-2 gap-3 py-10">
-          <div>
-            <h2 className="mb-7">Ready To Start Your Bathroom Renovation?</h2>
-            <div className="h-1 w-40 bg-primary mb-7" />
-            <button className="btn mb-7">Get Your Free Estimate!</button>
-            <h4 className="font-medium">Or Call Us: <a href="tel:+">647-496-0826</a></h4>
-          </div>
-        </div>
-      </section> */}
+
             <section className="py-10">
                 <div className="w-11/12 md:w-10/12 mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
