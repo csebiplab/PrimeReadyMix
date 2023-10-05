@@ -59,6 +59,7 @@ module.exports = withMT({
                     950: "#000000",
                 },
                 buttonColor: "#FF6448",
+                pageBg: "#F5F8FA",
             },
         },
     },

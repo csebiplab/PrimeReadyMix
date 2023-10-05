@@ -8,6 +8,9 @@
 * {
     @apply text-dark;
 }
+body {
+    background-color: #f5f8fa;
+}
 footer * {
     @apply text-white;
 }

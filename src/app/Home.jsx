@@ -9,17 +9,19 @@ import { Autoplay, Pagination } from "swiper/modules";
 import BottomServiceArea from "../components/common/BottomServiceArea";
 import ServicesSection from "../components/common/ServicesSection";
 import { contacts } from "../site/info";
+import { BsCheck2Square } from "react-icons/bs";
+import { FaRegWindowClose } from "react-icons/fa";
 
 const Home = () => {
     return (
-        <main>
+        <main className="w-11/12 md:w-10/12 mx-auto">
             <section className="py-10 relative">
-                <div className="container">
+                <div className="">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5 py-10">
                         <div className="text-center md:text-left">
                             <h1 className="font-bold text-4xl mb-1">
                                 Ready Mix & <br />
-                                Concrete Delivery <br />
+                                Concrete Delivery, <br />
                                 Toronto Ready Mix
                             </h1>
                             <h4 className="text-dark-500 mt-4 md:text-2xl text-[18px] font-semibold md:font-semibold">
@@ -97,7 +99,7 @@ const Home = () => {
             </section>
 
             <section className="py-10">
-                <div className="container grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className=" grid grid-cols-1 md:grid-cols-2 gap-8">
                     <img
                         src="https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/blob-9397e44.png/:/cr=t:0%25,l:0.12%25,w:99.75%25,h:100%25/rs=w:600,h:451,cg:true/qt=q:46"
                         alt=""
@@ -125,11 +127,54 @@ const Home = () => {
                             Ready Mix stands as a beacon of quality and reliability in the Toronto
                             Ready Mix industry.
                         </p>
+                        {/* <div>
+                            <h2 className="font-bold text-2xl md:text-3xl lg:text-4xl my-5 text-center">
+                                Why Choose Prime Ready Mix?
+                            </h2>
+                        </div>
+                        <div className="flex flex-col md:flex-row justify-center items-center">
+                            <div>
+                                <h5 className="text-sm font-bold mt-5 mb-3">
+                                    Easy Renovation Experience
+                                </h5>
+                                {[
+                                    "All fixtures, materials, and labor included",
+                                    "Built by a local, vetted contractor",
+                                    "4 weeks average build",
+                                ].map((item, key) => (
+                                    <figure
+                                        key={key}
+                                        className=" mx-auto flex items-center justify-start mb-2 text-lg font-medium"
+                                    >
+                                        <FaRegWindowClose className="h-6 w-6 fill-primary mr-1" />
+                                        <p className=" text-sm">{item}</p>
+                                    </figure>
+                                ))}
+                            </div>
+                            <div>
+                                <h5 className="text-sm font-bold mt-5 mb-3">
+                                    Usual Renovation Experience
+                                </h5>
+                                {[
+                                    "All fixtures, materials, and labor included",
+                                    "Built by a local, vetted contractor",
+                                    "4 weeks average build",
+                                ].map((item, key) => (
+                                    <figure
+                                        key={key}
+                                        className=" mx-auto flex items-center justify-start mb-2 text-lg font-medium"
+                                    >
+                                        <BsCheck2Square className="h-6 w-6 fill-buttonColor mr-1" />
+                                        <p className=" text-sm">{item}</p>
+                                    </figure>
+                                ))}
+                            </div>
+                        </div> */}
                     </div>
                 </div>
             </section>
             <section className="py-10">
-                <div className="container grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className=" grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
                         <h2 className="font-bold  text-2xl md:text-3xl lg:text-4xl">
                             Trusted Ready Mix Services in Toronto
@@ -160,7 +205,7 @@ const Home = () => {
                 </div>
             </section>
             <section className="py-10">
-                <div className="container grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className=" grid grid-cols-1 md:grid-cols-2 gap-8">
                     <img
                         src="https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/blob-9397e44.png/:/cr=t:0%25,l:0.12%25,w:99.75%25,h:100%25/rs=w:600,h:451,cg:true/qt=q:46"
                         alt=""
@@ -195,7 +240,7 @@ const Home = () => {
                     className="md:absolute mb-4 md:mb-0 top-0 right-0 h-full w-full md:w-[45%] object-cover object-center"
                     alt=""
                 />
-                <div className="container grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div className=" grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div className="py-10">
                         <h2 className="tracking-2 mb-4  text-2xl md:text-3xl lg:text-4xl">
                             Why Choose Us For Toronto Ready Mix?
@@ -221,7 +266,7 @@ const Home = () => {
             </section>
 
             {/* <section className="py-12 bg-indigo-50/10">
-        <div className="container">
+        <div className="">
           <div className="text-center mb-8">
             <h1 className="mb-6">Our Home Renovation Services In Toronto</h1>
             <p className="mb-6">Enjoy a stress-free renovation with our unique build process.</p>
@@ -258,7 +303,7 @@ const Home = () => {
             <ServicesSection />
 
             <section className="bg-dark-50/5">
-                <div className="text-center mb-3 container">
+                <div className="text-center mb-3 ">
                     <h2 className="tracking-2 mb-4  text-2xl md:text-3xl lg:text-4xl">
                         Why Prime Ready Mix is Your Best Choice?
                     </h2>
@@ -278,7 +323,7 @@ const Home = () => {
                         className="md:absolute mb-4 md:mb-0 top-0 left-0 h-full w-full md:w-[45%] object-cover object-center"
                         alt=""
                     />
-                    <div className="container grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div className=" grid grid-cols-1 md:grid-cols-2 gap-5">
                         <div className="py-10 col-start-2">
                             {[
                                 {
@@ -338,7 +383,7 @@ const Home = () => {
             </section>
 
             <section className="py-10">
-                <div className="container grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div className=" grid grid-cols-1 md:grid-cols-2 gap-10">
                     <div className="py-10">
                         <h2 className="tracking-2 mb-4  text-2xl md:text-3xl lg:text-4xl">
                             Ready to start your home construction services?

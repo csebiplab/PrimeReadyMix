@@ -1,33 +1,67 @@
 "use client";
-import {
-    Button,
-    Input,
-    Option,
-    Select,
-    Textarea
-} from "@material-tailwind/react";
+import { Button, Input, Option, Select, Textarea } from "@material-tailwind/react";
 
 const ProjectFrom = ({}) => {
-  return (
-    <>
-      <form className="flex flex-col gap-5 font-xl max-w-md">
-        <Input variant="standard" size="lg" label="Name *" color="orange" className="text-2xl font-bold"/>
-        <Input variant="standard" size="lg" label="Phone *"  color="orange" />
-        <Input variant="standard" size="lg" label="Email *"  color="orange" />
-        <Select size="lg" variant="standard" label="Project Budget"  color="orange" >
-          <Option>10,000 - 20,000</Option>
-          <Option>20,000 - 30,000</Option>
-          <Option>30,000 - 40,000</Option>
-          <Option>40,000 - 50,000</Option>
-          <Option>50,000+</Option>
-        </Select>
-        <Textarea variant="standard" size="lg" label="Project description *" color="orange" />
-        <Button size="lg" className="bg-primary text-xl" color="orange">
-          Submit
-        </Button>
-      </form>
-    </>
-  );
+    return (
+        <div className="w-2/3 mx-auto">
+            <form className="flex flex-col gap-5 font-xl max-w-md">
+                <Input
+                    size="lg"
+                    color="orange"
+                    className="text-2xl font-bold rounded-none border-none bg-white"
+                    placeholder="Full Name*"
+                    required
+                    labelProps={{
+                        className: "hidden",
+                    }}
+                />
+                <Input
+                    size="lg"
+                    color="orange"
+                    className="text-2xl font-bold rounded-none border-none bg-white"
+                    placeholder="Email*"
+                    required
+                    labelProps={{
+                        className: "hidden",
+                    }}
+                />
+                <Input
+                    label="Project Budget"
+                    size="lg"
+                    // color="orange"
+                    className="text-2xl font-bold rounded-none border-none bg-white"
+                    placeholder="Mobile*"
+                    required
+                    labelProps={{
+                        className: "hidden",
+                    }}
+                />
+                <select className="py-3 px-2 rounded-none border-none bg-white">
+                    <option disabled selected>
+                        Project Budget
+                    </option>
+                    <option>10,000 - 20,000</option>
+                    <option>20,000 - 30,000</option>
+                    <option>30,000 - 40,000</option>
+                    <option>40,000 - 50,000</option>
+                    <option>50,000+</option>
+                </select>
+                <Textarea
+                    size="lg"
+                    color="orange"
+                    className="text-2xl font-bold rounded-none border-none bg-white"
+                    placeholder="Project Description*"
+                    required
+                    labelProps={{
+                        className: "hidden",
+                    }}
+                />
+                <Button size="lg" className="bg-primary text-xl" color="orange">
+                    Submit
+                </Button>
+            </form>
+        </div>
+    );
 };
 
 export default ProjectFrom;
