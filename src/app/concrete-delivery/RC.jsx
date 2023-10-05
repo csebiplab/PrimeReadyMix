@@ -143,24 +143,8 @@ const Services = () => {
                             <h2 className="font-semibold text-center md:text-left mb-10">
                                 Concrete delivery services in Toronto
                             </h2>
-                            {/* <div className="flex items-center flex-col md:flex-row  my-5">
-                <div className="pr-3 flex-grow">
-                  <div className="flex gap-3">
-                    <ClockIcon
-                      height={70}
-                      width={70}
-                      className="stroke-primary"
-                    />
-                    <div>
-                      <p className="text-lg font-medium">Limited time offer</p>
-                      <h3 className="font-medium text-primary">
-                        $3,000 cashback
-                      </h3>
-                    </div>
-                  </div>
-                </div>
-              </div> */}
-                            <p className="flex-grow text-dark-300 text-center md:text-left">
+
+                            <p className="flex-grow text-dark-300 ">
                                 If you're in need of reliable concrete delivery services in Toronto,
                                 look no further. Our company is dedicated to providing top-notch
                                 concrete solutions tailored to your specific needs. With a fleet of
@@ -184,7 +168,7 @@ const Services = () => {
                         pauseOnMouseEnter: false,
                     }}
                     modules={[Autoplay]}
-                    className="relative md:!absolute mb-4 md:mb-0 top-0 right-0 h-full w-11/12 md:w-[45%] max-h-64 md:max-h-full object-cover object-center"
+                    className="relative md:!absolute mb-4 md:mb-0 top-0 right-0 h-full w-full md:w-[45%] max-h-64 md:max-h-full object-cover object-center"
                 >
                     {[
                         "https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/blob-0cdc476.png/:/cr=t:0.01%25,l:25.41%25,w:51.71%25,h:99.99%25/rs=w:365,h:365,cg:true,m",
@@ -233,16 +217,16 @@ const Services = () => {
                 </div>
             </section>
             <section className="py-10">
-                <div className="w-11/12 md:w-10/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="w-11/12 md:w-10/12 mx-auto flex flex-col-reverse md:flex-row gap-8">
                     <img
                         src="https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/Truck-with-loader-3-2827-1024x609.jpeg/:/rs=w:600,cg:true,m"
                         alt=""
                         className="mx-auto w-2/3 md:w-full aspect-square ring-4 ring-secondary ring-offset-4 rounded-full object-cover"
                     />
                     <div className="lg:col-span-2">
-                        <h1 className="font-bold text-2xl md:text-5xl">
+                        <h2 className="font-bold text-2xl md:text-5xl">
                             We're here to solve your concrete problems.
-                        </h1>
+                        </h2>
                         <div className="h-1 w-40 bg-primary my-5" />
                         <p className="text-dark-300 mb-2">
                             Welcome to our dedicated team, committed to resolving all your concrete
@@ -554,9 +538,9 @@ const Services = () => {
                                 key={item?.id}
                                 className="px-3 py-4 bg-primary-50 border-2 border-primary-300 rounded-sm"
                             >
-                                <h1 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-widest">
+                                <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-widest">
                                     {String(item.id).padStart(2, 0)}
-                                </h1>
+                                </h2>
                                 <h6 className="text-lg md:text-xl lg:text-2xl text-primary font-semibold mb-2 ">
                                     {item.title}
                                 </h6>
@@ -651,9 +635,9 @@ const Services = () => {
                                 key={item?.id}
                                 className="px-3 py-4 bg-primary/5 border-l-4 border-primary rounded-sm mb-3"
                             >
-                                <h1 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-widest">
+                                <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-widest">
                                     {String(item.id).padStart(2, 0)}
-                                </h1>
+                                </h2>
                                 <h6 className="text-lg md:text-xl lg:text-2xl text-primary font-semibold mb-2 ">
                                     {item.title}
                                 </h6>
@@ -685,7 +669,7 @@ const Services = () => {
                 <img
                     src="https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/blob-b6db9aa.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:600,cg:true"
                     alt=""
-                    className="w-full md:w-[48%] h-full md:absolute top-0 left-0 object-cover object-center"
+                    className="w-11/12 md:w-[48%] h-full md:absolute top-0 left-0 object-cover object-center"
                 />
                 <div className="w-11/12 md:w-10/12 mx-auto grid grid-cols-1 md:grid-cols-2 gap-3 py-10">
                     <div className="col-start-2">
@@ -801,7 +785,7 @@ const Services = () => {
         />
         <div className="w-11/12 md:w-10/12 mx-auto grid grid-cols-1 md:grid-cols-2 gap-3 py-10">
           <div>
-            <h1 className="mb-7">Ready To Start Your Bathroom Renovation?</h1>
+            <h2 className="mb-7">Ready To Start Your Bathroom Renovation?</h2>
             <div className="h-1 w-40 bg-primary mb-7" />
             <button className="btn mb-7">Get Your Free Estimate!</button>
             <h4 className="font-medium">Or Call Us: <a href="tel:+">647-496-0826</a></h4>

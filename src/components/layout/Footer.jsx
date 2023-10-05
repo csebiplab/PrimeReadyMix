@@ -14,7 +14,7 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-5 gap-5 justify-center items-start mx-auto">
                     <div className="col-span-12 md:col-span-2 mx-auto">
                         <img
-                            src="/logo.png"
+                            src="/prime-readymix-logo.png"
                             className="w-full max-w-[120px] bg-white mb-3 rounded-md mx-auto md:mx-0"
                             alt=""
                         />

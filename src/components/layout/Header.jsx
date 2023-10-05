@@ -34,7 +34,11 @@ const Header = () => {
                 </div>
                 <div className="w-11/12 md:w-10/12 mx-auto gap-2 py-2 flex  items-center justify-between bg-white sticky top-0">
                     <a href="/">
-                        <img src="/logo.png" alt="" className="max-w-[120px] w-full" />
+                        <img
+                            src="/prime-readymix-logo.png"
+                            alt=""
+                            className="max-w-[120px] w-full"
+                        />
                     </a>
                     <a
                         href="tel:+"
