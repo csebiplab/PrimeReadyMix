@@ -13,80 +13,44 @@ import { contacts } from "../site/info";
 import { BsCheck2Square } from "react-icons/bs";
 import { FaRegWindowClose } from "react-icons/fa";
 import DialogComponent from "../components/common/DialogComponent";
+import Image from "next/image";
 
 const Home = () => {
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen((cur) => !cur);
 
     return (
-        <main className="w-11/12 md:w-10/12 mx-auto">
-            <section className="py-10 relative">
-                <div className="">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 py-10">
-                        <div className="text-center md:text-left">
-                            <h1 className="font-bold text-4xl mb-1 leading-tight">
-                                Ready Mix & <br />
-                                Concrete Delivery, <br />
-                                Toronto Ready Mix
-                            </h1>
-                            <h4 className="text-dark-500 mt-7 md:text-2xl text-[18px] font-semibold md:font-semibold leading-6">
-                                When it comes to reliable and trusted ready mix services in Toronto,
-                                there is no better choice than Prime Ready Mix.
-                            </h4>
+        <main className="">
+            <section className="relative md:h-[40rem] flex items-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-11/12 md:w-10/12 mx-auto">
+                    <div className="mt-11">
+                        <h1 className="font-bold text-4xl mb-1 leading-tight text-center md:text-left">
+                            Ready Mix & <br />
+                            Concrete Delivery, <br />
+                            Toronto Ready Mix
+                        </h1>
+                        <h4 className="text-dark-500 mt-7 md:text-2xl text-[18px] font-semibold md:font-semibold leading-6 text-center md:text-left">
+                            When it comes to reliable and trusted ready mix services in Toronto,
+                            there is no better choice than Prime Ready Mix.
+                        </h4>
+                        <div className="flex justify-center md:justify-start">
                             <button
-                                className="btn !text-sm !py-3 !px-10 my-6 !bg-primary "
+                                className="btn !text-sm !py-3 !px-10 my-6 !bg-primary"
                                 onClick={handleOpen}
                             >
                                 Get Your Estimate
                             </button>
-                            <div className="h-screen py-10 overflow-y-scroll">
-                                <DialogComponent
-                                    open={open}
-                                    handler={handleOpen}
-                                    setOpen={setOpen}
-                                />
-                            </div>
-                            {/* <img
-                                className="mx-auto w-3/4 md:w-full mt-4"
-                                style={{ transform: "rotateY(180deg) rotateZ(5deg)" }}
-                                src="https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/P85-side-e1663291233852.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1352,h:500,cg:true"
-                                alt=""
-                            /> */}
-                            <br />
-                            {/* <div className="flex justify-center md:justify-between items-end gap-2 flex-wrap ">
-                <p className="font-bold text-primary text-lg">
-                  Limited Time Offer
-                </p>
-                <p className="text-dark-400">Exp. Sep 30th 2023</p>
-              </div>
-              <div className="flex items-center flex-wrap relative flex-col md:flex-row my-4 text-center">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-10 w-10 rounded-full text-lg border-2 font-semibold border-dark-400 bg-dark text-white flex justify-center items-center">
-                  OR
-                </div>
-                <figure className="flex-grow py-3 bg-dark-50/10 rounded-sm w-full md:w-auto border-b-[1px] border-b-dark md:border-b-0">
-                  <h4 className="px-5 font-semibold">
-                    Get Cashback{" "}
-                    <span className="text-primary font-bold">$3,000</span>
-                  </h4>
-                  <hr className="border-px my-3 border-dark-300 hidden md:block" />
-                  <p className="px-5 mb-2">
-                    For eligible <b>bathroom</b> customers.
-                  </p>
-                </figure>
-                <figure className="flex-grow py-3  rounded-sm bg-white w-full  md:w-auto border-t-[1px] border-t-dark md:border-t-0">
-                  <h4 className="px-5  font-semibold">
-                    Get Cashback{" "}
-                    <span className="text-primary font-bold">$3,000</span>
-                  </h4>
-                  <hr className="border-px my-3 border-dark-300  hidden md:block" />
-                  <p className="px-5 mb-2">
-                    For eligible <b>kitchen</b> customers
-                  </p>
-                </figure>
-              </div> */}
                         </div>
+                        <div>
+                            <DialogComponent open={open} handler={handleOpen} setOpen={setOpen} />
+                        </div>
+
+                        <br />
                     </div>
                 </div>
+                <section className="md:hidden">
+                    <img src={"/prime-readymix-banner.png"} alt="prime-ready-mix-banner" />
+                </section>
                 <Swiper
                     spaceBetween={0}
                     slidesPerView={1}
@@ -95,7 +59,7 @@ const Home = () => {
                         pauseOnMouseEnter: false,
                     }}
                     modules={[Autoplay]}
-                    className="relative md:!absolute mb-4 md:mb-0 top-0 right-0 w-full md:w-[45%] h-56 md:h-full object-cover object-center"
+                    className="relative md:!absolute mb-4 md:mb-0 top-0 right-0 h-full w-full md:w-[45%] max-h-64 md:max-h-full object-cover object-center"
                 >
                     {[
                         "https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/blob-5fe5952.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:600,cg:true",
@@ -113,15 +77,15 @@ const Home = () => {
                 </Swiper>
             </section>
 
-            <section className="py-10">
-                <div className=" grid grid-cols-1 md:grid-cols-2 gap-8">
+            <section className="md:py-10">
+                <div className=" flex flex-col-reverse md:flex-row gap-8 relative">
                     <img
                         src="https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/blob-9397e44.png/:/cr=t:0%25,l:0.12%25,w:99.75%25,h:100%25/rs=w:600,h:451,cg:true/qt=q:46"
                         alt=""
-                        className="w-full h-full max-h-[320px] md:max-h-[600px] object-cover object-bottom"
+                        className="w-full h-full max-h-[320px] md:max-h-[600px]"
                     />
-                    <div>
-                        <h2 className="font-bold text-2xl md:text-3xl lg:text-4xl">
+                    <div className="w-11/12 md:w-10/12 mx-auto md:mr-auto">
+                        <h2 className="font-bold text-2xl  md:text-3xl lg:text-4xl">
                             About Prime Ready Mix
                         </h2>
                         <div className="h-1 w-40 bg-primary my-5" />
@@ -188,14 +152,14 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section className="py-10">
-                <div className=" grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
+            <section className="py-10 relative">
+                <div className=" grid grid-cols-1 md:grid-cols-2 gap-8 w-11/12 md:w-10/12 mx-auto">
+                    <div className="">
                         <h2 className="font-bold  text-2xl md:text-3xl lg:text-4xl">
                             Trusted Ready Mix Services in Toronto
                         </h2>
                         <div className="h-1 w-40 bg-primary my-5" />
-                        <p className="text-dark-300 md:text-lg">
+                        <p className="text-dark-300 md:text-lg mb-10 ">
                             When it comes to reliable and trusted ready mix services in Toronto,
                             there is no better choice than Prime Ready Mix. With a proven track
                             record of delivering high-quality concrete mixes tailored to meet the
@@ -212,12 +176,12 @@ const Home = () => {
                             dedicated to the success of your project.
                         </p>
                     </div>
-                    <img
-                        src="https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/P85-side-e1663291233852.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1352,h:500,cg:true"
-                        alt=""
-                        className="w-full h-full max-h-[320px] md:max-h-[600px] object-contain object-bottom"
-                    />
                 </div>
+                <img
+                    src="https://media.istockphoto.com/id/997566504/photo/cement-mixer-on-the-road.webp?b=1&s=170667a&w=0&k=20&c=nkm-6Ih8q6L6_PaA-xqRV63nADGh7xQzb9f9oLY8ImU="
+                    alt=""
+                    className="relative md:!absolute mb-4 md:mb-0 top-0 right-0 h-full w-full md:w-[45%] max-h-64 md:max-h-full object-cover object-center"
+                />
             </section>
             <section className="py-10">
                 <div className=" grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -226,7 +190,7 @@ const Home = () => {
                         alt=""
                         className="w-full h-full max-h-[320px] md:max-h-[600px] object-cover object-bottom"
                     />
-                    <div>
+                    <div className="w-11/12 md:w-10/12 mx-auto">
                         <h2 className="font-bold  text-2xl md:text-3xl lg:text-4xl">
                             Our Ready Mix Services
                         </h2>
@@ -255,9 +219,9 @@ const Home = () => {
                     className="md:absolute mb-4 md:mb-0 top-0 right-0 h-full w-full md:w-[45%] object-cover object-center"
                     alt=""
                 />
-                <div className=" grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div className=" grid grid-cols-1 md:grid-cols-2 gap-5 w-11/12 md:w-10/12 mx-auto">
                     <div className="py-10">
-                        <h2 className="tracking-2 mb-4  text-2xl md:text-3xl lg:text-4xl">
+                        <h2 className="tracking-2 mb-4  text-2xl md:text-3xl lg:text-4xl ">
                             Why Choose Us For Toronto Ready Mix?
                         </h2>
                         <div className="bar my-4" />
@@ -280,49 +244,14 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* <section className="py-12 bg-indigo-50/10">
-        <div className="">
-          <div className="text-center mb-8">
-            <h1 className="mb-6">Our Home Renovation Services In Toronto</h1>
-            <p className="mb-6">Enjoy a stress-free renovation with our unique build process.</p>
-            <div className="h-1 mx-auto w-40 bg-primary my-5" />
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {[
-              { name: "Kitchen Renovations", features: ["Modern Makeovers", "Timeless Upgrades", "Heart of Your Home"], banner: 'https://media-content.angi.com/0c1a252a-f64f-42e4-9166-ef9870838671.jpeg?imwidth=900' },
-              { name: "Bathroom Renovations", features: ["Spa-Inspired Retreats", "Family Bathrooms", "Dreams into Reality"], banner: 'https://media-content.angi.com/98dc0283-20e2-4a4f-8505-ea1f9ba93766.jpg?imwidth=260' },
-              { name: "Basement Renovations", features: ["Maximize Living Space", "Add Value", "Functional & Stylish"], banner: 'https://media-content.angi.com/6db2bbc1-3be4-45ed-808d-579c7925d1f7.jpg?imwidth=260' },
-              { name: "Brownstone & Townhome Renovations", features: ["Preserve Historic Charm", "Enhance Character", "Unique Expertise"], banner: 'https://media-content.angi.com/6db2bbc1-3be4-45ed-808d-579c7925d1f7.jpg?imwidth=260' },
-            ].map((item, key) => {
-              return (
-                <Link key={key} href="/" className="block hover:no-underline group border border-dark-50/80">
-                  <img src={item.banner} alt={item.banner} className="w-full max-h-52 h-full object-cover object-center grayscale group-hover:grayscale-0 duration-150" />
-                  <div className="p-2 min-h-[190px] flex flex-col gap-2 justify-between">
-                    <div>
-                      <h6 className="mb-1">{item?.name}</h6>
-                      <ul>
-                        {item.features.map((e, key) => <li key={e + key} className="mb-1 text-dark-400"> <BsArrowRight className="fill-primary inline-block" /> {e}</li>)}
-                      </ul>
-                    </div>
-                    <div className="flex gap-2 items-center">
-                      <span className="font-semibold group-hover:text-primary">Learn more</span> <div className="flex-grow h-[2px] bg-dark group-hover:bg-primary" />
-                    </div>
-                  </div>
-                </Link>
-              )
-            })}
-          </div>
-        </div>
-      </section> */}
-
             <ServicesSection />
 
             <section className="bg-dark-50/5">
-                <div className="text-center mb-3 ">
+                <div className="text-center mb-3 w-11/12 md:w-10/12 mx-auto">
                     <h2 className="tracking-2 mb-4  text-2xl md:text-3xl lg:text-4xl">
                         Why Prime Ready Mix is Your Best Choice?
                     </h2>
-                    <p className="mb-3 text-dark-400 max-w-3xl mx-auto md:text-lg ">
+                    <p className="mb-3 text-dark-400 max-w-3xl mx-auto md:text-lg text-left md:text-center">
                         Prime Ready Mix stands out as the best choice for your concrete needs due to
                         its unwavering commitment to quality, expertise, wide range of products,
                         efficient delivery, environmentally conscious practices, cost-effectiveness,
@@ -398,9 +327,9 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className="py-10">
-                <div className=" grid grid-cols-1 md:grid-cols-2 gap-10">
-                    <div className="py-10">
+            <section className="relative ">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-11/12 md:w-10/12 mx-auto mt-11 mb-10">
+                    <div className="">
                         <h2 className="tracking-2 mb-4  text-2xl md:text-3xl lg:text-4xl">
                             Ready to start your home construction services?
                         </h2>
@@ -428,34 +357,32 @@ const Home = () => {
                             </a>{" "}
                         </p>
                     </div>
-                    <Swiper
-                        spaceBetween={0}
-                        slidesPerView={1}
-                        autoplay={{
-                            disableOnInteraction: false,
-                            pauseOnMouseEnter: false,
-                        }}
-                        // pagination={{
-                        //     bulletActiveClass :' bg-primary opacity-100',
-                        // }}
-                        modules={[Autoplay, Pagination]}
-                        className="w-full object-cover object-center max-h-[600px]"
-                    >
-                        {[
-                            "https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/c3-2-1.jpeg/:/cr=t:0%25,l:31.57%25,w:68.43%25,h:100%25/rs=w:365,h:365,cg:true",
-                            "https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/Burlington-Concrete-Mixer.jpeg/:/cr=t:0%25,l:1.09%25,w:75%25,h:100%25/rs=w:365,h:365,cg:true",
-                            "https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/Burlington-Concrete-Mixer.jpeg/:/cr=t:0%25,l:1.09%25,w:75%25,h:100%25/rs=w:365,h:365,cg:true",
-                        ].map((item, key) => (
-                            <SwiperSlide key={key} className="h-60 md:h-full">
-                                <img
-                                    src={item}
-                                    className="object-cover object-center h-full w-full"
-                                    alt=""
-                                />
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
                 </div>
+
+                <Swiper
+                    spaceBetween={0}
+                    slidesPerView={1}
+                    autoplay={{
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: false,
+                    }}
+                    modules={[Autoplay]}
+                    className="relative md:!absolute mb-4 md:mb-0 top-0 right-0 h-full w-full md:w-[45%] max-h-64 md:max-h-full object-cover object-center"
+                >
+                    {[
+                        "https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/c3-2-1.jpeg/:/cr=t:0%25,l:31.57%25,w:68.43%25,h:100%25/rs=w:365,h:365,cg:true",
+                        "https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/Burlington-Concrete-Mixer.jpeg/:/cr=t:0%25,l:1.09%25,w:75%25,h:100%25/rs=w:365,h:365,cg:true",
+                        "https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/Burlington-Concrete-Mixer.jpeg/:/cr=t:0%25,l:1.09%25,w:75%25,h:100%25/rs=w:365,h:365,cg:true",
+                    ].map((item, key) => (
+                        <SwiperSlide key={key} className="h-60 md:h-full">
+                            <img
+                                src={item}
+                                className="object-cover object-center h-full w-full"
+                                alt=""
+                            />
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
             </section>
 
             <BottomServiceArea />

@@ -23,18 +23,44 @@ const Header = () => {
     return (
         <>
             <header className=" sticky top-0 bg-white z-[1000] shadow shadow-dark-50/10">
-                <div className="w-full mx-auto py-3 bg-pageBg">
-                    <h6 className="w-11/12 md:w-10/12 mx-auto  text-dark text-xs font-medium text-center md:text-left">
-                        {" "}
-                        <span className="">
-                            <i className="fa-brands fa-canadian-maple-leaf mr-2 text-dark text-base "></i>
-                        </span>
-                        TORONTO READY MIX
-                    </h6>
+                <div className="w-full bg-pageBg ">
+                    <div className="w-11/12 md:w-10/12 mx-auto py-3 flex justify-center md:justify-between items-center">
+                        <h6 className=" text-dark text-sm font-medium text-center md:text-left">
+                            {" "}
+                            <span className="">
+                                <i className="fa-brands fa-canadian-maple-leaf mr-2 text-dark text-base "></i>
+                            </span>
+                            TORONTO READY MIX
+                        </h6>
+                        <div className="md:flex md:flex-row justify-end items-center hidden">
+                            <Link
+                                href={"/"}
+                                className="text-dark text-sm font-normal mx-3 hover:underline"
+                            >
+                                Blogs
+                            </Link>
+                            <Link
+                                href={"/"}
+                                className="text-dark text-sm font-normal mx-3 hover:underline"
+                            >
+                                Testimonials
+                            </Link>
+                            <Link
+                                href={"/"}
+                                className="text-dark text-sm font-normal mx-3 hover:underline"
+                            >
+                                Contact Us
+                            </Link>
+                        </div>
+                    </div>
                 </div>
                 <div className="w-11/12 md:w-10/12 mx-auto gap-2 py-2 flex  items-center justify-between bg-white sticky top-0">
                     <a href="/">
-                        <img src="/logo.png" alt="" className="max-w-[120px] w-full" />
+                        <img
+                            src="/prime-readymix-logo.png"
+                            alt=""
+                            className="max-w-[150px] w-full"
+                        />
                     </a>
                     <a
                         href="tel:+"
@@ -64,12 +90,10 @@ const Header = () => {
                             <span className="h-9 w-9 rounded-full justify-center items-center bg-dark-50/10 flex group-hover:bg-dark">
                                 <FaPhone className="inline-block h-4 w-4 fill-dark group-hover:fill-white" />
                             </span>
-                            <span className="text-xl font-semibold text-primary">
-                                {contacts.phone}
-                            </span>
+                            <span className="text-sm font-bold text-primary">{contacts.phone}</span>
                         </a>
-                        <Link href="/contact-us" className="btn">
-                            Contact Us
+                        <Link href="/contact-us" className="btn !text-sm">
+                            Get an Estimate
                         </Link>
                     </nav>
                     <IconButton
