@@ -6,6 +6,7 @@ import {
     AiOutlineInstagram,
 } from "react-icons/ai";
 import { site_info } from "../../site/info";
+import Link from "next/link";
 
 const Footer = () => {
     return (
@@ -29,19 +30,25 @@ const Footer = () => {
                         </h4>
                         <ul className="tracking-wide text-center md:text-start text-base text-white">
                             <li>
-                                <a href="http://" className="mb-1 text-white hover:text-primary">
-                                    FAQ
-                                </a>
+                                <Link href="/blogs" className="mb-1 text-white hover:text-primary">
+                                    Blogs
+                                </Link>
                             </li>
                             <li>
-                                <a href="http://" className="mb-1 text-white hover:text-primary">
+                                <Link
+                                    href="/contact-us"
+                                    className="mb-1 text-white hover:text-primary"
+                                >
                                     Contact Us
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="http://" className="mb-1 text-white hover:text-primary">
+                                <Link
+                                    href="/testimonials"
+                                    className="mb-1 text-white hover:text-primary"
+                                >
                                     Testimonial
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>
@@ -51,14 +58,12 @@ const Footer = () => {
                         </h4>
                         <ul className="tracking-wide text-center md:text-start text-base">
                             <li>
-                                <a href="http://" className="mb-1 text-white hover:text-primary">
-                                    Bathroom Remodeling
-                                </a>
-                            </li>
-                            <li>
-                                <a href="http://" className="mb-1 text-white hover:text-primary">
-                                    Kitchen Remodeling
-                                </a>
+                                <Link
+                                    href="/concrete-delivery"
+                                    className="mb-1 text-white hover:text-primary"
+                                >
+                                    Concrete Delivery
+                                </Link>
                             </li>
                         </ul>
                     </div>

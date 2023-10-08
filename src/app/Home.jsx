@@ -29,10 +29,10 @@ const Home = () => {
                             Concrete Delivery, <br />
                             Toronto Ready Mix
                         </h1>
-                        <h4 className="text-dark-500 mt-7 md:text-2xl text-[18px] font-semibold md:font-semibold leading-6 text-center md:text-left">
+                        <h2 className="text-dark-500 mt-7 md:text-2xl text-[18px] font-semibold md:font-semibold leading-6 text-center md:text-left">
                             When it comes to reliable and trusted ready mix services in Toronto,
                             there is no better choice than Prime Ready Mix.
-                        </h4>
+                        </h2>
                         <div className="flex justify-center md:justify-start">
                             <button
                                 className="btn !text-sm !py-3 !px-10 my-6 !bg-primary"
@@ -191,9 +191,9 @@ const Home = () => {
                         className="w-full h-full max-h-[320px] md:max-h-[600px] object-cover object-bottom"
                     />
                     <div className="w-11/12 md:w-10/12 mx-auto">
-                        <h2 className="font-bold  text-2xl md:text-3xl lg:text-4xl">
+                        <h3 className="font-bold  text-2xl md:text-3xl lg:text-4xl">
                             Our Ready Mix Services
-                        </h2>
+                        </h3>
                         <div className="h-1 w-40 bg-primary my-5" />
                         <p className="text-dark-300 md:text-lg">
                             Our Ready Mix Services offer a seamless solution for all your concrete
@@ -221,9 +221,9 @@ const Home = () => {
                 />
                 <div className=" grid grid-cols-1 md:grid-cols-2 gap-5 w-11/12 md:w-10/12 mx-auto">
                     <div className="py-10">
-                        <h2 className="tracking-2 mb-4  text-2xl md:text-3xl lg:text-4xl ">
-                            Why Choose Us For Toronto Ready Mix?
-                        </h2>
+                        <h3 className="tracking-2 mb-4  text-2xl md:text-3xl lg:text-4xl ">
+                            Why Choose Us For Toronto Mixed Concrete Services?
+                        </h3>
                         <div className="bar my-4" />
                         <p className="mb-3 text-dark-400 md:text-lg">
                             When it comes to Toronto Ready Mix, choosing Prime Ready Mix is an
@@ -248,16 +248,51 @@ const Home = () => {
 
             <section className="bg-dark-50/5">
                 <div className="text-center mb-3 w-11/12 md:w-10/12 mx-auto">
-                    <h2 className="tracking-2 mb-4  text-2xl md:text-3xl lg:text-4xl">
-                        Why Prime Ready Mix is Your Best Choice?
-                    </h2>
+                    <h3 className="tracking-2 mb-4  text-2xl md:text-3xl lg:text-4xl">
+                        Why is Prime Ready Mix Your Best Choice?
+                    </h3>
                     <p className="mb-3 text-dark-400 max-w-3xl mx-auto md:text-lg text-left md:text-center">
                         Prime Ready Mix stands out as the best choice for your concrete needs due to
-                        its unwavering commitment to quality, expertise, wide range of products,
+                        its unwavering commitment to quality, expertise, a wide range of products,
                         efficient delivery, environmentally conscious practices, cost-effectiveness,
                         customization options, customer-centric approach, safety, and a proven track
                         record. Choosing Prime Ready Mix means choosing excellence in concrete
-                        solutions.
+                        solutions. 01 - Quality Assurance: Prime Ready Mix prioritizes quality in
+                        every batch of concrete we produce. Our state-of-the-art facilities and
+                        stringent quality control measures ensure that you receive a consistent and
+                        reliable product every time. 02 - Expertise and Experience: With years of
+                        experience in the industry, Prime Ready Mix boasts a team of experts. They
+                        understand the nuances of concrete production. Our knowledge enables us to
+                        tailor mixes to specific project requirements, ensuring optimal performance.
+                        03 - Wide Range of Products: Prime Ready Mix offers a diverse range of
+                        concrete mixes designed for various applications. Whether it's for a
+                        residential, commercial, or industrial project, we have a solution to meet
+                        your specific needs. 04 - Efficient Delivery Service: Time is of the essence
+                        in construction projects. Everyone knows Prime Ready Mix for its punctual
+                        and efficient delivery service. Our well-maintained fleet of vehicles
+                        ensures that your concrete arrives on-site promptly. 05 - Environmentally
+                        Conscious Practices: Prime Ready Mix is committed to sustainable practices.
+                        Our Toronto Ready Mix Concrete team employs eco-friendly technologies and
+                        methods in our production process, minimizing our environmental footprint.
+                        06 - Cost-Effective Solutions: Prime Ready Mix understands the importance of
+                        staying within budget. We offer competitive pricing without compromising on
+                        quality, providing cost-effective solutions for your projects. 07 -
+                        Customizable Mix Designs: Every construction project is unique, and Prime
+                        Ready Mix recognizes this. We offer customizable mix designs, allowing you
+                        to fine-tune the concrete to meet specific project requirements. Ready to
+                        start your home construction services? Embarking on the journey of building
+                        your dream home is an exciting endeavor. Finding the right construction
+                        services is a crucial step toward turning your vision into reality. Our team
+                        is dedicated to bringing your dreams to life, combining expertise, quality
+                        craftsmanship, and a commitment to client satisfaction. With years of
+                        experience in the Toronto Ready Mix Concrete industry, we understand that
+                        every project is unique, and we tailor our services to suit your specific
+                        needs. From the initial design phase to the final finishing touches, we
+                        prioritize open communication and transparency, ensuring you're involved in
+                        every decision along the way. Whether it's a cozy family home or a sprawling
+                        architectural masterpiece, we have the skills, resources, and passion to
+                        bring your vision to fruition. Get ready to embark on this exciting journey
+                        with us. And let's start building your future, one brick at a time.
                     </p>
                     <div className="bar my-4 mx-auto" />
                 </div>
@@ -272,7 +307,7 @@ const Home = () => {
                             {[
                                 {
                                     title: "Quality Assurance",
-                                    desc: "Prime Ready Mix prioritizes quality in every batch of concrete we produce. Our state-of-the-art facilities and stringent quality control measures ensure that you receive a consistent and reliable product every time.",
+                                    desc: "Prime Ready Mix prioritizes quality in every batch of concrete we produce. Our state-of-the-art facilities and stringent quality control measures ensure that you receive a consistent and reliable product every time",
                                 },
                                 {
                                     title: "Expertise and Experience",
@@ -299,18 +334,6 @@ const Home = () => {
                                     title: "Customizable Mix Designs",
                                     desc: "Every construction project is unique, and Prime Ready Mix recognizes this. We offer customizable mix designs, allowing you to fine-tune the concrete to meet specific project requirements.",
                                 },
-                                {
-                                    title: "Customer-Centric Approach",
-                                    desc: "Customer satisfaction is a top priority for Prime Ready Mix. Our team is responsive, attentive, and always willing to go the extra mile to meet your needs and address any concerns.",
-                                },
-                                {
-                                    title: "Safety First",
-                                    desc: "Safety is paramount in construction. Prime Ready Mix adheres to strict safety standards in our operations, ensuring that both our employees and your project site remain secure.",
-                                },
-                                {
-                                    title: "Proven Track Record",
-                                    desc: "Prime Ready Mix has a solid track record of successful projects across various industries. Our satisfied clientele serves as a testament to the quality and reliability of our products and services.",
-                                },
                             ].map((item, key) => (
                                 <p className="mb-3 text-dark-400" key={key}>
                                     <span className="font-bold text-primary">
@@ -330,25 +353,25 @@ const Home = () => {
             <section className="relative ">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-11/12 md:w-10/12 mx-auto mt-11 mb-10">
                     <div className="">
-                        <h2 className="tracking-2 mb-4  text-2xl md:text-3xl lg:text-4xl">
+                        <h5 className="tracking-2 mb-4  text-2xl md:text-3xl lg:text-4xl">
                             Ready to start your home construction services?
-                        </h2>
+                        </h5>
                         <div className="bar my-4" />
                         <p className="md:text-lg mb-3 text-dark-400">
                             Embarking on the journey of building your dream home is an exciting
-                            endeavor, and finding the right construction services is a crucial step
+                            endeavor. Finding the right construction services is a crucial step
                             toward turning your vision into reality. Our team is dedicated to
                             bringing your dreams to life, combining expertise, quality
                             craftsmanship, and a commitment to client satisfaction. With years of
-                            experience in the Toronto Ready Mix industry, we understand that every
-                            project is unique, and we tailor our services to suit your specific
-                            needs. From the initial design phase to the final finishing touches, we
-                            prioritize open communication and transparency, ensuring you're involved
-                            in every decision along the way. Whether it's a cozy family home or a
-                            sprawling architectural masterpiece, we have the skills, resources, and
-                            passion to bring your vision to fruition. Get ready to embark on this
-                            exciting journey with us, and let's start building your future, one
-                            brick at a time.
+                            experience in the Toronto Ready Mix Concrete industry, we understand
+                            that every project is unique, and we tailor our services to suit your
+                            specific needs. From the initial design phase to the final finishing
+                            touches, we prioritize open communication and transparency, ensuring
+                            you're involved in every decision along the way. Whether it's a cozy
+                            family home or a sprawling architectural masterpiece, we have the
+                            skills, resources, and passion to bring your vision to fruition. Get
+                            ready to embark on this exciting journey with us. And let's start
+                            building your future, one brick at a time.
                         </p>
                         <br />
                         <p>

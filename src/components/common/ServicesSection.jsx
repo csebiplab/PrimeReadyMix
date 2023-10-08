@@ -3,9 +3,9 @@ const ServicesSection = () => {
         <section className="py-14">
             <div className="w-11/12 md:w-10/12 mx-auto">
                 <div className="max-w-4xl text-center mx-auto">
-                    <h1 className="mb-4  text-3xl md:text-4xl lg:text-5xl">
+                    <h4 className="mb-4  text-3xl md:text-4xl lg:text-5xl">
                         Our Ready Mix Concrete Services Process
-                    </h1>
+                    </h4>
                     <p className="md:text-lg lg:text-xl font-medium mb-3">
                         Our Toronto Ready Mix Concrete Services Process is designed to ensure a
                         seamless and reliable experience for our customers, from initial
@@ -48,36 +48,36 @@ const ServicesSection = () => {
                             title: "Pouring and Placement",
                             desc: "Upon arrival, our experienced team coordinates with your construction crew to efficiently pour and place the concrete. We pay close attention to proper leveling and finishing.",
                         },
-                        {
-                            title: "Curing and Quality Assurance",
-                            desc: "After placement, we oversee the curing process to ensure optimal strength development. Our quality control team conducts tests to verify that the concrete meets specified standards.",
-                        },
-                        {
-                            title: "Post-Delivery Support",
-                            desc: "We believe in providing excellent customer service even after delivery. If you have any questions or require additional support, our Toronto Ready Mix team is always available to assist you.",
-                        },
-                        {
-                            title: "Feedback and Follow-Up",
-                            desc: "We value your feedback on our services. After the project is completed, we may follow up to gather your input, which will help us continuously improve our processes.",
-                        },
-                        {
-                            title: "Documentation and Invoicing",
-                            desc: "We provide detailed documentation of the delivered concrete, including batch records and quality test results. Our billing process is transparent and ensures accuracy.",
-                        },
-                        {
-                            title: "Environmental Considerations",
-                            desc: "Throughout our process, we adhere to environmentally responsible practices, including recycling excess concrete and minimizing waste.",
-                        },
-                        {
-                            title: "Project Completion",
-                            desc: "Once the concrete is in place and the project is finished, we ensure that the site is cleaned up and any leftover materials are properly disposed of.",
-                        },
+                        // {
+                        //     title: "Curing and Quality Assurance",
+                        //     desc: "After placement, we oversee the curing process to ensure optimal strength development. Our quality control team conducts tests to verify that the concrete meets specified standards.",
+                        // },
+                        // {
+                        //     title: "Post-Delivery Support",
+                        //     desc: "We believe in providing excellent customer service even after delivery. If you have any questions or require additional support, our Toronto Ready Mix team is always available to assist you.",
+                        // },
+                        // {
+                        //     title: "Feedback and Follow-Up",
+                        //     desc: "We value your feedback on our services. After the project is completed, we may follow up to gather your input, which will help us continuously improve our processes.",
+                        // },
+                        // {
+                        //     title: "Documentation and Invoicing",
+                        //     desc: "We provide detailed documentation of the delivered concrete, including batch records and quality test results. Our billing process is transparent and ensures accuracy.",
+                        // },
+                        // {
+                        //     title: "Environmental Considerations",
+                        //     desc: "Throughout our process, we adhere to environmentally responsible practices, including recycling excess concrete and minimizing waste.",
+                        // },
+                        // {
+                        //     title: "Project Completion",
+                        //     desc: "Once the concrete is in place and the project is finished, we ensure that the site is cleaned up and any leftover materials are properly disposed of.",
+                        // },
                     ].map((item, key) => (
                         <figure className="group p-3 md:aspect-square border-b-2 border-b-gray-400 hover:border-b-primary duration-150 md:text-center flex flex-col md:justify-center md:items-center">
                             {/* <img src={item.icon} alt="" className="w-20 mb-8 mx-auto" /> */}
-                            <h3 className="text-dark group-hover:text-primary mb-2 md:mb-4  text-xl md:text-2xl lg:text-3xl">
+                            <p className="text-dark group-hover:text-primary mb-2 md:mb-4  text-xl md:text-2xl lg:text-3xl">
                                 {item.title}
-                            </h3>
+                            </p>
                             <p className="text-gray-700 md:text-xl">{item.desc}</p>
                         </figure>
                     ))}
