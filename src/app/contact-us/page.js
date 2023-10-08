@@ -7,8 +7,7 @@ import ProjectFrom from "./ProjectFrom";
 
 export const metadata = {
     title: "Prime Ready Mix Contact",
-    description:
-        "When it comes to reliable and trusted ready mix services in Toronto, there is no better choice than Prime Ready Mix.",
+    description: "You’re on the way to the easiest renovation ever.",
 };
 
 export default function contact_us() {

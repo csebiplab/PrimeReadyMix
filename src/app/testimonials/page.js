@@ -2,9 +2,9 @@ import BottomServiceArea from "../../components/common/BottomServiceArea";
 import Reviews from "./Reviews";
 
 export const metadata = {
-    title: "Prime Ready Mix Concrete Testimonials",
+    title: "Prime Ready Mix Easy Reno Testimonials",
     description:
-        "When it comes to reliable and trusted ready mix services in Toronto, there is no better choice than Prime Ready Mix.",
+        "Below is a short selection from some of the testimonials we have collected over the years. Whether it is Google, Home Stars, Trusted Pros or Houzz, our clients are happy with their finished product. At Easy Reno our aim is to make every project a complete success.",
 };
 
 export default function () {
