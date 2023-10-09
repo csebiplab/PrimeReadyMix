@@ -97,6 +97,7 @@ const Header = () => {
                         </Link>
                     </nav>
                     <IconButton
+                        aria-label="icon-button"
                         variant="text"
                         className="block p-4 bg-[#33475B] !text-white rounded-none  lg:hidden"
                         onClick={openDrawer}
@@ -110,7 +111,12 @@ const Header = () => {
                     <Typography variant="h5" color="blue-gray">
                         {site_info.name}
                     </Typography>
-                    <IconButton variant="text" color="blue-gray" onClick={closeDrawer}>
+                    <IconButton
+                        variant="text"
+                        color="blue-gray"
+                        onClick={closeDrawer}
+                        aria-label="icon-button"
+                    >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
