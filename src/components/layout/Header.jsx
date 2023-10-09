@@ -34,19 +34,19 @@ const Header = () => {
                         </h6>
                         <div className="md:flex md:flex-row justify-end items-center hidden">
                             <Link
-                                href={"/"}
+                                href={"/blogs"}
                                 className="text-dark text-sm font-normal mx-3 hover:underline"
                             >
                                 Blogs
                             </Link>
                             <Link
-                                href={"/"}
+                                href={"/testimonials"}
                                 className="text-dark text-sm font-normal mx-3 hover:underline"
                             >
                                 Testimonials
                             </Link>
                             <Link
-                                href={"/"}
+                                href={"/contact-us"}
                                 className="text-dark text-sm font-normal mx-3 hover:underline"
                             >
                                 Contact Us

@@ -5,6 +5,11 @@ import ServicesSection from "../../components/common/ServicesSection";
 import { site_info } from "../../site/info";
 import ProjectFrom from "./ProjectFrom";
 
+export const metadata = {
+    title: "Prime Ready Mix Contact",
+    description: "You’re on the way to the easiest renovation ever.",
+};
+
 export default function contact_us() {
     return (
         <main className="w-10/12  mx-auto">
