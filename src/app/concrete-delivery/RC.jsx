@@ -11,6 +11,7 @@ import {
     Select,
     Textarea,
 } from "@material-tailwind/react";
+import Image from "next/image";
 import { useState } from "react";
 import "swiper/css";
 import "swiper/css/autoplay";
@@ -186,10 +187,13 @@ const Services = () => {
                         "https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/Burlington-Concrete-Mixer.jpeg/:/cr=t:0%25,l:1.09%25,w:75%25,h:100%25/rs=w:365,h:365,cg:true",
                     ].map((item, key) => (
                         <SwiperSlide key={key} className="h-60 md:h-full">
-                            <img
+                            <Image
+                                priority
                                 src={item}
                                 className="object-cover object-center h-full w-full"
                                 alt=""
+                                width={300}
+                                height={300}
                             />
                         </SwiperSlide>
                     ))}
@@ -219,18 +223,24 @@ const Services = () => {
                             fulfillment within its walls.{" "}
                         </p>
                     </div>
-                    <img
+                    <Image
+                        priority
                         src="https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/blob-5fe5952.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:600,cg:true"
                         alt=""
+                        width={300}
+                        height={300}
                         className="mx-auto w-2/3 md:w-2/5 aspect-square ring-4 ring-primary-600 ring-offset-4 rounded-full object-cover"
                     />
                 </div>
             </section>
             <section className="py-10">
                 <div className="w-11/12 md:w-10/12 mx-auto flex flex-col-reverse md:flex-row gap-8">
-                    <img
+                    <Image
+                        priority
                         src="https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/Truck-with-loader-3-2827-1024x609.jpeg/:/rs=w:600,cg:true,m"
                         alt=""
+                        width={300}
+                        height={300}
                         className="mx-auto w-2/3 md:w-2/5 aspect-square ring-4 ring-secondary ring-offset-4 rounded-full object-cover"
                     />
                     <div className="lg:col-span-2">
@@ -738,9 +748,12 @@ const Services = () => {
                 </div>
             </section>
             <section className="relative bg-dark-50/10">
-                <img
+                <Image
+                    priority
                     src="https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/blob-b6db9aa.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:600,cg:true"
                     alt=""
+                    width={300}
+                    height={300}
                     className="w-11/12 md:w-[48%] h-full md:absolute top-0 left-0 object-cover object-center"
                 />
                 <div className="w-11/12 md:w-10/12 mx-auto grid grid-cols-1 md:grid-cols-2 gap-3 py-10">
@@ -842,9 +855,12 @@ const Services = () => {
                             firsthand.
                         </p>
                     </div>
-                    <img
+                    <Image
+                        priority
                         src="https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/blob-9397e44.png/:/cr=t:0%25,l:0.12%25,w:99.75%25,h:100%25/rs=w:600,h:451,cg:true"
                         alt=""
+                        width={300}
+                        height={300}
                         className="w-full sticky top-32 h-full"
                     />
                 </div>
@@ -988,9 +1004,12 @@ const Services = () => {
                                 </p>
                             </div>
                         </div>
-                        <img
+                        <Image
+                            priority
                             src="https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/P85-side-e1663291233852.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1352,h:500,cg:true"
                             alt=""
+                            width={300}
+                            height={300}
                             className="w-full sticky top-32 h-full"
                         />
                     </div>

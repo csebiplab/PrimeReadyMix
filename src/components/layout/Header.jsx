@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { FaBars, FaPhone } from "react-icons/fa";
 import { contacts, site_info } from "../../site/info";
+import Image from "next/image";
 
 const menu = [
     {
@@ -56,10 +57,13 @@ const Header = () => {
                 </div>
                 <div className="w-11/12 md:w-10/12 mx-auto gap-2 py-2 flex  items-center justify-between bg-white sticky top-0">
                     <a href="/">
-                        <img
+                        <Image
+                            priority
                             src="/prime-readymix-logo.png"
                             alt=""
                             className="max-w-[150px] w-full h-full"
+                            width={300}
+                            height={300}
                         />
                     </a>
                     <a

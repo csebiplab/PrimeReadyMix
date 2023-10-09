@@ -1,22 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     reactStrictMode: true,
-    images:[
-        {
-            remotePatterns: [
-                {
-                  protocol: "https",
-                  hostname: "media-content.angi.com",
-                  port: "",
-                },
-                {
-                  protocol: "https",
-                  hostname: "img1.wsimg.com",
-                  port: "",
-                },
-            ]
-        }
-    ]
-}
 
-module.exports = nextConfig
+    images: {
+        domains: [
+            "icons8.com",
+            "media-content.angi.com",
+            "img1.wsimg.com",
+            "media.istockphoto.com",
+        ],
+    },
+};
+
+module.exports = nextConfig;

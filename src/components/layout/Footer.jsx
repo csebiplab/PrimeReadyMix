@@ -2,6 +2,7 @@
 import { AiFillFacebook, AiFillGoogleCircle, AiOutlineInstagram } from "react-icons/ai";
 import { site_info } from "../../site/info";
 import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
     return (
@@ -9,10 +10,13 @@ const Footer = () => {
             <div className="w-11/12 md:w-10/12 mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-5 gap-5 justify-between items-start mx-auto">
                     <div className="col-span-12 md:col-span-2 mx-auto justify-center md:justify-start">
-                        <img
+                        <Image
+                            priority
                             src="/prime-readymix-logo.png"
                             className="w-full max-w-[150px] bg-white mb-3 rounded-none mx-auto md:mx-0 h-full"
                             alt=""
+                            width={300}
+                            height={300}
                         />
                         <p className="text-sm md:w-4/5 leading-relexed text-center md:text-left">
                             {site_info.name} simplifies the process and costs of renovation by
