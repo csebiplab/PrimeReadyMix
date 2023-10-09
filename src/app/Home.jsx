@@ -21,14 +21,14 @@ const Home = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-11/12 md:w-10/12 mx-auto">
                     <div className="mt-11">
                         <h1 className="font-bold text-4xl mb-1 leading-tight text-center md:text-left">
-                            Ready Mix & <br />
+                            Ready Mix Concrete & <br />
                             Concrete Delivery, <br />
                             Toronto Ready Mix
                         </h1>
-                        <h2 className="text-dark-500 mt-7 md:text-2xl text-[18px] font-semibold md:font-semibold leading-6 text-center md:text-left">
-                            When it comes to reliable and trusted ready mix services in Toronto,
-                            there is no better choice than Prime Ready Mix.
-                        </h2>
+                        <p className="text-dark-500 mt-7 md:text-2xl text-[18px] font-semibold md:font-semibold leading-6 text-center md:text-left">
+                            When it comes to reliable and trusted ready mix concrete services in
+                            Toronto, there is no better choice than Prime Ready Mix.
+                        </p>
                         <div className="flex justify-center md:justify-start">
                             <button
                                 aria-label="estimate-button"
@@ -96,25 +96,25 @@ const Home = () => {
                     />
                     <div className="w-11/12 md:w-10/12 mx-auto md:mr-auto">
                         <h2 className="font-bold text-2xl  md:text-3xl lg:text-4xl">
-                            About Prime Ready Mix
+                            About Prime Ready Mix Concrete Services
                         </h2>
                         <div className="h-1 w-40 bg-primary my-5" />
                         <p className="text-dark-300 md:text-lg">
-                            Prime Ready Mix is a renowned name in the construction industry, known
-                            for delivering top-quality concrete solutions tailored to meet the
+                            Prime Ready Mix is a renowned name in the construction industry. We are
+                            delivering top-quality ready mix concrete solutions tailored to meet the
                             diverse needs of projects large and small. With a commitment to
-                            excellence and a focus on customer satisfaction, Prime Ready Mix has
+                            excellence and a focus on customer satisfaction, our company has
                             established itself as a trusted partner for builders, contractors, and
-                            developers alike. Their state-of-the-art facilities and advanced mixing
+                            developers alike. Our state-of-the-art facilities and advanced mixing
                             technology ensure that every batch of concrete is precisely formulated
                             and consistently reliable. Whether for towering skyscrapers or intricate
-                            residential developments, Prime Ready Mix prides itself on providing a
-                            product that meets industry standards and exceeds them. With a team of
-                            experienced professionals and a dedication to innovation, we continue to
-                            play a pivotal role in shaping the infrastructure of communities. When
-                            it comes to reliable and high-performance concrete solutions, Prime
-                            Ready Mix stands as a beacon of quality and reliability in the Toronto
-                            Ready Mix industry.
+                            residential developments, we pride ourselves on providing a product that
+                            meets industry standards and exceeds them. With a team of experienced
+                            professionals and a dedication to innovation, we continue to play a
+                            pivotal role in shaping the infrastructure of communities. When it comes
+                            to reliable and high-performance concrete solutions, Prime Ready Mix
+                            stands as a beacon of quality and reliability in the Toronto Concrete
+                            industry.
                         </p>
                     </div>
                 </div>
@@ -123,24 +123,22 @@ const Home = () => {
                 <div className=" grid grid-cols-1 md:grid-cols-2 gap-8 w-11/12 md:w-10/12 mx-auto">
                     <div className="">
                         <h2 className="font-bold  text-2xl md:text-3xl lg:text-4xl">
-                            Trusted Ready Mix Services in Toronto
+                            Trusted Mixed Concrete Services in Toronto
                         </h2>
                         <div className="h-1 w-40 bg-primary my-5" />
                         <p className="text-dark-300 md:text-lg mb-10 ">
-                            When it comes to reliable and trusted ready mix services in Toronto,
-                            there is no better choice than Prime Ready Mix. With a proven track
-                            record of delivering high-quality concrete mixes tailored to meet the
-                            specific needs of each project, we have established ourselves as a go-to
-                            provider in the Toronto Ready Mix industry. Our team of skilled
-                            technicians and state-of-the-art batching plants ensure precise and
-                            consistent mixes every time. Whether it's a small residential project or
-                            a large-scale commercial venture, Prime Ready Mix takes pride in our
-                            prompt and efficient service, ensuring that projects stay on schedule.
-                            Additionally, our commitment to quality control and adherence to
-                            industry standards guarantee that the concrete supplied is not only
-                            durable but also environmentally sustainable. When you choose Prime
-                            Ready Mix, you're not just getting concrete; you're getting a partner
-                            dedicated to the success of your project.
+                            With a proven track record of delivering high-quality concrete mixes
+                            tailored to meet the specific needs of each project, we have established
+                            ourselves as a go-to provider in the Toronto Ready Mix Concrete
+                            industry. Our team of skilled technicians and state-of-the-art batching
+                            plants ensure precise and consistent mixes every time. Whether it's a
+                            small residential project or a large-scale commercial venture, Prime
+                            Ready Mix takes pride in our prompt and efficient service, ensuring that
+                            projects stay on schedule. Additionally, our commitment to quality
+                            control and adherence to industry standards guarantee that the concrete
+                            supplied is not only durable but also environmentally sustainable. When
+                            you choose Prime Ready Mix, you're not just getting concrete; you're
+                            getting a partner dedicated to the success of your project.
                         </p>
                     </div>
                 </div>
@@ -165,22 +163,30 @@ const Home = () => {
                     />
                     <div className="w-11/12 md:w-10/12 mx-auto">
                         <h3 className="font-bold  text-2xl md:text-3xl lg:text-4xl">
-                            Our Ready Mix Services
+                            Our Ready Mix Concrete Services
                         </h3>
                         <div className="h-1 w-40 bg-primary my-5" />
                         <p className="text-dark-300 md:text-lg">
-                            Our Ready Mix Services offer a seamless solution for all your concrete
-                            needs and concrete delivery services in GTA. With a dedicated team of
-                            skilled professionals and a fleet of state-of-the-art mixing trucks, we
-                            ensure that you receive the highest-quality concrete precisely when and
-                            where you need it. Whether it's a small residential project or a
-                            large-scale commercial undertaking, our Toronto Ready Mix services are
-                            designed to save you time, labor, and costs associated with on-site
-                            mixing. We take pride in our commitment to delivering consistent,
-                            durable, and reliable concrete mixes tailored to meet the unique
-                            specifications of each project. Trust in our expertise and experience to
-                            bring your construction visions to life, backed by the convenience and
-                            efficiency of our top-notch ready mix Toronto services.
+                            Prime Ready Mix Concrete Services offers a seamless solution for all
+                            your concrete needs and concrete delivery services in GTA. With a
+                            dedicated team of skilled professionals and a fleet of state-of-the-art
+                            mixing trucks, we ensure that you receive the highest-quality concrete
+                            precisely when and where you need it. Whether it's a small residential
+                            project or a large-scale commercial undertaking, we design our Toronto
+                            Ready Mix services to save you time, labor, and costs associated with
+                            on-site mixing. We take pride in our commitment to delivering
+                            consistent, durable, and reliable{" "}
+                            <a
+                                href="https://en.wikipedia.org/wiki/Ready-mix_concrete"
+                                target="_blank"
+                                className="text-blue-500 underline"
+                            >
+                                concrete mixes
+                            </a>{" "}
+                            tailored to meet the unique specifications of each project. Trust in our
+                            expertise and experience to bring your construction visions to life,
+                            backed by the convenience and efficiency of our top-notch ready mix
+                            Toronto services.
                         </p>
                     </div>
                 </div>
@@ -202,19 +208,20 @@ const Home = () => {
                         </h3>
                         <div className="bar my-4" />
                         <p className="mb-3 text-dark-400 md:text-lg">
-                            When it comes to Toronto Ready Mix, choosing Prime Ready Mix is an
-                            assurance of unmatched quality and reliability. With years of experience
-                            in the industry, we have honed our expertise to deliver concrete
-                            solutions that exceed expectations. Our state-of-the-art facilities and
-                            advanced mixing technology ensure that every batch of ready mix is
-                            precisely formulated to meet the unique demands of your project. What
-                            sets us apart is our unwavering commitment to timeliness, ensuring that
-                            your concrete arrives exactly when you need it. Moreover, our team of
-                            skilled professionals is dedicated to providing personalized service,
-                            offering guidance and expertise throughout the process. When you choose
-                            us for Toronto Ready Mix, you're not just getting concrete; you're
-                            getting a partner in your project's success. Trust us to lay the
-                            foundation for your vision with excellence and precision.
+                            When it comes to Toronto Ready Mix Concrete Services, choosing Prime
+                            Ready Mix is an assurance of unmatched quality and reliability. With
+                            years of experience in the industry, we have honed our expertise to
+                            deliver concrete solutions that exceed expectations. Our
+                            state-of-the-art facilities and advanced mixing technology ensure that
+                            every batch of ready mix is precisely formulated to meet the unique
+                            demands of your project. What sets us apart is our unwavering commitment
+                            to timeliness, ensuring that your concrete arrives exactly when you need
+                            it. Moreover, our team of skilled professionals is dedicated to
+                            providing personalized service, offering guidance and expertise
+                            throughout the process. When you choose us for Toronto Ready Mix
+                            Services, you're not just getting concrete; you're getting a partner in
+                            your project's success. Trust us to lay the foundation for your vision
+                            with excellence and precision.
                         </p>
                     </div>
                 </div>
