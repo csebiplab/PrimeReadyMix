@@ -19,19 +19,6 @@ export const metadata = {
             me: ["my-email", "my-link"],
         },
     },
-    // robots: {
-    //     index: false,
-    //     follow: true,
-    //     nocache: true,
-    //     googleBot: {
-    //         index: true,
-    //         follow: false,
-    //         noimageindex: true,
-    //         "max-video-preview": -1,
-    //         "max-image-preview": "large",
-    //         "max-snippet": -1,
-    //     },
-    // },
 };
 
 export default function RootLayout({ children }) {
@@ -42,10 +29,7 @@ export default function RootLayout({ children }) {
                 <Header />
                 {children}
                 <Footer />
-                <Script
-                    src="https://kit.fontawesome.com/d63d7fa193.js"
-                    crossOrigin="anonymous"
-                ></Script>
+                <Script src="https://kit.fontawesome.com/d63d7fa193.js"></Script>
             </body>
         </html>
     );

@@ -1,4 +1,3 @@
-import BottomServiceArea from "../../components/common/BottomServiceArea";
 import Reviews from "./Reviews";
 
 export const metadata = {
@@ -43,7 +42,6 @@ export default function () {
                     </div>
                 </div>
             </section>
-            <BottomServiceArea />
         </main>
     );
 }

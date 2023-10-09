@@ -16,7 +16,6 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import BottomServiceArea from "../../components/common/BottomServiceArea";
 
 const ClockIcon = ({ width, height, fillColor, ...props }) => {
     return (
@@ -555,8 +554,8 @@ const Services = () => {
                                 <h6 className="text-lg md:text-xl lg:text-2xl text-primary font-semibold mb-2 ">
                                     {item.title}
                                 </h6>
-                                {item.list.map((e) => (
-                                    <p className="mb-3 flex gap-2 items-start">
+                                {item.list.map((e, key) => (
+                                    <p className="mb-3 flex gap-2 items-start" key={key}>
                                         <span className="inline-block min-h-[8px] min-w-[8px] mt-2 rounded-full bg-primary" />{" "}
                                         <span>{e}</span>
                                     </p>
@@ -652,8 +651,11 @@ const Services = () => {
                                 <h6 className="text-lg md:text-xl lg:text-2xl text-primary font-semibold mb-2 ">
                                     {item.title}
                                 </h6>
-                                {item.list.map((e) => (
-                                    <p className="pl-4 text-[16px] mb-3 flex gap-2 items-start">
+                                {item.list.map((e, key) => (
+                                    <p
+                                        className="pl-4 text-[16px] mb-3 flex gap-2 items-start"
+                                        key={key}
+                                    >
                                         <span className="inline-block min-h-[8px] min-w-[8px] mt-2 rounded-full bg-primary" />{" "}
                                         <span>{e}</span>
                                     </p>
@@ -694,7 +696,6 @@ const Services = () => {
                                 />
                                 <Input
                                     size="lg"
-                                    // color="black"
                                     className="text-2xl font-bold  bg-white"
                                     label="Mobile"
                                     required
@@ -713,9 +714,9 @@ const Services = () => {
                                     required
                                 />
                                 <Button
+                                    aria-label="estimate-button"
                                     size="md"
                                     className="bg-primary text-lg rounded-md my-0"
-                                    color="black"
                                 >
                                     Get an estimate
                                 </Button>
@@ -725,9 +726,9 @@ const Services = () => {
                             </h3>
                             <a href="tel:+1 (647) 539-6755" className="w-full">
                                 <Button
+                                    aria-label="call-button"
                                     size="md"
                                     className="bg-dark w-full text-lg rounded-md my-0"
-                                    color="black "
                                 >
                                     Make a call
                                 </Button>
@@ -844,7 +845,7 @@ const Services = () => {
                     <img
                         src="https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/blob-9397e44.png/:/cr=t:0%25,l:0.12%25,w:99.75%25,h:100%25/rs=w:600,h:451,cg:true"
                         alt=""
-                        className="w-full sticky top-32"
+                        className="w-full sticky top-32 h-full"
                     />
                 </div>
             </section>
@@ -990,15 +991,13 @@ const Services = () => {
                         <img
                             src="https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/P85-side-e1663291233852.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1352,h:500,cg:true"
                             alt=""
-                            className="w-full sticky top-32 "
+                            className="w-full sticky top-32 h-full"
                         />
                     </div>
                 </div>
             </section>
 
             <FAQsection />
-
-            <BottomServiceArea />
         </main>
     );
 };

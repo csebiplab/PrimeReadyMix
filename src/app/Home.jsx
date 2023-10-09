@@ -2,16 +2,12 @@
 
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
-import { Autoplay, Pagination } from "swiper/modules";
-import BottomServiceArea from "../components/common/BottomServiceArea";
+import { Autoplay } from "swiper/modules";
 import ServicesSection from "../components/common/ServicesSection";
 import { contacts } from "../site/info";
-import { BsCheck2Square } from "react-icons/bs";
-import { FaRegWindowClose } from "react-icons/fa";
 import DialogComponent from "../components/common/DialogComponent";
 import Image from "next/image";
 
@@ -35,6 +31,7 @@ const Home = () => {
                         </h2>
                         <div className="flex justify-center md:justify-start">
                             <button
+                                aria-label="estimate-button"
                                 className="btn !text-sm !py-3 !px-10 my-6 !bg-primary"
                                 onClick={handleOpen}
                             >
@@ -49,7 +46,11 @@ const Home = () => {
                     </div>
                 </div>
                 <section className="md:hidden">
-                    <img src={"/prime-readymix-banner.png"} alt="prime-ready-mix-banner" />
+                    <img
+                        src={"/prime-readymix-banner.png"}
+                        alt="prime-ready-mix-banner"
+                        className="w-full h-full"
+                    />
                 </section>
                 <Swiper
                     spaceBetween={0}
@@ -106,49 +107,6 @@ const Home = () => {
                             Ready Mix stands as a beacon of quality and reliability in the Toronto
                             Ready Mix industry.
                         </p>
-                        {/* <div>
-                            <h2 className="font-bold text-2xl md:text-3xl lg:text-4xl my-5 text-center">
-                                Why Choose Prime Ready Mix?
-                            </h2>
-                        </div>
-                        <div className="flex flex-col md:flex-row justify-center items-center">
-                            <div>
-                                <h5 className="text-sm font-bold mt-5 mb-3">
-                                    Easy Renovation Experience
-                                </h5>
-                                {[
-                                    "All fixtures, materials, and labor included",
-                                    "Built by a local, vetted contractor",
-                                    "4 weeks average build",
-                                ].map((item, key) => (
-                                    <figure
-                                        key={key}
-                                        className=" mx-auto flex items-center justify-start mb-2 text-lg font-medium"
-                                    >
-                                        <FaRegWindowClose className="h-6 w-6 fill-primary mr-1" />
-                                        <p className=" text-sm">{item}</p>
-                                    </figure>
-                                ))}
-                            </div>
-                            <div>
-                                <h5 className="text-sm font-bold mt-5 mb-3">
-                                    Usual Renovation Experience
-                                </h5>
-                                {[
-                                    "All fixtures, materials, and labor included",
-                                    "Built by a local, vetted contractor",
-                                    "4 weeks average build",
-                                ].map((item, key) => (
-                                    <figure
-                                        key={key}
-                                        className=" mx-auto flex items-center justify-start mb-2 text-lg font-medium"
-                                    >
-                                        <BsCheck2Square className="h-6 w-6 fill-buttonColor mr-1" />
-                                        <p className=" text-sm">{item}</p>
-                                    </figure>
-                                ))}
-                            </div>
-                        </div> */}
                     </div>
                 </div>
             </section>
@@ -251,7 +209,7 @@ const Home = () => {
                     <h3 className="tracking-2 mb-4  text-2xl md:text-3xl lg:text-4xl">
                         Why is Prime Ready Mix Your Best Choice?
                     </h3>
-                    <p className="mb-3 text-dark-400 max-w-3xl mx-auto md:text-lg text-left md:text-center">
+                    <p className="mb-3 text-dark-400 mx-auto md:text-lg text-left md:text-center">
                         Prime Ready Mix stands out as the best choice for your concrete needs due to
                         its unwavering commitment to quality, expertise, a wide range of products,
                         efficient delivery, environmentally conscious practices, cost-effectiveness,
@@ -407,8 +365,6 @@ const Home = () => {
                     ))}
                 </Swiper>
             </section>
-
-            <BottomServiceArea />
         </main>
     );
 };

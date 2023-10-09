@@ -59,7 +59,7 @@ const Header = () => {
                         <img
                             src="/prime-readymix-logo.png"
                             alt=""
-                            className="max-w-[150px] w-full"
+                            className="max-w-[150px] w-full h-full"
                         />
                     </a>
                     <a
@@ -101,7 +101,7 @@ const Header = () => {
                         className="block p-4 bg-[#33475B] !text-white rounded-none  lg:hidden"
                         onClick={openDrawer}
                     >
-                        <i class="fa-solid fa-bars text-xl bg-none text-white " />
+                        <i className="fa-solid fa-bars text-xl bg-none text-white " />
                     </IconButton>
                 </div>
             </header>
@@ -128,11 +128,12 @@ const Header = () => {
                     </IconButton>
                 </div>
                 <nav className="gap-2 flex flex-col">
-                    {menu.map((item) => (
+                    {menu.map((item, key) => (
                         <Link
                             href={item.url}
                             className="flex items-center gap-2 py-2 px-3 group"
                             onClick={closeDrawer}
+                            key={key}
                         >
                             <span className="text-xl font-semibold text-primary">{item.name}</span>
                         </Link>

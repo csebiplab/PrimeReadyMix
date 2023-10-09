@@ -1,10 +1,5 @@
 "use client";
-import {
-    AiFillFacebook,
-    AiFillGoogleCircle,
-    AiOutlineCopyrightCircle,
-    AiOutlineInstagram,
-} from "react-icons/ai";
+import { AiFillFacebook, AiFillGoogleCircle, AiOutlineInstagram } from "react-icons/ai";
 import { site_info } from "../../site/info";
 import Link from "next/link";
 
@@ -16,7 +11,7 @@ const Footer = () => {
                     <div className="col-span-12 md:col-span-2 mx-auto justify-center md:justify-start">
                         <img
                             src="/prime-readymix-logo.png"
-                            className="w-full max-w-[150px] bg-white mb-3 rounded-none mx-auto md:mx-0"
+                            className="w-full max-w-[150px] bg-white mb-3 rounded-none mx-auto md:mx-0 h-full"
                             alt=""
                         />
                         <p className="text-sm md:w-4/5 leading-relexed text-center md:text-left">
