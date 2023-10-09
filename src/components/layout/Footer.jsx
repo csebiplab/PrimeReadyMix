@@ -30,14 +30,17 @@ const Footer = () => {
                         </h4>
                         <ul className="tracking-wide text-center md:text-start text-base text-white">
                             <li>
-                                <Link href="/blogs" className="mb-1 text-white hover:text-primary">
+                                <Link
+                                    href="/blogs"
+                                    className="mb-1 text-white hover:text-primary text-lg py-2"
+                                >
                                     Blogs
                                 </Link>
                             </li>
                             <li>
                                 <Link
                                     href="/contact-us"
-                                    className="mb-1 text-white hover:text-primary"
+                                    className="mb-1 text-white hover:text-primary text-lg py-2"
                                 >
                                     Contact Us
                                 </Link>
@@ -45,7 +48,7 @@ const Footer = () => {
                             <li>
                                 <Link
                                     href="/testimonials"
-                                    className="mb-1 text-white hover:text-primary"
+                                    className="mb-1 text-white hover:text-primary text-lg py-2"
                                 >
                                     Testimonial
                                 </Link>
@@ -72,13 +75,25 @@ const Footer = () => {
                             Contacts
                         </h4>
                         <div className="flex gap-3 md:gap-6 justify-center md:justify-start items-center">
-                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <a
+                                href="https://readymixnearme.ca/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
                                 <AiFillFacebook className="h-5 md:h-8 w-5 md:w-8" />
                             </a>
-                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <a
+                                href="https://readymixnearme.ca/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
                                 <AiFillGoogleCircle className="h-5 md:h-8 w-5 md:w-8" />
                             </a>
-                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <a
+                                href="https://readymixnearme.ca/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
                                 <AiOutlineInstagram className="h-5 md:h-8 w-5 md:w-8" />
                             </a>
                         </div>
