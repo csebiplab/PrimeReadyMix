@@ -1,5 +1,4 @@
 import { BsCheck2Square } from "react-icons/bs";
-import BottomServiceArea from "../../components/common/BottomServiceArea";
 import ReviewSlider from "../../components/common/ReviewSlider";
 import ServicesSection from "../../components/common/ServicesSection";
 import { site_info } from "../../site/info";
@@ -55,7 +54,6 @@ export default function contact_us() {
             </section>
             <ServicesSection />
 
-            <BottomServiceArea />
         </main>
     );
 }

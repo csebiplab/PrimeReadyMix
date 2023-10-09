@@ -28,7 +28,6 @@ const ProjectFrom = ({}) => {
                 <Input
                     label="Project Budget"
                     size="lg"
-                    // color="orange"
                     className="text-2xl font-bold rounded-none border-none bg-white"
                     placeholder="Mobile*"
                     required
@@ -56,7 +55,12 @@ const ProjectFrom = ({}) => {
                         className: "hidden",
                     }}
                 />
-                <Button size="lg" className="bg-primary text-xl" color="orange">
+                <Button
+                    aria-label="submit-button"
+                    size="lg"
+                    className="bg-primary text-xl"
+                    color="orange"
+                >
                     Submit
                 </Button>
             </form>

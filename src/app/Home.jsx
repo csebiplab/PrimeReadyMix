@@ -2,16 +2,12 @@
 
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
-import { Autoplay, Pagination } from "swiper/modules";
-import BottomServiceArea from "../components/common/BottomServiceArea";
+import { Autoplay } from "swiper/modules";
 import ServicesSection from "../components/common/ServicesSection";
 import { contacts } from "../site/info";
-import { BsCheck2Square } from "react-icons/bs";
-import { FaRegWindowClose } from "react-icons/fa";
 import DialogComponent from "../components/common/DialogComponent";
 import Image from "next/image";
 
@@ -35,6 +31,7 @@ const Home = () => {
                         </h2>
                         <div className="flex justify-center md:justify-start">
                             <button
+                                aria-label="estimate-button"
                                 className="btn !text-sm !py-3 !px-10 my-6 !bg-primary"
                                 onClick={handleOpen}
                             >
@@ -49,7 +46,14 @@ const Home = () => {
                     </div>
                 </div>
                 <section className="md:hidden">
-                    <img src={"/prime-readymix-banner.png"} alt="prime-ready-mix-banner" />
+                    <Image
+                        priority
+                        src={"/prime-readymix-banner.png"}
+                        alt="prime-ready-mix-banner"
+                        width={500}
+                        height={500}
+                        className="w-full h-full"
+                    />
                 </section>
                 <Swiper
                     spaceBetween={0}
@@ -67,10 +71,13 @@ const Home = () => {
                         "https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/blob-dce5594.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:600,cg:true",
                     ].map((item, key) => (
                         <SwiperSlide key={key} className="h-60 md:h-full">
-                            <img
+                            <Image
+                                priority
                                 src={item}
                                 className="object-cover object-center h-full w-full"
                                 alt=""
+                                width={300}
+                                height={300}
                             />
                         </SwiperSlide>
                     ))}
@@ -79,10 +86,13 @@ const Home = () => {
 
             <section className="md:py-10">
                 <div className=" flex flex-col-reverse md:flex-row gap-8 relative">
-                    <img
+                    <Image
+                        priority
                         src="https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/blob-9397e44.png/:/cr=t:0%25,l:0.12%25,w:99.75%25,h:100%25/rs=w:600,h:451,cg:true/qt=q:46"
                         alt=""
-                        className="w-full h-full max-h-[320px] md:max-h-[600px]"
+                        className="object-cover object-center w-full h-full max-h-[320px] md:max-h-[600px]"
+                        width={300}
+                        height={300}
                     />
                     <div className="w-11/12 md:w-10/12 mx-auto md:mr-auto">
                         <h2 className="font-bold text-2xl  md:text-3xl lg:text-4xl">
@@ -106,49 +116,6 @@ const Home = () => {
                             Ready Mix stands as a beacon of quality and reliability in the Toronto
                             Ready Mix industry.
                         </p>
-                        {/* <div>
-                            <h2 className="font-bold text-2xl md:text-3xl lg:text-4xl my-5 text-center">
-                                Why Choose Prime Ready Mix?
-                            </h2>
-                        </div>
-                        <div className="flex flex-col md:flex-row justify-center items-center">
-                            <div>
-                                <h5 className="text-sm font-bold mt-5 mb-3">
-                                    Easy Renovation Experience
-                                </h5>
-                                {[
-                                    "All fixtures, materials, and labor included",
-                                    "Built by a local, vetted contractor",
-                                    "4 weeks average build",
-                                ].map((item, key) => (
-                                    <figure
-                                        key={key}
-                                        className=" mx-auto flex items-center justify-start mb-2 text-lg font-medium"
-                                    >
-                                        <FaRegWindowClose className="h-6 w-6 fill-primary mr-1" />
-                                        <p className=" text-sm">{item}</p>
-                                    </figure>
-                                ))}
-                            </div>
-                            <div>
-                                <h5 className="text-sm font-bold mt-5 mb-3">
-                                    Usual Renovation Experience
-                                </h5>
-                                {[
-                                    "All fixtures, materials, and labor included",
-                                    "Built by a local, vetted contractor",
-                                    "4 weeks average build",
-                                ].map((item, key) => (
-                                    <figure
-                                        key={key}
-                                        className=" mx-auto flex items-center justify-start mb-2 text-lg font-medium"
-                                    >
-                                        <BsCheck2Square className="h-6 w-6 fill-buttonColor mr-1" />
-                                        <p className=" text-sm">{item}</p>
-                                    </figure>
-                                ))}
-                            </div>
-                        </div> */}
                     </div>
                 </div>
             </section>
@@ -177,17 +144,23 @@ const Home = () => {
                         </p>
                     </div>
                 </div>
-                <img
+                <Image
+                    priority
                     src="https://media.istockphoto.com/id/997566504/photo/cement-mixer-on-the-road.webp?b=1&s=170667a&w=0&k=20&c=nkm-6Ih8q6L6_PaA-xqRV63nADGh7xQzb9f9oLY8ImU="
                     alt=""
+                    width={300}
+                    height={300}
                     className="relative md:!absolute mb-4 md:mb-0 top-0 right-0 h-full w-full md:w-[45%] max-h-64 md:max-h-full object-cover object-center"
                 />
             </section>
             <section className="py-10">
                 <div className=" grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <img
+                    <Image
+                        priority
                         src="https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/blob-9397e44.png/:/cr=t:0%25,l:0.12%25,w:99.75%25,h:100%25/rs=w:600,h:451,cg:true/qt=q:46"
                         alt=""
+                        width={300}
+                        height={300}
                         className="w-full h-full max-h-[320px] md:max-h-[600px] object-cover object-bottom"
                     />
                     <div className="w-11/12 md:w-10/12 mx-auto">
@@ -214,9 +187,12 @@ const Home = () => {
             </section>
 
             <section className="relative bg-dark-50/5">
-                <img
+                <Image
+                    priority
                     src="https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/IMG_1524-scaled.webp/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:600,cg:true"
                     className="md:absolute mb-4 md:mb-0 top-0 right-0 h-full w-full md:w-[45%] object-cover object-center"
+                    width={300}
+                    height={300}
                     alt=""
                 />
                 <div className=" grid grid-cols-1 md:grid-cols-2 gap-5 w-11/12 md:w-10/12 mx-auto">
@@ -251,7 +227,7 @@ const Home = () => {
                     <h3 className="tracking-2 mb-4  text-2xl md:text-3xl lg:text-4xl">
                         Why is Prime Ready Mix Your Best Choice?
                     </h3>
-                    <p className="mb-3 text-dark-400 max-w-3xl mx-auto md:text-lg text-left md:text-center">
+                    <p className="mb-3 text-dark-400 mx-auto md:text-lg text-left md:text-center">
                         Prime Ready Mix stands out as the best choice for your concrete needs due to
                         its unwavering commitment to quality, expertise, a wide range of products,
                         efficient delivery, environmentally conscious practices, cost-effectiveness,
@@ -297,9 +273,12 @@ const Home = () => {
                     <div className="bar my-4 mx-auto" />
                 </div>
                 <div className="relative">
-                    <img
+                    <Image
+                        priority
                         src="https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/blob-b6db9aa.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:600,cg:true"
                         className="md:absolute mb-4 md:mb-0 top-0 left-0 h-full w-full md:w-[45%] object-cover object-center"
+                        width={300}
+                        height={300}
                         alt=""
                     />
                     <div className=" grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -398,17 +377,18 @@ const Home = () => {
                         "https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/Burlington-Concrete-Mixer.jpeg/:/cr=t:0%25,l:1.09%25,w:75%25,h:100%25/rs=w:365,h:365,cg:true",
                     ].map((item, key) => (
                         <SwiperSlide key={key} className="h-60 md:h-full">
-                            <img
+                            <Image
+                                priority
                                 src={item}
                                 className="object-cover object-center h-full w-full"
                                 alt=""
+                                width={300}
+                                height={300}
                             />
                         </SwiperSlide>
                     ))}
                 </Swiper>
             </section>
-
-            <BottomServiceArea />
         </main>
     );
 };

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { FaBars, FaPhone } from "react-icons/fa";
 import { contacts, site_info } from "../../site/info";
+import Image from "next/image";
 
 const menu = [
     {
@@ -56,10 +57,13 @@ const Header = () => {
                 </div>
                 <div className="w-11/12 md:w-10/12 mx-auto gap-2 py-2 flex  items-center justify-between bg-white sticky top-0">
                     <a href="/">
-                        <img
+                        <Image
+                            priority
                             src="/prime-readymix-logo.png"
                             alt=""
-                            className="max-w-[150px] w-full"
+                            className="max-w-[150px] w-full h-full"
+                            width={300}
+                            height={300}
                         />
                     </a>
                     <a
@@ -97,11 +101,12 @@ const Header = () => {
                         </Link>
                     </nav>
                     <IconButton
+                        aria-label="icon-button"
                         variant="text"
                         className="block p-4 bg-[#33475B] !text-white rounded-none  lg:hidden"
                         onClick={openDrawer}
                     >
-                        <i class="fa-solid fa-bars text-xl bg-none text-white " />
+                        <i className="fa-solid fa-bars text-xl bg-none text-white " />
                     </IconButton>
                 </div>
             </header>
@@ -110,7 +115,12 @@ const Header = () => {
                     <Typography variant="h5" color="blue-gray">
                         {site_info.name}
                     </Typography>
-                    <IconButton variant="text" color="blue-gray" onClick={closeDrawer}>
+                    <IconButton
+                        variant="text"
+                        color="blue-gray"
+                        onClick={closeDrawer}
+                        aria-label="icon-button"
+                    >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
@@ -128,11 +138,12 @@ const Header = () => {
                     </IconButton>
                 </div>
                 <nav className="gap-2 flex flex-col">
-                    {menu.map((item) => (
+                    {menu.map((item, key) => (
                         <Link
                             href={item.url}
                             className="flex items-center gap-2 py-2 px-3 group"
                             onClick={closeDrawer}
+                            key={key}
                         >
                             <span className="text-xl font-semibold text-primary">{item.name}</span>
                         </Link>

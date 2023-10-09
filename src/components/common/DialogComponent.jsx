@@ -18,7 +18,6 @@ import React from "react";
 const DialogComponent = ({ open, handleOpen, setOpen }) => {
     return (
         <Dialog
-            // size="xl"
             open={open}
             handler={handleOpen}
             className="bg-transparent shadow-none h-screen overflow-y-scroll"
@@ -27,7 +26,7 @@ const DialogComponent = ({ open, handleOpen, setOpen }) => {
                 <div className="flex justify-end items-start w-10/12 mx-auto mt-5">
                     <span>
                         <i
-                            class="fa-solid fa-x"
+                            className="fa-solid fa-x"
                             onClick={() => {
                                 setOpen(false);
                             }}
@@ -58,7 +57,6 @@ const DialogComponent = ({ open, handleOpen, setOpen }) => {
                         />
                         <Input
                             size="lg"
-                            // color="black"
                             className="text-2xl font-bold  bg-white"
                             label="Mobile"
                             required
@@ -77,9 +75,9 @@ const DialogComponent = ({ open, handleOpen, setOpen }) => {
                             required
                         />
                         <Button
+                            aria-label="estimate-button"
                             size="md"
                             className="bg-primary text-lg rounded-md my-0"
-                            color="black"
                         >
                             Get an estimate
                         </Button>
@@ -87,9 +85,9 @@ const DialogComponent = ({ open, handleOpen, setOpen }) => {
                     <h3 className="text-sm font-semibold text-center text-black my-1">OR</h3>
                     <a href="tel:+1 (647) 539-6755" className="w-full">
                         <Button
+                            aria-label="estimate-button"
                             size="md"
                             className="bg-dark w-full text-lg rounded-md my-0"
-                            color="black "
                         >
                             Make a call
                         </Button>

@@ -1,12 +1,15 @@
 const nextConfig = {
-  reactStrictMode: true,
-  images: {
-    domains: [
-      "media-content.angi.com",
-      "img1.wsimg.com",
-      // Add any other domains your application uses for images
-    ],
-  },
+
+    reactStrictMode: true,
+
+    images: {
+        domains: [
+            "icons8.com",
+            "media-content.angi.com",
+            "img1.wsimg.com",
+            "media.istockphoto.com",
+        ],
+    },
 };
 
 module.exports = nextConfig;
