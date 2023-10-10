@@ -240,42 +240,7 @@ const Home = () => {
                         efficient delivery, environmentally conscious practices, cost-effectiveness,
                         customization options, customer-centric approach, safety, and a proven track
                         record. Choosing Prime Ready Mix means choosing excellence in concrete
-                        solutions. 01 - Quality Assurance: Prime Ready Mix prioritizes quality in
-                        every batch of concrete we produce. Our state-of-the-art facilities and
-                        stringent quality control measures ensure that you receive a consistent and
-                        reliable product every time. 02 - Expertise and Experience: With years of
-                        experience in the industry, Prime Ready Mix boasts a team of experts. They
-                        understand the nuances of concrete production. Our knowledge enables us to
-                        tailor mixes to specific project requirements, ensuring optimal performance.
-                        03 - Wide Range of Products: Prime Ready Mix offers a diverse range of
-                        concrete mixes designed for various applications. Whether it's for a
-                        residential, commercial, or industrial project, we have a solution to meet
-                        your specific needs. 04 - Efficient Delivery Service: Time is of the essence
-                        in construction projects. Everyone knows Prime Ready Mix for its punctual
-                        and efficient delivery service. Our well-maintained fleet of vehicles
-                        ensures that your concrete arrives on-site promptly. 05 - Environmentally
-                        Conscious Practices: Prime Ready Mix is committed to sustainable practices.
-                        Our Toronto Ready Mix Concrete team employs eco-friendly technologies and
-                        methods in our production process, minimizing our environmental footprint.
-                        06 - Cost-Effective Solutions: Prime Ready Mix understands the importance of
-                        staying within budget. We offer competitive pricing without compromising on
-                        quality, providing cost-effective solutions for your projects. 07 -
-                        Customizable Mix Designs: Every construction project is unique, and Prime
-                        Ready Mix recognizes this. We offer customizable mix designs, allowing you
-                        to fine-tune the concrete to meet specific project requirements. Ready to
-                        start your home construction services? Embarking on the journey of building
-                        your dream home is an exciting endeavor. Finding the right construction
-                        services is a crucial step toward turning your vision into reality. Our team
-                        is dedicated to bringing your dreams to life, combining expertise, quality
-                        craftsmanship, and a commitment to client satisfaction. With years of
-                        experience in the Toronto Ready Mix Concrete industry, we understand that
-                        every project is unique, and we tailor our services to suit your specific
-                        needs. From the initial design phase to the final finishing touches, we
-                        prioritize open communication and transparency, ensuring you're involved in
-                        every decision along the way. Whether it's a cozy family home or a sprawling
-                        architectural masterpiece, we have the skills, resources, and passion to
-                        bring your vision to fruition. Get ready to embark on this exciting journey
-                        with us. And let's start building your future, one brick at a time.
+                        solutions.
                     </p>
                     <div className="bar my-4 mx-auto" />
                 </div>
