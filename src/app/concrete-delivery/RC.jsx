@@ -108,22 +108,6 @@ export function FAQsection() {
                         question: "What is the quality assurance process at Prime Ready Mix?",
                         answer: "We have a rigorous quality control process in place to ensure that our concrete meets industry standards and specifications. Our materials are sourced from reputable suppliers, and our mixing process is closely monitored.",
                     },
-                    {
-                        question: "Can I request a custom mix for my project?",
-                        answer: "Yes, we can work with you to create a custom mix tailored to your specific project requirements. Our technical team will collaborate with you to develop the ideal mix.",
-                    },
-                    {
-                        question: "What payment methods do you accept?",
-                        answer: "We accept various payment methods, including credit and debit cards, bank transfers, and checks.",
-                    },
-                    {
-                        question: "What is your cancellation policy?",
-                        answer: "If you need to cancel an order, please notify us as soon as possible. Cancellation fees may apply, depending on the stage of the order and other factors.",
-                    },
-                    {
-                        question: "Do you offer technical support or advice?",
-                        answer: "Yes, our technical experts are available to provide guidance on concrete selection, mix design, and other technical aspects of your project. Feel free to reach out to our team with any questions.",
-                    },
                 ].map((item, key) => (
                     <Accordion open={open === key + 1} key={key} icon={<Icon id={1} open={open} />}>
                         <AccordionHeader onClick={() => handleOpen(key + 1)}>
@@ -151,9 +135,9 @@ const Services = () => {
                 <div className=" w-11/12 md:w-10/12 mx-auto ">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5 py-10 md:py-14">
                         <div className="">
-                            <h2 className="font-semibold text-center md:text-left mb-10">
+                            <h1 className="font-semibold text-center md:text-left mb-10">
                                 Concrete delivery services in Toronto
-                            </h2>
+                            </h1>
 
                             <p className="flex-grow text-dark-300 ">
                                 If you're in need of reliable concrete delivery services in Toronto,
@@ -161,12 +145,19 @@ const Services = () => {
                                 concrete solutions tailored to your specific needs. With a fleet of
                                 modern and well-maintained vehicles, we ensure prompt and efficient
                                 delivery to your construction site. Our team of skilled
-                                professionals is committed to delivering high-quality concrete on
-                                time, every time. Whether you require a small batch for a DIY
+                                professionals is committed to delivering{" "}
+                                <a
+                                    href="https://en.wikipedia.org/wiki/Concrete"
+                                    className="text-sky-500 underline"
+                                    target="_blank"
+                                >
+                                    high-quality concrete
+                                </a>{" "}
+                                on time, every time. Whether you require a small batch for a DIY
                                 project or a large-scale commercial delivery, we have the expertise
                                 and resources to meet your requirements. Trust us for hassle-free
                                 and dependable concrete delivery services in Toronto, and let us
-                                contribute to the success of your construction endeavours.
+                                contribute to the success of your construction endeavors.
                             </p>
                         </div>
                     </div>
@@ -202,9 +193,9 @@ const Services = () => {
             <section className="py-10">
                 <div className="w-11/12 md:w-10/12 mx-auto flex flex-col-reverse md:flex-row gap-8">
                     <div className="lg:col-span-2">
-                        <h1 className="font-bold text-2xl md:text-5xl">
-                            Frustrated with your outdated home?
-                        </h1>
+                        <h2 className="font-bold text-2xl md:text-5xl">
+                            Frustrated With Your Outdated Home?
+                        </h2>
                         <div className="h-1 w-40 bg-primary my-5" />
                         <p className="text-dark-300 mb-2">
                             If you find yourself frustrated with your outdated home, it might be
@@ -212,7 +203,12 @@ const Services = () => {
                             rejuvenation. A home is more than just four walls; it's a reflection of
                             your personality, a sanctuary from the world, and a place where memories
                             are made. Outdated spaces can stifle creativity and hinder the sense of
-                            comfort we all seek.
+                            comfort we all seek. Embracing change, whether it's through a fresh coat
+                            of paint, modernizing fixtures, or a complete overhaul, can breathe new
+                            life into your living environment. So, take that first step towards a
+                            more vibrant and inviting space; your revitalized home will not only
+                            elevate your daily experience but also inspire you to create new
+                            chapters of joy and fulfillment within its walls.
                         </p>
                         <p className="text-dark-300 mb-2">
                             Embracing change, whether it's through a fresh coat of paint,
@@ -245,7 +241,7 @@ const Services = () => {
                     />
                     <div className="lg:col-span-2">
                         <h2 className="font-bold text-2xl md:text-5xl">
-                            We're here to solve your concrete problems.
+                            We're here to solve your concrete delivery problems.
                         </h2>
                         <div className="h-1 w-40 bg-primary my-5" />
                         <p className="text-dark-300 mb-2">
@@ -256,7 +252,7 @@ const Services = () => {
                             durable, long-lasting solutions. Our skilled professionals employ the
                             latest techniques and top-quality materials to ensure your concrete
                             project stands the test of time. Say goodbye to unsightly imperfections
-                            and hello to a flawless finish. Trust us to transform your concrete
+                            and hello to a flawless finish. Trust us to transform your substantial
                             challenges into solid, reliable results. Let's build a foundation with
                             our concrete delivery services, which you can rely on.
                         </p>
@@ -267,7 +263,7 @@ const Services = () => {
                 <div className="w-11/12 md:w-10/12 mx-auto">
                     <h2 className="text-center text-dark-400 mb-5">
                         Why Choose Us for{" "}
-                        <span className="text-primary">Ready Mix Concrete Toronto</span>?
+                        <span className="text-primary">Ready Mix Concrete Delivery Toronto</span>?
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-x-3 gap-y-4 mb-3">
                         {[
@@ -283,43 +279,23 @@ const Services = () => {
                             },
                             {
                                 id: 3,
-                                title: "Timely Delivery",
-                                desc: "We understand the importance of punctuality in construction projects. Our fleet of well-maintained vehicles and efficient logistics system allow us to deliver ready mix concrete to your site on time, every time.",
+                                title: "Cost-Effective Option",
+                                desc: "Opting for ready mix concrete delivery can save you both time and money. You eliminate the need for on-site mixing, reducing labor costs and minimizing waste. Additionally, our competitive pricing ensures that you get value for your investment.",
                             },
                             {
                                 id: 4,
-                                title: "Customized Solutions",
-                                desc: "No two construction projects are the same, which is why we offer customized solutions to meet your specific needs. Whether you require a specific mix design or need concrete for a unique application, we can tailor our services accordingly.",
-                            },
-                            {
-                                id: 5,
-                                title: "Cost-Effective Option",
-                                desc: "Opting for ready mix concrete delivery can save you both time and money. You eliminate the need for on-site mixing, reducing labour costs and minimizing waste. Additionally, our competitive pricing ensures that you get value for your investment.",
-                            },
-                            {
-                                id: 6,
-                                title: "Environmentally Friendly Practices",
-                                desc: "We are committed to sustainable and environmentally friendly practices. Our production processes are designed to minimize waste and emissions, making us a responsible choice for eco-conscious construction projects.",
-                            },
-                            {
-                                id: 7,
-                                title: "Technical Support and Guidance",
-                                desc: "Our team is not just a concrete supplier; we also serve as a valuable resource for technical support and guidance. Whether you have questions about mix designs, pouring techniques, or any other aspect of concrete usage, we're here to help.",
-                            },
-                            {
-                                id: 8,
                                 title: "Safety First",
                                 desc: "Safety is a paramount concern in any construction project. We adhere to strict safety standards in our operations, ensuring that our ready mix concrete is delivered and poured in a manner that prioritizes the well-being of workers and the integrity of the project.",
                             },
                             {
-                                id: 9,
+                                id: 5,
                                 title: "Comprehensive Service Area",
-                                desc: "We have a wide service area, covering [mention locations or regions]. This means that no matter where your project is located within our service area, you can count on us for reliable and efficient ready mix concrete delivery.",
+                                desc: "We have a wide service area covering [mention locations or regions]. It means that no matter where your project is located within our service area, you can count on us for reliable and efficient ready mix concrete delivery.",
                             },
                             {
-                                id: 10,
+                                id: 6,
                                 title: "Customer Satisfaction",
-                                desc: "Our track record speaks for itself. We have a long list of satisfied customers who have benefited from our reliable and high-quality ready mix concrete delivery services.",
+                                desc: "Our track record speaks for itself. We have a long list of satisfied customers who have benefited from our reliable and high-quality ready mix concrete delivery services.                                ",
                             },
                         ].map((item) => (
                             <p key={item?.id}>
@@ -336,7 +312,7 @@ const Services = () => {
                     <p className="p-2 border-l-4 border-primary bg-primary-50 font-medium">
                         In summary, choosing us for your ready mix concrete delivery means opting
                         for quality, expertise, timely service, customization, cost-effectiveness,
-                        sustainability, safety, technical support, and a strong commitment to
+                        sustainability, safety, technical support, and a solid commitment to
                         customer satisfaction. We're not just a supplier; we're a partner in your
                         construction success.
                     </p>
@@ -383,22 +359,7 @@ const Services = () => {
                             {
                                 id: 7,
                                 title: "Effective Communication",
-                                desc: " Clear and open communication is paramount in any construction project. We keep our clients informed about progress, milestones, and any decisions that need to be made. This transparency fosters trust and ensures everyone is on the same page.",
-                            },
-                            {
-                                id: 8,
-                                title: "Adaptability and Flexibility",
-                                desc: "We understand that circumstances may change during construction. Whether it's due to unforeseen challenges or evolving client requirements, we remain flexible and adaptable to accommodate any necessary adjustments.",
-                            },
-                            {
-                                id: 9,
-                                title: "Timely Project Delivery",
-                                desc: "We are committed to delivering projects on time without compromising quality. Our well-defined timelines and efficient project management techniques help us meet deadlines consistently.",
-                            },
-                            {
-                                id: 10,
-                                title: "Post-Construction Support",
-                                desc: "Our commitment doesn't end with project completion. We offer post-construction support to address any concerns or issues that may arise after handover. Our goal is to ensure your satisfaction long after the project is finished.",
+                                desc: " Clear and open communication is paramount in any construction project. We keep our clients informed about progress, milestones, and any decisions that need to be made. This transparency fosters trust and ensures everyone is on the same page.We tackle construction problems with precision, expertise, and a commitment to excellence. Your project's success is our priority, and we're dedicated to delivering results.",
                             },
                         ].map((item) => (
                             <p key={item?.id}>
@@ -412,21 +373,21 @@ const Services = () => {
                             </p>
                         ))}
                     </div>
-                    <p className="p-2 border-l-4 border-primary bg-primary-50 font-medium">
+                    {/* <p className="p-2 border-l-4 border-primary bg-primary-50 font-medium">
                         By following this comprehensive approach, we tackle construction problems
                         with precision, expertise, and a commitment to excellence. Your project's
                         success is our priority, and we're dedicated to delivering results that
                         exceed your expectations.
-                    </p>
+                    </p> */}
                 </div>
             </section>
             <section className="py-10">
                 <div className="w-11/12 md:w-10/12 mx-auto">
                     <div className="mb-5 text-left md:text-center">
-                        <h2 className=" text-dark-400  mb-2">
+                        <h3 className=" text-dark-400  mb-2">
                             Preparing a <span className="text-primary">Customized Plan</span> for
-                            Concrete Supply
-                        </h2>
+                            Concrete Delivery
+                        </h3>
                         <p className="text-lg max-w-3xl mx-auto leading-relaxed font-medium text-dark-400">
                             By following this customized concrete supply plan, you can ensure a
                             smooth and efficient process from the initial assessment to the
@@ -439,8 +400,7 @@ const Services = () => {
                                 id: 1,
                                 title: "Project Overview",
                                 list: [
-                                    "Define the scope of the project, including location, size, and type of construction.",
-                                    "Identify specific requirements for concrete, such as strength, mix design, and special additives.",
+                                    "Define the scope of the project, including location, size, and type of construction.Identify specific requirements for concrete, such as strength, mix design, and special additives.",
                                 ],
                             },
                             {
@@ -514,45 +474,6 @@ const Services = () => {
                                     "Develop contingency plans for unforeseen circumstances, such as unexpected delays, changes in project scope, or adverse weather conditions.",
                                 ],
                             },
-                            {
-                                id: 11,
-                                title: "Communication and Coordination",
-                                list: [
-                                    "Establish clear lines of communication between the project team, concrete supplier, and any other stakeholders involved.",
-                                    "Regularly update all parties on progress and any changes to the plan.",
-                                ],
-                            },
-                            {
-                                id: 12,
-                                title: "Environmental and Regulatory Compliance",
-                                list: [
-                                    "Ensure that all concrete production and delivery processes comply with local environmental regulations.",
-                                    "Consider sustainable sourcing options and waste management practices.",
-                                ],
-                            },
-                            {
-                                id: 13,
-                                title: "Cost Analysis and Budgeting",
-                                list: [
-                                    "Create a detailed cost analysis that includes concrete supply, transportation, and any additional expenses related to the concrete supply plan.",
-                                    "Allocate a budget and monitor expenses throughout the project.",
-                                ],
-                            },
-                            {
-                                id: 14,
-                                title: "Documentation and Reporting",
-                                list: [
-                                    "Maintain thorough records of all concrete-related activities, including delivery receipts, quality test results, and any incidents or deviations from the plan.",
-                                    "Generate regular reports to track progress and ensure compliance with the plan.",
-                                ],
-                            },
-                            {
-                                id: 15,
-                                title: "Post-Project Evaluation",
-                                list: [
-                                    "Conduct a comprehensive evaluation after project completion to assess the effectiveness of the concrete supply plan.",
-                                ],
-                            },
                         ].map((item) => (
                             <figure
                                 key={item?.id}
@@ -576,7 +497,7 @@ const Services = () => {
                 </div>
             </section>
             <section className="py-10 relative">
-                <div className="w-11/12 md:w-10/12 mx-auto grid grid-cols-1 md:grid-cols-2">
+                <div className="w-11/12 md:w-10/12 mx-auto grid grid-cols-1 md:grid-cols-2 gap-3">
                     <div className="">
                         <div className="mb-5">
                             <h2 className=" text-dark-400  mb-2">
@@ -596,23 +517,14 @@ const Services = () => {
                                 id: 1,
                                 title: "Structural Design Analysis",
                                 list: [
-                                    "Conduct a thorough structural analysis to determine the specific requirements of the concrete mix.",
-                                    "Consider factors such as load-bearing capacity, exposure conditions, and expected service life.",
-                                    "Engage structural engineers to provide accurate design specifications, including concrete strength, slump, and any special additives or admixtures needed.",
+                                    "Conduct a thorough structural analysis to determine the specific requirements of the concrete mix.             Consider factors such as load-bearing capacity, exposure conditions, and expected service life.                                   ",
                                 ],
                             },
                             {
                                 id: 2,
                                 title: "Material Selection",
                                 list: [
-                                    "Choose high-quality raw materials, including cement, aggregates, water, and admixtures.",
-                                    "Ensure they meet relevant industry standards and have the necessary certifications.",
-                                    "Opt for well-graded aggregates to achieve a balanced mix with good workability and strength.",
-                                    "Verify the source and quality of aggregates to prevent any impurities or contaminants.",
-                                    "Select cement with suitable properties for the intended application.",
-                                    "Consider factors like type (e.g., Portland or blended), fineness, and chemical composition.",
-                                    "Use clean, potable water free from impurities that could negatively impact concrete performance.",
-                                    "If needed, incorporate admixtures to enhance specific properties like workability, durability, or setting time.",
+                                    "Choose high-quality raw materials, including cement, aggregates, water, and admixtures.Ensure they meet relevant industry standards and have the necessary certifications.                                   Opt for well-graded aggregates to achieve a balanced mix with good workability and strength.                                   ",
                                 ],
                             },
                             {
@@ -630,7 +542,6 @@ const Services = () => {
                                 list: [
                                     "Implement a rigorous quality control program to monitor raw materials, production processes, and final product quality.",
                                     "Conduct regular tests, including slump tests, compressive strength tests, and durability assessments, to verify that the concrete meets design specifications.",
-                                    "Perform periodic audits and inspections to ensure compliance with industry standards and regulations.",
                                 ],
                             },
                             {
@@ -648,6 +559,7 @@ const Services = () => {
                                 list: [
                                     "Stay updated with industry advancements and emerging technologies related to premix concrete production.",
                                     "Encourage a culture of continuous improvement to refine processes and incorporate innovative materials or techniques that enhance concrete performance.",
+                                    "By following these expert steps in design and material selection, you can produce high-quality premix concrete.                                   ",
                                 ],
                             },
                         ].map((item) => (
@@ -681,70 +593,72 @@ const Services = () => {
                             achieving consistent and reliable results.
                         </p>
                     </div>
-                    <Card className="mx-auto w-full sticky top-32">
-                        <CardBody className="flex flex-col gap-1">
-                            <div>
-                                <h3 className="text-dark text-lg font-bolder text-center">
-                                    Get Your Free Estimate
+                    <div>
+                        <Card className="mx-auto w-full sticky top-32">
+                            <CardBody className="flex flex-col gap-1">
+                                <div>
+                                    <h3 className="text-dark text-lg font-bolder text-center">
+                                        Get Your Free Estimate
+                                    </h3>
+                                    <h5 className="text-sm font-semibold text-center text-black my-3">
+                                        Design, Materials, Construction, Support
+                                    </h5>
+                                </div>
+                                <form className="flex flex-col gap-5 font-xl w-full mt-6 mx-auto">
+                                    <Input
+                                        size="lg"
+                                        className="text-2xl font-bold  bg-white"
+                                        label="Full Name"
+                                        required
+                                    />
+                                    <Input
+                                        size="lg"
+                                        className="text-2xl font-bold  bg-white"
+                                        label="Email"
+                                        required
+                                    />
+                                    <Input
+                                        size="lg"
+                                        className="text-2xl font-bold  bg-white"
+                                        label="Mobile"
+                                        required
+                                    />
+                                    <Select label="Project Budget" className="py-3 px-2  bg-white">
+                                        <Option>10,000 - 20,000</Option>
+                                        <Option>20,000 - 30,000</Option>
+                                        <Option>30,000 - 40,000</Option>
+                                        <Option>40,000 - 50,000</Option>
+                                        <Option>50,000+</Option>
+                                    </Select>
+                                    <Textarea
+                                        size="lg"
+                                        className="text-2xl font-bold  bg-white"
+                                        label="Project Description"
+                                        required
+                                    />
+                                    <Button
+                                        aria-label="estimate-button"
+                                        size="md"
+                                        className="bg-primary text-lg rounded-md my-0"
+                                    >
+                                        Get an estimate
+                                    </Button>
+                                </form>
+                                <h3 className="text-sm font-semibold text-center text-black my-1">
+                                    OR
                                 </h3>
-                                <h5 className="text-sm font-semibold text-center text-black my-3">
-                                    Design, Materials, Construction, Support
-                                </h5>
-                            </div>
-                            <form className="flex flex-col gap-5 font-xl w-full mt-6 mx-auto">
-                                <Input
-                                    size="lg"
-                                    className="text-2xl font-bold  bg-white"
-                                    label="Full Name"
-                                    required
-                                />
-                                <Input
-                                    size="lg"
-                                    className="text-2xl font-bold  bg-white"
-                                    label="Email"
-                                    required
-                                />
-                                <Input
-                                    size="lg"
-                                    className="text-2xl font-bold  bg-white"
-                                    label="Mobile"
-                                    required
-                                />
-                                <Select label="Project Budget" className="py-3 px-2  bg-white">
-                                    <Option>10,000 - 20,000</Option>
-                                    <Option>20,000 - 30,000</Option>
-                                    <Option>30,000 - 40,000</Option>
-                                    <Option>40,000 - 50,000</Option>
-                                    <Option>50,000+</Option>
-                                </Select>
-                                <Textarea
-                                    size="lg"
-                                    className="text-2xl font-bold  bg-white"
-                                    label="Project Description"
-                                    required
-                                />
-                                <Button
-                                    aria-label="estimate-button"
-                                    size="md"
-                                    className="bg-primary text-lg rounded-md my-0"
-                                >
-                                    Get an estimate
-                                </Button>
-                            </form>
-                            <h3 className="text-sm font-semibold text-center text-black my-1">
-                                OR
-                            </h3>
-                            <a href="tel:+1 (647) 539-6755" className="w-full">
-                                <Button
-                                    aria-label="call-button"
-                                    size="md"
-                                    className="bg-dark w-full text-lg rounded-md my-0"
-                                >
-                                    Make a call
-                                </Button>
-                            </a>
-                        </CardBody>
-                    </Card>
+                                <a href="tel:+1 (647) 539-6755" className="w-full">
+                                    <Button
+                                        aria-label="call-button"
+                                        size="md"
+                                        className="bg-dark w-full text-lg rounded-md my-0"
+                                    >
+                                        Make a call
+                                    </Button>
+                                </a>
+                            </CardBody>
+                        </Card>
+                    </div>
                 </div>
             </section>
             <section className="relative bg-dark-50/10">
@@ -758,7 +672,7 @@ const Services = () => {
                 />
                 <div className="w-11/12 md:w-10/12 mx-auto grid grid-cols-1 md:grid-cols-2 gap-3 py-10">
                     <div className="col-start-2">
-                        <h2 className="mb-3">Skilled concrete suppliers</h2>
+                        <h3 className="mb-3">Skilled concrete suppliers</h3>
 
                         <div className="h-1 w-40 bg-primary mb-4" />
                         <div>
@@ -781,9 +695,9 @@ const Services = () => {
             <section className="py-10 relative">
                 <div className="w-11/12 md:w-10/12 mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                        <h2 className="mb-5">
-                            The Benefits of Choosing Us for Concrete Services in Toronto
-                        </h2>
+                        <h3 className="mb-5">
+                            The Benefits of Choosing Us for Concrete Delivery Services in Toronto
+                        </h3>
                         <div className="mb-4 w-40 h-[2px] bg-primary " />
                         {[
                             {
@@ -819,22 +733,7 @@ const Services = () => {
                             {
                                 id: 7,
                                 title: "Environmentally Responsible Practices",
-                                desc: "We are committed to environmentally friendly practices. From responsibly sourcing materials to minimizing waste, we take steps to reduce our environmental impact while providing top-notch concrete services.",
-                            },
-                            {
-                                id: 8,
-                                title: "Clear Communication and Transparency",
-                                desc: "We believe in open and clear communication throughout the project. Our team keeps you informed at every stage, addressing any concerns or questions you may have.",
-                            },
-                            {
-                                id: 9,
-                                title: "Customer Satisfaction Guarantee",
-                                desc: "Our ultimate goal is your satisfaction. We take pride in delivering results that not only meet but also exceed your expectations. We stand by the quality of our work and are dedicated to ensuring you are completely satisfied with the finished product.",
-                            },
-                            {
-                                id: 10,
-                                title: "Local Knowledge and Community Involvement",
-                                desc: "Being based in Toronto, we have a deep understanding of the local terrain, climate, and building regulations. We are also proud to be involved in the community, contributing to the growth and development of the area.",
+                                desc: "We are committed to environmentally friendly practices. From responsibly sourcing materials to minimizing waste, we take steps to reduce our environmental impact while providing top-notch concrete services.Choosing our concrete services in Toronto means choosing a team dedicated to excellence, quality, and customer satisfaction.",
                             },
                         ].map((item, key) => (
                             <p key={key} className="text-dark-400 mb-3">
@@ -861,7 +760,7 @@ const Services = () => {
                         alt=""
                         width={300}
                         height={300}
-                        className="w-full sticky top-32 h-full"
+                        className="w-full sticky top-32"
                     />
                 </div>
             </section>
@@ -871,7 +770,7 @@ const Services = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                         <div className="">
                             <div className="mb-3">
-                                <h4 className="font-bold">Ready for a home transformation?</h4>
+                                <h3 className="font-bold">Ready for a home transformation?</h3>
                                 <div className="h-1 w-40 bg-primary my-1" />
                                 <p className="text-dark-300 mb-2">
                                     Are you prepared to embark on a remarkable journey of home
@@ -935,7 +834,7 @@ const Services = () => {
                                     With its reliability and efficiency, ready mixed concrete is the
                                     foundation for durable and structurally sound buildings. So,
                                     let's dive into the world of ready mixed concrete and discover
-                                    how it can streamline your construction endeavours and deliver
+                                    how it can streamline your construction endeavors and deliver
                                     outstanding results!
                                 </p>
                             </div>
@@ -950,7 +849,14 @@ const Services = () => {
                                     committed to providing top-notch, quality concrete delivery
                                     solutions at prices that won't break the bank. With years of
                                     experience in the industry, we understand the importance of
-                                    delivering reliable and cost-effective ready mix concrete for
+                                    delivering reliable and cost-effective{" "}
+                                    <a
+                                        href="https://readymixnearme.ca/"
+                                        className="underline"
+                                        target="_blank"
+                                    >
+                                        ready mix concrete for
+                                    </a>
                                     your construction projects. Whether it's a small residential
                                     endeavour or a large-scale commercial venture, we have the
                                     expertise and resources to meet your concrete needs efficiently.
@@ -1010,7 +916,7 @@ const Services = () => {
                             alt=""
                             width={300}
                             height={300}
-                            className="w-full sticky top-32 h-full"
+                            className="w-full sticky top-32 "
                         />
                     </div>
                 </div>
