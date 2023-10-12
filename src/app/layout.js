@@ -13,7 +13,7 @@ export const metadata = {
     description:
         "When it comes to reliable and trusted ready mix concrete services in Toronto, there is no better choice than Prime Ready Mix",
     verification: {
-        google: "google",
+        google: "iok2m8F7C2fwqS7xL0sbkyGBauyiAFagM_QUNClJC18",
         yandex: "yandex",
         yahoo: "yahoo",
         other: {
