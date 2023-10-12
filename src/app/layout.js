@@ -4,13 +4,14 @@ import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 import "./globals.css";
 import Script from "next/script";
+import GoogleAnalytics from "./GoogleAnalytics";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata = {
-    title: "Prime Ready Mix Concrete in Toronto",
+    title: "Ready Mix Concrete & Concrete Delivery, Toronto Ready Mix",
     description:
-        "When it comes to reliable and trusted ready mix services in Toronto, there is no better choice than Prime Ready Mix.",
+        "When it comes to reliable and trusted ready mix concrete services in Toronto, there is no better choice than Prime Ready Mix",
     verification: {
         google: "google",
         yandex: "yandex",
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
             <body className={montserrat.className}>
                 <ProgressBar />
                 <Header />
+                <GoogleAnalytics />
                 {children}
                 <Footer />
                 <Script src="https://kit.fontawesome.com/d63d7fa193.js"></Script>
