@@ -8,6 +8,7 @@ import GoogleAnalytics from "./GoogleAnalytics";
 import StoreProvider from "../redux/storeProvider";
 import { allMetadata, rootMetadata } from "../helpers/metadataHelpers";
 import axios from "axios";
+import { base } from "../redux/api/apiEndpoints";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -15,7 +16,7 @@ export const generateMetadata = async () => {
     // const dynamicRootMetadata = rootMetadata();
     // console.log(dynamicRootMetadata);
     try {
-        const { data } = await axios.get("http://localhost:5000/api/v1/metadata");
+        const { data } = await axios.get(base + "/api/v1/metadata");
 
         const dynamicMetadata = await data.find((metadata) => {
             return metadata.page === "root";

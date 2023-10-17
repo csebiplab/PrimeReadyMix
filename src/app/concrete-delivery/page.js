@@ -1,20 +1,27 @@
 import axios from "axios";
 import Services from "./RC";
+import { base } from "../../redux/api/apiEndpoints";
 
 export const generateMetadata = async () => {
     // const dynamicRootMetadata = rootMetadata();
     // console.log(dynamicRootMetadata);
     try {
-        const { data } = await axios.get("http://localhost:5000/api/v1/metadata");
+        const { data } = await axios.get(base + "/api/v1/metadata");
 
         const dynamicMetadata = await data.find((metadata) => {
-            // console.log(metadata);
             return metadata.page === "concrete-delivery";
         });
         console.log(dynamicMetadata);
+        const { title, description, google_console_key, yandex_console_key, yahoo_console_key } =
+            dynamicMetadata || {};
         return {
-            title: dynamicMetadata.title,
-            description: dynamicMetadata.description,
+            title: title,
+            description: description,
+            verification: {
+                google: google_console_key,
+                yandex: yandex_console_key,
+                yahoo: yahoo_console_key,
+            },
         };
     } catch (error) {
         console.log(error);
