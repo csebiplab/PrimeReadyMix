@@ -6,7 +6,7 @@ import "./globals.css";
 import Script from "next/script";
 import GoogleAnalytics from "./GoogleAnalytics";
 import StoreProvider from "../redux/storeProvider";
-import { allMetadata, rootMetadata } from "../helpers/metadataHelpers";
+import { allMetadata, rootMetadata } from "../helpers/robotTxtHelper";
 import axios from "axios";
 import { base } from "../redux/api/apiEndpoints";
 
@@ -21,7 +21,7 @@ export const generateMetadata = async () => {
         const dynamicMetadata = await data.find((metadata) => {
             return metadata.page === "root";
         });
-        console.log(dynamicMetadata);
+        // console.log(dynamicMetadata);
         const { title, description, google_console_key, yandex_console_key, yahoo_console_key } =
             dynamicMetadata || {};
         return {

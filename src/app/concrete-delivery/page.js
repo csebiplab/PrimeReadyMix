@@ -11,7 +11,7 @@ export const generateMetadata = async () => {
         const dynamicMetadata = await data.find((metadata) => {
             return metadata.page === "concrete-delivery";
         });
-        console.log(dynamicMetadata);
+        // console.log(dynamicMetadata);
         const { title, description, google_console_key, yandex_console_key, yahoo_console_key } =
             dynamicMetadata || {};
         return {
