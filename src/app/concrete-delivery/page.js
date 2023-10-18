@@ -1,10 +1,38 @@
+import axios from "axios";
 import Services from "./RC";
+import { base } from "../../redux/api/apiEndpoints";
 
-export const metadata = {
-    title: "Prime Ready Mix Concrete Delivery",
-    description:
-        "If you're in need of reliable concrete delivery services in Toronto, look no further. Our company is dedicated to providing top-notch concrete solutions tailored to your specific needs. With a fleet of modern and well-maintained vehicles, we ensure prompt and efficient delivery to your construction site. Our team of skilled professionals is committed to delivering high-quality concrete on time, every time. Whether you require a small batch for a DIY project or a large-scale commercial delivery, we have the expertise and resources to meet your requirements. Trust us for hassle-free and dependable concrete delivery services in Toronto, and let us contribute to the success of your construction endeavours.",
+export const generateMetadata = async () => {
+    // const dynamicRootMetadata = rootMetadata();
+    // console.log(dynamicRootMetadata);
+    try {
+        const { data } = await axios.get(base + "/api/v1/metadata");
+
+        const dynamicMetadata = await data.find((metadata) => {
+            return metadata.page === "concrete-delivery";
+        });
+        // console.log(dynamicMetadata);
+        const { title, description, google_console_key, yandex_console_key, yahoo_console_key } =
+            dynamicMetadata || {};
+        return {
+            title: title,
+            description: description,
+            verification: {
+                google: google_console_key,
+                yandex: yandex_console_key,
+                yahoo: yahoo_console_key,
+            },
+        };
+    } catch (error) {
+        console.log(error);
+    }
 };
+// export const metadata = {
+//     title: "Concrete Delivery Services in Toronto",
+//     description:
+//         " If you're in need of reliable concrete delivery services in Toronto, look no further. Our company is dedicated to providing top-notch concrete solutions",
+// };
 export default function () {
+    // console.log(process.env.NEXT_PUBLIC_GOOGLE_ID);
     return <Services />;
 }

@@ -168,18 +168,25 @@ const Home = () => {
                         <div className="h-1 w-40 bg-primary my-5" />
                         <p className="text-dark-300 md:text-lg">
                             Prime Ready Mix Concrete Services offers a seamless solution for all
-                            your concrete needs and concrete delivery services in GTA. With a
-                            dedicated team of skilled professionals and a fleet of state-of-the-art
-                            mixing trucks, we ensure that you receive the highest-quality concrete
-                            precisely when and where you need it. Whether it's a small residential
-                            project or a large-scale commercial undertaking, we design our Toronto
-                            Ready Mix services to save you time, labor, and costs associated with
-                            on-site mixing. We take pride in our commitment to delivering
-                            consistent, durable, and reliable{" "}
+                            your concrete needs and{" "}
+                            <a
+                                href="https://readymixnearme.ca/concrete-delivery"
+                                target="_blank"
+                                className=" underline"
+                            >
+                                concrete delivery
+                            </a>
+                            services in GTA. With a dedicated team of skilled professionals and a
+                            fleet of state-of-the-art mixing trucks, we ensure that you receive the
+                            highest-quality concrete precisely when and where you need it. Whether
+                            it's a small residential project or a large-scale commercial
+                            undertaking, we design our Toronto Ready Mix services to save you time,
+                            labor, and costs associated with on-site mixing. We take pride in our
+                            commitment to delivering consistent, durable, and reliable{" "}
                             <a
                                 href="https://en.wikipedia.org/wiki/Ready-mix_concrete"
                                 target="_blank"
-                                className="text-blue-500 underline"
+                                className=" underline"
                             >
                                 concrete mixes
                             </a>{" "}
