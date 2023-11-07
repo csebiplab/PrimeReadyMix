@@ -23,7 +23,7 @@ const Header = () => {
     const closeDrawer = () => setOpen(false);
     return (
         <>
-            <header className=" sticky top-0 bg-white z-[1000] shadow shadow-dark-50/10">
+            <header className=" container mx-auto sticky top-0 bg-white z-[1000] shadow shadow-dark-50/10">
                 <div className="w-full bg-pageBg ">
                     <div className="w-11/12 md:w-10/12 mx-auto py-3 flex justify-center md:justify-between items-center">
                         <h6 className=" text-dark text-sm font-medium text-center md:text-left">
@@ -35,7 +35,7 @@ const Header = () => {
                         </h6>
                         <div className="md:flex md:flex-row justify-end items-center hidden">
                             <Link
-                                href={"/blogs"}
+                                href={"/blog"}
                                 className="text-dark text-sm font-normal mx-3 hover:underline"
                             >
                                 Blogs

@@ -96,6 +96,10 @@ const Footer = () => {
                                 <AiOutlineInstagram className="h-5 md:h-8 w-5 md:w-8" />
                             </a>
                         </div>
+                        <div>
+                            <p>Address:</p>
+                            <p>Phone:</p>
+                        </div>
                     </div>
                 </div>
                 <br />

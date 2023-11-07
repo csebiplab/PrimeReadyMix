@@ -8,6 +8,7 @@ import "swiper/css/pagination";
 import { Autoplay } from "swiper/modules";
 import ServicesSection from "../components/common/ServicesSection";
 import { contacts } from "../site/info";
+import ReadyMix from '../../public/ReadyMixConcrete.jpg'
 import DialogComponent from "../components/common/DialogComponent";
 import Image from "next/image";
 
@@ -63,7 +64,7 @@ const Home = () => {
                         pauseOnMouseEnter: false,
                     }}
                     modules={[Autoplay]}
-                    className="relative md:!absolute mb-4 md:mb-0 top-0 right-0 h-full w-full md:w-[45%] max-h-64 md:max-h-full object-cover object-center"
+                    className="relative md:!absolute mb-4 md:mb-0 top-0 right-0 h-96 lg:mt-36 w-full md:w-[50%] max-h-96 md:max-h-full object-cover object-center"
                 >
                     {[
                         "https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/blob-5fe5952.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:600,cg:true",
@@ -82,6 +83,8 @@ const Home = () => {
                         </SwiperSlide>
                     ))}
                 </Swiper>
+                {/* className="relative md:!absolute mb-4 md:mb-0 top-0 right-0 h-full w-full md:w-[45%] max-h-64 md:max-h-full object-cover object-center" */}
+                {/* <Image className="relative md:!absolute mb-4 md:mb-0 top-0 right-0 h-full w-full md:w-[50%] max-h-64 md:max-h-full object-cover object-center" src={ReadyMix} alt="cleaner picture"></Image> */}
             </section>
 
             <section className="md:py-10">
@@ -155,7 +158,7 @@ const Home = () => {
                 <div className=" grid grid-cols-1 md:grid-cols-2 gap-8">
                     <Image
                         priority
-                        src="https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/blob-9397e44.png/:/cr=t:0%25,l:0.12%25,w:99.75%25,h:100%25/rs=w:600,h:451,cg:true/qt=q:46"
+                        src="https://i.ibb.co/dWmBbcP/Ready-Mix-Concreteservice.jpg"
                         alt=""
                         width={300}
                         height={300}
@@ -202,8 +205,8 @@ const Home = () => {
             <section className="relative bg-dark-50/5">
                 <Image
                     priority
-                    src="https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/IMG_1524-scaled.webp/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:600,cg:true"
-                    className="md:absolute mb-4 md:mb-0 top-0 right-0 h-full w-full md:w-[45%] object-cover object-center"
+                    src="https://i.ibb.co/VLqLMmt/Why-Choose.jpg"
+                    className="md:absolute mb-4 md:mb-0 top-0 right-0 h-full w-full md:w-[50%] object-cover object-center"
                     width={300}
                     height={300}
                     alt=""
