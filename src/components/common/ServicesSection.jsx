@@ -50,10 +50,10 @@ const ServicesSection = () => {
                         },
                     ].map((item, key) => (
                         <figure
-                            className="group p-3 md:aspect-square border-b-2 border-b-gray-400 hover:border-b-primary duration-150 md:text-center flex flex-col md:justify-center md:items-center"
+                            className="group p-3 md:aspect-square border-b-2 border-b-gray-400 hover:border-b-red-400 duration-150 md:text-center flex flex-col md:justify-center md:items-center"
                             key={key}
                         >
-                            <p className="text-dark group-hover:text-primary mb-2 md:mb-4  text-xl md:text-2xl lg:text-3xl">
+                            <p className="text-dark group-hover:text-red-400 mb-2 md:mb-4  text-xl md:text-2xl lg:text-3xl">
                                 {item.title}
                             </p>
                             <p className="text-gray-700 md:text-xl">{item.desc}</p>
