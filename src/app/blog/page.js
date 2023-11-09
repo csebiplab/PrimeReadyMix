@@ -6,10 +6,10 @@ const BlogPage = () => {
     return (
         <div className='container mx-auto'>
             <div class='flex justify-center mt-12'>
-                <section class='grid sm:grid-cols-1 lg:grid-cols-2 place-items-center w-full sm:w-[70%] p-4'>
-                    <div>
-                        <h4>Easy Reno</h4>
-                        <h4>Blog</h4>
+                <section class='grid sm:grid-cols-1 lg:grid-cols-2 place-items-center w-full sm:w-[80%]  p-4'>
+                    <div className='text-4xl font-semibold'>
+                        <p>Prime Ready</p>
+                        <p>Mix</p>
                     </div>
                     <div>
                         <p>If you’re one of the many homeowners who are planning a home renovation, you have an important choice in front of you. Should you take the do-it-yourself route to try to cut your overall costs, or should you bring in a professional contractor to make sure your remodel is done right? In this blog, we’ll review some of the specific areas of your project that require the work of a professional, as well as some of the dangers of DIY bathroom and kitchen remodeling and what you need to know before getting started.</p>
@@ -41,7 +41,7 @@ const BlogPage = () => {
                 <div className='lg:w-[60%]'>
 
 
-                    <h5>Contact Ready Mix </h5>
+                    <h5>Contact Prime Ready Mix </h5>
                     <div className="sm:col-span-3">
                         <div className="mt-2">
                             <input
@@ -116,8 +116,8 @@ const BlogPage = () => {
                             />
                         </div>
                     </div>
-                    <button className="bg-red-400 hover:bg-red-600 w-full mt-4 text-white font-bold py-4 px-4 rounded-tl-md rounded-tr-md">
-                        Click Me
+                    <button className="bg-orange-800 hover:bg-red-600 w-full mt-4 text-white font-bold py-4 px-4 rounded-tl-md rounded-tr-md">
+                        Submit
                     </button>
 
 
