@@ -1,7 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from 'swiper/modules';
+import { FaStar } from 'react-icons/fa';
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
@@ -11,16 +13,43 @@ import { contacts } from "../site/info";
 import ReadyMix from '../../public/ReadyMixConcrete.jpg'
 import DialogComponent from "../components/common/DialogComponent";
 import Image from "next/image";
+import axios from "axios";
+import './Home.css'
 
 const Home = () => {
     const [open, setOpen] = useState(false);
+    const [categories, setCategories] = useState([])
+    const [blogs, setBlogs] = useState([])
     const handleOpen = () => setOpen((cur) => !cur);
+    useEffect(() => {
+        fetchData();
+    }, []);
 
+    const fetchData = async () => {
+        try {
+            const response = await axios.get('./data.json');
+            setCategories(response.data);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+
+    useEffect(() => {
+        fetchBlog();
+    }, []);
+    const fetchBlog = async () => {
+        try {
+            const response = await axios.get('./dataone.json');
+            setBlogs(response.data);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
     return (
         <main className="">
-            <section className="relative md:h-[40rem] flex flex-col md:flex-row items-center">
+            <section className="relative mt-4 flex flex-col md:flex-row items-center">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-11/12 md:w-10/12 mx-auto">
-                    <div className="mt-11">
+                    <div className="">
                         <h1 className="font-bold text-4xl mb-1 leading-tight text-center md:text-left">
                             Ready Mix Concrete & <br />
                             Concrete Delivery, <br />
@@ -64,7 +93,7 @@ const Home = () => {
                         pauseOnMouseEnter: false,
                     }}
                     modules={[Autoplay]}
-                    className="relative md:!absolute mb-4 md:mb-0 top-0 right-0 h-96 lg:mt-36 w-full md:w-[50%] max-h-96 md:max-h-full object-cover object-center"
+                    className="relative md:!absolute mb-4 md:mb-0 top-0 right-0 h-96  w-full md:w-[50%] max-h-96 md:max-h-full object-cover object-center"
                 >
                     {[
                         "https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/blob-5fe5952.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:600,cg:true",
@@ -154,6 +183,9 @@ const Home = () => {
                     className="relative md:!absolute mb-4 md:mb-0 top-0 right-0 h-full w-full md:w-[45%] max-h-64 md:max-h-full object-cover object-center"
                 />
             </section>
+
+
+
             <section className="py-10">
                 <div className=" grid grid-cols-1 md:grid-cols-2 gap-8">
                     <Image
@@ -202,6 +234,7 @@ const Home = () => {
                 </div>
             </section>
 
+
             <section className="relative bg-dark-50/5">
                 <Image
                     priority
@@ -234,6 +267,28 @@ const Home = () => {
                             with excellence and precision.
                         </p>
                     </div>
+                </div>
+            </section>
+            <section className="mt-20">
+                <h5 className="text-5xl text-center">Our Prime Ready Mix Renovation Services In Toronto</h5>
+                <p className="text-center mt-2 text-xl">Enjoy a stress-free renovation with our unique build process.</p>
+                <div className="grid gri-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    {
+                        blogs.map((item, index) => (
+                            <div key={index} className="group">
+                                <div className="w-full rounded overflow-hidden relative hover:shadow-md">
+                                    <Image width={300} height={400} className="w-full h-full object-cover" src={item?.image} alt="Card Image" />
+                                    <div className="px-6 py-4">
+                                        <div className="font-bold text-xl mb-2">{item?.title}</div>
+                                        <p className="text-gray-700 text-base">{item?.description}</p>
+                                    </div>
+                                    <p className="px-6 font-bold text-xl mb-2 group-hover:text-red-400 transition duration-300 ease-in-out">
+                                        Learn More
+                                    </p>
+                                </div>
+                            </div>
+                        ))
+                    }
                 </div>
             </section>
 
@@ -371,6 +426,45 @@ const Home = () => {
                     ))}
                 </Swiper>
             </section>
+
+
+            <section className="mt-16">
+                <p className="text-5xl font-semibold mb-4">Reviews</p>
+                <p className="relative mt-4 ">
+                    Here’s what to expect when you hire us as your bathroom contractor in Toronto.
+                    <span className="absolute bottom-0 left-0 w-24 h-1  bg-orange-500"></span>
+                </p>
+
+                <Swiper
+                    slidesPerView={3}
+                    spaceBetween={12}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    autoplay={{
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: false,
+                    }}
+                    modules={[Autoplay]}
+                    className="mySwiper mt-8"
+                >
+                    {categories.map((item) => (
+                        <SwiperSlide key={item.id}>
+                            <div className="bg-white py-16 px-10">
+                                <div className="flex items-center  mb-2">
+                                    {Array.from({ length: item.rating }, (_, index) => (
+                                        <FaStar key={index} className="text-yellow-500 mr-1" />
+                                    ))}
+                                </div>
+                                <p>{item.description}</p>
+                                <p className="text-xl font-semibold">{item.name}</p>
+                                <p className="font-semibold">{item.location}</p>
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </section>
+
         </main>
     );
 };
