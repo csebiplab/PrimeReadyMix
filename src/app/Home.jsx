@@ -15,6 +15,7 @@ import DialogComponent from "../components/common/DialogComponent";
 import Image from "next/image";
 import axios from "axios";
 import './Home.css'
+import Head from "next/head";
 
 const Home = () => {
     const [open, setOpen] = useState(false);
