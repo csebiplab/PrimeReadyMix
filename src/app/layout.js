@@ -9,9 +9,9 @@ import StoreProvider from "../redux/storeProvider";
 import { allMetadata, rootMetadata } from "../helpers/robotTxtHelper";
 import axios from "axios";
 import { base } from "../redux/api/apiEndpoints";
+import Head from "next/head";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
-
 export const generateMetadata = async () => {
     // const dynamicRootMetadata = rootMetadata();
     // console.log(dynamicRootMetadata);
@@ -50,8 +50,7 @@ export const generateMetadata = async () => {
 //             me: ["my-email", "my-link"],
 //         },
 //     },
-// };
-
+// }
 export default function RootLayout({ children }) {
     return (
         <html lang="en">

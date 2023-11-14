@@ -8,7 +8,8 @@ const nextConfig = {
             "media-content.angi.com",
             "img1.wsimg.com",
             "media.istockphoto.com",
-            "i.ibb.co"
+            "i.ibb.co",
+            "encrypted-tbn0.gstatic.com"
         ],
     },
 };
