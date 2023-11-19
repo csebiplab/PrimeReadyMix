@@ -12,31 +12,31 @@ import { base } from "../redux/api/apiEndpoints";
 import Head from "next/head";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
-export const generateMetadata = async () => {
-    // const dynamicRootMetadata = rootMetadata();
-    // console.log(dynamicRootMetadata);
-    try {
-        const { data } = await axios.get(base + "/api/v1/metadata");
+// export const generateMetadata = async () => {
+//     // const dynamicRootMetadata = rootMetadata();
+//     // console.log(dynamicRootMetadata);
+//     try {
+//         const { data } = await axios.get(base + "/api/v1/metadata");
 
-        const dynamicMetadata = await data.find((metadata) => {
-            return metadata.page === "root";
-        });
-        // console.log(dynamicMetadata);
-        const { title, description, google_console_key, yandex_console_key, yahoo_console_key } =
-            dynamicMetadata || {};
-        return {
-            title: title,
-            description: description,
-            verification: {
-                google: google_console_key,
-                yandex: yandex_console_key,
-                yahoo: yahoo_console_key,
-            },
-        };
-    } catch (error) {
-        console.log(error);
-    }
-};
+//         const dynamicMetadata = await data.find((metadata) => {
+//             return metadata.page === "root";
+//         });
+//         // console.log(dynamicMetadata);
+//         const { title, description, google_console_key, yandex_console_key, yahoo_console_key } =
+//             dynamicMetadata || {};
+//         return {
+//             title: title,
+//             description: description,
+//             verification: {
+//                 google: google_console_key,
+//                 yandex: yandex_console_key,
+//                 yahoo: yahoo_console_key,
+//             },
+//         };
+//     } catch (error) {
+//         console.log(error);
+//     }
+// };
 
 // export const metadata = {
 //     title: "Ready Mix Concrete & Concrete Delivery, Toronto Ready Mix",
@@ -51,19 +51,42 @@ export const generateMetadata = async () => {
 //         },
 //     },
 // }
+// export const metadata = {
+//     title: "Ready Mix Concrete & Concrete Delivery, Toronto Ready Mix",
+//     description:
+//         "When it comes to reliable and trusted ready mix concrete services in Toronto, there is no better choice than Prime Ready Mix",
+//     verification: {
+//         google: "iok2m8F7C2fwqS7xL0sbkyGBauyiAFagM_QUNClJC18",
+//         yandex: "yandex",
+//         yahoo: "yahoo",
+//         other: {
+//             me: ["my-email", "my-link"],
+//         },
+//     },
+export const metadata = {
+  metadataBase: new URL("https://readymixnearme.ca/"),
+  title: {
+    default: "Readymix near me",
+    template: `%s | Readymix near me`,
+  },
+  description: "This is Seo websites",
+  verification: {
+    google: "google-site-verification=878787878",
+  },
+};
 export default function RootLayout({ children }) {
-    return (
-        <html lang="en">
-            <body className={montserrat.className}>
-                <StoreProvider>
-                    <ProgressBar />
-                    <Header />
-                    <GoogleAnalytics />
-                    {children}
-                    <Footer />
-                </StoreProvider>
-                <Script src="https://kit.fontawesome.com/d63d7fa193.js"></Script>
-            </body>
-        </html>
-    );
+  return (
+    <html lang="en">
+      <body className={montserrat.className}>
+        <StoreProvider>
+          <ProgressBar />
+          <Header />
+          <GoogleAnalytics />
+          {children}
+          <Footer />
+        </StoreProvider>
+        <Script src="https://kit.fontawesome.com/d63d7fa193.js"></Script>
+      </body>
+    </html>
+  );
 }
