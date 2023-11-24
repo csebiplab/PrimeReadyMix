@@ -11,14 +11,17 @@ export const metadata = async () => {
     );
     const getOwnershipVerificationUrl = data?.verificationOwnershipUrl[0];
     const { url } = getOwnershipVerificationUrl || {};
-    console.log("title and description from database", url);
+    const contentMatch = url.match(/content="([^"]+)"/);
+    const contentValue = contentMatch ? contentMatch[1] : null;
     return {
-      title: url || "shala",
-      description: url,
-      metaTags: url,
+      title: "Dashboard page",
+      verification: {
+        //don't remove the dynamic varification meta tag
+        google: contentValue,
+      },
     };
   } catch (error) {
-    console.log(error);
+    console.log("axios Error", error);
   }
 };
 const page = () => {

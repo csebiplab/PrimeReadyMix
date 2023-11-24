@@ -25,9 +25,9 @@ export const metadata = async () => {
       },
       description: description,
       keywords: keywords,
-      verification: {
-        google: "google-site-verification=878787878",
-      },
+      // verification: {
+      //   google: "google-site-verification=878787878",
+      // },
     };
   } catch (error) {
     console.log(error);
