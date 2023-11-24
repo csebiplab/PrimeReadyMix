@@ -9,7 +9,8 @@ const SitemapGenerate = () => {
     try {
       const res = await fetch("http://localhost:3000/api/sitemapUrl");
       if (res.ok) {
-        setUrl(res?.url);
+        const data = await res.json();
+        setUrl(data?.sitemapUrls[0]?.url);
       } else {
         throw new Error("Failed to create a topic");
       }
