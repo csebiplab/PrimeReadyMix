@@ -1,7 +1,8 @@
 import React from "react";
+import SitemapGenerate from "./sitemapGenerate";
 
 const page = () => {
-  return <div>sitemap is started</div>;
+  return <div><SitemapGenerate/></div>;
 };
 
 export default page;

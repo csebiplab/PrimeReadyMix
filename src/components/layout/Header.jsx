@@ -33,25 +33,26 @@ const Header = () => {
               </span>
               TORONTO READY MIX
             </h6>
-            <Link
-              href={"/blog"}
-              className="text-dark text-sm font-normal mx-3 hover:underline"
-            >
-              Blogs
-            </Link>
-            <Link
-              href={"/dashboard"}
-              className="text-dark text-sm font-normal mx-3 hover:underline"
-            >
-              Dashboard
-            </Link>
-            <Link
-              href={"/sitemapgen"}
-              className="text-dark text-sm font-normal mx-3 hover:underline"
-            >
-              Sitemapgen
-            </Link>
+
             <div className="md:flex md:flex-row justify-end items-center hidden">
+              <Link
+                href={"/blog"}
+                className="text-dark text-sm font-normal mx-3 hover:underline"
+              >
+                Blogs
+              </Link>
+              <Link
+                href={"/dashboard"}
+                className="text-dark text-sm font-normal mx-3 hover:underline"
+              >
+                Dashboard
+              </Link>
+              <Link
+                href={"/sitemapgen"}
+                className="text-dark text-sm font-normal mx-3 hover:underline"
+              >
+                Sitemapgen
+              </Link>
               <Link
                 href={"/testimonials"}
                 className="text-dark text-sm font-normal mx-3 hover:underline"

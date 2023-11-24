@@ -1,28 +1,34 @@
-// import axios from "axios";
-// import { base, sitemap } from "../redux/api/apiEndpoints";
+import axios from "axios";
 
-// export default function sitemap() {
-//     const fetchRobotTxt = async () => {
-//         try {
-//             const { data } = await axios.get(base + "/api/v1" + sitemap);
-//             console.log(data);
-//             return data;
-//         } catch (error) {
-//             console.log(error);
-//         }
-//     };
-//     const data = fetchRobotTxt();
-//     console.log(data);
+export default async function sitemap() {
+  const data = await getData();
+  console.log("response from blog posts data1", data);
 
-//     const sitemapData = [];
-//     data.map((singleData) => {
-//         sitemapData.push({
-//             url: singleData.url,
-//             priority: singleData.priority,
-//             changeFrequency: singleData.frequency_change,
-//             lastModified: singleData.updatedAt,
-//         });
-//     });
+  const baseURL = "http://localhost:3000/";
+  const routes = [
+    "",
+    "/concrete-delivery",
+    "/blog",
+    "/testimonials",
+    "/contact-us",
+  ].map((route) => ({
+    url: `${baseURL}${route}`,
+    lastModified: new Date().toISOString(),
+  }));
 
-//     return sitemapData;
-// }
+  const posts = data?.map((item) => ({
+    url: `${baseURL}dynamicblog/${item?._id}`,
+    lastModified: item?.description,
+  }));
+  console.log("response from blog posts data2", posts);
+  return [...routes, ...posts];
+}
+
+async function getData() {
+  try {
+    const res = await axios.get("https://readymix-server.vercel.app/api/posts");
+    return res.data;
+  } catch (error) {
+    throw new Error("Failed to fetch data");
+  }
+}
