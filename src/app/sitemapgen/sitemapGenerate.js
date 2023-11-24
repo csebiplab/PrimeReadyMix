@@ -8,7 +8,6 @@ const SitemapGenerate = () => {
 
     try {
       const res = await fetch("http://localhost:3000/api/sitemapUrl");
-      console.log("resposnse for ownership tag1", res);
       if (res.ok) {
         setUrl(res?.url);
       } else {

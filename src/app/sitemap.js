@@ -2,8 +2,6 @@ import axios from "axios";
 
 export default async function sitemap() {
   const data = await getData();
-  console.log("response from blog posts data1", data);
-
   const baseURL = "http://localhost:3000/";
   const routes = [
     "",
