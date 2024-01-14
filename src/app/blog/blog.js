@@ -23,7 +23,7 @@ const
 
         }, [])
 
-        console.log(description)
+        // console.log(description)
 
         return (
             <Link href={`/dynamicblog/${_id}`}>

@@ -1,26 +1,50 @@
 'use client'
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import { useRouter } from 'next/router';
 import Contact from '../../../components/common/Contact';
 import Head from 'next/head';
 import Image from 'next/image';
 
 const DynamicBlog = ({ params }) => {
-
-    const [categories, setCategories] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
+    const [categories, setCategories] = useState(null);
+    const [img, setImg] = useState("");
+    const [imgAlt, setImgAlt] = useState("");
 
     useEffect(() => {
-        fetch(`https://readymix-server.vercel.app/api/posts/${params?.id}`)
-            .then(res => res.json())
-            .then(data => {
-                setCategories(data);
-            })
-            .catch(error => {
+        const fetchData = async () => {
+            try {
+                setIsLoading(true);
+                const response = await fetch(`http://localhost:8080/api/blogContent/${params?.id}`);
+                const data = await response.json();
+                setCategories(data?.blogDetailsData);
+            } catch (error) {
                 console.error('Error fetching data:', error);
-            });
-    }, []);
+            } finally {
+                setIsLoading(false);
+            }
+        };
 
-    console.log(categories);
+        fetchData();
+    }, [params]);
+
+
+
+    useEffect(() => {
+        if (!isLoading && categories?.content) {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(categories.content, 'text/html');
+            const imgElement = doc.querySelector('img');
+            const imgSrc = imgElement ? imgElement.getAttribute('src') : null;
+            const imgAltTxt = imgElement ? imgElement.getAttribute('alt') : null;
+            setImg(imgSrc);
+            setImgAlt(imgAltTxt);
+        }
+    }, [isLoading, categories]);
+
+    // Filter out first img tag from HTML content
+    const filteredContent = categories?.content.replace(/<img[^>]*>/, "");
+
 
     return (
         // <div className='mt-8'>
@@ -46,26 +70,18 @@ const DynamicBlog = ({ params }) => {
         <div className='mt-8 w-full max-w-screen-lg mx-auto'>
             <div className='flex'>
                 <div className='mr-8'>
-                    <h1 className='text-3xl font-bold mb-4'>{categories?.name}</h1>
+                    <h1 className='text-3xl font-bold mb-4'>{categories?.title}</h1>
                     <p className='text-gray-600'>{categories?.description}</p>
                 </div>
                 <div>
-                    <Image width={900} height={400} className='h-auto' src={categories?.image} alt="Blog Image" />
+                    <Suspense fallback={isLoading && <p>Loading...</p>}>
+                        {img && <Image width={900} height={400} className='h-auto' src={img} alt={imgAlt || "Blog Image"} />}
+                    </Suspense>
                 </div>
             </div>
             <div className='flex mt-8 gap-8'>
-                <div className='w-full' dangerouslySetInnerHTML={{ __html: categories?.quillValue }} />
-                <div className='w-full'>
+                <div className='w-full' dangerouslySetInnerHTML={{ __html: filteredContent }} />                <div className='w-full'>
                     {/* Assuming Contact is a component that needs to be full-width */}
-
-
-
-
-
-
-
-
-
                     <div className='lg:w-[80%] mt-12 sticky top-0'>
                         <h5>Contact Prime Ready Mix </h5>
                         <div className="sm:col-span-3">
@@ -74,7 +90,7 @@ const DynamicBlog = ({ params }) => {
                                     type="text"
                                     name="last-name"
                                     id="last-name"
-                                    placeholder='    First Name *'
+                                    placeholder='First Name *'
                                     autoComplete="family-name"
                                     className="block w-full rounded-md border-0 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 />
@@ -136,7 +152,7 @@ const DynamicBlog = ({ params }) => {
                                 <textarea
                                     name="phone"
                                     id="phone"
-                                    placeholder="    Project Description"
+                                    placeholder="Project Description"
                                     autoComplete="family-name"
                                     className="block w-full rounded-md border-0 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 placeholder-mr-4"
                                 />
