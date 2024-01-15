@@ -77,7 +77,7 @@ const Home = () => {
                     </div>
                 </div>
                 <section className="md:hidden">
-                    <Image
+                    <img
                         priority
                         src={"/prime-readymix-banner.png"}
                         alt="prime-ready-mix-banner"
@@ -102,7 +102,7 @@ const Home = () => {
                         "https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/blob-dce5594.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:600,cg:true",
                     ].map((item, key) => (
                         <SwiperSlide key={key} className="h-60 md:h-full">
-                            <Image
+                            <img
                                 priority
                                 src={item}
                                 className="object-cover object-center h-full w-full"
@@ -114,12 +114,12 @@ const Home = () => {
                     ))}
                 </Swiper>
                 {/* className="relative md:!absolute mb-4 md:mb-0 top-0 right-0 h-full w-full md:w-[45%] max-h-64 md:max-h-full object-cover object-center" */}
-                {/* <Image className="relative md:!absolute mb-4 md:mb-0 top-0 right-0 h-full w-full md:w-[50%] max-h-64 md:max-h-full object-cover object-center" src={ReadyMix} alt="cleaner picture"></Image> */}
+                {/* <img className="relative md:!absolute mb-4 md:mb-0 top-0 right-0 h-full w-full md:w-[50%] max-h-64 md:max-h-full object-cover object-center" src={ReadyMix} alt="cleaner picture"></Image> */}
             </section>
 
             <section className="md:py-10">
                 <div className=" flex flex-col-reverse md:flex-row gap-8 relative">
-                    <Image
+                    <img
                         priority
                         src="https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/blob-9397e44.png/:/cr=t:0%25,l:0.12%25,w:99.75%25,h:100%25/rs=w:600,h:451,cg:true/qt=q:46"
                         alt=""
@@ -175,7 +175,7 @@ const Home = () => {
                         </p>
                     </div>
                 </div>
-                <Image
+                <img
                     priority
                     src="https://media.istockphoto.com/id/997566504/photo/cement-mixer-on-the-road.webp?b=1&s=170667a&w=0&k=20&c=nkm-6Ih8q6L6_PaA-xqRV63nADGh7xQzb9f9oLY8ImU="
                     alt=""
@@ -189,7 +189,7 @@ const Home = () => {
 
             <section className="py-10">
                 <div className=" grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <Image
+                    <img
                         priority
                         src="https://i.ibb.co/dWmBbcP/Ready-Mix-Concreteservice.jpg"
                         alt=""
@@ -237,7 +237,7 @@ const Home = () => {
 
 
             <section className="relative bg-dark-50/5">
-                <Image
+                <img
                     priority
                     src="https://i.ibb.co/VLqLMmt/Why-Choose.jpg"
                     className="md:absolute mb-4 md:mb-0 top-0 right-0 h-full w-full md:w-[50%] object-cover object-center"
@@ -278,7 +278,7 @@ const Home = () => {
                         blogs.map((item, index) => (
                             <div key={index} className="group">
                                 <div className="w-full rounded overflow-hidden relative hover:shadow-md">
-                                    <Image width={300} height={400} className="w-full h-full object-cover" src={item?.image} alt="Card Image" />
+                                    <img width={300} height={400} className="w-full h-full object-cover" src={item?.image} alt="Card Image" />
                                     <div className="px-6 py-4">
                                         <div className="font-bold text-xl mb-2">{item?.title}</div>
                                         <p className="text-gray-700 text-base">{item?.description}</p>
@@ -311,7 +311,7 @@ const Home = () => {
                     <div className="bar my-4 mx-auto" />
                 </div>
                 <div className="relative">
-                    <Image
+                    <img
                         priority
                         src="https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/blob-b6db9aa.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:600,cg:true"
                         className="md:absolute mb-4 md:mb-0 top-0 left-0 h-full w-full md:w-[45%] object-cover object-center"
@@ -415,7 +415,7 @@ const Home = () => {
                         "https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/Burlington-Concrete-Mixer.jpeg/:/cr=t:0%25,l:1.09%25,w:75%25,h:100%25/rs=w:365,h:365,cg:true",
                     ].map((item, key) => (
                         <SwiperSlide key={key} className="h-60 md:h-full">
-                            <Image
+                            <img
                                 priority
                                 src={item}
                                 className="object-cover object-center h-full w-full"

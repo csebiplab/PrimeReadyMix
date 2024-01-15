@@ -30,7 +30,7 @@ const
                 <div className="overlay-pos">
                     <div className="blog-card">
                         <Suspense fallback={!img && <p>Loading...</p>}>
-                            <Image className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125" width={400} height={400} src={img} alt={imgAlt} />
+                            {img && <img className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125" width={400} height={400} src={img} alt={imgAlt} />}
                         </Suspense>
                     </div>
                     <div className='overlay'>
