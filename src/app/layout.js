@@ -11,7 +11,7 @@ import axios from "axios";
 import { base } from "../redux/api/apiEndpoints";
 import Head from "next/head";
 
-export async function generateMetadata({ params, searchParams }, parent) {
+export async function generateMetadata() {
 
     // fetch data
     const metaData = await fetch(`http://localhost:8080/api/home`).then((res) => res.json())
