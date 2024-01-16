@@ -2,31 +2,45 @@ import axios from "axios";
 import Services from "./RC";
 import { base } from "../../redux/api/apiEndpoints";
 
-export const generateMetadata = async () => {
-    // const dynamicRootMetadata = rootMetadata();
-    // console.log(dynamicRootMetadata);
-    try {
-        const { data } = await axios.get(base + "/api/v1/metadata");
+export async function generateMetadata() {
 
-        const dynamicMetadata = await data.find((metadata) => {
-            return metadata.page === "concrete-delivery";
-        });
-        // console.log(dynamicMetadata);
-        const { title, description, google_console_key, yandex_console_key, yahoo_console_key } =
-            dynamicMetadata || {};
-        return {
-            title: title,
-            description: description,
-            verification: {
-                google: google_console_key,
-                yandex: yandex_console_key,
-                yahoo: yahoo_console_key,
-            },
-        };
-    } catch (error) {
-        console.log(error);
+    // fetch data
+    const metaData = await fetch(`http://localhost:8080/api/concreteDelivery`).then((res) => res.json())
+    // console.log("meta ---", metaData)
+
+    return {
+        title: metaData?.concreteDeliveryRouteAllMetaData[0]?.title,
+        description: metaData?.concreteDeliveryRouteAllMetaData[0]?.description,
+        keywords: metaData?.concreteDeliveryRouteAllMetaData[0]?.keywords
+
     }
-};
+}
+
+// export const generateMetadata = async () => {
+//     // const dynamicRootMetadata = rootMetadata();
+//     // console.log(dynamicRootMetadata);
+//     try {
+//         const { data } = await axios.get(base + "/api/v1/metadata");
+
+//         const dynamicMetadata = await data.find((metadata) => {
+//             return metadata.page === "concrete-delivery";
+//         });
+//         // console.log(dynamicMetadata);
+//         const { title, description, google_console_key, yandex_console_key, yahoo_console_key } =
+//             dynamicMetadata || {};
+//         return {
+//             title: title,
+//             description: description,
+//             verification: {
+//                 google: google_console_key,
+//                 yandex: yandex_console_key,
+//                 yahoo: yahoo_console_key,
+//             },
+//         };
+//     } catch (error) {
+//         console.log(error);
+//     }
+// };
 // export const metadata = {
 //     title: "Concrete Delivery Services in Toronto",
 //     description:
