@@ -1,10 +1,18 @@
 import Reviews from "./Reviews";
 
-export const metadata = {
-    title: "Prime Ready Mix Easy Reno Testimonials",
-    description:
-        "Below is a short selection from some of the testimonials we have collected over the years. Whether it is Google, Home Stars, Trusted Pros or Houzz, our clients are happy with their finished product. At Easy Reno our aim is to make every project a complete success.",
-};
+export async function generateMetadata() {
+
+    // fetch data
+    const metaData = await fetch(`http://localhost:8080/api/testimonials`).then((res) => res.json())
+    // console.log("meta ---", metaData)
+
+    return {
+        title: metaData?.testimonialRouteAllMetaData[0]?.title,
+        description: metaData?.testimonialRouteAllMetaData[0]?.description,
+        keywords: metaData?.testimonialRouteAllMetaData[0]?.keywords
+
+    }
+}
 
 export default function () {
     return (
