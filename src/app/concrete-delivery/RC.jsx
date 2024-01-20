@@ -179,7 +179,7 @@ const Services = () => {
                     ].map((item, key) => (
                         <SwiperSlide key={key} className="h-60 md:h-full">
                             <img
-                                priority
+                                priority="true"
                                 src={item}
                                 className="object-cover object-center h-full w-full"
                                 alt=""
@@ -220,7 +220,7 @@ const Services = () => {
                         </p>
                     </div>
                     <img
-                        priority
+                        priority="true"
                         src="https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/blob-5fe5952.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:600,cg:true"
                         alt=""
                         width={300}
@@ -232,7 +232,7 @@ const Services = () => {
             <section className="py-10">
                 <div className="w-11/12 md:w-10/12 mx-auto flex flex-col-reverse md:flex-row gap-8">
                     <img
-                        priority
+                        priority="true"
                         src="https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/Truck-with-loader-3-2827-1024x609.jpeg/:/rs=w:600,cg:true,m"
                         alt=""
                         width={300}
@@ -663,7 +663,7 @@ const Services = () => {
             </section>
             <section className="relative bg-dark-50/10">
                 <img
-                    priority
+                    priority="true"
                     src="https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/blob-b6db9aa.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:600,cg:true"
                     alt=""
                     width={300}
@@ -755,7 +755,7 @@ const Services = () => {
                         </p>
                     </div>
                     <img
-                        priority
+                        priority="true"
                         src="https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/blob-9397e44.png/:/cr=t:0%25,l:0.12%25,w:99.75%25,h:100%25/rs=w:600,h:451,cg:true"
                         alt=""
                         width={300}
@@ -911,7 +911,7 @@ const Services = () => {
                             </div>
                         </div>
                         <img
-                            priority
+                            priority="true"
                             src="https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/P85-side-e1663291233852.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1352,h:500,cg:true"
                             alt=""
                             width={300}

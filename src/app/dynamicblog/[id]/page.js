@@ -1,9 +1,10 @@
 'use client'
 import React, { useEffect, useState, Suspense } from 'react';
-import { useRouter } from 'next/router';
-import Contact from '../../../components/common/Contact';
-import Head from 'next/head';
-import Image from 'next/image';
+import { base } from '../../../redux/api/apiEndpoints';
+// import { useRouter } from 'next/router';
+// import Contact from '../../../components/common/Contact';
+// import Head from 'next/head';
+// import Image from 'next/image';
 
 const DynamicBlog = ({ params }) => {
     const [isLoading, setIsLoading] = useState(false);
@@ -11,11 +12,13 @@ const DynamicBlog = ({ params }) => {
     const [img, setImg] = useState("");
     const [imgAlt, setImgAlt] = useState("");
 
+    // const baseUrl = process.env.NEXT_PUBLIC_LOCAL_API;
+
     useEffect(() => {
         const fetchData = async () => {
             try {
                 setIsLoading(true);
-                const response = await fetch(`http://localhost:8080/api/blogContent/${params?.id}`);
+                const response = await fetch(`${base}/api/blogContent/${params?.id}`);
                 const data = await response.json();
                 setCategories(data?.blogDetailsData);
             } catch (error) {
@@ -30,7 +33,7 @@ const DynamicBlog = ({ params }) => {
 
 
 
-    useEffect(() => {
+    useEffect(() => {  const filteredContent = categories?.content.replace(/<img[^>]*>/, "");
         if (!isLoading && categories?.content) {
             const parser = new DOMParser();
             const doc = parser.parseFromString(categories.content, 'text/html');
@@ -43,7 +46,7 @@ const DynamicBlog = ({ params }) => {
     }, [isLoading, categories]);
 
     // Filter out first img tag from HTML content
-    const filteredContent = categories?.content.replace(/<img[^>]*>/, "");
+  
 
 
     return (

@@ -6,15 +6,18 @@ import "./globals.css";
 import Script from "next/script";
 import GoogleAnalytics from "./GoogleAnalytics";
 import StoreProvider from "../redux/storeProvider";
-import { allMetadata, rootMetadata } from "../helpers/robotTxtHelper";
-import axios from "axios";
 import { base } from "../redux/api/apiEndpoints";
-import Head from "next/head";
+// import { allMetadata, rootMetadata } from "../helpers/robotTxtHelper";
+// import axios from "axios";
+// import { base } from "../redux/api/apiEndpoints";
+// import Head from "next/head";
 
 export async function generateMetadata() {
 
+    // const baseUrl = process.env.NEXT_PUBLIC_LOCAL_API
+
     // fetch data
-    const metaData = await fetch(`http://localhost:8080/api/home`).then((res) => res.json())
+    const metaData = await fetch(`${base}/api/home`).then((res) => res.json())
     // console.log("meta ---", metaData)
 
     return {

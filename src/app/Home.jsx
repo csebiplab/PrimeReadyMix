@@ -87,7 +87,7 @@ const Home = () => {
           </div>
           <section className="md:hidden">
             <img
-              priority
+              priority="true"
               src={"/prime-readymix-banner.png"}
               alt="prime-ready-mix-banner"
               width={500}
@@ -112,7 +112,7 @@ const Home = () => {
             ].map((item, key) => (
               <SwiperSlide key={key} className="h-60 md:h-full">
                 <img
-                  priority
+                  priority="true"
                   src={item}
                   className="object-cover object-center h-full w-full"
                   alt=""
@@ -129,7 +129,7 @@ const Home = () => {
         <section className="md:py-10">
           <div className=" flex flex-col-reverse md:flex-row gap-8 relative">
             <img
-              priority
+              priority="true"
               src="https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/blob-9397e44.png/:/cr=t:0%25,l:0.12%25,w:99.75%25,h:100%25/rs=w:600,h:451,cg:true/qt=q:46"
               alt=""
               className="object-cover object-center w-full h-full max-h-[320px] md:max-h-[600px]"
@@ -189,7 +189,7 @@ const Home = () => {
             </div>
           </div>
           <img
-            priority
+            priority="true"
             src="https://media.istockphoto.com/id/997566504/photo/cement-mixer-on-the-road.webp?b=1&s=170667a&w=0&k=20&c=nkm-6Ih8q6L6_PaA-xqRV63nADGh7xQzb9f9oLY8ImU="
             alt=""
             width={300}
@@ -201,7 +201,7 @@ const Home = () => {
         <section className="py-10">
           <div className=" grid grid-cols-1 md:grid-cols-2 gap-8">
             <img
-              priority
+              priority="true"
               src="https://i.ibb.co/dWmBbcP/Ready-Mix-Concreteservice.jpg"
               alt=""
               width={300}
@@ -249,7 +249,7 @@ const Home = () => {
 
         <section className="relative bg-dark-50/5">
           <img
-            priority
+            priority="true"
             src="https://i.ibb.co/VLqLMmt/Why-Choose.jpg"
             className="md:absolute mb-4 md:mb-0 top-0 right-0 h-full w-full md:w-[50%] object-cover object-center"
             width={300}
@@ -335,7 +335,7 @@ const Home = () => {
           </div>
           <div className="relative">
             <img
-              priority
+              priority="true"
               src="https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/blob-b6db9aa.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:600,cg:true"
               className="md:absolute mb-4 md:mb-0 top-0 left-0 h-full w-full md:w-[45%] object-cover object-center"
               width={300}
@@ -440,7 +440,7 @@ const Home = () => {
             ].map((item, key) => (
               <SwiperSlide key={key} className="h-60 md:h-full">
                 <img
-                  priority
+                  priority="true"
                   src={item}
                   className="object-cover object-center h-full w-full"
                   alt=""
