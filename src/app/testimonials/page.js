@@ -1,10 +1,21 @@
+import { base } from "../../redux/api/apiEndpoints";
 import Reviews from "./Reviews";
 
-export const metadata = {
-    title: "Prime Ready Mix Easy Reno Testimonials",
-    description:
-        "Below is a short selection from some of the testimonials we have collected over the years. Whether it is Google, Home Stars, Trusted Pros or Houzz, our clients are happy with their finished product. At Easy Reno our aim is to make every project a complete success.",
-};
+export async function generateMetadata() {
+
+    // const baseUrl = process.env.NEXT_PUBLIC_LOCAL_API;
+
+    // fetch data
+    const metaData = await fetch(`${base}/api/testimonials`).then((res) => res.json())
+    // console.log("meta ---", metaData)
+
+    return {
+        title: metaData?.testimonialRouteAllMetaData[0]?.title,
+        description: metaData?.testimonialRouteAllMetaData[0]?.description,
+        keywords: metaData?.testimonialRouteAllMetaData[0]?.keywords
+
+    }
+}
 
 export default function () {
     return (

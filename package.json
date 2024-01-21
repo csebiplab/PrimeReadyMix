@@ -9,7 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@floating-ui/core": "^1.5.3",
+    "@floating-ui/dom": "^1.5.4",
     "@material-tailwind/react": "^2.1.2",
+    "@motionone/utils": "^10.16.3",
     "@reduxjs/toolkit": "^1.9.7",
     "axios": "^1.5.1",
     "next": "^13.5.2",

@@ -10,8 +10,10 @@ export const usePostDataFetching = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("https://readymix-server.vercel.app/api/posts");
-                setData(response.data);
+                const response = await axios.get("http://localhost:8080/api/blogContent");
+                // console.log(response);
+                // console.log(response?.data?.blogContentData);
+                setData(response?.data?.blogContentData);
             } catch (error) {
                 setError(error);
             } finally {

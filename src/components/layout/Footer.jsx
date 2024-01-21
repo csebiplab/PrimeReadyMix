@@ -10,8 +10,8 @@ const Footer = () => {
             <div className="w-11/12 md:w-10/12 mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-5 gap-5 justify-between items-start mx-auto">
                     <div className="col-span-12 md:col-span-2 mx-auto justify-center md:justify-start">
-                        <Image
-                            priority
+                        <img
+                            priority="true"
                             src="/prime-readymix-logo.png"
                             className="w-full max-w-[150px] bg-white mb-3 rounded-none mx-auto md:mx-0 h-full"
                             alt=""

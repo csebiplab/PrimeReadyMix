@@ -6,37 +6,54 @@ import "./globals.css";
 import Script from "next/script";
 import GoogleAnalytics from "./GoogleAnalytics";
 import StoreProvider from "../redux/storeProvider";
-import { allMetadata, rootMetadata } from "../helpers/robotTxtHelper";
-import axios from "axios";
 import { base } from "../redux/api/apiEndpoints";
-import Head from "next/head";
+// import { allMetadata, rootMetadata } from "../helpers/robotTxtHelper";
+// import axios from "axios";
+// import { base } from "../redux/api/apiEndpoints";
+// import Head from "next/head";
+
+export async function generateMetadata() {
+
+    // const baseUrl = process.env.NEXT_PUBLIC_LOCAL_API
+
+    // fetch data
+    const metaData = await fetch(`${base}/api/home`).then((res) => res.json())
+    // console.log("meta ---", metaData)
+
+    return {
+        title: metaData?.homeRouteAllMetaData[0]?.title,
+        description: metaData?.homeRouteAllMetaData[0]?.description,
+        keywords: metaData?.homeRouteAllMetaData[0]?.keywords
+
+    }
+}
 
 const montserrat = Montserrat({ subsets: ["latin"] });
-export const generateMetadata = async () => {
-    // const dynamicRootMetadata = rootMetadata();
-    // console.log(dynamicRootMetadata);
-    try {
-        const { data } = await axios.get(base + "/api/v1/metadata");
+// export const generateMetadata = async () => {
+//     // const dynamicRootMetadata = rootMetadata();
+//     // console.log(dynamicRootMetadata);
+//     try {
+//         const { data } = await axios.get(base + "/api/v1/metadata");
 
-        const dynamicMetadata = await data.find((metadata) => {
-            return metadata.page === "root";
-        });
-        // console.log(dynamicMetadata);
-        const { title, description, google_console_key, yandex_console_key, yahoo_console_key } =
-            dynamicMetadata || {};
-        return {
-            title: title,
-            description: description,
-            verification: {
-                google: google_console_key,
-                yandex: yandex_console_key,
-                yahoo: yahoo_console_key,
-            },
-        };
-    } catch (error) {
-        console.log(error);
-    }
-};
+//         const dynamicMetadata = await data.find((metadata) => {
+//             return metadata.page === "root";
+//         });
+//         // console.log(dynamicMetadata);
+//         const { title, description, google_console_key, yandex_console_key, yahoo_console_key } =
+//             dynamicMetadata || {};
+//         return {
+//             title: title,
+//             description: description,
+//             verification: {
+//                 google: google_console_key,
+//                 yandex: yandex_console_key,
+//                 yahoo: yahoo_console_key,
+//             },
+//         };
+//     } catch (error) {
+//         console.log(error);
+//     }
+// };
 
 // export const metadata = {
 //     title: "Ready Mix Concrete & Concrete Delivery, Toronto Ready Mix",

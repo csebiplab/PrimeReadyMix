@@ -4,10 +4,24 @@ import ServicesSection from "../../components/common/ServicesSection";
 import { site_info } from "../../site/info";
 import ProjectFrom from "./ProjectFrom";
 
-export const metadata = {
-    title: "Prime Ready Mix Contact",
-    description: "You’re on the way to the easiest renovation ever.",
-};
+// export const metadata = {
+//     title: "Prime Ready Mix Contact",
+//     description: "You’re on the way to the easiest renovation ever.",
+// };
+
+export async function generateMetadata() {
+
+    // fetch data
+    const metaData = await fetch(`http://localhost:8080/api/contactUs`).then((res) => res.json())
+    // console.log("meta ---", metaData)
+
+    return {
+        title: metaData?.contactRouteAllMetaData[0]?.title,
+        description: metaData?.contactRouteAllMetaData[0]?.description,
+        keywords: metaData?.contactRouteAllMetaData[0]?.keywords
+
+    }
+}
 
 export default function contact_us() {
     return (
