@@ -1,10 +1,10 @@
 import axios from "axios";
 import { base, sitemap } from "../redux/api/apiEndpoints";
 
-export default function sitemap() {
+export default function Sitemap() {
     const fetchRobotTxt = async () => {
         try {
-            const { data } = await axios.get(base + "/api/v1" + sitemap);
+            const { data } = await axios.get(base + "/api" + sitemap);
             console.log(data);
             return data;
         } catch (error) {

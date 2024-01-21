@@ -3,6 +3,7 @@ import ReviewSlider from "../../components/common/ReviewSlider";
 import ServicesSection from "../../components/common/ServicesSection";
 import { site_info } from "../../site/info";
 import ProjectFrom from "./ProjectFrom";
+import { base } from "../../redux/api/apiEndpoints";
 
 // export const metadata = {
 //     title: "Prime Ready Mix Contact",
@@ -12,7 +13,7 @@ import ProjectFrom from "./ProjectFrom";
 export async function generateMetadata() {
 
     // fetch data
-    const metaData = await fetch(`http://localhost:8080/api/contactUs`).then((res) => res.json())
+    const metaData = await fetch(`${base}/api/contactUs`).then((res) => res.json())
     // console.log("meta ---", metaData)
 
     return {

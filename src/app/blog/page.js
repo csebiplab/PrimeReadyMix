@@ -1,9 +1,10 @@
+import { base } from "../../redux/api/apiEndpoints";
 import BlogPage from "./blogPage";
 
 export async function generateMetadata() {
 
     // fetch data
-    const metaData = await fetch(`http://localhost:8080/api/blogs`).then((res) => res.json())
+    const metaData = await fetch(`${base}/api/blogs`).then((res) => res.json())
     // console.log("meta ---", metaData)
 
     return {

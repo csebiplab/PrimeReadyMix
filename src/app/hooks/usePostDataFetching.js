@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { base } from '../../redux/api/apiEndpoints';
 
 export const usePostDataFetching = () => {
     const [data, setData] = useState([]);
@@ -10,7 +11,7 @@ export const usePostDataFetching = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://localhost:8080/api/blogContent");
+                const response = await axios.get(`${base}/api/blogContent`);
                 // console.log(response);
                 // console.log(response?.data?.blogContentData);
                 setData(response?.data?.blogContentData);
