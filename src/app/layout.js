@@ -4,7 +4,7 @@ import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 import "./globals.css";
 import Script from "next/script";
-import GoogleAnalytics from "./GoogleAnalytics";
+// import GoogleAnalytics from "./GoogleAnalytics";
 import StoreProvider from "../redux/storeProvider";
 import { base } from "../redux/api/apiEndpoints";
 // import { allMetadata, rootMetadata } from "../helpers/robotTxtHelper";
@@ -75,7 +75,7 @@ export default function RootLayout({ children }) {
                 <StoreProvider>
                     <ProgressBar />
                     <Header />
-                    <GoogleAnalytics />
+                    {/* <GoogleAnalytics /> */}
                     {children}
                     <Footer />
                 </StoreProvider>
