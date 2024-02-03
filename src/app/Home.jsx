@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
 import { FaStar } from "react-icons/fa";
 import "swiper/css";
 import "swiper/css/autoplay";
@@ -10,13 +9,9 @@ import "swiper/css/pagination";
 import { Autoplay } from "swiper/modules";
 import ServicesSection from "../components/common/ServicesSection";
 import { contacts } from "../site/info";
-import ReadyMix from "../../public/ReadyMixConcrete.jpg";
 import DialogComponent from "../components/common/DialogComponent";
-import Image from "next/image";
 import axios from "axios";
 import "./Home.css";
-import Head from "next/head";
-
 
 const Home = () => {
   const [open, setOpen] = useState(false);

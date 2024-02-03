@@ -1,10 +1,11 @@
-import { axios } from "axios";
+import axios from "axios";
 import { base, robotTxt } from "../redux/api/apiEndpoints";
+
 
 export default function robots() {
     const fetchRobotTxt = async () => {
         try {
-            const { data } = await axios.get(base + "/api/v1" + robotTxt);
+            const { data } = await axios.get(base + "/api" + robotTxt);
             console.log(data);
             return data;
         } catch (error) {

@@ -3,7 +3,7 @@ import { base } from "./apiEndpoints";
 
 export const apiSlice = createApi({
     reducerPath: "api",
-    baseQuery: fetchBaseQuery({ baseUrl: base + "/api/v1" }),
+    baseQuery: fetchBaseQuery({ baseUrl: base + "/api" }),
     tagTypes: [],
     endpoints: (builder) => ({}),
 });

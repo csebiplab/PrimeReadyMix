@@ -11,6 +11,7 @@ const DynamicBlog = ({ params }) => {
     const [categories, setCategories] = useState(null);
     const [img, setImg] = useState("");
     const [imgAlt, setImgAlt] = useState("");
+    const [blogDetails, setBlogDetails] = useState("")
 
     // const baseUrl = process.env.NEXT_PUBLIC_LOCAL_API;
 
@@ -33,7 +34,7 @@ const DynamicBlog = ({ params }) => {
 
 
 
-    useEffect(() => {  const filteredContent = categories?.content.replace(/<img[^>]*>/, "");
+    useEffect(() => {
         if (!isLoading && categories?.content) {
             const parser = new DOMParser();
             const doc = parser.parseFromString(categories.content, 'text/html');
@@ -42,11 +43,10 @@ const DynamicBlog = ({ params }) => {
             const imgAltTxt = imgElement ? imgElement.getAttribute('alt') : null;
             setImg(imgSrc);
             setImgAlt(imgAltTxt);
+            const filteredContent = categories?.content.replace(/<img[^>]*>/, "");
+            setBlogDetails(filteredContent)
         }
     }, [isLoading, categories]);
-
-    // Filter out first img tag from HTML content
-  
 
 
     return (
@@ -85,7 +85,8 @@ const DynamicBlog = ({ params }) => {
                             </div>
                         </div>
                         <div className='flex mt-8 gap-8'>
-                            <div className='w-full' dangerouslySetInnerHTML={{ __html: filteredContent }} />                <div className='w-full'>
+                            <div className='w-full' dangerouslySetInnerHTML={{ __html: blogDetails }} />
+                            <div className='w-full'>
                                 {/* Assuming Contact is a component that needs to be full-width */}
                                 <div className='lg:w-[80%] mt-12 sticky top-0'>
                                     <h5>Contact Prime Ready Mix </h5>
@@ -107,7 +108,7 @@ const DynamicBlog = ({ params }) => {
                                                 type="text"
                                                 name="last-name"
                                                 id="last-name"
-                                                placeholder='    Last Name *'
+                                                placeholder='Last Name *'
                                                 autoComplete="family-name"
                                                 className="block w-full rounded-md border-0 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                             />
@@ -119,7 +120,7 @@ const DynamicBlog = ({ params }) => {
                                                 type="email"
                                                 name="last-name"
                                                 id="last-name"
-                                                placeholder='     Email*'
+                                                placeholder='Email*'
                                                 autoComplete="family-name"
                                                 className="block w-full rounded-md border-0 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                             />

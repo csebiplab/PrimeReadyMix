@@ -4,7 +4,7 @@ import { base, googleAnalytics } from "./src/redux/api/apiEndpoints";
 
 export const GA_TRACKING_ID = async () => {
     try {
-        const { data } = await axios.get(base + "/api/v1" + googleAnalytics);
+        const { data } = await axios.get(base + "/api" + googleAnalytics);
         console.log(data[0].google_analytics_key);
         return data;
     } catch (error) {
