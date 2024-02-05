@@ -47,15 +47,61 @@ const Home = () => {
   return (
     <>
       <main className="">
-        <section className="relative flex flex-col md:flex-row items-center xl:container xl:mx-auto">
+        <section className="md:hidden">
+          <div>
+            <div className="relative">
+              <img
+                priority="true"
+                // src="https://i.ibb.co/VLqLMmt/Why-Choose.jpg"
+                src="./primeReadyMixHero.jpg"
+                className="object-cover object-center h-[31rem] w-full"
+                alt=""
+                width={400}
+                height={700}
+              />
+              <div className="pt-10 absolute top-0 left-0 bg-dark bg-opacity-35 text-white h-full">
+                <h1 className="font-bold text-[34px] mb-1 leading-tight text-center px-3 text-white">
+                  Ready Mix Concrete & <br />
+                  Concrete Delivery, <br />
+                  Toronto Ready Mix
+                </h1>
+                <p className="text-white mt-7 text-xl font-semibold leading-6 text-center px-14">
+                  When it comes to reliable and trusted ready mix concrete
+                  services in Toronto, there is no better choice than Prime
+                  Ready Mix.
+                </p>
+                <div className="flex justify-center md:justify-start">
+                  <button
+                    aria-label="estimate-button"
+                    className="btn !text-sm !py-3 !px-10 my-6 !bg-primary"
+                    onClick={handleOpen}
+                  >
+                    Get Your Estimate
+                  </button>
+                </div>
+                <div>
+                  <DialogComponent
+                    open={open}
+                    handler={handleOpen}
+                    setOpen={setOpen}
+                  />
+                </div>
+
+                <br />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="hidden relative md:flex flex-col md:flex-row items-center xl:container xl:mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mx-auto">
-            <div className="md:pl-28 pt-10">
-              <h1 className="font-bold text-4xl mb-1 leading-tight text-center md:text-left">
+            <div className="md:pl-28 pt-10 md:pt-20">
+              <h1 className="font-bold text-3xl md:text-[44px] mb-1 leading-tight text-center md:text-left px-14 md:px-0">
                 Ready Mix Concrete & <br />
                 Concrete Delivery, <br />
                 Toronto Ready Mix
               </h1>
-              <p className="text-dark-500 mt-7 md:text-2xl text-[18px] font-semibold md:font-semibold leading-6 text-center md:text-left">
+              <p className="text-dark-500 mt-7 text-xl font-semibold leading-6 text-center md:text-left px-14 md:px-0">
                 When it comes to reliable and trusted ready mix concrete
                 services in Toronto, there is no better choice than Prime Ready
                 Mix.
@@ -80,7 +126,7 @@ const Home = () => {
               <br />
             </div>
           </div>
-          <section className="md:hidden">
+          {/* <section className="md:hidden">
             <img
               priority="true"
               src={"/prime-readymix-banner.png"}
@@ -89,7 +135,7 @@ const Home = () => {
               height={500}
               className="w-full h-full"
             />
-          </section>
+          </section> */}
           <Swiper
             spaceBetween={0}
             slidesPerView={1}
@@ -119,7 +165,8 @@ const Home = () => {
             <SwiperSlide className="h-auto md:h-full xl:h-full">
               <img
                 priority="true"
-                src="https://i.ibb.co/VLqLMmt/Why-Choose.jpg"
+                // src="https://i.ibb.co/VLqLMmt/Why-Choose.jpg"
+                src="./primeReadyMixHero.jpg"
                 className="object-cover object-center h-[31rem] xl:h-full w-full"
                 alt=""
                 width={400}
