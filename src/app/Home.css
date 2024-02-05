@@ -15,3 +15,15 @@
     flex-basis: calc(20% - 15px); 
   }
 } */
+
+
+@media (min-width: 3000px) {
+  .custom-container {
+    padding: 0 10rem;
+    margin: 0 auto;
+  }
+
+  .custom-container img {
+    height: auto;
+  }
+}
