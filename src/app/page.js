@@ -1,4 +1,4 @@
 import Home from "./Home";
 export default function MainPage() {
-    return <div className="container mx-auto"><Home /></div>;
+    return <div className="mx-auto"><Home /></div>;
 }
