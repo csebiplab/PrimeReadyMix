@@ -9,7 +9,7 @@ const
     Blogs = ({ item }) => {
         const [img, setImg] = useState("");
         const [imgAlt, setImgAlt] = useState("");
-        const { _id, title, description, content } = item
+        const { blogTitle, metaTitle, shortDescription, content } = item ?? {};
 
         useEffect(() => {
             // Parse the HTML content to extract img src
@@ -26,7 +26,8 @@ const
         // console.log(description)
 
         return (
-            <Link href={`/dynamicblog/${_id}`}>
+            // <Link href={`/dynamicblog/${metaTitle}`}>
+            <Link href="/dynamicblog/[...metaTitle]" as={`/dynamicblog/${encodeURIComponent(metaTitle)}`}>
                 <div className="overlay-pos">
                     <div className="blog-card">
                         <Suspense fallback={!img && <p>Loading...</p>}>
@@ -35,8 +36,8 @@ const
                     </div>
                     <div className='overlay'>
                         <div>
-                            <h1 className="font-dmserif text-3xl font-bold text-white px-4">{title}</h1>
-                            <p className="mb-3 text-lg text-white px-4">{description}</p>
+                            <h1 className="font-dmserif text-3xl font-bold text-white px-4">{blogTitle}</h1>
+                            <p className="mb-3 text-lg text-white px-4">{shortDescription}</p>
                             {/* <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">Show</button> */}
                         </div>
                     </div>
