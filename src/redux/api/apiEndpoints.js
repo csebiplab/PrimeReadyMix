@@ -5,7 +5,7 @@ const endPoints = {
             : process.env.NEXT_PUBLIC_LIVE_API,
     metadata: "/metadata",
     googleAnalytics: "/search-console",
-    robotTxt: "/robot-txt",
+    robotTxt: "/robotTxt",
     siteMap: "/siteMap",
 };
 
