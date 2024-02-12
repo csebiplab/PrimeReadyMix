@@ -6,7 +6,7 @@ const endPoints = {
     metadata: "/metadata",
     googleAnalytics: "/search-console",
     robotTxt: "/robot-txt",
-    sitemap: "/sitemap",
+    siteMap: "/siteMap",
 };
 
-export const { base, metadata, googleAnalytics, robotTxt, sitemap } = endPoints;
+export const { base, metadata, googleAnalytics, robotTxt, siteMap } = endPoints;
