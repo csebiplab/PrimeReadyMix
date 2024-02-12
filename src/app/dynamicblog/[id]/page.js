@@ -1,10 +1,7 @@
 'use client'
 import React, { useEffect, useState, Suspense } from 'react';
 import { base } from '../../../redux/api/apiEndpoints';
-// import { useRouter } from 'next/router';
-// import Contact from '../../../components/common/Contact';
-// import Head from 'next/head';
-// import Image from 'next/image';
+
 
 const DynamicBlog = ({ params }) => {
     const [isLoading, setIsLoading] = useState(false);
@@ -12,8 +9,6 @@ const DynamicBlog = ({ params }) => {
     const [img, setImg] = useState("");
     const [imgAlt, setImgAlt] = useState("");
     const [blogDetails, setBlogDetails] = useState("")
-
-    // const baseUrl = process.env.NEXT_PUBLIC_LOCAL_API;
 
     useEffect(() => {
         const fetchData = async () => {
@@ -50,33 +45,14 @@ const DynamicBlog = ({ params }) => {
 
 
     return (
-        // <div className='mt-8'>
-        //     <div className='flex'>
-        //         <div className='mr-8'>
-        //             <h1 className='text-3xl font-bold mb-4'>{categories.name}</h1>
-        //             <p className='text-gray-600'>{categories.description}</p>
-        //         </div>
-        //         <div>
-        //             <img className='max-w-full h-auto' src={categories.image} alt="Blog Image" />
-        //         </div>
-        //     </div>
-        //     <div className='flex'>
-        //         <div>
-        //             <div className='mt-8' dangerouslySetInnerHTML={{ __html: categories.quillValue }} />
-        //         </div>
-        //         <div>
-        //             <Contact />
-        //         </div>
-        //     </div>
-        // </div>
         <>
             {
                 isLoading ? <p>Loading...</p> : <>
                     <div className='mt-8 w-full max-w-screen-lg mx-auto'>
                         <div className='flex'>
                             <div className='mr-8'>
-                                <h1 className='text-3xl font-bold mb-4'>{categories?.title}</h1>
-                                <p className='text-gray-600'>{categories?.description}</p>
+                                <h1 className='text-3xl font-bold mb-4'>{categories?.blogTitle}</h1>
+                                <p className='text-gray-600'>{categories?.shortDescription}</p>
                             </div>
                             <div>
                                 <Suspense fallback={isLoading && <p>Loading...</p>}>
