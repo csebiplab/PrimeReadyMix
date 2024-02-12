@@ -4,18 +4,13 @@ import Services from "./RC";
 // import { base } from "../../redux/api/apiEndpoints";
 
 export async function generateMetadata() {
-
-    // const baseUrl = process.env.NEXT_PUBLIC_LOCAL_API
-
-    // fetch data
     const metaData = await fetch(`${base}/api/concreteDelivery`).then((res) => res.json())
-    // console.log("meta ---", metaData)
 
     return {
         title: metaData?.concreteDeliveryRouteAllMetaData[0]?.title,
         description: metaData?.concreteDeliveryRouteAllMetaData[0]?.description,
-        keywords: metaData?.concreteDeliveryRouteAllMetaData[0]?.keywords
-
+        keywords: metaData?.concreteDeliveryRouteAllMetaData[0]?.keywords,
+        
     }
 }
 
