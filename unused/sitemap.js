@@ -1,4 +1,4 @@
-import { base, siteMap } from "../redux/api/apiEndpoints";
+import { base, siteMap } from "../src/redux/api/apiEndpoints";
 
 export default async function sitemap() {
     try {
