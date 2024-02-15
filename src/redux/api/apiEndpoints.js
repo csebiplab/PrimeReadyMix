@@ -5,8 +5,8 @@ const endPoints = {
             : process.env.NEXT_PUBLIC_LIVE_API,
     metadata: "/metadata",
     googleAnalytics: "/search-console",
-    robotTxt: "/robot-txt",
-    sitemap: "/sitemap",
+    robotTxt: "/robotTxt",
+    siteMap: "/siteMap",
 };
 
-export const { base, metadata, googleAnalytics, robotTxt, sitemap } = endPoints;
+export const { base, metadata, googleAnalytics, robotTxt, siteMap } = endPoints;

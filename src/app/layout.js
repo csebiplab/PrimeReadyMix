@@ -12,21 +12,46 @@ import { base } from "../redux/api/apiEndpoints";
 // import { base } from "../redux/api/apiEndpoints";
 // import Head from "next/head";
 
+
 export async function generateMetadata() {
+    try {
+        // Fetch metadata for the home route
+        const metaDataResponse = await fetch(`${base}/api/home`);
+        const metaData = await metaDataResponse.json();
 
-    // const baseUrl = process.env.NEXT_PUBLIC_LOCAL_API
+        // Fetch Google site verification URL
+        const googleVerificationResponse = await fetch(`${base}/api/verificationUrl`);
+        const googleVerification = await googleVerificationResponse.json();
 
-    // fetch data
-    const metaData = await fetch(`${base}/api/home`).then((res) => res.json())
-    // console.log("meta ---", metaData)
+        // Extract Google console key from the meta tag content
+        const googleConsoleKey = extractGoogleConsoleKey(googleVerification);
 
-    return {
-        title: metaData?.homeRouteAllMetaData[0]?.title,
-        description: metaData?.homeRouteAllMetaData[0]?.description,
-        keywords: metaData?.homeRouteAllMetaData[0]?.keywords
-
+        return {
+            title: metaData?.homeRouteAllMetaData[0]?.title,
+            description: metaData?.homeRouteAllMetaData[0]?.description,
+            keywords: metaData?.homeRouteAllMetaData[0]?.keywords,
+            verification: {
+                google: googleConsoleKey,
+            }
+        };
+    } catch (error) {
+        console.error('Error generating metadata:', error);
+        throw error;
     }
 }
+
+function extractGoogleConsoleKey(googleVerification) {
+    try {
+        const { verificationUrl } = googleVerification ?? {};
+        const metaTagContent = verificationUrl[0]?.title;
+        const consoleKey = metaTagContent.split(" ")[2]?.split("=")[1]?.slice(1, -1);
+        return consoleKey;
+    } catch (error) {
+        console.error('Error extracting Google console key:', error);
+        throw error;
+    }
+}
+
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 // export const generateMetadata = async () => {
