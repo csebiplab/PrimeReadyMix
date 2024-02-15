@@ -1,21 +1,24 @@
 'use client';
-import React from "react";
-import axios from "axios";
-import { base, siteMap } from "../../redux/api/apiEndpoints";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { base, siteMap } from "../redux/api/apiEndpoints";
 
 const SitemapData = () => {
-    const [sitemapData, setSitemapData] = React.useState([]);
-    const [isLoading, setIsLoading] = React.useState(false);
+    const [sitemapData, setSitemapData] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
 
-    React.useEffect(() => {
+    useEffect(() => {
+        setIsLoading(true)
         async function fetchSitemap() {
             try {
-                const response = await axios.get(`${base}/api${siteMap}`);
+                const response = await fetch(`${base}/api${siteMap}`);
                 return response.data?.sitemap ?? [];
             } catch (error) {
                 console.error("Error fetching sitemap data:", error);
                 return [];
+            }
+            finally {
+                setIsLoading(false)
             }
         }
 
@@ -24,6 +27,10 @@ const SitemapData = () => {
     }, []);
 
     // console.log(sitemapData);
+
+    if (isLoading) {
+        return <p>Loading...</p>
+    }
 
     return (
         <div className="min-h-screen container py-10">

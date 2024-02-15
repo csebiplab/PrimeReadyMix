@@ -58,7 +58,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/sitemap"
+                  href="/sitemap-url"
                   className="mb-1 text-white hover:text-primary text-lg py-2"
                 >
                   Sitemap
