@@ -27,7 +27,7 @@ const
 
         return (
             // <Link href={`/dynamicblog/${metaTitle}`}>
-            <Link href="/dynamicblog/[...customLink]" as={`/dynamicblog/${encodeURIComponent(customLink)}`}>
+            <Link href="/[...customLink]" as={`/${encodeURIComponent(customLink)}`}>
                 <div className="overlay-pos">
                     <div className="blog-card">
                         <Suspense fallback={!img && <p>Loading...</p>}>
