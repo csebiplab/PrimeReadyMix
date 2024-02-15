@@ -1,4 +1,4 @@
-import { base } from "../../redux/api/apiEndpoints";
+// import { base } from "../../redux/api/apiEndpoints";
 import Reviews from "./Reviews";
 
 export async function generateMetadata() {
@@ -6,7 +6,7 @@ export async function generateMetadata() {
     // const baseUrl = process.env.NEXT_PUBLIC_LOCAL_API;
 
     // fetch data
-    const metaData = await fetch(`${base}/api/testimonials`).then((res) => res.json())
+    const metaData = await fetch(`${process.env.NEXT_PUBLIC_LIVE_API}/api/testimonials`).then((res) => res.json())
     // console.log("meta ---", metaData)
 
     return {

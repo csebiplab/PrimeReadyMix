@@ -1,10 +1,10 @@
-import { base } from "../../redux/api/apiEndpoints";
+// import { base } from "../../redux/api/apiEndpoints";
 import BlogPage from "./blogPage";
 
 export async function generateMetadata() {
 
     // fetch data
-    const metaData = await fetch(`${base}/api/blogs`).then((res) => res.json())
+    const metaData = await fetch(`${process.env.NEXT_PUBLIC_LIVE_API}/api/blogs`).then((res) => res.json())
     // console.log("meta ---", metaData)
 
     return {

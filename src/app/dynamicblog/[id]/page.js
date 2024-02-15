@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useState, Suspense } from 'react';
-import { base } from '../../../redux/api/apiEndpoints';
+// import { base } from '../../../redux/api/apiEndpoints';
 
 
 const DynamicBlog = ({ params }) => {
@@ -14,7 +14,7 @@ const DynamicBlog = ({ params }) => {
         const fetchData = async () => {
             try {
                 setIsLoading(true);
-                const response = await fetch(`${base}/api/blogContent/${params?.id}`);
+                const response = await fetch(`${process.env.NEXT_PUBLIC_LIVE_API}/api/blogContent/${params?.id}`);
                 const data = await response.json();
                 setCategories(data?.blogDetailsData);
             } catch (error) {
