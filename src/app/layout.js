@@ -6,7 +6,7 @@ import "./globals.css";
 import Script from "next/script";
 // import GoogleAnalytics from "./GoogleAnalytics";
 import StoreProvider from "../redux/storeProvider";
-import { base } from "../redux/api/apiEndpoints";
+// import { base } from "../redux/api/apiEndpoints";
 // import { allMetadata, rootMetadata } from "../helpers/robotTxtHelper";
 // import axios from "axios";
 // import { base } from "../redux/api/apiEndpoints";
@@ -16,11 +16,11 @@ import { base } from "../redux/api/apiEndpoints";
 export async function generateMetadata() {
     try {
         // Fetch metadata for the home route
-        const metaDataResponse = await fetch(`${base}/api/home`);
+        const metaDataResponse = await fetch(`${process.env.NEXT_PUBLIC_LIVE_API}/api/home`);
         const metaData = await metaDataResponse.json();
 
         // Fetch Google site verification URL
-        const googleVerificationResponse = await fetch(`${base}/api/verificationUrl`);
+        const googleVerificationResponse = await fetch(`${process.env.NEXT_PUBLIC_LIVE_API}/api/verificationUrl`);
         const googleVerification = await googleVerificationResponse.json();
 
         // Extract Google console key from the meta tag content
