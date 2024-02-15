@@ -1,9 +1,8 @@
-import axios from "axios";
 import { base, siteMap } from "../redux/api/apiEndpoints";
 
 export default async function sitemap() {
     try {
-        const { data } = await axios.get(base + "/api" + siteMap);
+        const { data } = await fetch(base + "/api" + siteMap);
         // console.log("object", data)
         const sitemapData = data?.sitemap?.map((singleData) => ({
             url: singleData.url,
