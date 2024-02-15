@@ -1,9 +1,9 @@
 import axios from "axios";
-import { base, robotTxt } from "../redux/api/apiEndpoints";
+import { robotTxt } from "../redux/api/apiEndpoints";
 
 export default async function robots() {
     try {
-        const response = await axios.get(`${base}/api${robotTxt}`);
+        const response = await axios.get(`${process.env.NEXT_PUBLIC_LIVE_API}/api${robotTxt}`);
         const robotTxts = response.data?.robotTxts ?? [];
 
         const formattedData = robotTxts.map((singleRobot) => ({

@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { base, siteMap } from "../redux/api/apiEndpoints";
+import { siteMap } from "../redux/api/apiEndpoints";
 
 const SitemapData = () => {
     const [sitemapData, setSitemapData] = useState([]);
@@ -11,7 +11,7 @@ const SitemapData = () => {
         setIsLoading(true)
         async function fetchSitemap() {
             try {
-                const response = await fetch(`${base}/api${siteMap}`);
+                const response = await fetch(`${process.env.NEXT_PUBLIC_LIVE_API}/api${siteMap}`);
                 return response.data?.sitemap ?? [];
             } catch (error) {
                 console.error("Error fetching sitemap data:", error);

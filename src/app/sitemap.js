@@ -1,9 +1,9 @@
 import axios from "axios";
-import { base, siteMap } from "../redux/api/apiEndpoints";
+import {  siteMap } from "../redux/api/apiEndpoints";
 
 export default async function sitemap() {
     try {
-        const { data } = await axios.get(`${base}/api${siteMap}`);
+        const { data } = await axios.get(`${process.env.NEXT_PUBLIC_LIVE_API}/api${siteMap}`);
         // console.log("object", data)
         const sitemapData = data?.sitemap?.map((singleData) => ({
             url: singleData.url,

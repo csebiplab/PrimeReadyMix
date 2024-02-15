@@ -1,10 +1,10 @@
 // import axios from "axios";
-import { base } from "../../redux/api/apiEndpoints";
+// import { base } from "../../redux/api/apiEndpoints";
 import Services from "./RC";
 // import { base } from "../../redux/api/apiEndpoints";
 
 export async function generateMetadata() {
-    const metaData = await fetch(`${base}/api/concreteDelivery`).then((res) => res.json())
+    const metaData = await fetch(`${process.env.NEXT_PUBLIC_LIVE_API}/api/concreteDelivery`).then((res) => res.json())
 
     return {
         title: metaData?.concreteDeliveryRouteAllMetaData[0]?.title,
