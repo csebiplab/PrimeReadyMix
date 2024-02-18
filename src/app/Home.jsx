@@ -142,7 +142,7 @@ const Home = () => {
         </section>
 
         <div className="container">
-          <section className="md:py-10 mt-28">
+          <section className="md:py-10 mt-10 md:mt-6">
             <div className=" flex flex-col-reverse md:flex-row gap-8 relative">
               <img
                 priority="true"
@@ -273,10 +273,10 @@ const Home = () => {
               height={300}
               alt=""
             />
-            <div className=" grid grid-cols-1 md:grid-cols-2 gap-5 w-11/12 md:w-10/12 mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:pr-24">
               <div className="py-10">
                 <h3 className="tracking-2 mb-4  text-2xl md:text-3xl lg:text-4xl ">
-                  Why Choose Us For Toronto Mixed Concrete Services?
+                  Why Choose Us For Toronto Mixed Concrete Services
                 </h3>
                 <div className="bar my-4" />
                 <p className="mb-3 text-dark-400 md:text-lg">
@@ -307,17 +307,17 @@ const Home = () => {
             <p className="text-center mt-2 text-xl">
               Enjoy a stress-free renovation with our unique build process.
             </p>
-            <div className="grid gri-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid gri-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-3">
               {blogs.map((item, index) => (
                 <div key={index} className="group">
                   <div className="w-full rounded overflow-hidden relative hover:shadow-md">
-                    <img
+                    {/* <img
                       width={300}
                       height={400}
                       className="w-full h-full object-cover"
                       src={item?.image}
                       alt="Card Image"
-                    />
+                    /> */}
                     <div className="px-6 py-4">
                       <div className="font-bold text-xl mb-2">
                         {item?.title}
