@@ -3,7 +3,7 @@ import React, { useEffect, useState, Suspense } from 'react';
 // import { base } from '../../../redux/api/apiEndpoints';
 
 
-const DynamicBlog = ({ params }) => {
+const DynamicBlogComponent = ({ params }) => {
     const [isLoading, setIsLoading] = useState(false);
     const [categories, setCategories] = useState(null);
     const [img, setImg] = useState("");
@@ -158,4 +158,4 @@ const DynamicBlog = ({ params }) => {
 
 };
 
-export default DynamicBlog;
+export default DynamicBlogComponent;

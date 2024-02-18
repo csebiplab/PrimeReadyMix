@@ -6,11 +6,10 @@ import {
 } from "react-icons/ai";
 import { site_info } from "../../site/info";
 import Link from "next/link";
-import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="pt-10 bg-[#1F2A35] text-white ">
+    <footer className="pt-10 bg-[#1F2A35] text-white custom-container">
       <div className="w-11/12 md:w-10/12 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-5 justify-between items-start mx-auto">
           <div className="col-span-12 md:col-span-2 mx-auto justify-center md:justify-start">
@@ -34,7 +33,7 @@ const Footer = () => {
             <ul className="tracking-wide text-center md:text-start text-base text-white">
               <li>
                 <Link
-                  href="/blogs"
+                  href="/blog"
                   className="mb-1 text-white hover:text-primary text-lg py-2"
                 >
                   Blogs
