@@ -93,89 +93,52 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="hidden relative md:flex flex-col md:flex-row items-center xl:container xl:mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mx-auto">
-            <div className="md:pl-28 pt-10 md:pt-20">
-              <h1 className="font-bold text-3xl md:text-[44px] mb-1 leading-tight text-center md:text-left px-14 md:px-0">
-                Ready Mix Concrete & <br />
-                Concrete Delivery, <br />
-                Toronto Ready Mix
-              </h1>
-              <p className="text-dark-500 mt-7 text-xl font-semibold leading-6 text-center md:text-left px-14 md:px-0">
-                When it comes to reliable and trusted ready mix concrete
-                services in Toronto, there is no better choice than Prime Ready
-                Mix.
-              </p>
-              <div className="flex justify-center md:justify-start">
-                <button
-                  aria-label="estimate-button"
-                  className="btn !text-sm !py-3 !px-10 my-6 !bg-primary"
-                  onClick={handleOpen}
-                >
-                  Get Your Estimate
-                </button>
-              </div>
-              <div>
-                <DialogComponent
-                  open={open}
-                  handler={handleOpen}
-                  setOpen={setOpen}
-                />
-              </div>
-
-              <br />
+       
+        <section className="hidden relative md:flex flex-col-reverse items-center md:flex-row custom-container gap-x-16">
+          <div className="flex flex-col justify-center pl-heading md:py-20">
+            <h1 className="font-bold text-3xl md:text-5xl mb-4 md:mb-6 leading-tight text-center md:text-left">
+              Ready Mix Concrete & <br />
+              Concrete Delivery, <br />
+              Toronto Ready Mix
+            </h1>
+            <p className="text-dark-500 text-xl font-semibold leading-6 text-center md:text-left mb-6">
+              When it comes to reliable and trusted ready mix concrete services
+              in Toronto, there is no better choice than Prime Ready Mix.
+            </p>
+            <div className="flex justify-center md:justify-start">
+              <button
+                aria-label="estimate-button"
+                className="btn !text-sm !py-3 !px-10 my-6 !bg-primary"
+                onClick={handleOpen}
+              >
+                Get Your Estimate
+              </button>
+            </div>
+            <div>
+              <DialogComponent
+                open={open}
+                handler={handleOpen}
+                setOpen={setOpen}
+              />
             </div>
           </div>
-          {/* <section className="md:hidden">
-            <img
-              priority="true"
-              src={"/prime-readymix-banner.png"}
-              alt="prime-ready-mix-banner"
-              width={500}
-              height={500}
-              className="w-full h-full"
-            />
-          </section> */}
-          <Swiper
-            spaceBetween={0}
-            slidesPerView={1}
-            // autoplay={{
-            //   disableOnInteraction: false,
-            //   pauseOnMouseEnter: false,
-            // }}
-            // modules={[Autoplay]}
-            className="relative md:!absolute mb-4 md:mb-0 top-0 right-0 w-full md:w-[50%] object-cover object-center"
-          >
-            {/* {[
-              "https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/blob-5fe5952.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:600,cg:true",
-              "https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/blob-b6db9aa.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:600,cg:true",
-              "https://img1.wsimg.com/isteam/ip/0b1f7c84-a64a-49ce-ae1c-c51b120d8ea2/blob-dce5594.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:600,cg:true",
-            ].map((item, key) => (
-              <SwiperSlide key={key} className="h-60 md:h-full">
+
+          <div className="w-full">
+            <Swiper
+              spaceBetween={0}
+              slidesPerView={1}
+              className="h-[300px] md:h-full"
+            >
+              <SwiperSlide>
                 <img
                   priority="true"
-                  src={item}
-                  className="object-cover object-center h-full w-full"
+                  src="./primeReadyMixHero.jpg"
+                  className="object-cover object-center w-full banner-img"
                   alt=""
-                  width={300}
-                  height={300}
                 />
-              </SwiperSlide> */}
-
-            <SwiperSlide className="h-auto md:h-full xl:h-full">
-              <img
-                priority="true"
-                // src="https://i.ibb.co/VLqLMmt/Why-Choose.jpg"
-                src="./primeReadyMixHero.jpg"
-                className="object-cover object-center h-[31rem] xl:h-full w-full"
-                alt=""
-                width={400}
-                height={700}
-              />
-            </SwiperSlide>
-          </Swiper>
-          {/* className="relative md:!absolute mb-4 md:mb-0 top-0 right-0 h-full w-full md:w-[45%] max-h-64 md:max-h-full object-cover object-center" */}
-          {/* <img className="relative md:!absolute mb-4 md:mb-0 top-0 right-0 h-full w-full md:w-[50%] max-h-64 md:max-h-full object-cover object-center" src={ReadyMix} alt="cleaner picture"></Image> */}
+              </SwiperSlide>
+            </Swiper>
+          </div>
         </section>
 
         <div className="container">

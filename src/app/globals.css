@@ -74,3 +74,54 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+@media only screen and (min-width: 200px) {
+  .banner-img {
+    min-height: 100vh;
+  }
+
+  .pl-heading {
+    padding-left: 50px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .pl-heading {
+    padding-left: 60px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .pl-heading {
+    padding-left: 80px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .pl-heading {
+    padding-left: 110px;
+  }
+}
+
+/* @media only screen and (min-width: 2112px) {
+  .banner-img {
+    min-height: 100%;
+  }
+  .pl-heading {
+    padding-left: 150px;
+  }
+} */
+
+@media only screen and (min-width: 2112px) {
+  .custom-container {
+    max-width: 2112px;
+    margin: 0 auto;
+  }
+
+  .banner-img {
+    min-height: 100%;
+  }
+  .pl-heading {
+    padding-left: 150px;
+  }
+}
