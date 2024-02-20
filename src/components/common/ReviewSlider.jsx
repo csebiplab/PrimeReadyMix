@@ -1,7 +1,7 @@
 "use client";
 
 import { Rating } from "@material-tailwind/react";
-import { FaUserAlt } from "react-icons/fa";
+import { FaStar, FaUserAlt } from "react-icons/fa";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -32,14 +32,17 @@ const ReviewSlider = ({ reviews = [] }) => {
       {reviews?.map((review) => (
         <SwiperSlide style={{ maxWidth: 360 }} className="p-3" key={review.id}>
           <figure className="p-6 border-2 border-primary bg-primary-50 rounded-md">
-            <Rating
+            {/* <Rating
               value={review.rating}
               readonly
               className="mb-3"
               ratedColor="yellow"
               color="yellow"
               unratedColor="gray"
-            />
+            /> */}
+            {Array.from({ length: review.rating })?.map((__, i) => (
+              <FaStar className="w-4 h-4 fill-secondary-600 inline-block mr-1" />
+            ))}
             <p className="text-lg text-dark-500 mb-3">{review.description}</p>
             <p className="text-small flex gap-2 items-center">
               {" "}

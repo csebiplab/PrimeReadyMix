@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FaStar } from "react-icons/fa";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
