@@ -16,6 +16,10 @@ const menu = [
     name: "Concrete delivery",
     url: "/concrete-delivery",
   },
+  {
+    name: "Blog",
+    url: "/blog",
+  },
 ];
 
 const Header = () => {
