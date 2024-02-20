@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useState } from "react";
 import { FaPhone } from "react-icons/fa";
 import { contacts, site_info } from "../../site/info";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { RxCross2 } from "react-icons/rx";
 
 const menu = [
   {
@@ -104,14 +106,27 @@ const Header = () => {
                 Get an Estimate
               </Link>
             </nav>
-            <IconButton
-              aria-label="icon-button"
-              variant="text"
-              className="block p-4 bg-[#33475B] !text-white rounded-none  lg:hidden"
-              onClick={openDrawer}
-            >
-              <i className="fa-solid fa-bars text-xl bg-none text-white " />
-            </IconButton>
+            {!open ? (
+              <IconButton
+                aria-label="icon-button"
+                variant="text"
+                className="block p-4 rounded-none lg:hidden"
+                onClick={openDrawer}
+              >
+                {/* <i className="fa-solid fa-bars text-xl bg-none text-white " /> */}
+                <GiHamburgerMenu className="w-7 h-7" />
+              </IconButton>
+            ) : (
+              <IconButton
+                aria-label="icon-button"
+                variant="text"
+                className="block p-4 rounded-none lg:hidden"
+                onClick={openDrawer}
+              >
+                {/* <i className="fa-solid fa-bars text-xl bg-none text-white " /> */}
+                <RxCross2 className="w-7 h-7" />
+              </IconButton>
+            )}
           </div>
         </div>
       </header>

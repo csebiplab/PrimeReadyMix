@@ -47,19 +47,20 @@ const Home = () => {
   return (
     <>
       <main className="">
+        {/* For Mobile */}
         <section className="md:hidden">
           <div>
             <div className="relative">
               <img
                 priority="true"
                 // src="https://i.ibb.co/VLqLMmt/Why-Choose.jpg"
-                src="./primeReadyMixHero.jpg"
+                src="./primeReadyMixMobileBanner.jpg"
                 className="object-cover object-center h-[31rem] w-full"
                 alt=""
                 width={400}
                 height={700}
               />
-              <div className="pt-10 absolute top-0 left-0 bg-dark bg-opacity-35 text-white h-full">
+              <div className="pt-10 absolute top-0 left-0 bg-dark bg-opacity-60 h-full">
                 <h1 className="font-bold text-[34px] mb-1 leading-tight text-center px-3 text-white">
                   Ready Mix Concrete & <br />
                   Concrete Delivery, <br />
@@ -93,7 +94,6 @@ const Home = () => {
           </div>
         </section>
 
-       
         <section className="hidden relative md:flex flex-col-reverse items-center md:flex-row custom-container gap-x-16">
           <div className="flex flex-col justify-center pl-heading md:py-20">
             <h1 className="font-bold text-3xl md:text-5xl mb-4 md:mb-6 leading-tight text-center md:text-left">
