@@ -1,28 +1,53 @@
 "use client";
 
 import { Rating } from "@material-tailwind/react";
-import { FaUserAlt } from "react-icons/fa";
+import { FaStar, FaUserAlt } from "react-icons/fa";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
-const ReviewSlider = () => {
+
+// Swiperjs responsive breakpoints for small devices
+const breakpoints = {
+  640: {
+    width: 640,
+    slidesPerView: 1,
+  },
+  768: {
+    width: 768,
+    slidesPerView: 2,
+  },
+};
+
+const ReviewSlider = ({ reviews = [] }) => {
   return (
     <Swiper
       spaceBetween={5}
-      slidesPerView={'auto'}
+      slidesPerView={"auto"}
       autoplay={{
         disableOnInteraction: true,
-        pauseOnMouseEnter: false
+        pauseOnMouseEnter: false,
       }}
+      breakpoints={breakpoints}
       className="py-6"
     >
-      {[1, 2, 3, 4, 5, 6, 7].map((item, key) => (
-        <SwiperSlide style={{ maxWidth: 360 }} className="p-3">
+      {reviews?.map((review) => (
+        <SwiperSlide style={{ maxWidth: 360 }} className="p-3" key={review.id}>
           <figure className="p-6 border-2 border-primary bg-primary-50 rounded-md">
-            <Rating value={4} readonly className="mb-3" ratedColor="primary" color="primary" unratedColor="gray" />
-            <p className="text-lg text-dark-500 mb-3">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere eum ullam voluptate ex deleniti, reprehenderit iusto neque quas similique magnam molestias necessitatibus aspernatur omnis temporibus nulla quo optio eius exercitationem!
+            {/* <Rating
+              value={review.rating}
+              readonly
+              className="mb-3"
+              ratedColor="yellow"
+              color="yellow"
+              unratedColor="gray"
+            /> */}
+            {Array.from({ length: review.rating })?.map((__, i) => (
+              <FaStar className="w-4 h-4 fill-secondary-600 inline-block mr-1" />
+            ))}
+            <p className="text-lg text-dark-500 mb-3">{review.description}</p>
+            <p className="text-small flex gap-2 items-center">
+              {" "}
+              <FaUserAlt className="inline-block" /> {review.name}
             </p>
-            <p className="text-small flex gap-2 items-center"> <FaUserAlt className="inline-block"/> User Name</p>
           </figure>
         </SwiperSlide>
       ))}

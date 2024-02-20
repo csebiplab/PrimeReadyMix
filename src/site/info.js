@@ -5,6 +5,6 @@ export const site_info={
 
 export const contacts={
     phone:'1 (647) 539-6755',
-    address : `4 Cedar Ave., Thornhill, Ontario, L3T 3W1`,
+    address : `4 Cedar Ave, Thornhill, ON L3T 3W1, Canada`,
     country : `Canada` 
 }

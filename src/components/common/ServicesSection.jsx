@@ -1,4 +1,4 @@
-import {useMemo} from "react";
+import { useMemo } from "react";
 
 const services = [
   {
@@ -42,7 +42,10 @@ const ServicesSection = () => {
     <section className="py-14">
       <div className="w-11/12 md:w-10/12 mx-auto">
         <div className="max-w-4xl text-center mx-auto">
-          <h4 className="mb-4  text-3xl md:text-4xl lg:text-5xl">
+          <h4
+            className="mb-4  text-3xl md:text-4xl lg:text-5xl"
+            data-aos="fade-down"
+          >
             Our Ready Mix Concrete Services Process
           </h4>
           <p className="md:text-lg lg:text-xl font-medium mb-3">
