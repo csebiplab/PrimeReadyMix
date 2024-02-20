@@ -12,11 +12,13 @@ import { contacts } from "../site/info";
 import DialogComponent from "../components/common/DialogComponent";
 import axios from "axios";
 import "./Home.css";
+import ReviewSlider from "../components/common/ReviewSlider";
 
 const Home = () => {
   const [open, setOpen] = useState(false);
-  const [categories, setCategories] = useState([]);
+  const [reviews, setReviews] = useState([]);
   const [blogs, setBlogs] = useState([]);
+
   const handleOpen = () => setOpen((cur) => !cur);
 
   useEffect(() => {
@@ -26,7 +28,7 @@ const Home = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get("./data.json");
-      setCategories(response.data);
+      setReviews(response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -43,6 +45,8 @@ const Home = () => {
       console.error("Error fetching data:", error);
     }
   };
+
+  // console.log(reviews);
 
   return (
     <>
@@ -129,9 +133,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="w-full"
-          data-aos="fade-left"
-          >
+          <div className="w-full" data-aos="fade-left">
             <Swiper
               spaceBetween={0}
               slidesPerView={1}
@@ -320,7 +322,7 @@ const Home = () => {
               </div>
             </div>
           </section>
-          <section className="mt-20">
+          {/* {  <section className="mt-20">
             <h5 className="text-5xl text-center" data-aos="fade-right">
               Our Prime Ready Mix Renovation Services In Toronto
             </h5>
@@ -331,13 +333,13 @@ const Home = () => {
               {blogs.map((item, index) => (
                 <div key={index} className="group">
                   <div className="w-full rounded overflow-hidden relative hover:shadow-md">
-                    {/* <img
+                    <img
                       width={300}
                       height={400}
                       className="w-full h-full object-cover"
                       src={item?.image}
                       alt="Card Image"
-                    /> */}
+                    />
                     <div className="px-6 py-4">
                       <div className="font-bold text-xl mb-2">
                         {item?.title}
@@ -353,7 +355,7 @@ const Home = () => {
                 </div>
               ))}
             </div>
-          </section>
+          </section> } */}
 
           <ServicesSection />
 
@@ -499,15 +501,16 @@ const Home = () => {
             </Swiper>
           </section>
 
-          <section className="mt-16">
+          <>
+            {/* <section className="mt-16">
             <h2 className="text-5xl font-semibold mb-4" data-aos="fade-right">
               Reviews
             </h2>
-            <p className="relative mt-4 ">
+            <p className="relative mt-4 mb-2">
               Here’s what to expect when you hire us as your bathroom contractor
               in Toronto.
-              <span className="absolute bottom-0 left-0 w-24 h-1  bg-orange-500"></span>
             </p>
+            <div className="mb-4 h-1 w-40 bg-primary" />
 
             <Swiper
               slidesPerView={3}
@@ -525,7 +528,7 @@ const Home = () => {
               {categories.map((item) => (
                 <SwiperSlide key={item.id}>
                   <div className="bg-white py-16 px-10">
-                    <div className="flex items-center  mb-2">
+                    <div className="flex items-center mb-2">
                       {Array.from({ length: item.rating }, (_, index) => (
                         <FaStar key={index} className="text-yellow-500 mr-1" />
                       ))}
@@ -537,6 +540,21 @@ const Home = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
+          </section> */}
+          </>
+
+          <section className="py-10">
+            <div className="">
+              <h2 className="text-5xl font-semibold mb-4" data-aos="fade-right">
+                Reviews
+              </h2>
+              <p className="text-xl font-medium mb-3">
+                Here’s what to expect when you hire us as your bathroom
+                contractor in Toronto.
+              </p>
+              <div className="mb-4 h-1 w-40 bg-primary" />
+              <ReviewSlider reviews={reviews} />
+            </div>
           </section>
         </div>
       </main>
