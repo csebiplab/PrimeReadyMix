@@ -4,15 +4,15 @@ import {
   AiFillGoogleCircle,
   AiOutlineInstagram,
 } from "react-icons/ai";
-import { site_info } from "../../site/info";
+import { contacts, site_info } from "../../site/info";
 import Link from "next/link";
 
 const Footer = () => {
   return (
     <footer className="pt-10 bg-[#1F2A35] text-white custom-container">
       <div className="w-11/12 md:w-10/12 mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-5 justify-between items-start mx-auto">
-          <div className="col-span-12 md:col-span-2 mx-auto justify-center md:justify-start">
+        <div className="grid grid-cols-1 md:grid-cols-9 gap-5 justify-between items-start mx-auto">
+          <div className="col-span-12 md:col-span-3 mx-auto justify-center md:justify-start">
             <img
               priority="true"
               src="/prime-readymix-logo.png"
@@ -26,7 +26,7 @@ const Footer = () => {
               bringing design, sourcing and management under one roof.
             </p>
           </div>
-          <div className="text-lg font-medium col-span-12 md:col-span-1">
+          <div className="text-lg font-medium col-span-12 md:col-span-2">
             <h4 className="font-bold text-base tracking-wider mb-2 text-center md:text-start">
               Company
             </h4>
@@ -65,7 +65,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="text-lg font-medium col-span-12 md:col-span-1">
+          <div className="text-lg font-medium col-span-12 md:col-span-2">
             <h4 className="font-bold text-base tracking-wider mb-2 text-center md:text-start">
               Services
             </h4>
@@ -80,7 +80,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="text-lg font-medium col-span-12 md:col-span-1">
+          <div className="text-lg font-medium col-span-12 md:col-span-2">
             <h4 className="font-bold text-base tracking-wider mb-2 text-center md:text-start">
               Contacts
             </h4>
@@ -107,9 +107,25 @@ const Footer = () => {
                 <AiOutlineInstagram className="h-5 md:h-8 w-5 md:w-8" />
               </a>
             </div>
-            <div>
-              <p>Address:</p>
-              <p>Phone:</p>
+            <div className="max-w-72 flex justify-center items-center mx-auto">
+              <div>
+                {" "}
+                <p>
+                  Phone:{" "}
+                  <Link href="tel:+" className="ml-1">
+                    {contacts.phone}
+                  </Link>
+                </p>
+                <p>
+                  Adress:{" "}
+                  <Link
+                    href="https://maps.app.goo.gl/D5NwgNTS9TmRbgUg7"
+                    className="ml-1"
+                  >
+                    {contacts.address}
+                  </Link>
+                </p>
+              </div>
             </div>
           </div>
         </div>
