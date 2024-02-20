@@ -6,6 +6,7 @@ import "./globals.css";
 import Script from "next/script";
 // import GoogleAnalytics from "./GoogleAnalytics";
 import StoreProvider from "../redux/storeProvider";
+import { AOSInit } from "../components/common/AOSInitialize";
 // import { base } from "../redux/api/apiEndpoints";
 // import { allMetadata, rootMetadata } from "../helpers/robotTxtHelper";
 // import axios from "axios";
@@ -98,6 +99,7 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <body className={montserrat.className}>
                 <StoreProvider>
+                    <AOSInit />
                     <ProgressBar />
                     <Header />
                     {/* <GoogleAnalytics /> */}
