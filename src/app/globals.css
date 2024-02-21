@@ -75,6 +75,10 @@ a {
   background: #555;
 }
 
+.inline-tag-bg-none * {
+  background-color: transparent !important;
+}
+
 @media only screen and (min-width: 200px) {
   .banner-img {
     min-height: 100vh;
