@@ -25,7 +25,7 @@ export async function generateMetadata(
 
 const DynamicBlogPage = ({ params }) => {
     return (
-        <div>
+        <div className='custom-container px-5 md:px-0'>
             <DynamicBlogComponent params={params} />
         </div>
     );
