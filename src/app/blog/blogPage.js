@@ -3,7 +3,7 @@ import React from 'react';
 import { AiOutlineMail } from "react-icons/ai";
 import { FiPhoneCall } from 'react-icons/fi';
 import './blog.css'
-import Blogs from './blog';
+import Blogs from './Blogs';
 import Contact from '../../components/common/Contact';
 import { usePostDataFetching } from '../hooks/usePostDataFetching';
 import Head from 'next/head';
