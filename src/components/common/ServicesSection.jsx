@@ -39,12 +39,11 @@ const ServicesSection = () => {
   const servicesArr = useMemo(() => services, []);
 
   return (
-    <section className="py-14">
       <div className="w-11/12 md:w-10/12 mx-auto">
         <div className="max-w-4xl text-center mx-auto">
           <h4
             className="mb-4  text-3xl md:text-4xl lg:text-5xl"
-            data-aos="fade-down"
+            // data-aos="fade-down"
           >
             Our Ready Mix Concrete Services Process
           </h4>
@@ -71,7 +70,6 @@ const ServicesSection = () => {
           ))}
         </div>
       </div>
-    </section>
   );
 };
 

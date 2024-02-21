@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="pt-10 bg-[#1F2A35] text-white custom-container">
+    <footer className="pt-10 bg-[#1F2A35] text-white custom-container overflow-x-hidden">
       <div className="w-11/12 md:w-10/12 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-9 gap-5 justify-between items-start mx-auto">
           <div className="col-span-12 md:col-span-3 mx-auto justify-center md:justify-start">

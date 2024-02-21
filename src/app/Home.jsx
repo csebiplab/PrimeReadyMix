@@ -13,6 +13,38 @@ import axios from "axios";
 import "./Home.css";
 import ReviewSlider from "../components/common/ReviewSlider";
 
+const services = [
+  {
+    title: "Quality Assurance",
+    desc: "Prime Ready Mix prioritizes quality in every batch of concrete we produce. Our state-of-the-art facilities and stringent quality control measures ensure that you receive a consistent and reliable product every time",
+  },
+  {
+    title: "Expertise and Experience",
+    desc: "With years of experience in the industry, Prime Ready Mix boasts a team of experts who understand the nuances of concrete production. Our knowledge enables us to tailor mixes to specific project requirements, ensuring optimal performance.",
+  },
+  {
+    title: "Wide Range of Products",
+    desc: "Prime Ready Mix offers a diverse range of concrete mixes designed for various applications. Whether it's for a residential, commercial, or industrial project, we have a solution to meet your specific needs.",
+  },
+  {
+    title: "Efficient Delivery Service",
+    desc: "Time is of the essence in construction projects. Prime Ready Mix is known for its punctual and efficient delivery service. Our well-maintained fleet of vehicles ensures that your concrete arrives on-site promptly.",
+  },
+  {
+    title: "Environmentally Conscious Practices",
+    desc: "Prime Ready Mix is committed to sustainable practices. Our Toronto Ready Mix team employs eco-friendly technologies and methods in our production process, minimizing our environmental footprint.",
+  },
+  {
+    title: "Cost-Effective Solutions",
+    desc: "Prime Ready Mix understands the importance of staying within budget. We offer competitive pricing without compromising on quality, providing cost-effective solutions for your projects.",
+  },
+
+  {
+    title: "Customizable Mix Designs",
+    desc: "Every construction project is unique, and Prime Ready Mix recognizes this. We offer customizable mix designs, allowing you to fine-tune the concrete to meet specific project requirements.",
+  },
+];
+
 const Home = () => {
   const [open, setOpen] = useState(false);
   const [reviews, setReviews] = useState([]);
@@ -49,11 +81,11 @@ const Home = () => {
 
   return (
     <>
-      <main className="">
-        {/* For Mobile */}
+      <main className="overflow-x-hidden">
+        {/* Nav For Mobile */}
         <section className="md:hidden">
           <div>
-            <div className="relative">
+            <div className="relative container">
               <img
                 priority="true"
                 // src="https://i.ibb.co/VLqLMmt/Why-Choose.jpg"
@@ -66,7 +98,7 @@ const Home = () => {
               <div className="pt-10 absolute top-0 left-0 bg-dark bg-opacity-60 h-full">
                 <h1
                   className="font-bold text-[34px] mb-1 leading-tight text-center px-3 text-white"
-                  data-aos="fade-right"
+                  // data-aos="fade-right"
                 >
                   Ready Mix Concrete & <br />
                   Concrete Delivery, <br />
@@ -100,11 +132,9 @@ const Home = () => {
           </div>
         </section>
 
+        {/* Nav For Large Screen */}
         <section className="hidden relative md:flex flex-col-reverse items-center md:flex-row custom-container gap-x-16">
-          <div
-            className="flex flex-col justify-center pl-heading md:py-20"
-            data-aos="fade-right"
-          >
+          <div className="flex flex-col justify-center pl-heading md:py-20">
             <h1 className="font-bold text-3xl md:text-5xl mb-4 md:mb-6 leading-tight text-center md:text-left">
               Ready Mix Concrete & <br />
               Concrete Delivery, <br />
@@ -132,7 +162,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="w-full" data-aos="fade-left">
+          <div className="w-full">
             <Swiper
               spaceBetween={0}
               slidesPerView={1}
@@ -150,7 +180,7 @@ const Home = () => {
           </div>
         </section>
 
-        <div className="container">
+        <div className="overflow-x-hidden">
           <section className="md:py-10 mt-10 md:mt-6">
             <div className=" flex flex-col-reverse md:flex-row gap-8 relative">
               <img
@@ -164,7 +194,7 @@ const Home = () => {
               <div className="w-11/12 md:w-10/12 mx-auto md:mr-auto">
                 <h2
                   className="font-bold text-2xl  md:text-3xl lg:text-4xl"
-                  data-aos="fade-right"
+                  // data-aos="fade-right"
                 >
                   About Prime Ready Mix Concrete Services
                 </h2>
@@ -196,7 +226,7 @@ const Home = () => {
               <div className="">
                 <h2
                   className="font-bold  text-2xl md:text-3xl lg:text-4xl"
-                  data-aos="fade-right"
+                  // data-aos="fade-right"
                 >
                   Trusted Mixed Concrete Services in Toronto
                 </h2>
@@ -229,7 +259,7 @@ const Home = () => {
             />
           </section>
 
-          <section className="py-10">
+          <section className="py-10 container">
             <div className=" grid grid-cols-1 md:grid-cols-2 gap-8">
               <img
                 priority="true"
@@ -242,7 +272,7 @@ const Home = () => {
               <div className="w-11/12 md:w-10/12 mx-auto">
                 <h3
                   className="font-bold  text-2xl md:text-3xl lg:text-4xl"
-                  data-aos="fade-left"
+                  // data-aos="fade-left"
                 >
                   Our Ready Mix Concrete Services
                 </h3>
@@ -282,7 +312,7 @@ const Home = () => {
             </div>
           </section>
 
-          <section className="relative bg-dark-50/5">
+          <section className="relative bg-dark-50/5 container">
             <img
               priority="true"
               src="https://i.ibb.co/VLqLMmt/Why-Choose.jpg"
@@ -295,7 +325,7 @@ const Home = () => {
               <div className="py-10">
                 <h3
                   className="tracking-2 mb-4  text-2xl md:text-3xl lg:text-4xl"
-                  data-aos="fade-right"
+                  // data-aos="fade-right"
                 >
                   Why Choose Us For Toronto Mixed Concrete Services
                 </h3>
@@ -321,8 +351,11 @@ const Home = () => {
               </div>
             </div>
           </section>
-          {/* {  <section className="mt-20">
-            <h5 className="text-5xl text-center" data-aos="fade-right">
+
+          <>
+            {" "}
+            {/* {  <section className="mt-20">
+            <h5 className="text-5xl text-center" // data-aos="fade-right">
               Our Prime Ready Mix Renovation Services In Toronto
             </h5>
             <p className="text-center mt-2 text-xl">
@@ -355,14 +388,17 @@ const Home = () => {
               ))}
             </div>
           </section> } */}
+          </>
 
-          <ServicesSection />
+          <section className="py-14 container">
+            <ServicesSection />
+          </section>
 
           <section className="bg-dark-50/5">
             <div className="text-center mb-3 w-11/12 md:w-10/12 mx-auto">
               <h3
                 className="tracking-2 mb-4  text-2xl md:text-3xl lg:text-4xl"
-                data-aos="fade-right"
+                // data-aos="fade-right"
               >
                 Why is Prime Ready Mix Your Best Choice?
               </h3>
@@ -388,37 +424,7 @@ const Home = () => {
               />
               <div className=" grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div className="py-10 col-start-2">
-                  {[
-                    {
-                      title: "Quality Assurance",
-                      desc: "Prime Ready Mix prioritizes quality in every batch of concrete we produce. Our state-of-the-art facilities and stringent quality control measures ensure that you receive a consistent and reliable product every time",
-                    },
-                    {
-                      title: "Expertise and Experience",
-                      desc: "With years of experience in the industry, Prime Ready Mix boasts a team of experts who understand the nuances of concrete production. Our knowledge enables us to tailor mixes to specific project requirements, ensuring optimal performance.",
-                    },
-                    {
-                      title: "Wide Range of Products",
-                      desc: "Prime Ready Mix offers a diverse range of concrete mixes designed for various applications. Whether it's for a residential, commercial, or industrial project, we have a solution to meet your specific needs.",
-                    },
-                    {
-                      title: "Efficient Delivery Service",
-                      desc: "Time is of the essence in construction projects. Prime Ready Mix is known for its punctual and efficient delivery service. Our well-maintained fleet of vehicles ensures that your concrete arrives on-site promptly.",
-                    },
-                    {
-                      title: "Environmentally Conscious Practices",
-                      desc: "Prime Ready Mix is committed to sustainable practices. Our Toronto Ready Mix team employs eco-friendly technologies and methods in our production process, minimizing our environmental footprint.",
-                    },
-                    {
-                      title: "Cost-Effective Solutions",
-                      desc: "Prime Ready Mix understands the importance of staying within budget. We offer competitive pricing without compromising on quality, providing cost-effective solutions for your projects.",
-                    },
-
-                    {
-                      title: "Customizable Mix Designs",
-                      desc: "Every construction project is unique, and Prime Ready Mix recognizes this. We offer customizable mix designs, allowing you to fine-tune the concrete to meet specific project requirements.",
-                    },
-                  ].map((item, key) => (
+                  {services?.map((item, key) => (
                     <p className="mb-3 text-dark-400" key={key}>
                       <span className="font-bold text-primary">
                         {String(key + 1).padStart(2, 0)} -{" "}
@@ -434,12 +440,12 @@ const Home = () => {
             </div>
           </section>
 
-          <section className="relative ">
+          <section className="relative container">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-11/12 md:w-10/12 mx-auto mt-11 mb-10">
               <div className="">
                 <h5
                   className="tracking-2 mb-4  text-2xl md:text-3xl lg:text-4xl"
-                  data-aos="fade-right"
+                  // data-aos="fade-right"
                 >
                   Ready to start your home construction services?
                 </h5>
@@ -502,7 +508,7 @@ const Home = () => {
 
           <>
             {/* <section className="mt-16">
-            <h2 className="text-5xl font-semibold mb-4" data-aos="fade-right">
+            <h2 className="text-5xl font-semibold mb-4" // data-aos="fade-right">
               Reviews
             </h2>
             <p className="relative mt-4 mb-2">
@@ -544,10 +550,13 @@ const Home = () => {
 
           <section className="py-10">
             <div className="">
-              <h2 className="text-5xl font-semibold mb-4" data-aos="fade-right">
+              <h2
+                className="text-5xl font-semibold mb-4"
+                // data-aos="fade-right"
+              >
                 Reviews
               </h2>
-              <p className="text-xl font-medium mb-3">
+              <p className="text-xl font-medium mb-3 ml-1">
                 Here’s what to expect when you hire us as your bathroom
                 contractor in Toronto.
               </p>
