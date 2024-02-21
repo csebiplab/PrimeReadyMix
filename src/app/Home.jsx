@@ -557,7 +557,7 @@ const Home = () => {
                 Reviews
               </h2>
               <p className="text-xl font-medium mb-3 ml-1">
-                Here’s what to expect when you hire us as your bathroom
+                Here’s what to expect when you hire us as your Ready Mix
                 contractor in Toronto.
               </p>
               <div className="mb-4 h-1 w-40 bg-primary" />
