@@ -98,7 +98,7 @@ const Home = () => {
               <div className="pt-10 absolute top-0 left-0 bg-dark bg-opacity-60 h-full">
                 <h1
                   className="font-bold text-[34px] mb-1 leading-tight text-center px-3 text-white"
-                  data-aos="fade-right"
+                  // data-aos="fade-right"
                 >
                   Ready Mix Concrete & <br />
                   Concrete Delivery, <br />
@@ -194,7 +194,7 @@ const Home = () => {
               <div className="w-11/12 md:w-10/12 mx-auto md:mr-auto">
                 <h2
                   className="font-bold text-2xl  md:text-3xl lg:text-4xl"
-                  data-aos="fade-right"
+                  // data-aos="fade-right"
                 >
                   About Prime Ready Mix Concrete Services
                 </h2>
@@ -226,7 +226,7 @@ const Home = () => {
               <div className="">
                 <h2
                   className="font-bold  text-2xl md:text-3xl lg:text-4xl"
-                  data-aos="fade-right"
+                  // data-aos="fade-right"
                 >
                   Trusted Mixed Concrete Services in Toronto
                 </h2>
@@ -272,7 +272,7 @@ const Home = () => {
               <div className="w-11/12 md:w-10/12 mx-auto">
                 <h3
                   className="font-bold  text-2xl md:text-3xl lg:text-4xl"
-                  data-aos="fade-left"
+                  // data-aos="fade-left"
                 >
                   Our Ready Mix Concrete Services
                 </h3>
@@ -325,7 +325,7 @@ const Home = () => {
               <div className="py-10">
                 <h3
                   className="tracking-2 mb-4  text-2xl md:text-3xl lg:text-4xl"
-                  data-aos="fade-right"
+                  // data-aos="fade-right"
                 >
                   Why Choose Us For Toronto Mixed Concrete Services
                 </h3>
@@ -355,7 +355,7 @@ const Home = () => {
           <>
             {" "}
             {/* {  <section className="mt-20">
-            <h5 className="text-5xl text-center" data-aos="fade-right">
+            <h5 className="text-5xl text-center" // data-aos="fade-right">
               Our Prime Ready Mix Renovation Services In Toronto
             </h5>
             <p className="text-center mt-2 text-xl">
@@ -398,7 +398,7 @@ const Home = () => {
             <div className="text-center mb-3 w-11/12 md:w-10/12 mx-auto">
               <h3
                 className="tracking-2 mb-4  text-2xl md:text-3xl lg:text-4xl"
-                data-aos="fade-right"
+                // data-aos="fade-right"
               >
                 Why is Prime Ready Mix Your Best Choice?
               </h3>
@@ -445,7 +445,7 @@ const Home = () => {
               <div className="">
                 <h5
                   className="tracking-2 mb-4  text-2xl md:text-3xl lg:text-4xl"
-                  data-aos="fade-right"
+                  // data-aos="fade-right"
                 >
                   Ready to start your home construction services?
                 </h5>
@@ -508,7 +508,7 @@ const Home = () => {
 
           <>
             {/* <section className="mt-16">
-            <h2 className="text-5xl font-semibold mb-4" data-aos="fade-right">
+            <h2 className="text-5xl font-semibold mb-4" // data-aos="fade-right">
               Reviews
             </h2>
             <p className="relative mt-4 mb-2">
@@ -550,7 +550,10 @@ const Home = () => {
 
           <section className="py-10">
             <div className="">
-              <h2 className="text-5xl font-semibold mb-4" data-aos="fade-right">
+              <h2
+                className="text-5xl font-semibold mb-4"
+                // data-aos="fade-right"
+              >
                 Reviews
               </h2>
               <p className="text-xl font-medium mb-3 ml-1">
