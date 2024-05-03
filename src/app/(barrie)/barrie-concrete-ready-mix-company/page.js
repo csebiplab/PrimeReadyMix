@@ -1,8 +1,8 @@
-import React from 'react';
+import "../../globals.css"
 
 const BarrieConcreteReadyMixPage = () => {
     return (
-        <div>
+        <div className='container h-screen'>
             barrie-concrete-ready-mix-company
         </div>
     );
