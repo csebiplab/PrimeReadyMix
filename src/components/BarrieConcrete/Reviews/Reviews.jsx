@@ -35,59 +35,53 @@ const breakpoints = {
 const reviews = [
   {
     text: "They Are Professional and do great job cleaning the house!!! I Locked myself out of my house the other day and they were the only ones with a key. They were kind enough to drive over to unlock their door.",
-    author: "Samantha Garcia",
-    location: "Toronto",
+    author: "Lisa Silva",
+    location: "North York",
   },
   {
-    text: "Prime Concrete Pumping is the go-to company for concrete pumping in Toronto. Their team was punctual, knowledgeable, and professional. The concrete pump truck worked perfectly, and the cost was reasonable. I highly recommend them for any concrete pumping needs!",
-    author: "Daniel Taylor",
-    location: "Toronto",
+    text: "They Are Professional and do great job cleaning the house!!! I Locked myself out of my house the other day and they were the only ones with a key. They were kind enough to drive over to unlock their door.",
+    author: "Lisa Silva",
+    location: "North York",
   },
   {
-    text: "I'm impressed with the professionalism and efficiency of Prime Concrete Pumping. Their team in Toronto provided top-notch service for our project. They explained how the concrete pump works and answered all our questions. Would definitely use them again!",
-    author: "Jennifer Martinez",
-    location: "Toronto",
+    text: "They Are Professional and do great job cleaning the house!!! I Locked myself out of my house the other day and they were the only ones with a key. They were kind enough to drive over to unlock their door.",
+    author: "Lisa Silva",
+    location: "North York",
   },
   {
-    text: "Prime Concrete Pumping provided exceptional service for our project in Toronto. The concrete pump truck was in excellent condition, and their operators were knowledgeable and professional. The cost was reasonable, and the results were excellent. Highly recommend!",
-    author: "Robert Wilson",
-    location: "Barrie",
+    text: "They Are Professional and do great job cleaning the house!!! I Locked myself out of my house the other day and they were the only ones with a key. They were kind enough to drive over to unlock their door.",
+    author: "Lisa Silva",
+    location: "North York",
   },
   {
-    text: "I had a great experience with Prime Concrete Pumping in Toronto. Their team was friendly, reliable, and highly skilled. They explained how the concrete pump works and made sure everything was done safely and efficiently. I would definitely recommend them to others.",
-    author: "Jessica Davis",
-    location: "Barrie",
+    text: "They Are Professional and do great job cleaning the house!!! I Locked myself out of my house the other day and they were the only ones with a key. They were kind enough to drive over to unlock their door.",
+    author: "Lisa Silva",
+    location: "North York",
   },
   {
-    text: "Prime Concrete Pumping in Toronto is fantastic! We used their services for our construction project, and they delivered excellent results. The concrete pump truck operated flawlessly, and the team provided great customer service. Will definitely use them again!",
-    author: "David Jones",
-    location: "Barrie",
+    text: "They Are Professional and do great job cleaning the house!!! I Locked myself out of my house the other day and they were the only ones with a key. They were kind enough to drive over to unlock their door.",
+    author: "Lisa Silva",
+    location: "North York",
   },
   {
-    text: "I can't say enough good things about Prime Concrete Pumping. Their team in Toronto was professional, knowledgeable, and efficient. The concrete pump rental process was easy, and the cost was very competitive. I highly recommend them for any concrete pumping needs!",
-    author: "Sarah Brown",
-    location: "Toronto",
+    text: "They Are Professional and do great job cleaning the house!!! I Locked myself out of my house the other day and they were the only ones with a key. They were kind enough to drive over to unlock their door.",
+    author: "Lisa Silva",
+    location: "North York",
   },
   {
-    text: "Prime Concrete Pumping is the best in Toronto! Their team provided excellent service for our project, and their concrete pump trucks are top-of-the-line. They were able to answer all our questions about how the equipment works and ensured everything ran smoothly. 5 stars!",
-    author: "Michael Williams",
-    location: "Barrie",
+    text: "They Are Professional and do great job cleaning the house!!! I Locked myself out of my house the other day and they were the only ones with a key. They were kind enough to drive over to unlock their door.",
+    author: "Lisa Silva",
+    location: "North York",
   },
   {
-    text: "I recently used Prime Concrete Pumping for a job in Toronto, and I'm extremely satisfied with their service. The concrete pump truck arrived on time, the operators were skilled and efficient, and the whole process was smooth. Highly recommend them for any concrete pumping needs!",
-    author: "Emily Johnson",
-    location: "Toronto",
-  },
-  {
-    text: "We rented a concrete pump from Prime Concrete Pumping for our construction project in Toronto, and we couldn't be happier with the service. The team was knowledgeable, the equipment was in great condition, and the cost was very reasonable. Will definitely use them again!",
-    author: "James Smith",
-    location: "Barrie",
-  },
-  {
-    text: "Prime Concrete Pumping exceeded my expectations! Their team in Toronto provided prompt and professional service for our project. The concrete pump truck was top-notch, and they answered all our questions about how the process works. Highly recommend!",
-    author: "Samantha Garcia",
-    location: "Toronto",
-  },
+    text: "They Are Professional and do great job cleaning the house!!! I Locked myself out of my house the other day and they were the only ones with a key. They were kind enough to drive over to unlock their door.",
+    author: "Lisa Silva",
+    location: "North York",
+  }
+ 
+  
+ 
+  
 ];
 
 const Reviews = () => {
@@ -95,12 +89,11 @@ const Reviews = () => {
     <div className="container 3xl:py-[50px] py-[30px]">
       <div>
         <div className=" flex flex-col justify-center items-center ">
-        <SectionSmallHeading text={smallHeadingText.aboutUs__heading} />
+        <SectionSmallHeading text={smallHeadingText.review__heading} />
 
-          <h3 className="mb-[15px] md:mb-[25px] !mt-[10px] md:mt-4 text-black text-lg md:text-3xl lg:text-4xl !font-medium">
-            Here’s what to expect{" "}
-            <span className="text-primary">when you hire us</span>
-          </h3>
+        <h3 className="mb-[15px] md:mb-[25px] text-black !text-3xl !lg:text-4xl !font-semibold">
+        Reviews  Barrie Concrete Ready Mix
+            </h3>
         </div>
       </div>
 
@@ -123,7 +116,7 @@ const Reviews = () => {
               <div className="bg-[#D9D9D980] rounded-lg shadow-md p-[13px] ">
                 <div>
                   <Image
-                    src="/assets/review/Google-Review-Logo 3.png"
+                    src="/barrie/icons/google.png"
                     width={90}
                     height={52}
                     alt="star"
@@ -170,13 +163,13 @@ const Reviews = () => {
                     />
                   </svg>
                 </div>
-                <p className="text-sm text-gray-800 py-3 3xl:text-[14px] ">
+                <p className="text-sm !text-black py-3 3xl:text-[16px] ">
                   {review?.text}
                 </p>
-                <h6 className="font-semibold text-gray-900 ">
+                <h6 className="font-semibold text-black text-[15px]">
                   {review?.author}
                 </h6>
-                <p className="text-gray-600 text-xs ">{review?.location}</p>
+                <p className="text-gray-600 text-xs">{review?.location}</p>
               </div>
             </SwiperSlide>
           ))}
