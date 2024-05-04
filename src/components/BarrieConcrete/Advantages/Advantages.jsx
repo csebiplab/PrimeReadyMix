@@ -71,15 +71,23 @@ const Advantages = () => {
   return (
     <div>
       <div className="shadow-sm mx-[35px] md:mx-0">
-        <div className="mx-auto  flex flex-col items-center justify-center">
-          <div>
+        <div className="grid grid-cols-3 items-center">
+        <div className="col-span-1 flex flex-col">
+          <div className="text-center md:text-start ">
           <SectionSmallHeading text={smallHeadingText.advantages__heading} />
           </div>
 
-          <h3 className="mb-[15px] md:mb-[25px] text-black !text-3xl !lg:text-4xl !font-semibold">
+          <h3 className="mb-2 md:mb-1 text-base md:text-xl lg:text-4xl text-dark ">
           The Benefits of Selecting Us for Barrie Concrete Ready Mix Supply
             </h3>
         </div>
+          <div className="col-span-1 col-start-3">
+          <p className="text-lg font-medium leading-[155%] text-[#50708F] mb-6">
+          Our commitment to quality ensures that you receive a superior product every time. With our expertise and dedication, you can trust us to deliver concrete mixes that meet your specific requirements efficiently and reliably. We prioritize customer satisfaction, providing excellent service and timely deliveries to streamline your projects.
+            </p>
+          </div>
+        </div>
+        
 
         <div className="grid md:grid-cols-2 gap-4 md:gap-8 2xl:gap-12">
           <div className=" border-2 shadow">

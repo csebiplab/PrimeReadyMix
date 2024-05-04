@@ -91,7 +91,7 @@ const Reviews = () => {
         <div className=" flex flex-col justify-center items-center ">
         <SectionSmallHeading text={smallHeadingText.review__heading} />
 
-        <h3 className="mb-[15px] md:mb-[25px] text-black !text-3xl !lg:text-4xl !font-semibold">
+        <h3 className="mb-[15px] md:mb-[25px] text-base md:text-xl lg:text-4xl text-center text-dark">
         Reviews  Barrie Concrete Ready Mix
             </h3>
         </div>

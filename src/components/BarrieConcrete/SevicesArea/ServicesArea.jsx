@@ -1,17 +1,17 @@
 "use client";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/virtual";
+import "swiper/css/autoplay";
 import "swiper/css/effect-coverflow";
 import "swiper/css/grid";
-import "swiper/css/autoplay";
+import "swiper/css/navigation";
+import "swiper/css/virtual";
 
-import { SwiperButton } from "./SwiperButton";
-import SectionSmallHeading from "../../ui/SectionSmallHeading";
 import { smallHeadingText } from "../../../constants/small-heading-text";
+import SectionSmallHeading from "../../ui/SectionSmallHeading";
+import { SwiperButton } from "./SwiperButton";
 
 const breakpoints = {
   0: {

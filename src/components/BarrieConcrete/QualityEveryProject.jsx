@@ -20,7 +20,7 @@ const QualityEveryProject = () => {
           <div className="">
             <SectionSmallHeading text={smallHeadingText.quality__heading} />
 
-            <h3 className="mb-[15px] md:mb-[25px] text-black !text-3xl !lg:text-4xl !font-semibold">
+            <h3 className="mb-[15px] md:mb-[25px] text-base md:text-xl lg:text-4xl  text-dark">
             Your Leading Choice for Concrete Ready Mix in Barrie
             </h3>
 
