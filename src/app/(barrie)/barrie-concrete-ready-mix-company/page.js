@@ -9,7 +9,7 @@ import KeyFactors from "../../../components/BarrieConcrete/KeyFactors";
 import PowerOfReadyMixInnovation from "../../../components/BarrieConcrete/PowerOfReadyMixInnovation";
 import QualityEveryProject from "../../../components/BarrieConcrete/QualityEveryProject";
 import Reviews from "../../../components/BarrieConcrete/Reviews";
-import ServicesArea from "../../../components/BarrieConcrete/ServicesArea";
+import ServicesArea from "../../../components/BarrieConcrete/SevicesArea/ServicesArea";
 import Workflow from "../../../components/BarrieConcrete/Workflow";
 import Banner from "../../../components/HomeSections/Banner";
 import "../../globals.css"
