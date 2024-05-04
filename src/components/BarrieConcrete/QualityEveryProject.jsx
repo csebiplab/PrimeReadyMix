@@ -28,6 +28,16 @@ const QualityEveryProject = () => {
             Looking for a top-quality concrete ready mix in Barrie? Look no further than our leading choice. With a commitment to excellence and reliability, we provide the finest concrete mixes tailored to your specific project needs. Whether you're undertaking a small residential project or a large-scale commercial development, our ready mix solutions ensure durability, strength, and consistency, backed by our team of skilled professionals dedicated to delivering exceptional results. Our state-of-the-art facilities and advanced mixing technology guarantee precise proportions and uniformity, ensuring the highest quality standards are met with every batch.
             </p>
           </div>
+          {/* ============== Button ============== */}
+          <div className="flex justify-center md:justify-start">
+                <button
+                  aria-label="learn-more"
+                  className="btn !text-sm !py-3 !px-10 my-6 !bg-primary"
+                  
+                >
+                  Learn More
+                </button>
+              </div>
         </div>
       </div>
     </div>
