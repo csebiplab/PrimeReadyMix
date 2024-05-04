@@ -12,6 +12,7 @@ import DialogComponent from "../components/common/DialogComponent";
 import axios from "axios";
 import "./Home.css";
 import ReviewSlider from "../components/common/ReviewSlider";
+import Banner from "../components/HomeSections/Banner";
 
 const services = [
   {
@@ -46,9 +47,9 @@ const services = [
 ];
 
 const Home = () => {
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
   const [reviews, setReviews] = useState([]);
-  const [blogs, setBlogs] = useState([]);
+  // const [blogs, setBlogs] = useState([]);
 
   const handleOpen = () => setOpen((cur) => !cur);
 
@@ -82,8 +83,10 @@ const Home = () => {
   return (
     <>
       <main className="overflow-x-hidden">
-        {/* Nav For Mobile */}
-        <section className="md:hidden">
+        <Banner content="home" />
+
+        {/* Banner For Mobile */}
+        {/* <section className="md:hidden">
           <div>
             <div className="relative container">
               <img
@@ -130,10 +133,10 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
-        {/* Nav For Large Screen */}
-        <section className="hidden relative md:flex flex-col-reverse items-center md:flex-row custom-container gap-x-16">
+        {/* Banner For Large Screen */}
+        {/* <section className="hidden relative md:flex flex-col-reverse items-center md:flex-row custom-container gap-x-16">
           <div className="flex flex-col justify-center pl-heading md:py-20">
             <h1 className="font-bold text-3xl md:text-5xl mb-4 md:mb-6 leading-tight text-center md:text-left">
               Ready Mix Concrete & <br />
@@ -178,7 +181,7 @@ const Home = () => {
               </SwiperSlide>
             </Swiper>
           </div>
-        </section>
+        </section> */}
 
         <div className="overflow-x-hidden">
           <section className="md:py-10 mt-10 md:mt-6">

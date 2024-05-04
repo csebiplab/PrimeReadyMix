@@ -1,0 +1,7 @@
+section {
+  @apply my-[60px];
+}
+
+.my-60px {
+  @apply my-[60px];
+}

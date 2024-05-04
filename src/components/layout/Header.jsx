@@ -20,6 +20,10 @@ const menu = [
     name: "Blog",
     url: "/blog",
   },
+  {
+    name: "Barrie Concrete",
+    url: "/barrie-concrete-ready-mix-company",
+  },
 ];
 
 const Header = () => {

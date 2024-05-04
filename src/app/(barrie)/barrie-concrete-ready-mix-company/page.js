@@ -1,0 +1,80 @@
+import AboutUs from "../../../components/BarrieConcrete/AboutUs";
+import Advantages from "../../../components/BarrieConcrete/Advantages";
+import BuildingStandards from "../../../components/BarrieConcrete/BuildingStandards";
+import BuildingSuccessTogether from "../../../components/BarrieConcrete/BuildingSuccessTogether";
+import ConcreteSource from "../../../components/BarrieConcrete/ConcreteSource";
+import DosDont from "../../../components/BarrieConcrete/DosDont";
+import Feedback from "../../../components/BarrieConcrete/Feedback";
+import KeyFactors from "../../../components/BarrieConcrete/KeyFactors";
+import PowerOfReadyMixInnovation from "../../../components/BarrieConcrete/PowerOfReadyMixInnovation";
+import QualityEveryProject from "../../../components/BarrieConcrete/QualityEveryProject";
+import Reviews from "../../../components/BarrieConcrete/Reviews";
+import ServicesArea from "../../../components/BarrieConcrete/ServicesArea";
+import Workflow from "../../../components/BarrieConcrete/Workflow";
+import Banner from "../../../components/HomeSections/Banner";
+import "../../globals.css"
+import "./Barrie.css"
+
+const BarrieConcreteReadyMixPage = () => {
+    return (
+        <div className='min-h-screen'>
+            <>
+                <Banner content="barrie" />
+            </>
+
+            <section>
+                <AboutUs />
+            </section>
+
+            <div className="my-60px">
+                <ConcreteSource />
+            </div>
+
+            <section>
+                <QualityEveryProject />
+            </section>
+
+            <div className="my-60px">
+                <BuildingSuccessTogether />
+            </div>
+
+            <div className="my-60px">
+                <BuildingStandards />
+            </div>
+
+            <section>
+                <Workflow />
+            </section>
+
+            <section>
+                <DosDont />
+            </section>
+
+            <section>
+                <Reviews />
+            </section>
+
+            <div className="my-60px">
+                <KeyFactors />
+            </div>
+
+            <section>
+                <Advantages />
+            </section>
+
+            <div className="my-60px">
+                <PowerOfReadyMixInnovation />
+            </div>
+
+            <div className="my-60px">
+                <ServicesArea />
+            </div>
+
+            <>
+                <Feedback />
+            </>
+        </div>
+    );
+};
+
+export default BarrieConcreteReadyMixPage;
