@@ -12,8 +12,8 @@ import Reviews from "../../../components/BarrieConcrete/Reviews";
 import ServicesArea from "../../../components/BarrieConcrete/ServicesArea";
 import Workflow from "../../../components/BarrieConcrete/Workflow";
 import Banner from "../../../components/HomeSections/Banner";
-import "../../globals.css"
-import "./Barrie.css"
+import "../../globals.css";
+import "./Barrie.css";
 
 const BarrieConcreteReadyMixPage = () => {
     return (

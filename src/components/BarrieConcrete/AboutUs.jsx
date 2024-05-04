@@ -24,7 +24,7 @@ const AboutUs = () => {
               About Our Ready Mix Barrie Supplier
             </h3>
 
-            <p className="text-lg font-medium leading-[194%]">
+            <p className="text-lg font-medium leading-[194%] text-[#50708F]">
               Prime Ready Mix is your trusted supplier of ready mix concrete in
               Barrie. With a commitment to excellence and customer satisfaction,
               we provide high-quality concrete products tailored to meet your
