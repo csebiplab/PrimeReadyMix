@@ -3,9 +3,9 @@ import { Drawer, IconButton, Typography } from "@material-tailwind/react";
 import Link from "next/link";
 import { useState } from "react";
 import { FaPhone } from "react-icons/fa";
-import { contacts, site_info } from "../../site/info";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
+import { contacts, site_info } from "../../site/info";
 
 const menu = [
   {

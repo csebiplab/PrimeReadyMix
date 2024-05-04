@@ -1,5 +1,5 @@
 import AboutUs from "../../../components/BarrieConcrete/AboutUs";
-import Advantages from "../../../components/BarrieConcrete/Advantages";
+import Advantages from "../../../components/BarrieConcrete/Advantages/Advantages";
 import BuildingStandards from "../../../components/BarrieConcrete/BuildingStandards";
 import BuildingSuccessTogether from "../../../components/BarrieConcrete/BuildingSuccessTogether";
 import ConcreteSource from "../../../components/BarrieConcrete/ConcreteSource";
@@ -12,8 +12,8 @@ import Reviews from "../../../components/BarrieConcrete/Reviews";
 import ServicesArea from "../../../components/BarrieConcrete/SevicesArea/ServicesArea";
 import Workflow from "../../../components/BarrieConcrete/Workflow";
 import Banner from "../../../components/HomeSections/Banner";
-import "../../globals.css"
-import "./Barrie.css"
+import "../../globals.css";
+import "./Barrie.css";
 
 const BarrieConcreteReadyMixPage = () => {
     return (
