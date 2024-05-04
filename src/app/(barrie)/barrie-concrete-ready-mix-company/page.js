@@ -22,7 +22,7 @@ const BarrieConcreteReadyMixPage = () => {
                 <Banner content="barrie" />
             </>
 
-            <section>
+            <section className="p-section">
                 <AboutUs />
             </section>
 
@@ -30,7 +30,7 @@ const BarrieConcreteReadyMixPage = () => {
                 <ConcreteSource />
             </div>
 
-            <section>
+            <section className="p-section">
                 <QualityEveryProject />
             </section>
 
@@ -42,15 +42,15 @@ const BarrieConcreteReadyMixPage = () => {
                 <BuildingStandards />
             </div>
 
-            <section>
+            <section className="p-section">
                 <Workflow />
             </section>
 
-            <section>
+            <section className="p-section">
                 <DosDont />
             </section>
 
-            <section>
+            <section className="p-section">
                 <Reviews />
             </section>
 
@@ -58,7 +58,7 @@ const BarrieConcreteReadyMixPage = () => {
                 <KeyFactors />
             </div>
 
-            <section>
+            <section className="p-section">
                 <Advantages />
             </section>
 
@@ -70,9 +70,9 @@ const BarrieConcreteReadyMixPage = () => {
                 <ServicesArea />
             </div>
 
-            <>
+            <div className="p-section">
                 <Feedback />
-            </>
+            </div>
         </div>
     );
 };
