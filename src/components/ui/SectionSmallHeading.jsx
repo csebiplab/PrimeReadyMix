@@ -1,6 +1,6 @@
 const SectionSmallHeading = ({ text = "empty text" }) => {
   return (
-    <div className="flex items-center pb-2">
+    <div className="flex items-center pb-[10px]">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="36"
@@ -13,7 +13,7 @@ const SectionSmallHeading = ({ text = "empty text" }) => {
           fill="#9C7066"
         />
       </svg>
-      <p className="text-center text-sm ml-1">{text}</p>
+      <p className="text-center text-base ml-1 text-[#33475B]">{text}</p>
     </div>
   );
 };
