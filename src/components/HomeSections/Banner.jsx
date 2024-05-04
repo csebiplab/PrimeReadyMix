@@ -1,8 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import DialogComponent from "../common/DialogComponent";
-import Image from "next/image";
 
 const homeContent = {
   home: {
