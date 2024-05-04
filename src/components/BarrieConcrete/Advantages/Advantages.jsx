@@ -6,66 +6,64 @@ import "./Advantages.css";
 
 const usualConcrete = [
   {
-    title: "Inconsistent quality of work.",
+    title: "Poor Quality Control Measures Resulting in Substandard Concrete",
   },
   {
-    title: "Lack of communication and responsiveness.",
+    title: "Unreliable Delivery Schedule Leading to Project Delays",
   },
   {
-    title: "Delayed project completion",
+    title: "Inconsistent Customer Service and Communication",
   },
   {
-    title: "Equipment maintenance issues",
+    title: "Environmental Concerns: Negligence in Waste Management",
   },
   {
-    title: "Poor safety record",
+    title: "Safety Hazards: Neglecting Workplace Safety Protocols",
   },
   {
-    title: "Overcharging for services",
+    title: "Equipment Malfunctions Causing Production Delays",
   },
   {
-    title: "Unreliable scheduling",
+    title: "Inadequate Training for Personnel Resulting in Errors",
   },
   {
-    title: "Inadequate site cleanup",
+    title: "Insufficient Testing Procedures Compromising Structural Integrity",
   },
   {
-    title: "Limited expertise in specialized concrete pumping techniques.",
-  },
-  {
-    title: "Difficulty in resolving disputes or issues.",
-  },
+    title: "Ignoring Customer Feedback and Complaints",
+  }
+ 
 ];
 const primeConcrete = [
   {
-    title: "Efficient project completion",
+    title: "Premium Quality Concrete Solutions",
   },
   {
-    title: "Precise concrete placement",
+    title: "Efficient and Reliable Ready Mix Services",
   },
   {
-    title: "Skilled and experienced operators",
+    title: "Tailored Concrete Mixes for Every Project",
   },
   {
-    title: "Versatile equipment capabilities",
+    title: "Expertise in Ready Mix Concrete Delivery",
   },
   {
-    title: "Enhanced site safety",
+    title: "Innovating Construction with Ready Mix Solutions",
   },
   {
-    title: "Cost-effective solutions",
+    title: "Seamless Integration of Ready Mix into Projects",
   },
   {
-    title: "Reduced labor requirements",
+    title: "Enhancing Construction Efficiency with Ready Mix",
   },
   {
-    title: "Minimized material waste",
+    title: "Trusted Partner for Ready Mix Supply",
   },
   {
-    title: "Reliable delivery schedules",
+    title: "Streamlined Construction Processes with Ready Mix",
   },
   {
-    title: "Support for various project scales",
+    title: "Elevating Construction Standards with Ready Mix Technology",
   },
 ];
 
@@ -78,19 +76,16 @@ const Advantages = () => {
           <SectionSmallHeading text={smallHeadingText.advantages__heading} />
           </div>
 
-          <h3 className="mb-[15px] md:mb-[25px] !mt-[10px] md:mt-4  text-black text-lg md:text-3xl lg:text-4xl text-center">
-            Choose the{" "}
-            <span className="text-primary">
-              Best Concrete Pumping Contractors
-            </span>
-          </h3>
+          <h3 className="mb-[15px] md:mb-[25px] text-black !text-3xl !lg:text-4xl !font-semibold">
+          The Benefits of Selecting Us for Barrie Concrete Ready Mix Supply
+            </h3>
         </div>
 
         <div className="grid md:grid-cols-2 gap-4 md:gap-8 2xl:gap-12">
           <div className=" border-2 shadow">
-            <h4 className="title-bg text-center 2xl:py-[15px] py-[10px] text-white text-base 2xl:text-2xl">
-              Usual concrete pumping contractors
-            </h4>
+            <h6 className="title-bg text-center py-2 text-white text-base 2xl:text-xl leading-[127%]">
+            Usual Ready Mix Company
+            </h6>
             <div className="3xl:py-[35px] py-[25px] 3xl:px-[25px] px-5 text-base ">
               {usualConcrete.map((usual, idx) => (
                 <div
@@ -111,9 +106,9 @@ const Advantages = () => {
           </div>
 
           <div className=" border-2 shadow">
-            <h4 className="title-bg text-center 2xl:py-[15px] py-[10px] text-white text-base 2xl:text-2xl">
-              Prime Concrete Pumping’s contractors
-            </h4>
+            <h6 className="title-bg text-center py-2 text-white text-base 2xl:text-xl leading-[127%]">
+            Prime Ready Mix
+            </h6>
             <div className="3xl:py-[35px] py-[25px] 3xl:px-[25px] px-5 text-base">
               {primeConcrete.map((usual, idx) => (
                 <div
@@ -127,7 +122,7 @@ const Advantages = () => {
                     height={23}
                     className="h-[15px] w-[15px] 2xl:h-[23px] 2xl:w-[23px]"
                   />
-                  <p className="">{usual.title}</p>
+                  <p className="text-base">{usual.title}</p>
                 </div>
               ))}
             </div>
