@@ -1,7 +1,7 @@
 import React from "react";
 
 const ServicesArea = () => {
-  return <div>PowerOfReadyMixInnovation PowerOfReadyMixInnovation</div>;
+  return <div>ServicesArea</div>;
 };
 
 export default ServicesArea;

@@ -5,3 +5,7 @@ section {
 .my-60px {
   @apply my-[60px];
 }
+
+.p-section {
+  @apply w-11/12 md:w-10/12 mx-auto;
+}
