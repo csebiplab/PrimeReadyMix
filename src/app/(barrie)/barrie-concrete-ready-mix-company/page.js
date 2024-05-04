@@ -4,7 +4,7 @@ import BuildingStandards from "../../../components/BarrieConcrete/BuildingStanda
 import BuildingSuccessTogether from "../../../components/BarrieConcrete/BuildingSuccessTogether";
 import ConcreteSource from "../../../components/BarrieConcrete/ConcreteSource";
 import DosDont from "../../../components/BarrieConcrete/DosDont";
-import Feedback from "../../../components/BarrieConcrete/Feedback";
+import Feedback from "../../../components/BarrieConcrete/Feedback/Feedback";
 import KeyFactors from "../../../components/BarrieConcrete/KeyFactors";
 import PowerOfReadyMixInnovation from "../../../components/BarrieConcrete/PowerOfReadyMixInnovation";
 import QualityEveryProject from "../../../components/BarrieConcrete/QualityEveryProject";

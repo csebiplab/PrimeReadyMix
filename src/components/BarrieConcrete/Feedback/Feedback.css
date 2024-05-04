@@ -1,0 +1,5 @@
+.field__style {
+  border-radius: 6px;
+  background: rgba(156, 112, 102, 0.15);
+  box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.25);
+}
