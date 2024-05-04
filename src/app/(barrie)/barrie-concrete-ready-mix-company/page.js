@@ -8,7 +8,7 @@ import Feedback from "../../../components/BarrieConcrete/Feedback";
 import KeyFactors from "../../../components/BarrieConcrete/KeyFactors";
 import PowerOfReadyMixInnovation from "../../../components/BarrieConcrete/PowerOfReadyMixInnovation";
 import QualityEveryProject from "../../../components/BarrieConcrete/QualityEveryProject";
-import Reviews from "../../../components/BarrieConcrete/Reviews";
+import Reviews from "../../../components/BarrieConcrete/Reviews/Reviews";
 import ServicesArea from "../../../components/BarrieConcrete/ServicesArea";
 import Workflow from "../../../components/BarrieConcrete/Workflow";
 import Banner from "../../../components/HomeSections/Banner";
