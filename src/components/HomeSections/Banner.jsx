@@ -25,7 +25,7 @@ const Banner = ({ content = "home" }) => {
   return (
     <div>
       {/* Banner For Mobile */}
-      <section className="md:hidden">
+      <div className="md:hidden">
         <div>
           <div className="relative container">
             <Image
@@ -63,10 +63,10 @@ const Banner = ({ content = "home" }) => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Banner For Large Screen */}
-      <section className="hidden relative md:flex flex-col-reverse items-center md:flex-row custom-container gap-x-16">
+      <div className="hidden relative md:flex flex-col-reverse items-center md:flex-row custom-container gap-x-16">
         <div className="flex flex-col justify-center pl-heading md:py-20">
           <h1 className="font-bold text-3xl md:text-5xl mb-4 md:mb-6 leading-tight text-center md:text-left">
             {content === "barrie" ? h1.split(" ").slice(0, 2).join(" ") : h1}
@@ -115,7 +115,7 @@ const Banner = ({ content = "home" }) => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 };
