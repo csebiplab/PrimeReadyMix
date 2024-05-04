@@ -1,9 +1,7 @@
 "use client";
-
-import HeadingIcon from "@/components/ui/HeadingIcon";
-import { headingIconText } from "@/utils/heading-text";
 import Image from "next/image";
-
+import { smallHeadingText } from "../../../constants/small-heading-text";
+import SectionSmallHeading from "../../ui/SectionSmallHeading";
 import "./Advantages.css";
 
 const usualConcrete = [
@@ -77,7 +75,7 @@ const Advantages = () => {
       <div className="shadow-sm mx-[35px] md:mx-0">
         <div className="mx-auto  flex flex-col items-center justify-center">
           <div>
-            <HeadingIcon text={headingIconText.whoIsBest__IconText} />
+          <SectionSmallHeading text={smallHeadingText.advantages__heading} />
           </div>
 
           <h3 className="mb-[15px] md:mb-[25px] !mt-[10px] md:mt-4  text-black text-lg md:text-3xl lg:text-4xl text-center">
@@ -100,7 +98,7 @@ const Advantages = () => {
                   className="flex gap-4 items-center mb-3 lg:mb-5 3xl:mb-6"
                 >
                   <Image
-                    src="/assets/exPool/x.png"
+                    src="/barrie/icons/l.png"
                     alt="x"
                     width={23}
                     height={23}
@@ -123,7 +121,7 @@ const Advantages = () => {
                   className="flex items-center gap-4 mb-3 lg:mb-5 3xl:mb-6"
                 >
                   <Image
-                    src="/assets/exPool/r.png"
+                    src="/barrie/icons/r.png"
                     alt="r"
                     width={23}
                     height={23}
