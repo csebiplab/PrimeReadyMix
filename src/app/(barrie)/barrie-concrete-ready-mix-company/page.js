@@ -1,5 +1,5 @@
 import AboutUs from "../../../components/BarrieConcrete/AboutUs";
-import Advantages from "../../../components/BarrieConcrete/Advantages";
+import Advantages from "../../../components/BarrieConcrete/Advantages/Advantages";
 import BuildingStandards from "../../../components/BarrieConcrete/BuildingStandards";
 import BuildingSuccessTogether from "../../../components/BarrieConcrete/BuildingSuccessTogether";
 import ConcreteSource from "../../../components/BarrieConcrete/ConcreteSource";
