@@ -74,7 +74,7 @@ const Workflow = () => {
   ];
 
   return (
-    <div>
+    <div className="custom-container">
       <div className="flex flex-col">
         <div className="text-center mx-auto">
           <SectionSmallHeading text={smallHeadingText.working__heading} />

@@ -1,10 +1,9 @@
 "use client";
 
-import { useState } from "react";
-import { MdArrowForwardIos } from "react-icons/md";
-import SectionSmallHeading from "../../ui/SectionSmallHeading";
-import { smallHeadingText } from "../../../constants/small-heading-text";
 import Image from "next/image";
+import { useState } from "react";
+import { smallHeadingText } from "../../../constants/small-heading-text";
+import SectionSmallHeading from "../../ui/SectionSmallHeading";
 
 const services = [
   {
@@ -60,7 +59,7 @@ const DosDont = () => {
   };
 
   return (
-    <div>
+    <div className="custom-container">
       <div className="grid grid-cols-1 lg:grid-cols-2  gap-4 lg:gap-40">
         <div className="">
           <div className="flex justify-center lg:justify-normal">

@@ -5,7 +5,7 @@ import SectionSmallHeading from "../ui/SectionSmallHeading";
 const QualityEveryProject = () => {
   return <div>
     <div>
-      <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+      <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16 custom-container">
         <div className="">
           <Image
             alt="quality"
