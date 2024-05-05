@@ -6,7 +6,7 @@ import ConcreteSource from "../../../components/BarrieConcrete/ConcreteSource";
 import DosDont from "../../../components/BarrieConcrete/DosDont/DosDont";
 import Feedback from "../../../components/BarrieConcrete/Feedback/Feedback";
 import KeyFactors from "../../../components/BarrieConcrete/KeyFactors";
-import PowerOfReadyMixInnovation from "../../../components/BarrieConcrete/PowerOfReadyMixInnovation";
+import PowerOfReadyMixInnovation from "../../../components/BarrieConcrete/PowerOfReadyMixInnovation/PowerOfReadyMixInnovation";
 import QualityEveryProject from "../../../components/BarrieConcrete/QualityEveryProject";
 import Reviews from "../../../components/BarrieConcrete/Reviews/Reviews";
 
