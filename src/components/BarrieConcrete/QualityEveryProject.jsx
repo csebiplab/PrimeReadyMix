@@ -8,7 +8,7 @@ const QualityEveryProject = () => {
       <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
         <div className="">
           <Image
-            alt="About Us"
+            alt="quality"
             src="/barrie/images/quality.png"
             width={650}
             height={586}
