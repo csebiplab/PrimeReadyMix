@@ -4,5 +4,6 @@ export const smallHeadingText = {
     review__heading: "Reviews",
     advantages__heading: "Advantages of Partnering",
 
-    servicesArea__heading: "Services Area"
+    servicesArea__heading: "Services Area",
+    DosDont__heading: "Do’s & Don’t",
 }
