@@ -4,7 +4,7 @@ import { smallHeadingText } from "../../../constants/small-heading-text";
 import SectionSmallHeading from "../../ui/SectionSmallHeading";
 
 const PowerOfReadyMixInnovation = () => {
-  return <div className="py-10 relative">
+  return <div className="py-10 relative custom-container">
   <div className=" grid grid-cols-1 md:grid-cols-2 gap-8 w-11/12 md:w-10/12 mx-auto">
     <div className="">
       <SectionSmallHeading text={smallHeadingText.power__heading} />

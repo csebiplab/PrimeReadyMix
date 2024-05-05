@@ -4,7 +4,7 @@ import SectionSmallHeading from "../ui/SectionSmallHeading";
 
 const AboutUs = () => {
   return (
-    <div>
+    <div className="custom-container">
       <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
         <div className="">
           <Image
