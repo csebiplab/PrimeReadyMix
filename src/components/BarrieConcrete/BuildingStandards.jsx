@@ -27,6 +27,16 @@ const BuildingStandards = () => {
         We understand that every project is unique, which is why we offer a diverse range of concrete mixes tailored to suit your specific requirements. Our dedication to quality starts with our meticulous selection of raw materials. We source only the finest aggregates, cement, and additives, ensuring that every batch of concrete meets stringent quality standards. This meticulous attention to detail guarantees the durability, strength, and performance of our concrete ready mix.
         </p>
       </div>
+      {/* ============== Button ============== */}
+      <div className="flex justify-center md:justify-start">
+                <button
+                  aria-label="learn-more"
+                  className="btn !text-sm !py-3 !px-10 my-6 !bg-primary"
+                  
+                >
+                  Learn More
+                </button>
+              </div>
     </div>
    
   </div>
