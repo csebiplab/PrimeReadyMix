@@ -1,71 +1,84 @@
-// // Define a static robot object
-// const staticRobot = {
-//     rules: [
-//         { userAgent: '*', allow: '/', disallow: '/private/' }
-//     ],
-//     sitemap: 'https://readymixnearme.ca/'
-// };
 
-// export default async function robots() {
-//     try {
-//         // Fetch robot.txt data
-//         const response = await fetch(`${process.env.NEXT_PUBLIC_LIVE_API}/api/robotTxt`);
+const staticRobot = {
+    rules: [
+        {
+            userAgent: '*',
+            allow: ['/'],
+            disallow: ['/private/'],
+        }
+    ],
+    sitemap: 'https://readymixnearme.ca/sitemap.xml',
+};
 
-//         // Check if the response is successful
-//         if (!response.ok) {
-//             if (response.status === 404) {
-//                 console.warn("robot.txt not found. Using static robot data.");
-//                 return staticRobot;
-//             } else {
-//                 console.error(`Failed to fetch robot.txt: ${response.status} ${response.statusText}`);
-//                 return staticRobot;
-//             }
-//         }
+export default async function robots() {
+    try {
+        // Fetch robot.txt data
+        const response = await fetch(`${process.env.NEXT_PUBLIC_LIVE_API}/api/robotTxt`);
 
-//         // Parse response data as JSON
-//         const data = await response.json();
+        // Check if the response is successful
+        if (!response.ok) {
+            if (response.status === 404) {
+                console.warn("robot.txt not found. Using static robot data.");
+            } else {
+                console.error(`Failed to fetch robot.txt: ${response.status} ${response.statusText}`);
+            }
+        }
 
-//         console.log(data?.robotTxts, "robot datas");
+        // Parse response data as JSON
+        const data = await response.json();
 
-//         // Check if robot.txt data is empty or missing
-//         if (!data || !data.robotTxts || data.robotTxts.length === 0) {
-//             console.warn("No robot.txt data found. Using static robot data.");
-//             return staticRobot;
-//         }
+        // console.log(data?.robotTxts, "robot datas");
 
-//         // Format the robot.txt data
-//         const formattedData = data.robotTxts.map((singleRobot) => ({
-//             userAgent: singleRobot.user_agent,
-//             allow: singleRobot.allow,
-//             disallow: singleRobot.disallow + singleRobot.createdAt,
-//         }));
+        // Check if robot.txt data is empty or missing
+        if (!data || !data.robotTxts || data.robotTxts.length === 0) {
+            console.warn("No robot.txt data found. Using static robot data.");
+            return staticRobot;
+        }
 
-//         // Return formatted robot.txt data
-//         return {
-//             rules: formattedData.length > 0 ? formattedData : null,
-//             sitemap: data.robotTxts[0]?.sitemap_url,
-//         }
+         // Transform the data into desired format
+         const formattedData = data.robotTxts.map((robot) => ({
+            userAgent: robot.user_agent,
+            allow: [robot.allow],
+            disallow: [robot.disallow],
+        }));
 
-//     } catch (error) {
-//         console.error("Error fetching or parsing robot.txt data:", error.message);
-//         // If error occurs, return the static robot
-//         return staticRobot;
-//     }
-// }
+        // console.log(formattedData, "formatedData")
+        // console.log({rules: formattedData}, "ruels")
+        // console.log({rules: formattedData}, "ruels")
+        // console.log({rules: formattedData, sitemap:  `${data.robotTxts[0]?.sitemap_url}sitemap.xml`,}, "ruels and sitemap")
 
-export default function robots() {
-    return {
-        rules: [
-            {
-                userAgent: 'Googlebot',
-                allow: ['/'],
-                disallow: ['/private/'],
-            },
-            {
-                userAgent: ['Applebot', 'Bingbot'],
-                disallow: ['/'],
-            },
-        ],
-        sitemap: 'https://acme.com/sitemap.xml',
+        // Return the transformed data
+        return {
+            rules: formattedData,
+            sitemap: `${data.robotTxts[0]?.sitemap_url}sitemap.xml`,
+        };
+
+    } catch (error) {
+        console.error("Error fetching or parsing robot.txt data:", error.message);
+        // If error occurs, return the static robot
+        return staticRobot;
     }
 }
+
+// export default function robots() {
+//     return {
+//         rules: [
+//             {
+//                 userAgent: '*',
+//                 allow: ['/'],
+//                 disallow: ['/private/'],
+//             },
+         
+//         ],
+//         sitemap: 'https://readymixnearme.ca/sitemap.xml',
+//     }
+
+// [ { userAgent: '*', allow: [ '/' ], disallow: [ '/private/' ] } ] formatedData
+// { rules: [ { userAgent: '*', allow: [Array], disallow: [Array] } ] } ruels
+// { rules: [ { userAgent: '*', allow: [Array], disallow: [Array] } ] } ruels
+
+//   {
+//   rules: [ { userAgent: '*', allow: [Array], disallow: [Array] } ],
+//   sitemap: 'https://readymixnearme.ca/sitemap.xml'
+//    }
+// }
