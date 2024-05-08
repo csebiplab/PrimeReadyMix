@@ -1,7 +1,7 @@
-import React from "react";
-import SectionSmallHeading from "../ui/SectionSmallHeading";
-import { smallHeadingText } from "../../constants/small-heading-text";
 import Image from "next/image";
+import React from "react";
+import { smallHeadingText } from "../../constants/small-heading-text";
+import SectionSmallHeading from "../ui/SectionSmallHeading";
 
 const ConcreteSource = () => {
   return (
