@@ -48,10 +48,22 @@ export default async function robots() {
         // console.log({rules: formattedData, sitemap:  `${data.robotTxts[0]?.sitemap_url}sitemap.xml`,}, "ruels and sitemap")
 
         // Return the transformed data
-        return {
-            rules: formattedData,
-            sitemap: `${data.robotTxts[0]?.sitemap_url}sitemap.xml`,
-        };
+        // return {
+        //     rules: formattedData,
+        //     sitemap: `${data.robotTxts[0]?.sitemap_url}sitemap.xml`,
+        // };
+
+            return {
+              rules: [
+            {
+                userAgent: '*',
+                allow: ['/'],
+                disallow: ['/private/'],
+            }
+         
+        ],
+        sitemap: 'https://readymixnearme.ca/sitemap.xml',
+    }
 
     } catch (error) {
         console.error("Error fetching or parsing robot.txt data:", error.message);
