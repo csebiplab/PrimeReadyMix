@@ -18,20 +18,33 @@ export default async function robots() {
                 disallow: singleRobot?.disallow || '/private/',
             }));
 
+            // return {
+            //     rules: formattedData?.length > 0 ? formattedData : null,
+            //     sitemap: `${robotTxts[0]?.sitemap_url}sitemap.xml` || `https://readymixnearme.ca/sitempa.xml`,
+            // }
+
             return {
-                rules: formattedData?.length > 0 ? formattedData : null,
-                sitemap: `${robotTxts[0]?.sitemap_url}sitemap.xml` || `https://readymixnearme.ca/sitempa.xml`,
+                rules: {
+                    userAgent: '*',
+                    allow: '/',
+                    disallow: '/private/',
+                },
+                sitemap: `https://readymixnearme.ca/sitempa.xml`,
             }
+        } else {
+
+            return {
+                rules: {
+                    userAgent: '*',
+                    allow: '/',
+                    disallow: '/private/',
+                },
+                sitemap: `https://readymixnearme.ca/sitempa.xml`,
+            }
+
         }
 
-        return {
-            rules: {
-                userAgent: '*',
-                allow: '/',
-                disallow: '/private/',
-            },
-            sitemap: `https://readymixnearme.ca/sitempa.xml`,
-        }
+      
 
 
 
