@@ -6,12 +6,13 @@ import "./globals.css";
 import Script from "next/script";
 // import GoogleAnalytics from "./GoogleAnalytics";
 import StoreProvider from "../redux/storeProvider";
-import { AOSInit } from "../components/common/AOSInitialize";
+// import { AOSInit } from "../components/common/AOSInitialize";
 // import { base } from "../redux/api/apiEndpoints";
 // import { allMetadata, rootMetadata } from "../helpers/robotTxtHelper";
 // import axios from "axios";
 // import { base } from "../redux/api/apiEndpoints";
 // import Head from "next/head";
+import { Suspense } from "react";
 
 
 export async function generateMetadata() {
@@ -99,8 +100,11 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <body className={montserrat.className}>
                 <StoreProvider>
-                    <AOSInit />
-                    <ProgressBar />
+                    {/* <AOSInit /> */}
+                    <Suspense>
+                        <ProgressBar />
+                    </Suspense>
+
                     <Header />
                     {/* <GoogleAnalytics /> */}
                     {children}
