@@ -1,5 +1,6 @@
 export default async function robots() {
     try {
+       
         const response = await fetch(`${process.env.NEXT_PUBLIC_LIVE_API}/api/robotTxt`);
         // console.log(response.ok, "from robot")
         if (!response.ok) {
@@ -14,47 +15,60 @@ export default async function robots() {
         if (robotTxts?.length > 0) {
             const formattedData = robotTxts?.map((singleRobot) => ({
                 userAgent: singleRobot?.user_agent || '*',
-                allow: singleRobot?.allow || '/',
-                disallow: singleRobot?.disallow || '/private/',
+                allow: [`${singleRobot?.allow}`] || ['/'],
+                disallow: [`${singleRobot?.disallow}`] || ['/private/'],
             }));
 
-            // return {
-            //     rules: formattedData?.length > 0 ? formattedData : null,
-            //     sitemap: `${robotTxts[0]?.sitemap_url}sitemap.xml` || `https://readymixnearme.ca/sitempa.xml`,
-            // }
+            console.log({
+                rules: formattedData?.length > 0 ? formattedData : null,
+                sitemap: `${robotTxts[0]?.sitemap_url}sitemap.xml` || `https://readymixnearme.ca/sitempa.xml`,
+            })
 
             return {
-                rules: {
-                    userAgent: '*',
-                    allow: '/',
-                    disallow: '/private/',
-                },
-                sitemap: `https://readymixnearme.ca/sitempa.xml`,
+                rules: formattedData?.length > 0 ? formattedData : null,
+                sitemap: `${robotTxts[0]?.sitemap_url}sitemap.xml` || `https://readymixnearme.ca/sitempa.xml`,
             }
+
+            // return {
+            //     rules: {
+            //         userAgent: '*',
+            //         allow: '/',
+            //         disallow: '/private/',
+            //     },
+            //     sitemap: `https://readymixnearme.ca/sitempa.xml`,
+            // }
         } else {
 
             return {
                 rules: {
                     userAgent: '*',
-                    allow: '/',
-                    disallow: '/private/',
+                    allow:  ['/'],
+                    disallow:  ['/private/'],
                 },
                 sitemap: `https://readymixnearme.ca/sitempa.xml`,
-            }
+            };
 
         }
+     
 
-      
+        // return {
+        //     rules: {
+        //         userAgent: '*',
+        //         allow: '/',
+        //         disallow: '/private/',
+        //     },
+        //     sitemap: `https://readymixnearme.ca/sitempa.xml`,
+        // }
 
 
 
     } catch (error) {
-        console.error("Error fetching robot.txt data:==========e=====e=e====e=ee=e", error);
+        console.error("Error fetching robot.txt data:", error);
         return {
             rules: {
                 userAgent: '*',
-                allow: '/',
-                disallow: '/private/',
+                allow:  ['/'],
+                disallow:  ['/private/'],
             },
             sitemap: `https://readymixnearme.ca/sitempa.xml`,
         };
