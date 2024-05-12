@@ -1,3 +1,5 @@
+/*
+
 import axios from "axios";
 import {  siteMap } from "../redux/api/apiEndpoints";
 
@@ -20,4 +22,15 @@ export default async function sitemap() {
         console.error("Error fetching sitemap data:", error);
         return []; // Return empty array in case of error
     }
+}
+*/
+export default function sitemap() {
+    return [
+        {
+            url: 'https://primereadymix.ca/blogs',
+            lastModified: new Date(),
+            changeFrequency: 'yearly',
+            priority: 1,
+        },
+    ]
 }
