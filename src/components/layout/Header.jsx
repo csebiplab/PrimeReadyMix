@@ -45,7 +45,7 @@ const Header = () => {
               </h6>
               <div className="md:flex md:flex-row justify-end items-center hidden">
                 <Link
-                  href={"/blog"}
+                  href={"/blogs"}
                   className="text-dark text-sm font-normal mx-3 hover:underline"
                 >
                   Blogs

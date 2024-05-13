@@ -33,7 +33,7 @@ const Footer = () => {
             <ul className="tracking-wide text-center md:text-start text-base text-white">
               <li>
                 <Link
-                  href="/blog"
+                  href="/blogs"
                   className="mb-1 text-white hover:text-primary text-lg py-2"
                 >
                   Blogs
