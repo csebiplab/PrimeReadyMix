@@ -5,7 +5,7 @@ import { FiPhoneCall } from 'react-icons/fi';
 import './blog.css'
 import Blogs from './Blogs';
 import Contact from '../../../components/common/Contact';
-import { usePostDataFetching } from '../../hooks/usePostDataFetching';
+import { usePostDataFetching } from '../../../hooks/usePostDataFetching';
 import LoadingSpinner from '../../../components/common/LoadingSpinner';
 
 

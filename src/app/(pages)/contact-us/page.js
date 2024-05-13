@@ -1,20 +1,13 @@
 import { BsCheck2Square } from "react-icons/bs";
-import ReviewSlider from "../../components/common/ReviewSlider";
-import ServicesSection from "../../components/common/ServicesSection";
-import { site_info } from "../../site/info";
+import ReviewSlider from "../../../components/common/ReviewSlider";
+import ServicesSection from "../../../components/common/ServicesSection";
+import { site_info } from "../../../site/info";
 import ProjectFrom from "./ProjectFrom";
-// import { base } from "../../redux/api/apiEndpoints";
 
-// export const metadata = {
-//     title: "Prime Ready Mix Contact",
-//     description: "You’re on the way to the easiest renovation ever.",
-// };
 
 export async function generateMetadata() {
 
-    // fetch data
     const metaData = await fetch(`${process.env.NEXT_PUBLIC_LIVE_API}/api/contactUs`).then((res) => res.json())
-    // console.log("meta ---", metaData)
 
     return {
         title: metaData?.contactRouteAllMetaData[0]?.title,
