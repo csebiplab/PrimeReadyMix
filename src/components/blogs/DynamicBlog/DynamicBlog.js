@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useState, useMemo, Suspense } from 'react';
-import "../../../app/blog/blog.css";
+import "../../../app/(pages)/blogs/blog.css";
 import LoadingSpinner from '../../common/LoadingSpinner';
 
 

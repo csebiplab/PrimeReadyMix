@@ -1,5 +1,5 @@
 import React from 'react';
-import SitemapData from '../../components/SiteMapData';
+import SitemapData from '../../../components/SiteMapData';
 
 const ShowAllSitemapPage = () => {
     return (

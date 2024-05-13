@@ -1,7 +1,6 @@
 
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-// import { base } from '../../redux/api/apiEndpoints';
 
 export const usePostDataFetching = () => {
     const [data, setData] = useState([]);
@@ -12,8 +11,6 @@ export const usePostDataFetching = () => {
         const fetchData = async () => {
             try {
                 const response = await axios.get(`${process.env.NEXT_PUBLIC_LIVE_API}/api/blogContent`);
-                // console.log(response);
-                // console.log(response?.data?.blogContentData);
                 setData(response?.data?.blogContentData);
             } catch (error) {
                 setError(error);

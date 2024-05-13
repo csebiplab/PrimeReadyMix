@@ -6,13 +6,11 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
 import { Autoplay } from "swiper/modules";
-import ServicesSection from "../components/common/ServicesSection";
-import { contacts } from "../site/info";
-import DialogComponent from "../components/common/DialogComponent";
+import ServicesSection from "../../components/common/ServicesSection";
+import { contacts } from "../../site/info";
 import axios from "axios";
-import "./Home.css";
-import ReviewSlider from "../components/common/ReviewSlider";
-import Banner from "../components/HomeSections/Banner";
+import ReviewSlider from "../../components/common/ReviewSlider";
+import Banner from "../../components/HomeSections/Banner";
 
 const services = [
   {
@@ -47,9 +45,7 @@ const services = [
 ];
 
 const Home = () => {
-  // const [open, setOpen] = useState(false);
   const [reviews, setReviews] = useState([]);
-  // const [blogs, setBlogs] = useState([]);
 
   const handleOpen = () => setOpen((cur) => !cur);
 
@@ -66,122 +62,10 @@ const Home = () => {
     }
   };
 
-  // useEffect(() => {
-  //   fetchBlog();
-  // }, []);
-  // const fetchBlog = async () => {
-  //   try {
-  //     const response = await axios.get("./dataone.json");
-  //     setBlogs(response.data);
-  //   } catch (error) {
-  //     console.error("Error fetching data:", error);
-  //   }
-  // };
-
-  // console.log(reviews);
-
   return (
     <>
       <main className="overflow-x-hidden">
         <Banner content="home" />
-
-        {/* Banner For Mobile */}
-        {/* <section className="md:hidden">
-          <div>
-            <div className="relative container">
-              <img
-                priority="true"
-                // src="https://i.ibb.co/VLqLMmt/Why-Choose.jpg"
-                src="./primeReadyMixMobileBanner.jpg"
-                className="object-cover object-center h-[31rem] w-full"
-                alt=""
-                width={400}
-                height={700}
-              />
-              <div className="pt-10 absolute top-0 left-0 bg-dark bg-opacity-60 h-full">
-                <h1
-                  className="font-bold text-[34px] mb-1 leading-tight text-center px-3 text-white"
-                  // data-aos="fade-right"
-                >
-                  Ready Mix Concrete & <br />
-                  Concrete Delivery, <br />
-                  Toronto Ready Mix
-                </h1>
-                <p className="text-white mt-7 text-xl font-semibold leading-6 text-center px-14">
-                  When it comes to reliable and trusted ready mix concrete
-                  services in Toronto, there is no better choice than Prime
-                  Ready Mix.
-                </p>
-                <div className="flex justify-center md:justify-start">
-                  <button
-                    aria-label="estimate-button"
-                    className="btn !text-sm !py-3 !px-10 my-6 !bg-primary"
-                    onClick={handleOpen}
-                  >
-                    Get Your Estimate
-                  </button>
-                </div>
-                <div>
-                  <DialogComponent
-                    open={open}
-                    handler={handleOpen}
-                    setOpen={setOpen}
-                  />
-                </div>
-
-                <br />
-              </div>
-            </div>
-          </div>
-        </section> */}
-
-        {/* Banner For Large Screen */}
-        {/* <section className="hidden relative md:flex flex-col-reverse items-center md:flex-row custom-container gap-x-16">
-          <div className="flex flex-col justify-center pl-heading md:py-20">
-            <h1 className="font-bold text-3xl md:text-5xl mb-4 md:mb-6 leading-tight text-center md:text-left">
-              Ready Mix Concrete & <br />
-              Concrete Delivery, <br />
-              Toronto Ready Mix
-            </h1>
-            <p className="text-dark-500 text-xl font-semibold leading-6 text-center md:text-left mb-6">
-              When it comes to reliable and trusted ready mix concrete services
-              in Toronto, there is no better choice than Prime Ready Mix.
-            </p>
-            <div className="flex justify-center md:justify-start">
-              <button
-                aria-label="estimate-button"
-                className="btn !text-sm !py-3 !px-10 my-6 !bg-primary"
-                onClick={handleOpen}
-              >
-                Get Your Estimate
-              </button>
-            </div>
-            <div>
-              <DialogComponent
-                open={open}
-                handler={handleOpen}
-                setOpen={setOpen}
-              />
-            </div>
-          </div>
-
-          <div className="w-full">
-            <Swiper
-              spaceBetween={0}
-              slidesPerView={1}
-              className="h-[300px] md:h-full"
-            >
-              <SwiperSlide>
-                <img
-                  priority="true"
-                  src="./primeReadyMixHero.jpg"
-                  className="object-cover object-center w-full banner-img"
-                  alt=""
-                />
-              </SwiperSlide>
-            </Swiper>
-          </div>
-        </section> */}
 
         <div className="overflow-x-hidden">
           <section className="md:py-10 mt-10 md:mt-6">
@@ -355,54 +239,13 @@ const Home = () => {
             </div>
           </section>
 
-          <>
-            {" "}
-            {/* {  <section className="mt-20">
-            <h5 className="text-5xl text-center" // data-aos="fade-right">
-              Our Prime Ready Mix Renovation Services In Toronto
-            </h5>
-            <p className="text-center mt-2 text-xl">
-              Enjoy a stress-free renovation with our unique build process.
-            </p>
-            <div className="grid gri-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-3">
-              {blogs.map((item, index) => (
-                <div key={index} className="group">
-                  <div className="w-full rounded overflow-hidden relative hover:shadow-md">
-                    <img
-                      width={300}
-                      height={400}
-                      className="w-full h-full object-cover"
-                      src={item?.image}
-                      alt="Card Image"
-                    />
-                    <div className="px-6 py-4">
-                      <div className="font-bold text-xl mb-2">
-                        {item?.title}
-                      </div>
-                      <p className="text-gray-700 text-base">
-                        {item?.description}
-                      </p>
-                    </div>
-                    <p className="px-6 font-bold text-xl mb-2 group-hover:text-red-400 transition duration-300 ease-in-out">
-                      Learn More
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section> } */}
-          </>
-
           <section className="py-14 container">
             <ServicesSection />
           </section>
 
           <section className="bg-dark-50/5">
             <div className="text-center mb-3 w-11/12 md:w-10/12 mx-auto">
-              <h3
-                className="tracking-2 mb-4  text-2xl md:text-3xl lg:text-4xl"
-                // data-aos="fade-right"
-              >
+              <h3 className="tracking-2 mb-4  text-2xl md:text-3xl lg:text-4xl">
                 Why is Prime Ready Mix Your Best Choice?
               </h3>
               <p className="mb-3 text-dark-400 mx-auto md:text-lg text-left md:text-center">
@@ -446,10 +289,7 @@ const Home = () => {
           <section className="relative container">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-11/12 md:w-10/12 mx-auto mt-11 mb-10">
               <div className="">
-                <h5
-                  className="tracking-2 mb-4  text-2xl md:text-3xl lg:text-4xl"
-                  // data-aos="fade-right"
-                >
+                <h5 className="tracking-2 mb-4  text-2xl md:text-3xl lg:text-4xl">
                   Ready to start your home construction services?
                 </h5>
                 <div className="bar my-4" />
@@ -508,48 +348,6 @@ const Home = () => {
               ))}
             </Swiper>
           </section>
-
-          <>
-            {/* <section className="mt-16">
-            <h2 className="text-5xl font-semibold mb-4" // data-aos="fade-right">
-              Reviews
-            </h2>
-            <p className="relative mt-4 mb-2">
-              Here’s what to expect when you hire us as your bathroom contractor
-              in Toronto.
-            </p>
-            <div className="mb-4 h-1 w-40 bg-primary" />
-
-            <Swiper
-              slidesPerView={3}
-              spaceBetween={12}
-              pagination={{
-                clickable: true,
-              }}
-              autoplay={{
-                disableOnInteraction: false,
-                pauseOnMouseEnter: false,
-              }}
-              modules={[Autoplay]}
-              className="mySwiper mt-8"
-            >
-              {categories.map((item) => (
-                <SwiperSlide key={item.id}>
-                  <div className="bg-white py-16 px-10">
-                    <div className="flex items-center mb-2">
-                      {Array.from({ length: item.rating }, (_, index) => (
-                        <FaStar key={index} className="text-yellow-500 mr-1" />
-                      ))}
-                    </div>
-                    <p>{item.description}</p>
-                    <p className="text-xl font-semibold">{item.name}</p>
-                    <p className="font-semibold">{item.location}</p>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </section> */}
-          </>
 
           <section className="py-10">
             <div className="">
