@@ -112,18 +112,19 @@ const Footer = () => {
                 {" "}
                 <p>
                   Phone:{" "}
-                  <Link href="tel:+" className="ml-1">
+                  <a href="tel:+1 (647) 539-6755" className="ml-1">
                     {contacts.phone}
-                  </Link>
+                  </a>
                 </p>
                 <p>
                   Adress:{" "}
-                  <Link
+                  <a
                     href="https://maps.app.goo.gl/D5NwgNTS9TmRbgUg7"
                     className="ml-1"
+                    target="_blank"
                   >
                     {contacts.address}
-                  </Link>
+                  </a>
                 </p>
               </div>
             </div>

@@ -16,10 +16,6 @@ const menu = [
     name: "Concrete delivery",
     url: "/concrete-delivery",
   },
-  // {
-  //   name: "Blog",
-  //   url: "/blog",
-  // },
   {
     name: "Barrie Concrete",
     url: "/barrie-concrete-ready-mix-company",
@@ -77,7 +73,7 @@ const Header = () => {
               />
             </a>
             <a
-              href="tel:+"
+              href="tel:+1 (647) 539-6755"
               className="flex items-center justify-center gap-2 py-2 px-3 group  lg:hidden"
             >
               <span className="h-9 w-9 rounded-full justify-center items-center bg-dark-50/10 flex group-hover:bg-dark">
@@ -121,7 +117,6 @@ const Header = () => {
                 className="block p-4 rounded-none lg:hidden"
                 onClick={openDrawer}
               >
-                {/* <i className="fa-solid fa-bars text-xl bg-none text-white " /> */}
                 <GiHamburgerMenu className="w-7 h-7" />
               </IconButton>
             ) : (
@@ -131,7 +126,6 @@ const Header = () => {
                 className="block p-4 rounded-none lg:hidden"
                 onClick={openDrawer}
               >
-                {/* <i className="fa-solid fa-bars text-xl bg-none text-white " /> */}
                 <RxCross2 className="w-7 h-7" />
               </IconButton>
             )}
