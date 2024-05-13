@@ -16,10 +16,10 @@ const menu = [
     name: "Concrete delivery",
     url: "/concrete-delivery",
   },
-  {
-    name: "Blog",
-    url: "/blog",
-  },
+  // {
+  //   name: "Blog",
+  //   url: "/blog",
+  // },
   {
     name: "Barrie Concrete",
     url: "/barrie-concrete-ready-mix-company",
