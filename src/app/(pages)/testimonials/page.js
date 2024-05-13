@@ -1,13 +1,9 @@
-// import { base } from "../../redux/api/apiEndpoints";
 import Reviews from "./Reviews";
 
 export async function generateMetadata() {
 
-    // const baseUrl = process.env.NEXT_PUBLIC_LOCAL_API;
 
-    // fetch data
     const metaData = await fetch(`${process.env.NEXT_PUBLIC_LIVE_API}/api/testimonials`).then((res) => res.json())
-    // console.log("meta ---", metaData)
 
     return {
         title: metaData?.testimonialRouteAllMetaData[0]?.title,
