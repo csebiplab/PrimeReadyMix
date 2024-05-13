@@ -1,6 +1,5 @@
-// import { base } from "../../redux/api/apiEndpoints";
+import BlogPage from "./BlogPage";
 
-import BlogPage from "./blogPage";
 
 export async function generateMetadata() {
 
