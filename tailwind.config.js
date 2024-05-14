@@ -63,6 +63,12 @@ module.exports = withMT({
                 buttonColor: "#FF6448",
                 pageBg: "#F5F8FA",
 
+                "gray-1": "var(--gray-1)",
+                "gray-2": "var(--gray-2)",
+                "gray-3": "var(--gray-3)",
+                background: "var(--background-color)",
+                foreground: "var(--foreground)",
+
                 tremor: {
                     background: {
                         DEFAULT: "var(--background-color)",
