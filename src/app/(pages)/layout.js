@@ -3,11 +3,10 @@ import ProgressBar from "../../components/common/ProgressBar";
 import Footer from "../../components/layout/Footer";
 import Header from "../../components/layout/Header";
 import Script from "next/script";
-import StoreProvider from "../../redux/storeProvider";
 import { Suspense } from "react";
 import "./globals.css";
 
-
+/*
 export async function generateMetadata() {
     try {
         // Fetch metadata for the home route
@@ -33,7 +32,7 @@ export async function generateMetadata() {
         console.error('Error generating metadata:', error);
         throw error;
     }
-}
+}*/
 
 function extractGoogleConsoleKey(googleVerification) {
     try {
@@ -54,15 +53,13 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body className={montserrat.className}>
-                <StoreProvider>
-                    <Suspense>
-                        <ProgressBar />
-                    </Suspense>
+                <Suspense>
+                    <ProgressBar />
+                </Suspense>
 
-                    <Header />
-                    {children}
-                    <Footer />
-                </StoreProvider>
+                <Header />
+                {children}
+                <Footer />
                 <Script src="https://kit.fontawesome.com/d63d7fa193.js"></Script>
             </body>
         </html>

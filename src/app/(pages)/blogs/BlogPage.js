@@ -11,7 +11,7 @@ import LoadingSpinner from '../../../components/common/LoadingSpinner';
 
 
 const BlogPage = () => {
-    const { data: categories, isLoading, error } = usePostDataFetching();
+    // const { data: categories, isLoading, error } = usePostDataFetching();
     return (
         <>
 
@@ -38,7 +38,7 @@ const BlogPage = () => {
                                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-16 py-6 bg-white'>
 
                                         {
-                                            categories.map(item => <Blogs key={item._id} item={item}></Blogs>)
+                                            []?.map(item => <Blogs key={item._id} item={item} />)
                                         }
                                     </div>
                                 </Suspense>

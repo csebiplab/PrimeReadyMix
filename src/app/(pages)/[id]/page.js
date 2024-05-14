@@ -1,6 +1,7 @@
 import React from 'react';
 import DynamicBlogComponent from '../../../components/blogs/DynamicBlog/DynamicBlog';
 
+/*
 export async function generateMetadata(
     { params }
 ) {
@@ -19,6 +20,8 @@ export async function generateMetadata(
         keywords: blogDetailsData?.metaKeywords
     }
 }
+
+*/
 
 const DynamicBlogPage = ({ params }) => {
     return (
