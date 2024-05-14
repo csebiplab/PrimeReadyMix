@@ -8,7 +8,7 @@ export default function DashboardLayout({ children }) {
         <html>
             <body>
                 <div>
-                    nothing to see {children}
+                    {children}
                 </div>
             </body>
         </html>
