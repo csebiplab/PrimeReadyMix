@@ -6,7 +6,7 @@ import LoadingSpinner from '../../common/LoadingSpinner';
 
 const DynamicBlogComponent = ({ params }) => {
     const [isLoading, setIsLoading] = useState(false);
-    const [categories, setCategories] = useState(null);
+    const [categories, setCategories] = useState([]);
     const [img, setImg] = useState("");
     const [imgAlt, setImgAlt] = useState("");
     const [blogDetails, setBlogDetails] = useState("");
@@ -19,22 +19,22 @@ const DynamicBlogComponent = ({ params }) => {
         return null;
     }, [categories]);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                setIsLoading(true);
-                const response = await fetch(`${process.env.NEXT_PUBLIC_LIVE_API}/api/blogContent/${params?.id}`);
-                const data = await response.json();
-                setCategories(data?.blogDetailsData);
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            } finally {
-                setIsLoading(false);
-            }
-        };
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         try {
+    //             setIsLoading(true);
+    //             const response = await fetch(`${process.env.NEXT_PUBLIC_LIVE_API}/api/blogContent/${params?.id}`);
+    //             const data = await response.json();
+    //             setCategories(data?.blogDetailsData);
+    //         } catch (error) {
+    //             console.error('Error fetching data:', error);
+    //         } finally {
+    //             setIsLoading(false);
+    //         }
+    //     };
 
-        fetchData();
-    }, [params]);
+    //     fetchData();
+    // }, [params]);
 
     useEffect(() => {
         if (!isLoading && parsedContent) {

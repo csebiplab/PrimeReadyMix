@@ -5,17 +5,17 @@ import { site_info } from "../../../site/info";
 import ProjectFrom from "./ProjectFrom";
 
 
-export async function generateMetadata() {
+// export async function generateMetadata() {
 
-    const metaData = await fetch(`${process.env.NEXT_PUBLIC_LIVE_API}/api/contactUs`).then((res) => res.json())
+//     const metaData = await fetch(`${process.env.NEXT_PUBLIC_LIVE_API}/api/contactUs`).then((res) => res.json())
 
-    return {
-        title: metaData?.contactRouteAllMetaData[0]?.title,
-        description: metaData?.contactRouteAllMetaData[0]?.description,
-        keywords: metaData?.contactRouteAllMetaData[0]?.keywords
+//     return {
+//         title: metaData?.contactRouteAllMetaData[0]?.title,
+//         description: metaData?.contactRouteAllMetaData[0]?.description,
+//         keywords: metaData?.contactRouteAllMetaData[0]?.keywords
 
-    }
-}
+//     }
+// }
 
 export default function contact_us() {
     return (
