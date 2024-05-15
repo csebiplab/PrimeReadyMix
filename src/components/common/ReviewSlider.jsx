@@ -30,7 +30,7 @@ const ReviewSlider = ({ reviews = [] }) => {
     >
       {reviews?.map((review, idx) => (
         <SwiperSlide key={idx} style={{ maxWidth: 360 }} className="p-3">
-          <figure className="p-6 border-2 border-primary bg-primary-50 rounded-md">
+          <div className="p-6 border-2 border-primary bg-primary-50 rounded-md">
             {Array.from({ length: review.rating })?.map((__, i) => (
               <FaStar className="w-4 h-4 fill-secondary-600 inline-block mr-1" />
             ))}
@@ -39,7 +39,7 @@ const ReviewSlider = ({ reviews = [] }) => {
               {" "}
               <FaUserAlt className="inline-block" /> {review.name}
             </p>
-          </figure>
+          </div>
         </SwiperSlide>
       ))}
     </Swiper>
