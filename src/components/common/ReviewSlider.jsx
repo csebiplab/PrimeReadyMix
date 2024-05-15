@@ -32,7 +32,10 @@ const ReviewSlider = ({ reviews = [] }) => {
         <SwiperSlide key={idx} style={{ maxWidth: 360 }} className="p-3">
           <div className="p-6 border-2 border-primary bg-primary-50 rounded-md">
             {Array.from({ length: review.rating })?.map((__, i) => (
-              <FaStar className="w-4 h-4 fill-secondary-600 inline-block mr-1" />
+              <FaStar
+                key={i + 1000}
+                className="w-4 h-4 fill-secondary-600 inline-block mr-1"
+              />
             ))}
             <p className="text-lg text-dark-500 mb-3">{review.description}</p>
             <p className="text-small flex gap-2 items-center">
