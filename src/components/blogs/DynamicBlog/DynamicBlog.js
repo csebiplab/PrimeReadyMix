@@ -145,11 +145,11 @@ const ContactUsForm = () => {
                         id="phone"
                         className="p-3 block w-full rounded-md border border-primary-600 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:ring-0 sm:text-sm sm:leading-6"
                     >
-                        <option value="">Your Budget</option>
-                        <option value="tentotwenty">$10,000 - $20,000</option>
-                        <option value="twentytothirty">$20,000 - $30,000</option>
-                        <option value="thirtytofifty">$30,000 - $50,000</option>
-                        <option value="fifty">$50,000</option>
+                        <option defaultValue="">Your Budget</option>
+                        <option defaultValue="tentotwenty">$10,000 - $20,000</option>
+                        <option defaultValue="twentytothirty">$20,000 - $30,000</option>
+                        <option defaultValue="thirtytofifty">$30,000 - $50,000</option>
+                        <option defaultValue="fifty">$50,000</option>
                     </select>
                 </div>
             </div>
