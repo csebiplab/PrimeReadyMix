@@ -39,37 +39,37 @@ const ServicesSection = () => {
   const servicesArr = useMemo(() => services, []);
 
   return (
-      <div className="w-11/12 md:w-10/12 mx-auto">
-        <div className="max-w-4xl text-center mx-auto">
-          <h4
-            className="mb-4  text-3xl md:text-4xl lg:text-5xl"
-            // data-aos="fade-down"
-          >
-            Our Ready Mix Concrete Services Process
-          </h4>
-          <p className="md:text-lg lg:text-xl font-medium mb-3">
-            Our Toronto Ready Mix Concrete Services Process is designed to
-            ensure a seamless and reliable experience for our customers, from
-            initial consultation to project completion. We take pride in
-            delivering high-quality concrete that meets the unique demands of
-            your construction project.
-          </p>
-          <div className="mx-auto mb-4 h-1 w-40 bg-primary" />
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-center">
-          {servicesArr.map((item, key) => (
-            <figure
-              className="group p-3 md:aspect-square border-b-2 border-b-gray-400 hover:border-b-red-400 duration-150 md:text-center flex flex-col md:justify-center md:items-center"
-              key={key}
-            >
-              <p className="text-dark group-hover:text-red-400 mb-2 md:mb-4  text-xl md:text-2xl lg:text-3xl">
-                {item.title}
-              </p>
-              <p className="text-gray-700 md:text-xl">{item.desc}</p>
-            </figure>
-          ))}
-        </div>
+    <div className="w-11/12 md:w-10/12 mx-auto">
+      <div className="max-w-4xl text-center mx-auto">
+        <h4
+          className="mb-4  text-3xl md:text-4xl lg:text-5xl"
+          // data-aos="fade-down"
+        >
+          Our Ready Mix Concrete Services Process
+        </h4>
+        <p className="md:text-lg lg:text-xl font-medium mb-3">
+          Our Toronto Ready Mix Concrete Services Process is designed to ensure
+          a seamless and reliable experience for our customers, from initial
+          consultation to project completion. We take pride in delivering
+          high-quality concrete that meets the unique demands of your
+          construction project.
+        </p>
+        <div className="mx-auto mb-4 h-1 w-40 bg-primary" />
       </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-center">
+        {servicesArr.map((item, key) => (
+          <div
+            className="group p-3 md:aspect-square border-b-2 border-b-gray-400 hover:border-b-red-400 duration-150 md:text-center flex flex-col md:justify-center md:items-center"
+            key={key}
+          >
+            <p className="text-dark group-hover:text-red-400 mb-2 md:mb-4  text-xl md:text-2xl lg:text-3xl">
+              {item.title}
+            </p>
+            <p className="text-gray-700 md:text-xl">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 };
 

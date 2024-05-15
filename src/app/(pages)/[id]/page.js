@@ -1,7 +1,7 @@
 import React from 'react';
 import DynamicBlogComponent from '../../../components/blogs/DynamicBlog/DynamicBlog';
 
-/*
+
 export async function generateMetadata(
     { params }
 ) {
@@ -11,9 +11,6 @@ export async function generateMetadata(
         .then((res) => res.json())
         .catch(error => console.error(error))
 
-
-
-
     return {
         title: blogDetailsData?.metaTitle,
         description: blogDetailsData?.metaDescription,
@@ -21,7 +18,7 @@ export async function generateMetadata(
     }
 }
 
-*/
+
 
 const DynamicBlogPage = ({ params }) => {
     return (

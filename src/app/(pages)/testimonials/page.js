@@ -1,17 +1,17 @@
 import Reviews from "./Reviews";
 
-// export async function generateMetadata() {
+export async function generateMetadata() {
 
 
-//     const metaData = await fetch(`${process.env.NEXT_PUBLIC_LIVE_API}/api/testimonials`).then((res) => res.json())
+    const metaData = await fetch(`${process.env.NEXT_PUBLIC_LIVE_API}/api/testimonials`).then((res) => res.json())
 
-//     return {
-//         title: metaData?.testimonialRouteAllMetaData[0]?.title,
-//         description: metaData?.testimonialRouteAllMetaData[0]?.description,
-//         keywords: metaData?.testimonialRouteAllMetaData[0]?.keywords
+    return {
+        title: metaData?.testimonialRouteAllMetaData[0]?.title,
+        description: metaData?.testimonialRouteAllMetaData[0]?.description,
+        keywords: metaData?.testimonialRouteAllMetaData[0]?.keywords
 
-//     }
-// }
+    }
+}
 
 export default function () {
     return (

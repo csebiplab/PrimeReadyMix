@@ -3,21 +3,22 @@ import ReviewSlider from "../../../components/common/ReviewSlider";
 import ServicesSection from "../../../components/common/ServicesSection";
 import { site_info } from "../../../site/info";
 import ProjectFrom from "./ProjectFrom";
+import { reviews } from "../Home";
 
 
-// export async function generateMetadata() {
+export async function generateMetadata() {
 
-//     const metaData = await fetch(`${process.env.NEXT_PUBLIC_LIVE_API}/api/contactUs`).then((res) => res.json())
+    const metaData = await fetch(`${process.env.NEXT_PUBLIC_LIVE_API}/api/contactUs`).then((res) => res.json())
 
-//     return {
-//         title: metaData?.contactRouteAllMetaData[0]?.title,
-//         description: metaData?.contactRouteAllMetaData[0]?.description,
-//         keywords: metaData?.contactRouteAllMetaData[0]?.keywords
+    return {
+        title: metaData?.contactRouteAllMetaData[0]?.title,
+        description: metaData?.contactRouteAllMetaData[0]?.description,
+        keywords: metaData?.contactRouteAllMetaData[0]?.keywords
 
-//     }
-// }
+    }
+}
 
-export default function contact_us() {
+export default function ContactUsPage() {
     return (
         <main className="w-10/12  mx-auto">
             <section className="py-10">
@@ -35,13 +36,13 @@ export default function contact_us() {
                             "Built by a local, vetted contractor",
                             "4 weeks average build",
                         ].map((item, key) => (
-                            <figure
+                            <div
                                 key={key}
                                 className="w-2/3 mx-auto flex gap-4 items-center justify-start mb-4 text-lg font-medium"
                             >
                                 <BsCheck2Square className="h-6 w-6 fill-primary" />
                                 <p className=" text-xs">{item}</p>
-                            </figure>
+                            </div>
                         ))}
                     </div>
                     <div>
@@ -57,7 +58,7 @@ export default function contact_us() {
                         Toronto.
                     </p>
                     <div className="mb-4 h-1 w-40 bg-primary" />
-                    <ReviewSlider />
+                    <ReviewSlider reviews={reviews} />
                 </div>
             </section>
             <ServicesSection />

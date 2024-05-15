@@ -28,8 +28,8 @@ const ReviewSlider = ({ reviews = [] }) => {
       breakpoints={breakpoints}
       className="py-6"
     >
-      {reviews?.map((review) => (
-        <SwiperSlide style={{ maxWidth: 360 }} className="p-3" key={review.id}>
+      {reviews?.map((review, idx) => (
+        <SwiperSlide key={idx} style={{ maxWidth: 360 }} className="p-3">
           <figure className="p-6 border-2 border-primary bg-primary-50 rounded-md">
             {Array.from({ length: review.rating })?.map((__, i) => (
               <FaStar className="w-4 h-4 fill-secondary-600 inline-block mr-1" />
