@@ -2,11 +2,11 @@ import { Montserrat } from "next/font/google";
 import ProgressBar from "../../components/common/ProgressBar";
 import Footer from "../../components/layout/Footer";
 import Header from "../../components/layout/Header";
-import Script from "next/script";
+// import Script from "next/script";
 import { Suspense } from "react";
 import "./globals.css";
 
-/*
+
 export async function generateMetadata() {
     try {
         // Fetch metadata for the home route
@@ -32,7 +32,7 @@ export async function generateMetadata() {
         console.error('Error generating metadata:', error);
         throw error;
     }
-}*/
+}
 
 function extractGoogleConsoleKey(googleVerification) {
     try {
@@ -60,7 +60,7 @@ export default function RootLayout({ children }) {
                 <Header />
                 {children}
                 <Footer />
-                <Script src="https://kit.fontawesome.com/d63d7fa193.js"></Script>
+                {/* <Script src="https://kit.fontawesome.com/d63d7fa193.js"></Script> */}
             </body>
         </html>
     );

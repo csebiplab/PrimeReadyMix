@@ -7,7 +7,6 @@ import "swiper/css/pagination";
 import { Autoplay } from "swiper/modules";
 import ServicesSection from "../../components/common/ServicesSection";
 import { contacts } from "../../site/info";
-import axios from "axios";
 import ReviewSlider from "../../components/common/ReviewSlider";
 import Banner from "../../components/HomeSections/Banner";
 
