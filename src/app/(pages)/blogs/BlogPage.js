@@ -1,5 +1,7 @@
 'use client'
-import React, { Suspense } from 'react';
+
+
+import React, { Suspense, useEffect, useState } from 'react';
 import { AiOutlineMail } from "react-icons/ai";
 import { FiPhoneCall } from 'react-icons/fi';
 import './blog.css'
@@ -8,18 +10,37 @@ import Contact from '../../../components/common/Contact';
 import { usePostDataFetching } from '../../../hooks/usePostDataFetching';
 import LoadingSpinner from '../../../components/common/LoadingSpinner';
 
-
-
 const BlogPage = () => {
+    const [startTime, setStartTime] = useState(0);
+    const [endTime, setEndTime] = useState(0);
     const { data: categories, isLoading, error } = usePostDataFetching();
 
+    useEffect(() => {
+        // Record the start time when the component mounts
+        setStartTime(performance.now());
+    }, []);
+
+    useEffect(() => {
+        // Record the end time when data fetching is complete
+        if (!isLoading) {
+            setEndTime(performance.now());
+        }
+    }, [isLoading]);
+
+    useEffect(() => {
+        if (startTime && endTime) {
+            const duration = (endTime - startTime) / 1000; // Convert milliseconds to seconds
+            console.log(`>>>>>>>>>>>>>>>>>>>
+            Data fetching took ${duration.toFixed(2)} seconds.
+            <<<<<<<<<<<<<<<<<<<<<<<<<<`);
+        }
+    }, [endTime]);
 
     return (
         <>
-
             <div className='container mx-auto'>
                 <div className='flex justify-center mt-12'>
-                    <section className='grid sm:grid-cols-1 lg:grid-cols-2 place-items-center w-full sm:w-[80%]  p-4'>
+                    <section className='grid sm:grid-cols-1 lg:grid-cols-2 place-items-center w-full sm:w-[80%] p-4'>
                         <div className='text-4xl font-semibold'>
                             <p>Prime Ready</p>
                             <p>Mix</p>
@@ -31,26 +52,17 @@ const BlogPage = () => {
                 </div>
 
                 <section>
-                    {
-                        isLoading ?
-                            <LoadingSpinner />
-                            :
-                            <>
-                                <Suspense>
-                                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-16 py-6 bg-white'>
-
-                                        {
-                                            []?.map(item => <Blogs key={item._id} item={item} />)
-                                        }
-                                    </div>
-                                </Suspense>
-                            </>
-                    }
-
-
+                    {isLoading ? <LoadingSpinner /> : (
+                        <>
+                            <Suspense>
+                                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-16 py-6 bg-white'>
+                                    {categories?.map(item => <Blogs key={item._id} item={item} />)}
+                                </div>
+                            </Suspense>
+                        </>
+                    )}
                 </section>
 
-                {/* this section make contact us page */}
                 <section className='mb-10 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-16 mt-8'>
                     <div className='background px-12 py-16 flex flex-col justify-start items-start'>
                         <h3 className='text-white'>Turn Key Renovation Process Like No Other</h3>
@@ -70,19 +82,11 @@ const BlogPage = () => {
                             </div>
                         </div>
                     </div>
-                    {/* here start the form table */}
                     <Contact />
                 </section>
-
-            </div >
+            </div>
         </>
     );
 };
 
 export default BlogPage;
-
-// export function generateMetadata({ params }) {
-//     return {
-//         title: "this is blog route"
-//     }
-// }

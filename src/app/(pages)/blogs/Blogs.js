@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useEffect, useState, useMemo, Suspense } from 'react';
 import Link from 'next/link';
 import "./blog.css";
