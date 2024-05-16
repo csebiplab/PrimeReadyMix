@@ -34,13 +34,11 @@ function SiteVerificationComponent({
     }));
   };
   const handleUrlChange = (e) => {
-    // Update the inputValue state when the input value changes
     setInputValue((prevInputValue) => ({
       ...prevInputValue,
       url: e.target.value,
     }));
   };
-  // const endPoints = "/dashboard/siteVerification/editSiteVerification/";
   const handleSubmit = async () => {
     if (id) {
       let { title, url } = inputValue;
@@ -52,8 +50,6 @@ function SiteVerificationComponent({
           },
           body: JSON.stringify({ title, url }),
         });
-
-        console.log(res);
 
         if (res.ok) {
           toast(`Successfully updated verification url & meta data`);
@@ -91,7 +87,6 @@ function SiteVerificationComponent({
   return (
     <div>
       <div className="px-5">
-        {/* <h3>BLogs</h3> */}
         {verificationUrl?.length > 0 && !id ? (
           <>
             <div className="relative mt-4 overflow-x-auto shadow-md sm:rounded-lg">
@@ -112,7 +107,7 @@ function SiteVerificationComponent({
                 <tbody>
                   {verificationUrl?.map((item) => (
                     <tr
-                      key={item._id} // Don't forget to add a unique key to each row
+                      key={item._id}
                       className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700"
                     >
                       <th
