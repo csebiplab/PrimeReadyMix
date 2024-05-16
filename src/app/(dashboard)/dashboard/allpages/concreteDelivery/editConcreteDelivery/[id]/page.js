@@ -3,7 +3,7 @@ import ShareComponent from "@/components/Dashboard/Common/shareComponent/ShareCo
 
 
 async function getData(id) {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_LIVE_API}/api/home/${id}`, { cache: 'no-store' })
+  const res = await fetch(`${process.env.NEXT_PUBLIC_LIVE_API}/api/concreteDelivery/${id}`, { cache: 'no-store' })
 
   if (!res.ok) {
     throw new Error('Failed to fetch data')
@@ -19,13 +19,13 @@ const page = async ({ params }) => {
   const data = await getData(id)
 
 
-  const endPoints = "home";
+  const endPoints = "concreteDelivery";
 
 
 
-  const { home } = data ?? {};
+  const { concreteDelivery } = data ?? {}
 
-  const { title, description, keywords } = home ?? {}
+  const { title, description, keywords } = concreteDelivery ?? {}
   return (
     <ShareComponent
       id={id}
