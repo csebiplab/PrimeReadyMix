@@ -9,7 +9,7 @@ export default function RemoveSitemapButton({ id }) {
   const removeTopic = async () => {
     const confirmed = confirm("Are you sure?");
 
-    const baseAPIUrl = process.env.NEXT_PUBLIC_API_URL
+    const baseAPIUrl = process.env.NEXT_PUBLIC_LIVE_API
 
     if (confirmed) {
       const res = await fetch(`${baseAPIUrl}/api/siteMap?id=${id}`, {

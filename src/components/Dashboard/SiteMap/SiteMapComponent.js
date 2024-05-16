@@ -15,7 +15,7 @@ function SiteMapComponent({ sitemap = null, id = null, titleValue = null, urlVal
     url: "",
   });
 
-  const baseAPIUrl = process.env.NEXT_PUBLIC_API_URL
+  const baseAPIUrl = process.env.NEXT_PUBLIC_LIVE_API
 
   useEffect(() => {
     setInputValue({

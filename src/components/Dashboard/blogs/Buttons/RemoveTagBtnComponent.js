@@ -4,23 +4,23 @@ import { HiOutlineTrash } from "react-icons/hi";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 
-export default function RemoveButton({ id }) {
+export default function RemoveTagBtnComponent({ id }) {
   const router = useRouter();
   const removeTopic = async () => {
     const confirmed = confirm("Are you sure?");
 
-    const baseAPIUrl = process.env.NEXT_PUBLIC_LIVE_API;
+    const baseAPIUrl = process.env.NEXT_PUBLIC_LIVE_API
 
     if (confirmed) {
-      const res = await fetch(`${baseAPIUrl}/api/verificationUrl?id=${id}`, {
+      const res = await fetch(`${baseAPIUrl}/api/blogTag?id=${id}`, {
         method: "DELETE",
       });
 
       if (res.ok) {
         router.refresh();
       }
-      toast(`Site verification data successfully deleted.`);
-      router.push(`/dashboard/siteVerification`);
+      toast(`Blog tag data successfully deleted.`);
+      router.push(`/dashboard/blogs/tags`);
     }
   };
 
