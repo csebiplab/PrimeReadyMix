@@ -13,7 +13,6 @@ async function getData() {
 
 export default async function SeoSiteVerification() {
   const data = await getData()
-  // console.log(data)
 
   const { verificationUrl } = data ?? {};
 

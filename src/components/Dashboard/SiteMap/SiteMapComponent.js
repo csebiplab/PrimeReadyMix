@@ -1,25 +1,21 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
-import { HiPencilAlt } from "react-icons/hi";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
-import RemoveButton from "./RemoveButton";
+import RemoveSitemapButton from "./RemoveSiteMapButton";
+import Link from "next/link";
+import { HiPencilAlt } from "react-icons/hi";
 
-function SiteVerificationComponent({
-  verificationUrl,
-  id,
-  titleValue,
-  urlValue,
-}) {
+
+function SiteMapComponent({ sitemap = null, id = null, titleValue = null, urlValue = null }) {
   const router = useRouter();
   const [inputValue, setInputValue] = useState({
     title: "",
     url: "",
   });
 
-  const baseAPIUrl = process.env.NEXT_PUBLIC_API_URL;
+  const baseAPIUrl = process.env.NEXT_PUBLIC_API_URL
 
   useEffect(() => {
     setInputValue({
@@ -39,11 +35,12 @@ function SiteVerificationComponent({
       url: e.target.value,
     }));
   };
+
   const handleSubmit = async () => {
     if (id) {
       let { title, url } = inputValue;
       try {
-        const res = await fetch(`${baseAPIUrl}/api/verificationUrl/${id}`, {
+        const res = await fetch(`${baseAPIUrl}/api/siteMap/${id}`, {
           method: "PUT",
           headers: {
             "Content-type": "application/json",
@@ -54,7 +51,7 @@ function SiteVerificationComponent({
         if (res.ok) {
           toast(`Successfully updated verification url & meta data`);
           router.refresh();
-          router.push(`/dashboard/siteVerification`);
+          router.push(`/dashboard/siteMap`);
         } else {
           throw new Error(`Failed to update verification url & meta data`);
         }
@@ -64,7 +61,7 @@ function SiteVerificationComponent({
     } else {
       let { title, url } = inputValue;
       try {
-        const res = await fetch(`${baseAPIUrl}/api/verificationUrl`, {
+        const res = await fetch(`${baseAPIUrl}/api/siteMap`, {
           method: "POST",
           headers: {
             "Content-type": "application/json",
@@ -75,9 +72,9 @@ function SiteVerificationComponent({
         if (res.ok) {
           toast(`Successfully submitted verification url & meta data`);
           router.refresh();
-          router.push(`/dashboard/siteVerification`);
+          router.push(`/dashboard/siteMap`);
         } else {
-          throw new Error(`Failed to create verification url & meta data`);
+          throw new Error(`Failed to create sitemap url`);
         }
       } catch (error) {
         console.log(error);
@@ -87,7 +84,7 @@ function SiteVerificationComponent({
   return (
     <div>
       <div className="px-5">
-        {verificationUrl?.length > 0 && !id ? (
+        {sitemap?.length > 0 && !id ? (
           <>
             <div className="relative mt-4 overflow-x-auto shadow-md sm:rounded-lg">
               <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
@@ -105,7 +102,7 @@ function SiteVerificationComponent({
                   </tr>
                 </thead>
                 <tbody>
-                  {verificationUrl?.map((item) => (
+                  {sitemap?.map((item) => (
                     <tr
                       key={item._id}
                       className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700"
@@ -119,13 +116,12 @@ function SiteVerificationComponent({
                       <td className="px-6 py-4">{item?.url}</td>
                       <td className="px-6 py-4">
                         <div className="flex gap-2">
-                          {" "}
                           <Link
-                            href={`/dashboard/siteVerification/editSiteVerification/${item?._id}`}
+                            href={`/dashboard/siteMap/editSiteMap/${item?._id}`}
                           >
                             <HiPencilAlt size={24} />
                           </Link>
-                          <RemoveButton id={item._id} />
+                          <RemoveSitemapButton id={item._id} />
                         </div>
                       </td>
                     </tr>
@@ -162,7 +158,7 @@ function SiteVerificationComponent({
                   htmlFor="last-name"
                   className="block text-sm font-medium leading-6 text-gray-900"
                 >
-                  Verification Url
+                  Sitemap Url Url
                 </label>
                 <div className="mt-2">
                   <input
@@ -190,4 +186,4 @@ function SiteVerificationComponent({
   );
 }
 
-export default SiteVerificationComponent;
+export default SiteMapComponent;
