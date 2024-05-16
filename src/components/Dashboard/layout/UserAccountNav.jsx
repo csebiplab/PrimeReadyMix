@@ -13,7 +13,7 @@ import {
 } from "./DropDownMenu";
 
 export default function UserAccountNav({ user }) {
-  const baseAPIUrl = process.env.NEXT_PUBLIC_API_URL;
+  const baseAPIUrl = process.env.NEXT_PUBLIC_LIVE_API;
 
   return (
     <DropdownMenu>
