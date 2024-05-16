@@ -16,8 +16,6 @@ const EditSiteVerification = async ({ params }) => {
 
   const data = await getData(id)
 
-  console.log("id", id, "data-->", data)
-
   const { verificationData } = data ?? {};
 
   const { title, url } = verificationData ?? {};
