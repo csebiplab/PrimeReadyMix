@@ -66,7 +66,7 @@ const MenuItem = ({ item }) => {
                     href={subItem.href}
                     className={cn(
                       "py-1 text-sm px-2 rounded-lg flex flex-row gap-2 transition-colors items-center ",
-                      pathname === subItem.href ? "bg-gray-2" : ""
+                      pathname === subItem.href ? "bg-gray-2" : "bg-primary-100"
                     )}
                   >
                     <div className="flex flex-row space-x-4 items-center">
