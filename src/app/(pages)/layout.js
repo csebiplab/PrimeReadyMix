@@ -60,7 +60,6 @@ export default function RootLayout({ children }) {
                 <Header />
                 {children}
                 <Footer />
-                {/* <Script src="https://kit.fontawesome.com/d63d7fa193.js"></Script> */}
             </body>
         </html>
     );
