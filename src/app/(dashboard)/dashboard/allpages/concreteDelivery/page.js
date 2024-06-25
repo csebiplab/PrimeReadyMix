@@ -1,3 +1,4 @@
+import ShareComponent from "@/components/Dashboard/Common/shareComponent/ShareComponent";
 
 async function getData(id) {
   const res = await fetch(`${process.env.NEXT_PUBLIC_LIVE_API}/api/concreteDelivery`, { cache: 'no-store' })
