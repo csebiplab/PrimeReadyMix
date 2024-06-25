@@ -6,8 +6,8 @@ import SectionSmallHeading from "../ui/SectionSmallHeading";
 const ConcreteSource = () => {
   return (
     <div className="custom-container lg:pl-28">
-      <div className="border border-red-500 grid grid-cols-1 lg:grid-cols-10 px-20 lg:px-0 gap-x-14">
-        <div className="w-full border border-red-500 col-span-4">
+      <div className=" grid grid-cols-1 lg:grid-cols-10 px-20 lg:px-0 gap-x-14">
+        <div className="w-full  col-span-4">
           <div>
             <SectionSmallHeading
               text={smallHeadingText.concreteSource__heading}
