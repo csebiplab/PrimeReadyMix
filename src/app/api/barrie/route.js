@@ -26,8 +26,8 @@ export async function POST(request) {
 
 export async function GET() {
   await connectMongoDB();
-  const homeRouteAllMetaData = await BarriePageMetadata.find();
-  return NextResponse.json({ homeRouteAllMetaData });
+  const data = await BarriePageMetadata.find();
+  return NextResponse.json({ data });
 }
 
 export async function DELETE(request) {
