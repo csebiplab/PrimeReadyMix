@@ -41,6 +41,11 @@ export const dashboardConfig = {
                     icon: "dessert",
                 },
                 {
+                    title: "Barrie Concrete",
+                    href: "/dashboard/allpages/barrie-concrete",
+                    icon: "dessert",
+                },
+                {
                     title: "Blogs",
                     href: "/dashboard/allpages/blogs",
                     icon: "dessert",
