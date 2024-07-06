@@ -1,81 +1,41 @@
-import AboutUs from "../../../components/BarrieConcrete/AboutUs";
-import Advantages from "../../../components/BarrieConcrete/Advantages/Advantages";
-import BuildingStandards from "../../../components/BarrieConcrete/BuildingStandards";
-import BuildingSuccessTogether from "../../../components/BarrieConcrete/BuildingSuccessTogether/BuildingSuccessTogether";
-import ConcreteSource from "../../../components/BarrieConcrete/ConcreteSource";
-import DosDont from "../../../components/BarrieConcrete/DosDont/DosDont";
-import Feedback from "../../../components/BarrieConcrete/Feedback/Feedback";
-import KeyFactors from "../../../components/BarrieConcrete/KeyFactors";
-import PowerOfReadyMixInnovation from "../../../components/BarrieConcrete/PowerOfReadyMixInnovation/PowerOfReadyMixInnovation";
-import QualityEveryProject from "../../../components/BarrieConcrete/QualityEveryProject";
-import Reviews from "../../../components/BarrieConcrete/Reviews/Reviews";
+import React from 'react';
+import BarrieConcreteReadyMixPage from './Barrie';
 
-import ServicesArea from "../../../components/BarrieConcrete/SevicesArea/ServicesArea";
-import Workflow from "../../../components/BarrieConcrete/Workflow";
-import Banner from "../../../components/HomeSections/Banner";
-import "../globals.css";
-import "./Barrie.css";
+const staticBackupMetadata = {
+    title: "Barrie Concrete",
+    keywords: "Barrie Concrete",
+    description: "barrie concrete, ready mix company",
+}
 
-const BarrieConcreteReadyMixPage = () => {
+
+export async function generateMetadata() {
+    try {
+        const apiUrl = process.env.NEXT_PUBLIC_LIVE_API;
+
+        const metaDataResponse = await fetch(`${apiUrl}/api/barrie-concrete`, {
+            cache: "no-store",
+        });
+        const metaData = await metaDataResponse.json();
+
+
+        const { title, description, keywords } = metaData?.data?.[0] ?? {};
+
+        return {
+            title: title,
+            description: description,
+            keywords: keywords
+        }
+    } catch (error) {
+        return staticBackupMetadata;
+    }
+}
+
+const BarriePage = () => {
     return (
-        <div className='min-h-screen'>
-            <>
-                <Banner content="barrie" />
-            </>
-
-            <section className="p-section">
-                <AboutUs />
-            </section>
-
-            <div className="my-60px">
-                <ConcreteSource />
-            </div>
-
-            <section className="p-section">
-                <QualityEveryProject />
-            </section>
-
-            <div className="my-60px">
-                <BuildingSuccessTogether />
-            </div>
-
-            <div className="my-60px">
-                <BuildingStandards />
-            </div>
-
-            <section className="p-section">
-                <Workflow />
-            </section>
-
-            <section className="p-section">
-                <DosDont />
-            </section>
-
-            <section className="p-section">
-                <Reviews />
-            </section>
-
-            <div className="my-60px">
-                <KeyFactors />
-            </div>
-
-            <section className="p-section">
-                <Advantages />
-            </section>
-
-            <div className="my-60px">
-                <PowerOfReadyMixInnovation />
-            </div>
-
-            <div className="my-60px">
-                <ServicesArea />
-            </div>
-
-            <div className="p-section">
-                <Feedback />
-            </div>
+        <div>
+            <BarrieConcreteReadyMixPage />
         </div>
     );
 };
 
-export default BarrieConcreteReadyMixPage;
+export default BarriePage;
