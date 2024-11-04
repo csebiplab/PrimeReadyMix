@@ -11,7 +11,7 @@ const AboutUs = () => {
                     <Image src="/homePage/aboutUs.png" alt='about us image' width={615} height={565}/>
                 </div>
                 <div className='md:col-span-1'>
-                    <div>
+                    <div className='flex justify-center md:justify-start items-center'>
                         <HeadingIcon text={headingTexts.aboutUs__headingIconText}/>
                     </div>
                     <div>

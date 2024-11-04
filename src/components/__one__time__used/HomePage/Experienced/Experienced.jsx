@@ -11,7 +11,7 @@ const Experienced = () => {
                     <Image src="/homePage/experienced.png" alt='about us image' width={763} height={815}/>
                 </div>
                 <div className='md:col-span-1'>
-                    <div>
+                    <div className='flex justify-center md:justify-start items-center'>
                         <HeadingIcon text={headingTexts.experienced__headingIconText}/>
                     </div>
                     <div>
