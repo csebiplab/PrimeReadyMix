@@ -1,6 +1,9 @@
 import React from 'react';
 import HomePageBanner from './HomePageBanner/HomePageBanner';
 import AboutUs from './AboutUs/AboutUs';
+import Experienced from './Experienced/Experienced';
+import TrustedServices from './TrustedServices/TrustedServices';
+import BestDesign from './BestDesign/BestDesign';
 
 const HomePage = () => {
     return (
@@ -12,6 +15,19 @@ const HomePage = () => {
             <section>
                 <AboutUs />
             </section>
+
+            <section>
+                <TrustedServices />
+            </section>
+
+            <section>
+                <Experienced />
+            </section>
+
+            <section>
+                <BestDesign />
+            </section>
+            
         </div>
     );
 };

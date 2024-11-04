@@ -1,3 +1,18 @@
 export const headingTexts = {
     aboutUs__headingIconText : "About Us",
+    trustedServices__headingIconText : "Trusted Services",
+    experienced__headingIconText : "Experienced",
+    bestDesign__headingIconText : "Best Design",
+    gallery__headingIconText : "Gallery",
+    equipped__headingIconText : "Equipped",
+    benefits__headingIconText : "Benefits",
+    concreteCost__headingIconText : "Concrete Cost",
+    additionalServices__headingIconText : "Additional Services",
+    considerationsAndLimitations__headingIconText : "Considerations and Limitations",
+    process__headingIconText : "Process",
+    reviews__headingIconText : "Reviews",
+    whyUs__headingIconText : "Why Us",
+    readyToStart__headingIconText : "Ready to Start",
+    faq__headingIconText : "FAQ",
+    servicesArea__headingIconText : "Services Area",
 }
