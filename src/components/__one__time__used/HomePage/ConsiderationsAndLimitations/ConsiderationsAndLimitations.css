@@ -1,0 +1,10 @@
+.title__bg1{
+    border-radius: 16px 16px 0px 0px;
+    border: 1px solid #B3B3B3;
+    background: #F5F8FA;
+}
+.cart__bg1{
+    border-radius: 0px 0px 16px 16px;
+    border: 1px solid #B3B3B3;
+    background: #F5F8FA;
+}

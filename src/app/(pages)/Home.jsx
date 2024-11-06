@@ -172,11 +172,6 @@ const Home = () => {
               </div>
             </div>
           </section>
-
-          {/* test for  */}
-          <section>
-            <h2>Prime ready mix</h2>
-          </section>
           <section className="py-10 relative">
             <div className=" grid grid-cols-1 md:grid-cols-2 gap-8 w-11/12 md:w-10/12 mx-auto">
               <div className="">
