@@ -7,81 +7,81 @@ import { headingTexts } from "@/utils/heading-text";
 const QAPoolInstallationQuestionsNAns = [
   {
     id: 1,
-    question: "Do I need a design plan before starting the remodel?",
+    question: "What is ready-mix concrete?",
     answer:
-      "While a design plan is beneficial, it's not mandatory. Our experienced designers can work with you to create a plan that meets your needs, even if you're starting with just an idea.",
+      "Construction sites receive ready-mix concrete, a pre-mixed blend of cement, aggregates, water, and other additives. Upon delivery, it meets specific project requirements and is ready for immediate use.",
   },
   {
     id: 2,
-    question: "What types of materials do you recommend for cabinets and countertops?",
+    question: "What kinds of projects can you use ready-mix concrete for?",
     answer:
-      "We offer a range of materials, including solid wood, laminate, granite, quartz, and more. Our team can guide you in selecting the best materials based on your style, durability needs, and budget.",
+      "A variety of projects, including foundations, driveways, sidewalks, patios, parking lots, industrial floors, and large commercial or residential buildings, can use ready-mix concrete.",
   },
   {
     id: 3,
-    question: "Will you handle all the permits and inspections?",
+    question: "How do I know how much concrete I need?",
     answer:
-      "Yes, our team will manage all necessary permits and inspections required for your kitchen remodel, ensuring compliance with local regulations.",
+      "Our team at Prime Ready Mix can assist you in calculating the amount of concrete needed for your project. Simply provide the dimensions (length, width, and depth) of the area, and we'll give you an accurate estimate.",
   },
   {
     id: 4,
-    question: "What should I expect during the remodeling process?",
+    question: "What strength of concrete are you offering?",
     answer:
-      "You can expect clear communication, regular updates, and a dedicated project manager overseeing every aspect of the remodel to ensure everything runs smoothly.",
+      "We offer a wide range of concrete strengths, from standard grades for residential use to high-strength concrete for commercial and industrial applications. Let us know the specific requirements of your project, and we will provide the right mix.",
   },
   {
     id: 5,
-    question: "Can you help with design ideas and inspiration?",
+    question: "Can you provide concrete for smaller projects?",
     answer:
-      "Absolutely! Our design team is here to provide inspiration and guidance, helping you explore various styles and layouts that will work best for your kitchen.",
+      "Yes! At Prime Ready Mix, we cater to both large and small projects. Whether you need concrete for a small patio or a large commercial project, we can customize our services to suit your needs.",
   },
   {
     id: 6,
-    question: "What styles of kitchens do you specialize in?",
+    question: "How does Prime Ready Mix ensure the quality of your concrete?",
     answer:
-      "We specialize in various styles, including modern, traditional, farmhouse, contemporary, and transitional designs. Our team can help you choose a style that reflects your personality and complements your home.",
+      "Our company strictly adheres to industry standards and uses high-quality materials. We carefully mix each batch to ensure consistency and performance, and we conduct routine quality control tests to guarantee the strength and durability of the concrete.",
   },
   {
     id: 7,
-    question: "How do you ensure quality craftsmanship?",
+    question: "Is there a minimum order size for delivery?",
     answer:
-      "We maintain high standards of quality by employing skilled craftsmen and using top-quality materials. Our project managers oversee every detail to ensure the work meets our rigorous quality criteria.",
+      "Yes, we do have a minimum order size for delivery. Please contact us for details, as the minimum can vary depending on your location and project requirements.",
   },
   {
     id: 8,
-    question: "Can I make changes during the remodeling process?",
+    question: "Is there any training available for contractors using your products?",
     answer:
-      "While we encourage careful planning before starting, we understand that ideas can evolve. We'll do our best to accommodate changes, but it's important to discuss any modifications with us as soon as possible to avoid delays.",
+      "Yes, we offer training and informational sessions for contractors to ensure they understand how to use our products effectively. This includes guidance on mixing, pouring, and finishing techniques.",
   },
   {
     id: 9,
-    question: "What payment options do you offer?",
+    question: "Can you provide special concrete mixes?",
     answer:
-      "We provide various payment options to accommodate your needs, including financing solutions to help you manage your budget effectively.",
+      "Absolutely! We can create custom concrete mixes that include specific additives for special projects. Whether you need fibre reinforcement, waterproofing additives, or coloured concrete, we can accommodate your requests.",
   },
   {
     id: 10,
-    question: "How can I communicate with you during the project?",
+    question: "How long will the concrete stay workable after delivery?",
     answer:
-      "You'll have a dedicated project manager who will serve as your main point of contact throughout the remodel. We encourage open communication and will provide regular updates via your preferred method, whether it's phone, email, or in-person meetings.",
+      "Typically, ready-mix concrete remains workable for approximately 90 minutes after mixing, although this duration may vary depending on the specific mix and weather conditions. We recommend having your team ready to pour as soon as the delivery arrives.",
   },
   {
     id: 11,
-    question: "What happens if I encounter issues after the remodel is complete?",
+    question: "How can I place an order with Prime Ready Mix?",
     answer:
-      "Your satisfaction is our priority. If any issues arise after project completion, please reach out to us immediately. We're committed to addressing any concerns promptly and ensuring that you're completely happy with your new kitchen.",
+      "You can place an order by calling our office, filling out a request form on our website, or contacting us directly via email. Our team will assist you in selecting the right mix and scheduling your delivery.",
   },
   {
     id: 12,
-    question: "Do you offer eco-friendly options for kitchen remodels?",
+    question: "What payment methods do you accept?",
     answer:
-      "Yes! We can incorporate eco-friendly materials and energy-efficient appliances into your remodel. Our team can help you explore sustainable options that align with your environmental goals.",
+      "Our company accepts various payment methods, including credit/debit cards, bank transfers, and cash. For larger projects, we can discuss financing options if needed.",
   },
   {
     id: 13,
-    question: "How do I prepare my kitchen for remodeling?",
+    question: "Do you have a loyalty program for returning customers?",
     answer:
-      "We'll provide you with a checklist to help you prepare your kitchen for remodeling. This may include clearing out cabinets, relocating small appliances, and ensuring access to work areas.",
+      "Yes, we value our returning customers and offer a loyalty program that provides discounts and perks for frequent orders. Contact us for more details on how you can benefit from our loyalty rewards.",
   },
   {
     id: 14,
@@ -91,105 +91,75 @@ const QAPoolInstallationQuestionsNAns = [
   },
   {
     id: 15,
-    question: "What makes Glitz Floors & More different from other remodelers?",
+    question: "What is the curing time for ready-mix concrete?",
     answer:
-      "We prioritize customer satisfaction, quality craftsmanship, and personalized service. Our experienced team is dedicated to understanding your needs and delivering a kitchen remodel that exceeds your expectations.",
+      "The curing time for ready-mix concrete typically ranges from 7 to 28 days, depending on the mix design and environmental conditions. While the surface may appear dry after a few hours, it's essential to allow adequate time for the concrete to reach its full strength.",
   },
   {
     id: 16,
-    question: "Can you provide references or examples of past work?",
+    question: "How should I maintain my concrete after pouring it?",
     answer:
-      "Yes, we can provide references and a portfolio of our previous kitchen remodel projects. This will give you a better idea of our craftsmanship and design capabilities.",
+      "Proper care is critical for your concrete's longevity. We recommend keeping the surface moist for at least 7 days, avoiding heavy traffic until fully cured, and applying a sealant if necessary. Our team can provide specific care instructions for your project.",
   },
   {
     id: 17,
-    question: "What is your process for selecting materials?",
+    question: "What should I do if I experience issues with the concrete?",
     answer:
-      "We guide you through the selection process by discussing your preferences, budget, and functionality needs. We can recommend materials that fit your vision while ensuring quality and durability.",
+      "If you encounter any issues with the concrete, please contact us immediately. Our commitment to customer satisfaction means we will collaborate with you to resolve any issues, be they related to quality or installation.",
   },
   {
     id: 18,
-    question: "Is it necessary to have a design consultation before starting?",
+    question: "Do you offer delivery outside of your local area?",
     answer:
-      "While a design consultation is highly beneficial, it's not mandatory. We can work with you to create a design as part of the remodeling process if you prefer.",
+      "We primarily serve the local area, but we can accommodate deliveries to nearby regions depending on the order size and logistics. ",
   },
   {
     id: 19,
-    question: "Do you assist with kitchen appliance selection?",
+    question: "What environmental practices does Prime Ready Mix follow?",
     answer:
-      "Yes! We can help you choose the right appliances that fit your style, budget, and needs, ensuring they work well with the overall kitchen design.",
+      "At Prime Ready Mix, we are committed to sustainability. We utilize eco-friendly materials when possible, recycle excess concrete, and employ practices that minimize our carbon footprint during production and delivery.",
   },
   {
     id: 20,
-    question: "How do you ensure my project stays within budget?",
+    question: "How do temperature and weather affect concrete placement?",
     answer:
-      "We work closely with you to establish a clear budget from the start. Our team keeps track of expenses throughout the project and communicates any potential changes to ensure you stay on budget.",
+      "Temperature and weather can have a significant impact on concrete's curing and strength. High temperatures can cause rapid evaporation, leading to surface cracking, while cold temperatures can slow down the curing process. Our team can provide recommendations for optimal pouring conditions and how to mitigate weather-related issues.",
   },
   {
     id: 21,
-    question: "Will I need to make decisions quickly during the remodel?",
+    question: "Do you provide any concrete certifications or guarantees?",
     answer:
-      "While some decisions may need to be made promptly, we'll provide you with a clear timeline of when choices are needed, allowing you to feel confident in your selections without feeling rushed.",
+      "Yes, all our concrete mixes meet industry standards, and we provide certifications upon request. We stand behind the quality of our products and offer a satisfaction guarantee to ensure your project's success.",
   },
   {
     id: 22,
-    question: "What are the benefits of working with Glitz Floors & More?",
+    question: "What happens if there's a problem with the delivery?",
     answer:
-      "Working with Glitz Floors & More means you receive personalized service from a team that understands the community. We are familiar with local styles, regulations, and suppliers, enhancing the overall remodeling experience.",
+      "In the unlikely event of a delivery issue, such as delays or incorrect mixes, please contact us immediately. We strive to resolve any problems quickly and ensure your project remains on schedule.",
   },
   {
     id: 23,
-    question: "How can I maintain my new kitchen after the remodel?",
+    question: "What is the best time of year to pour concrete?",
     answer:
-      "We provide maintenance tips and guidance on how to care for your new kitchen, including cleaning recommendations for various materials and appliances to keep your space looking great for years to come.",
+      "The best time to pour concrete is typically in mild weather, avoiding extreme temperatures. However, we can provide guidance on pouring in different seasons.",
   },
   {
     id: 24,
-    question: "How do I get started with my kitchen remodel?",
+    question: "Can I modify the colour of my concrete?",
     answer:
-      "Getting started is easy! Simply contact us to schedule a consultation. We'll discuss your ideas, goals, and budget, laying the groundwork for your exciting kitchen transformation.",
+      "Yes, we offer a variety of colour options for your concrete. You can choose from standard colours or request custom shades to match your design preferences. Speak to our team about your colour options when placing your order.",
   },
   {
     id: 25,
-    question: "Can I see 3D renderings of my kitchen design?",
+    question: "What is the lifespan of ready-mix concrete?",
     answer:
-      "Yes! We offer 3D renderings of your kitchen design, allowing you to visualize the layout and features before any work begins. This helps you feel confident in your choices.",
+      "When properly mixed, placed, and cured, ready-mix concrete can last for decades, often 30 years or more, depending on the environmental conditions and use.",
   },
   {
     id: 26,
-    question: "What if I have specific design inspirations or styles in mind?",
+    question: "How does Prime Ready Mix compare to competitors?",
     answer:
-      "We encourage you to share any design inspirations or styles you love! Our team will work with you to incorporate those elements into your kitchen remodel.",
-  },
-  {
-    id: 27,
-    question: "Are you licensed and insured?",
-    answer:
-      "Absolutely! Glitz Floors & More is fully licensed and insured, giving you peace of mind that your project is in safe hands.",
-  },
-  {
-    id: 28,
-    question: "How do you handle waste and cleanup during the remodel?",
-    answer:
-      "We prioritize cleanliness throughout the project, implementing waste management strategies to keep your home tidy. Our team will handle cleanup at the end of each workday and the project's completion.",
-  },
-  {
-    id: 29,
-    question: "What if I have an unusual kitchen layout or small space?",
-    answer:
-      "No project is too challenging for us! Our team specializes in maximizing space and optimizing layouts, ensuring that even unusual or small kitchens can be functional and beautiful.",
-  },
-  {
-    id: 30,
-    question: "How do you ensure safety during the remodeling process?",
-    answer:
-      "Safety is a top priority for us. Our team follows strict safety protocols and regulations to protect our workers and your home throughout the renovation process.",
-  },
-  {
-    id: 31,
-    question: "What should I do if I have specific health or accessibility needs?",
-    answer:
-      "We're committed to creating kitchens that meet all your needs. If you have specific health or accessibility requirements, please share them with us so we can tailor the design accordingly.",
+      "At Prime Ready Mix, we pride ourselves on our commitment to quality, customer service, and competitive pricing. Our experienced team works closely with clients to ensure satisfaction, and our state-of-the-art mixing facility produces consistent, high-quality concrete.",
   }
 ];
 
@@ -201,10 +171,9 @@ const Faq = () => {
         <HeadingIcon text={headingTexts.faq__headingIconText}/>
 
           <div>
-            <h3 className="font-family-secondary text-[25px] md:text-[26px] lg:text-[29px] xl:text-[32px] 2xl:text-[35px] 3xl:text-[38px] 4xl:text-[41px] 5xl:text-[44px] font-bold text-secondary leading-normal text-center">
-            FAQ of Kitchen Remodeling Services
+            <h3 className="ext-[25px] md:text-[27px] lg:text-[29px] xl:text-[30px] 2xl:text-[32px] 3xl:text-[33px] 4xl:text-[34px] 5xl:text-[36px] font-bold leading-[30px] md:leading-[40px] text-dark text-center mt-[5px]">
+            Frequently Asked Questions (FAQ)
             </h3>
-            <p className="text-lg font-normal text-secondary-50 text-center leading-[40px]">If you have any more questions or need further assistance, please don't hesitate to reach out. We look forward to helping you create the kitchen of your dreams!</p>
           </div>
         </div>
       </div>

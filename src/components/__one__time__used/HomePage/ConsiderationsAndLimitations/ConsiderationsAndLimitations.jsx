@@ -65,10 +65,10 @@ const ConsiderationsAndLimitations = () => {
         <HeadingIcon
           text={headingTexts.considerationsAndLimitations__headingIconText}
         />
-        <h2 className="font-family-secondary text-[25px] md:text-[26px] lg:text-[29px] xl:text-[32px] 2xl:text-[35px] 3xl:text-[38px] 4xl:text-[41px] 5xl:text-[44px] font-bold text-secondary leading-normal text-center pt-[10px] pb-[5px]">
+        <h2 className="text-[25px] md:text-[27px] lg:text-[29px] xl:text-[30px] 2xl:text-[32px] 3xl:text-[33px] 4xl:text-[34px] 5xl:text-[36px] font-bold leading-[30px] md:leading-[40px] text-dark text-center md:text-left mt-[5px]">
         Considerations and Limitations Factors for Ready Mix Concrete Service
         </h2>
-        <p className="font-family-secondary text-lg font-normal text-center text-secondary">
+        <p className="text-lg text-dark-300 font-normal leading-[35px] text-center mt-[10px] mb-[25px]">
         When using ready-mix concrete services, it's important to be aware of several considerations and limitations that can impact your project's success. By carefully managing these considerations and understanding the limitations, you can ensure a smoother and more successful ready-mix concrete project.
         </p>
       </div>

@@ -72,8 +72,8 @@ const LocationMap = ({ classNames }) => {
           <HeadingIcon text={headingTexts.servicesArea__headingIconText}/>
 
             <div>
-              <h2 className="text-[25px] md:text-[26px] lg:text-[28px] xl:text-[29px] 2xl:text-[30px] 3xl:text-[32px] 4xl:text-[34px] 5xl:text-[36px] text-black font-bold leading-normal text-center pb-[10px]">
-                SERVICE AREA IN RH CONSTRUCTION USA INC
+              <h2 className="text-[25px] md:text-[27px] lg:text-[29px] xl:text-[30px] 2xl:text-[32px] 3xl:text-[33px] 4xl:text-[34px] 5xl:text-[36px] font-bold leading-[30px] md:leading-[40px] text-dark text-center md:text-left mt-[5px]">
+              Services Area in Barrie concrete Ready Mix
               </h2>
             </div>
           </div>
@@ -110,7 +110,7 @@ const LocationMap = ({ classNames }) => {
                       referrerPolicy="no-referrer-when-downgrade"
                     />
 
-                    <p className="lg:text-base text-center text-sm font-bold py-4 px-3 lg:px-10 bg-yellow-700 ">
+                    <p className="lg:text-base text-center text-sm font-bold py-3 5xl:py-4 px-3 lg:px-10 bg-primary text-white">
                       {location?.title}
                     </p>
                   </div>

@@ -7,10 +7,10 @@ const Equipped = () => {
     return (
         <div className='full__section_r_p pl-3 md:pl-0 padding__top'>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-[20px] md:gap-[30px] 5xl:gap-[37px]'>
-                <div className='order-2 md:col-span-1'>
+                <div className='md:col-span-1'>
                     <Image src="/homePage/equipped.png" alt='equipped image' width={905} height={675}/>
                 </div>
-                <div className='order-1 md:col-span-1'>
+                <div className='md:col-span-1'>
                     <div className='flex justify-center md:justify-start items-center'>
                         <HeadingIcon text={headingTexts.equipped__headingIconText}/>
                     </div>
