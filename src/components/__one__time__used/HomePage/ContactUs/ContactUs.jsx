@@ -1,10 +1,6 @@
 import Image from "next/image";
 import "./ContactUs.css";
 import Link from "next/link";
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { FaMapLocationDot, FaPhoneVolume, FaXTwitter } from "react-icons/fa6";
-import { IoIosMail } from "react-icons/io";
-// import contactUsLogo from "../../../../public/assets/logos/contact-logo.png";
 
 export default function ContactUs({ classNames }) {
   return (
@@ -18,7 +14,7 @@ export default function ContactUs({ classNames }) {
                   Contact Us
                 </p>
                 <div className="flex gap-2 items-center 5xl:text-[18px] md:text-base text-[14px] 5xl:py-8 py-4 justify-center md:justify-start">
-                  <FaMapLocationDot className=" lg:w-5 lg:h-5 w-auto h-auto" />
+                  <Image src="/homePage/icons/map_icon.png" alt="map icon" width={29} height={29}/>
                   <Link
                     href={`Location:4 Cedar Ave, Thornhill, ON L3T 3W1, Canada`}
                   >
@@ -28,37 +24,37 @@ export default function ContactUs({ classNames }) {
                   </Link>
                 </div>
                 <div className="flex gap-2 items-center 5xl:text-[18px] md:text-base text-[14px] justify-center md:justify-start">
-                  <FaPhoneVolume className=" lg:w-5 lg:h-5 w-auto h-auto" />
+                  <Image src="/homePage/icons/phone_icon.png" alt="phone icon" width={29} height={29}/>
 
                   <a href={`tel:+ 1 (647) 539-6755`}>
                     <p className="text-white"> + 1 (647) 539-6755</p>
                   </a>
                 </div>
                 <div className=" flex gap-2 my-auto items-center 5xl:text-[18px] md:text-base text-[14px] 5xl:py-8 py-4 justify-center md:justify-start">
-                  <IoIosMail className=" lg:w-5 lg:h-5 w-auto h-auto" />
+                  <Image src="/homePage/icons/email_icon.png" alt="email icon" width={29} height={29}/>
 
                   <Link href={`email:sampleit@gmail.com`}>
                     <p className="text-white">sampleit@gmail.com</p>
                   </Link>
                 </div>
                 <div className="flex lg:gap-8 gap-3 justify-center md:justify-start">
-                  <FaFacebook className=" lg:w-6 lg:h-6 w-auto h-auto" />
-                  <FaXTwitter className=" lg:w-6  lg:h-6 w-auto h-auto" />
-                  <FaInstagram className=" lg:w-6 lg:h-6 w-auto h-auto" />
-                  <FaLinkedin className=" lg:w-6 lg:h-6 w-auto h-auto" />
+                  <Image src="/homePage/icons/facebook.png" alt="facebook icon" width={28} height={28}/>
+                  <Image src="/homePage/icons/twiter.png" alt="twiter icon" width={28} height={28}/>
+                  <Image src="/homePage/icons/instragram.png" alt="instragram icon" width={28} height={28}/>
+                  <Image src="/homePage/icons/linkedin.png" alt="linkedin icon" width={28} height={28}/>
                 </div>
 
                 <p className="text-[20px] 5xl:text-[25px] text-white font-bold 5xl:py-10 py-6">
                   Concrete Ready Mix
                 </p>
                 <div className="flex justify-center md:justify-start">
-                  {/* <Image
-                    src={contactUsLogo}
+                  <Image
+                    src="/homePage/icons/contact_logo.png"
                     height={130}
                     width={280}
                     className="h-auto w-auto"
                     alt="logo"
-                  /> */}
+                  />
                 </div>
                 <p className=" 5xl:text-[25px] text-[20px] text-white font-bold 5xl:pt-10 pt-6">
                   Barrie concrete Ready Mix

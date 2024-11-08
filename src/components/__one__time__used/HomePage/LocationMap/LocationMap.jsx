@@ -110,7 +110,7 @@ const LocationMap = ({ classNames }) => {
                       referrerPolicy="no-referrer-when-downgrade"
                     />
 
-                    <p className="lg:text-base text-center text-sm font-bold py-4 px-3 lg:px-10 bg-yellow-700 ">
+                    <p className="lg:text-base text-center text-sm font-bold py-3 5xl:py-4 px-3 lg:px-10 bg-primary text-white">
                       {location?.title}
                     </p>
                   </div>
