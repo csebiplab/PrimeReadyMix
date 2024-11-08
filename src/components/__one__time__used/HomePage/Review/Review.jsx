@@ -70,14 +70,14 @@ const Review = () => {
   const swiperSlide = useRef();
   return (
     <div className="">
-      <div className="container common__padding__top">
+      <div className="container padding__top">
         <div className="">
           <div className="text-center">
             <div className="flex justify-center items-center">
             <HeadingIcon text={headingTexts.reviews__headingIconText}/>
             </div>
-            <h2 className="text-[25px] md:text-[26px] lg:text-[28px] xl:text-[29px] 2xl:text-[30px] 3xl:text-[32px] 4xl:text-[34px] 5xl:text-[36px] text-primary-100 font-bold leading-normal text-center pb-[15px]">
-              Here's what to expect when you hire us
+            <h2 className="text-[25px] md:text-[27px] lg:text-[29px] xl:text-[30px] 2xl:text-[32px] 3xl:text-[33px] 4xl:text-[34px] 5xl:text-[36px] font-bold leading-[30px] md:leading-[40px] text-dark text-center mt-[5px] mb-[25px]">
+            Reviews  Toronto Ready Mix
             </h2>
           </div>
           {/* =================== Card Section =============== */}

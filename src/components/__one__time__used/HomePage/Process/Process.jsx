@@ -60,11 +60,11 @@ const Process = () => {
     <div>
       <div className="container padding__top">
         <div className="flex flex-col items-center justify-center">
-        <HeadingIcon text={headingTexts.benefits__headingIconText}/>
-          <h2 className="font-family-secondary text-[25px] md:text-[26px] lg:text-[29px] xl:text-[32px] 2xl:text-[35px] 3xl:text-[38px] 4xl:text-[41px] 5xl:text-[44px] font-bold text-secondary leading-normal text-center pt-[10px]">
+        <HeadingIcon text={headingTexts.process__headingIconText}/>
+          <h2 className="text-[25px] md:text-[27px] lg:text-[29px] xl:text-[30px] 2xl:text-[32px] 3xl:text-[33px] 4xl:text-[34px] 5xl:text-[36px] font-bold leading-[30px] md:leading-[40px] text-dark text-center md:text-left mt-[5px]">
           Process of Our Ready Mix Concrete Services
           </h2>
-          <p className="font-family-secondary text-lg font-normal text-center text-secondary">
+          <p className="text-lg text-dark-300 font-normal leading-[35px] text-center mt-[10px]">
           We design our Toronto ready mix concrete services process to ensure a seamless and reliable experience for our customers, from initial consultation to project completion. We take pride in delivering high-quality concrete that meets the unique demands of your construction project.
           </p>
         </div>
@@ -79,13 +79,13 @@ const Process = () => {
                   height={129}
                   className="w-[129px] h-[129px] mx-auto"
                 />
-                <p className="font-family-secondary text-[22px] 5xl:text-[25px] font-bold text-secondary text-center leading-9 pt-[12px] pb-[5px]">
+                <p className="font-family-secondary text-[22px] 5xl:text-[25px] font-bold text-dark-300 text-center leading-9 pt-[12px] pb-[5px]">
                   {data.title}
                 </p>
-                <p className="font-family-secondary text-lg font-light text-black text-center pb-[25px]">
+                <p className="font-family-secondary text-lg font-light text-dark-300 text-center pb-[25px]">
                   {data.desc}
                 </p>
-                <div className="absolute bottom-0 w-full h-[2px] bg-secondary-300" />
+                <div className="absolute bottom-0 w-full h-[2px] bg-dark-300" />
               </div>
             );
           })}

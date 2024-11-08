@@ -51,10 +51,10 @@ const Benefits = () => {
       <div className="container padding__top">
         <div className="flex flex-col items-center justify-center">
         <HeadingIcon text={headingTexts.benefits__headingIconText}/>
-          <h2 className="font-family-secondary text-[25px] md:text-[26px] lg:text-[29px] xl:text-[32px] 2xl:text-[35px] 3xl:text-[38px] 4xl:text-[41px] 5xl:text-[44px] font-bold text-secondary leading-normal text-center pt-[10px] pb-[5px]">
+          <h2 className="text-[25px] md:text-[27px] lg:text-[29px] xl:text-[30px] 2xl:text-[32px] 3xl:text-[33px] 4xl:text-[34px] 5xl:text-[36px] font-bold leading-[30px] md:leading-[40px] text-dark text-center md:text-left mt-[5px]">
           Benefits of Working With US
           </h2>
-          <p className="font-family-secondary text-lg font-normal text-center text-secondary">
+          <p className="text-lg text-dark-300 font-normal leading-[35px] text-center md:text-left mt-[10px]">
           When it comes to Toronto ready mix concrete services, choosing Prime Ready Mix is an assurance of unmatched quality and reliability. With years of experience in the industry, we have honed our expertise to deliver concrete solutions. With our advanced mixing technology, we precisely formulate every batch of ready mix to meet your project's unique demands. Our unwavering commitment to timeliness sets us apart, ensuring that your concrete arrives exactly when you need it. When you choose us for Toronto ready mix services, you're not just getting concrete; you're getting a partner in your project's success. Trust Prime Ready Mix for all your concrete needs, and experience the difference that expert service and quality make.
           </p>
         </div>
@@ -71,12 +71,12 @@ const Benefits = () => {
                   alt="flooring image"
                   width={104}
                   height={104}
-                  className="absolute left-0 right-0 -top-14 w-[104px] h-[104px] mx-auto border-[2px] border-primary p-[5px] rounded-full bg-secondary-400"
+                  className="absolute left-0 right-0 -top-14 w-[104px] h-[104px] mx-auto border-[2px] border-primary p-[5px] rounded-full bg-white"
                 />
-                <p className="font-family-secondary text-[25px] font-bold text-center text-black pt-[65px]">
+                <p className="font-family-secondary text-[25px] font-bold text-center text-dark-300 pt-[65px]">
                   {data.title}
                 </p>
-                <p className="font-family-secondary text-lg font-normal text-center pt-[5px]">
+                <p className="font-family-secondary text-lg text-dark-300 font-normal text-center pt-[5px]">
                   {data.desc}
                 </p>
               </div>
