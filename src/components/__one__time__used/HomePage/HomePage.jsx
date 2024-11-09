@@ -16,6 +16,7 @@ import Faq from './Faq/Faq';
 import LocationMap from './LocationMap/LocationMap';
 import ContactUs from './ContactUs/ContactUs';
 import ConsiderationsAndLimitations from './ConsiderationsAndLimitations/ConsiderationsAndLimitations';
+import WhyUs from './WhyUs/WhyUs';
 
 const HomePage = () => {
     return (
@@ -70,6 +71,10 @@ const HomePage = () => {
 
             <section>
                 <Review />
+            </section>
+
+            <section>
+                <WhyUs />
             </section>
 
             <section>
