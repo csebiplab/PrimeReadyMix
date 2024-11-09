@@ -1,10 +1,11 @@
 import { Montserrat } from "next/font/google";
 import ProgressBar from "../../components/common/ProgressBar";
-import Footer from "../../components/layout/Footer";
+// import Footer from "../../components/layout/Footer";
 import Header from "../../components/layout/Header";
 // import Script from "next/script";
 import { Suspense } from "react";
 import "./globals.css";
+import Footer from "@/components/layout/Footer/Footer";
 
 
 export async function generateMetadata() {
@@ -59,7 +60,8 @@ export default function RootLayout({ children }) {
 
                 <Header />
                 {children}
-                <Footer />
+                {/* <Footer /> */}
+                <Footer/>
             </body>
         </html>
     );
