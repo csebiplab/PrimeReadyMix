@@ -79,9 +79,9 @@ const ConsiderationsAndLimitations = () => {
       {/* second part  */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-[26px]">
         <div className="md:col-span-1">
-          <p className="title__bg1 py-[14px] 5xl:py-[17px] text-center text-dark text-[22px] 5xl:text-[25px] font-bold leading-[35px] ">
+          <h4 className="title__bg1 py-[14px] 5xl:py-[17px] text-center text-dark text-[22px] 5xl:text-[25px] font-bold leading-[35px] ">
             Considerations
-          </p>
+          </h4>
           <div className="cart__bg1">
             {considerationsData.map((data) => {
               return (
@@ -105,9 +105,9 @@ const ConsiderationsAndLimitations = () => {
           </div>
         </div>
         <div className="md:col-span-1">
-          <p className="title__bg1 py-[14px] 5xl:py-[17px] text-center text-dark text-[22px] 5xl:text-[25px] font-bold leading-[35px] ">
+          <h4 className="title__bg1 py-[14px] 5xl:py-[17px] text-center text-dark text-[22px] 5xl:text-[25px] font-bold leading-[35px] ">
           Limitations
-          </p>
+          </h4>
           <div className="cart__bg1">
             {limitationsData.map((data) => {
               return (

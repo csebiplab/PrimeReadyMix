@@ -7,10 +7,10 @@ const ReadyToStart = () => {
     return (
         <div className='full__section_l_p pr-3 md:pr-0 padding__top'>
             <div className='grid grid-cols-1 md:grid-cols-5 gap-[20px] md:gap-[30px] 5xl:gap-[37px]'>
-                <div className='order-2 md:col-span-3'>
+                <div className='order-1 md:order-2 md:col-span-3'>
                     <Image src="/homePage/readyToStart.png" alt='ready to start image' width={1052} height={710}/>
                 </div>
-                <div className='order-1 md:col-span-2'>
+                <div className='order-2 md:order-1 md:col-span-2'>
                     <div className='flex justify-center md:justify-start items-center'>
                         <HeadingIcon text={headingTexts.readyToStart__headingIconText}/>
                     </div>
