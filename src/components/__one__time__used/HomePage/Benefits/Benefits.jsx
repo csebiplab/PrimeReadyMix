@@ -54,7 +54,7 @@ const Benefits = () => {
           <h2 className="text-[25px] md:text-[27px] lg:text-[29px] xl:text-[30px] 2xl:text-[32px] 3xl:text-[33px] 4xl:text-[34px] 5xl:text-[36px] font-bold leading-[30px] md:leading-[40px] text-dark text-center md:text-left mt-[5px]">
           Benefits of Working With US
           </h2>
-          <p className="text-lg text-dark-300 font-normal leading-[35px] text-center md:text-left mt-[10px]">
+          <p className="text-lg text-dark-300 font-normal leading-[35px] text-center mt-[10px]">
           When it comes to Toronto ready mix concrete services, choosing Prime Ready Mix is an assurance of unmatched quality and reliability. With years of experience in the industry, we have honed our expertise to deliver concrete solutions. With our advanced mixing technology, we precisely formulate every batch of ready mix to meet your project's unique demands. Our unwavering commitment to timeliness sets us apart, ensuring that your concrete arrives exactly when you need it. When you choose us for Toronto ready mix services, you're not just getting concrete; you're getting a partner in your project's success. Trust Prime Ready Mix for all your concrete needs, and experience the difference that expert service and quality make.
           </p>
         </div>

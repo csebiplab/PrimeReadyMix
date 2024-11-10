@@ -37,7 +37,7 @@ const ConcreteCost = () => {
           Ready Mix Concrete Cost in Toronto
           </h2>
           <p className="text-lg text-dark-300 font-normal leading-[35px] text-center md:text-left mt-[10px]">
-          The cost of ready-mix concrete in Toronto can vary depending on several factors, such as the type of concrete, the amount required, delivery distance, and additional services like pumping. On average, the price for ready-mix concrete typically ranges between $150 and $200 per cubic meter. It's always a beneficial idea to request a detailed quote from a trusted supplier, such as Prime Ready Mix, to get an accurate estimate tailored to your specific project.
+          The cost of ready-mix concrete in Toronto can vary depending on several factors, such as the type of concrete, the amount required, delivery distance, and additional services like pumping. On average, the price for ready-mix concrete typically ranges between <strong>$150</strong> and <strong>$200</strong> per cubic meter. It's always a beneficial idea to request a detailed quote from a trusted supplier, such as Prime Ready Mix, to get an accurate estimate tailored to your specific project.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-[15px] mt-[15px]">

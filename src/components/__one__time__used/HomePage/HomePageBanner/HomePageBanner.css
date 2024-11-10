@@ -19,4 +19,12 @@
   .hero_btn {
     background: #9C7066;
   }
+
+  .small_device_bg{
+    height: auto;
+    background-image: url("/homePage/hero_bg.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
   

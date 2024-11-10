@@ -7,10 +7,10 @@ const BestDesign = () => {
     return (
         <div className='full__section_l_p pr-3 md:pr-0 padding__top'>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-[20px] md:gap-[30px] 5xl:gap-[37px]'>
-                <div className='order-2 md:col-span-1'>
+                <div className='order-1 md:order-2 md:col-span-1'>
                     <Image src="/homePage/bestDesign.png" alt='best design' width={903} height={525}/>
                 </div>
-                <div className='order-1 md:col-span-1'>
+                <div className='order-2 md:order-1 md:col-span-1'>
                     <div className='flex justify-center md:justify-start items-center'>
                         <HeadingIcon text={headingTexts.bestDesign__headingIconText}/>
                     </div>

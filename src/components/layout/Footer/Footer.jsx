@@ -8,13 +8,13 @@ import "./Footer.css";
 
 const footerLinks1 = [
   {
-    cat: "News ",
+    cat: "Company",
     links: [
-      { label: ">> How it works ", url: "/" },
-      { label: ">> Gallery", url: "/" },
-      { label: ">> Testimonials", url: "/" },
-      { label: ">> Careers", url: "/" },
-      { label: ">> Sitemap", url: "/" },
+      { label: "Blogs", url: "/" },
+      { label: "Contact Us", url: "/" },
+      { label: "Testimonial", url: "/" },
+      { label: "Careers", url: "/" },
+      { label: "Sitemap", url: "/" },
     ],
   },
 ];
@@ -22,25 +22,22 @@ const footerLinks2 = [
   {
     cat: "Ours Services",
     links: [
-      { label: ">> Kitchen Remodeling", url: "/" },
-      { label: ">> Bathroom Remodeling", url: "/" },
-      { label: ">> Painting", url: "/" },
-      { label: ">> Roofing", url: "/" },
-      { label: ">> Brown Stone Repair", url: "/" },
-      { label: ">> Brick Works", url: "/" },
+      { label: "Kitchen Remodeling", url: "/" },
+      { label: "Bathroom Remodeling", url: "/" },
+      { label: "Painting", url: "/" },
+      { label: "Roofing", url: "/" },
+      { label: "Brown Stone Repair", url: "/" },
+      { label: "Brick Works", url: "/" },
     ],
   },
 ];
 
 const footerImages = [
-  "/assets/home_page/soap.png",
-  "/assets/home_page/toprated.png",
-  "/assets/home_page/elite.png",
-  "/assets/home_page/ssa-2023.png",
-  "/assets/home_page/100reviews.png",
-  "/assets/home_page/10year.png",
-  "/assets/home_page/bark-reviews-logo.png",
-  "/assets/home_page/facebook-reviews-logo.png",
+  "/homePage/footerIcon/google.png",
+  "/homePage/footerIcon/threeBest.png",
+  "/homePage/footerIcon/homeStar.png",
+  "/homePage/footerIcon/rated.png",
+  "/homePage/footerIcon/gaf.png",
 ];
 
 const Footer = () => {
@@ -53,26 +50,16 @@ const Footer = () => {
               <div className=" w-full lg:w-auto">
                 <div className=" mx-auto flex justify-center">
                   <Image
-                    src="/assets/home_page/footer_logo.jpeg"
+                    src="/homePage/footerIcon/footer_logo.png"
                     height={311}
                     width={141}
-                    alt="Logo"
-                    className=" w-[269px] h-[112px] md:w-[311px] md:h-[141px]"
+                    alt="footer Logo"
+                    className="w-full"
                   />
                 </div>
                 <p className="text-white pt-6 leading-[200%] text-center md:text-start">
-                  From bathroom renovation to concrete bathroom, transform your
-                  space with our bathroom remodeling services in Brooklyn.
+                From foundations to finishing touches, rely on Prime Ready Mix for superior solutions of concrete ready mix in Barrie.
                 </p>
-                <div className="flex items-center justify-center md:justify-start gap-[35px] pt-[29px]">
-                  <Image
-                    src="/assets/home_page/five_star.png"
-                    alt="five star icon"
-                    width={133}
-                    height={20}
-                  />
-                  <p className="text-white text-base font-bold">4.9</p>
-                </div>
               </div>
 
               {/* Mapping through footer links */}
@@ -128,29 +115,29 @@ const Footer = () => {
                 <ul className="text-center md:text-start mx-auto">
                   <li>
                     <Link
-                      href="553 East 2nd Street Brooklyn, NY 11218"
-                      className="footer-link items-start text-left justify-center md:justify-start md:items-center text-sm text-white"
+                      href="location:4 Cedar Ave, Thornhill, ON L3T 3W1, Canada"
+                      className="flex items-center gap-2 footer-link items-start text-left justify-center md:justify-start md:items-center text-sm text-white"
                     >
-                      <PiMapPinLineFill className="w-[21px] h-[21px]" />
-                      553 East 2nd Street Brooklyn, NY 11218
+                      <Image src="/homePage/icons/map.png" alt="map icon" width={21} height={21}/>
+                      <span>4 Cedar Ave, Thornhill, <br/> ON L3T 3W1, Canada</span>
                     </Link>
                   </li>
                   <li className="lg:py-8 xs:py-[12px]">
                     <Link
-                      href="tel:+1 (646) 683-4612"
-                      className="footer-link items-center justify-center md:justify-start text-sm text-white"
+                      href="tel:+1 (647) 539-6755"
+                      className="flex items-center gap-2 footer-link items-center justify-center md:justify-start text-sm text-white"
                     >
-                      <FaPhoneVolume className="w-[21px] h-[21px]" /> +1 (646)
-                      683-4612
+                      <Image src="/homePage/icons/phone.png" alt="phone icon" width={21} height={21}/>
+                      <span>+1 (647) 539-6755</span>
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="mailto:rhconusa@gmail.com"
-                      className="footer-link items-center justify-center md:justify-start text-sm text-white"
+                      href="mailto:sampleit@gmail.com"
+                      className="flex items-center gap-2 footer-link items-center justify-center md:justify-start text-sm text-white"
                     >
-                      <TfiEmail className="w-[21px] h-[21px]" />
-                      rhconusa@gmail.com
+                      <Image src="/homePage/icons/email.png" alt="email icon" width={21} height={21}/>
+                      <span>sampleit@gmail.com</span>
                     </Link>
                   </li>
                   {/* footer image  */}
@@ -163,7 +150,7 @@ const Footer = () => {
                             alt="footer image"
                             width={60}
                             height={51}
-                            className="w-[60px] h-[51px]"
+                            className="w-full"
                           />
                         </div>
                       );
@@ -175,8 +162,7 @@ const Footer = () => {
 
                     <div className="text-center lg:text-left">
                       <p className="text-xs lg:text-sm text-white">
-                        © All Copyright 2024 by RH Construction USA, Inc.
-                        General Cronstruction.
+                      © All Copyright 2024 by Toronto Ready Mix
                       </p>
                       <ul className="text-sm lg:text-sm flex justify-evenly gap-2 mt-4">
                         <li className="text-white"> Terms & Condition</li>
@@ -195,21 +181,20 @@ const Footer = () => {
       <div className="footer-bottom-bg">
         <div className="container flex flex-col lg:flex-row justify-between items-center py-2">
           <div className="flex justify-center items-center mb-2 lg:mb-0">
-            <p className="text-xs md:text-sm font-semibold text-white mr-[10px] lg:mr-4">
+            <p className="text-xs md:text-sm font-semibold text-white mr-[10px]">
               WEBSITE DESIGN AND SEO BY :-
             </p>
             <Image
-              src="/assets/home_page/gokundu_logo.png"
+              src="/homePage/footerIcon/gokundu_logo.png"
               alt="Gokundo"
               width={141}
               height={36}
-              className="w-[114px] h-[30px] md:w-[141px] md:h-9"
+              className="w-full"
             />
           </div>
           <div className="text-center lg:text-left hidden md:block">
             <p className="text-xs lg:text-sm text-white">
-              © All Copyright 2024 by RH Construction USA, Inc. General
-              Cronstruction.
+            © All Copyright 2024 by Toronto Ready Mix
             </p>
           </div>
           <div className="text-center lg:text-right hidden md:block">

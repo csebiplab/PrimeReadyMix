@@ -54,7 +54,7 @@ const ProjectGallery = () => {
 
   return (
     <div className="">
-      <div className="custom-container common__padding__top">
+      <div className="custom-container padding__top">
         <div className="">
           <div className="flex flex-col justify-center items-center">
           <HeadingIcon text={headingTexts.gallery__headingIconText}/>
@@ -87,21 +87,9 @@ const ProjectGallery = () => {
               <div className="w-full flex justify-center items-center mt-4">
                 <button
                   onClick={handleLoadMore}
-                  className="flex items-center justify-center gap-2 text-lg font-bold px-[50px] py-[18px] bg-primary text-black rounded"
+                  className="text-lg font-bold px-[50px] py-[18px] bg-primary text-white rounded"
                 >
-                  Load More{" "}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="7"
-                    height="11"
-                    viewBox="0 0 7 11"
-                    fill="none"
-                  >
-                    <path
-                      d="M1.38997 0.4375L0 1.67633L4.22005 5.4375L0 9.19867L1.38997 10.4375L7 5.4375L1.38997 0.4375Z"
-                      fill="black"
-                    />
-                  </svg>
+                  Load More
                 </button>
               </div>
             )}
