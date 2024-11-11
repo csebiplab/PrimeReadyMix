@@ -23,10 +23,10 @@ export const SwiperNavButtons = () => {
             </button>
             <button
               onClick={() => swiper.slideNext()}
-              className="text-white hover:text-primary hover:bg-white border-2 p-3 bg-primary rounded-full border-primary"
+              className="hover:bg-white border-2 p-3 bg-primary rounded-full border-primary"
               aria-label="Next slide"
             >
-              <FaChevronRight/>
+              <FaChevronRight className="text-white hover:text-primary"/>
             </button>
           </div>
 

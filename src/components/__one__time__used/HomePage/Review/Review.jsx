@@ -14,7 +14,6 @@ import "./ReviewSlider.css";
 import { SwiperNavButtons } from "./SwiperSliderButton";
 import HeadingIcon from '@/utils/HeadingIcon';
 import { headingTexts } from '@/utils/heading-text';
-// import { review } from '@/components/__home_components/Images/review.png';
 
 const breakpoints = {
   0: {
@@ -30,37 +29,37 @@ const breakpoints = {
 const reviews = [
   {
     reviewText:
-      "They Are Professional and do great job cleaning the house!!! I Locked myself out of my house the other day and they were the only ones with a key. They were kind enough to drive over to unlock their door.",
+      "They Are Professional and do great job cleaning the house!!! I Locked myself out of my house the other day and they were the only ones with a key. They were kind enough to drive over to unlock their",
     author: "Lisa Silva",
     address: "North York",
   },
   {
     reviewText:
-      "They Are Professional and do great job cleaning the house!!! I Locked myself out of my house the other day and they were the only ones with a key. They were kind enough to drive over to unlock their door.",
+      "They Are Professional and do great job cleaning the house!!! I Locked myself out of my house the other day and they were the only ones with a key. They were kind enough to drive over to unlock their",
     author: "Lisa Silva",
     address: "North York",
   },
   {
     reviewText:
-      "They Are Professional and do great job cleaning the house!!! I Locked myself out of my house the other day and they were the only ones with a key. They were kind enough to drive over to unlock their door.",
+      "They Are Professional and do great job cleaning the house!!! I Locked myself out of my house the other day and they were the only ones with a key. They were kind enough to drive over to unlock their",
     author: "Lisa Silva",
     address: "North York",
   },
   {
     reviewText:
-      "They Are Professional and do great job cleaning the house!!! I Locked myself out of my house the other day and they were the only ones with a key. They were kind enough to drive over to unlock their door.",
+      "They Are Professional and do great job cleaning the house!!! I Locked myself out of my house the other day and they were the only ones with a key. They were kind enough to drive over to unlock their",
     author: "Lisa Silva",
     address: "North York",
   },
   {
     reviewText:
-      "They Are Professional and do great job cleaning the house!!! I Locked myself out of my house the other day and they were the only ones with a key. They were kind enough to drive over to unlock their door.",
+      "They Are Professional and do great job cleaning the house!!! I Locked myself out of my house the other day and they were the only ones with a key. They were kind enough to drive over to unlock their",
     author: "Lisa Silva",
     address: "North York",
   },
   {
     reviewText:
-      "They Are Professional and do great job cleaning the house!!! I Locked myself out of my house the other day and they were the only ones with a key. They were kind enough to drive over to unlock their door.",
+      "They Are Professional and do great job cleaning the house!!! I Locked myself out of my house the other day and they were the only ones with a key. They were kind enough to drive over to unlock their",
     author: "Lisa Silva",
     address: "North York",
   },

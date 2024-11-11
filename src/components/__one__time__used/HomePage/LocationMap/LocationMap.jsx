@@ -22,45 +22,56 @@ const breakpoints = {
 
 const locations = [
   {
-    title: "Brooklyn",
+    title: "Toronto",
     iframeSrc:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193746.99686626304!2d-74.11015801519653!3d40.645386882912746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24416947c2109%3A0x82765c7404007886!2sBrooklyn%2C%20NY%2C%USA!5e0!3m2!1sen!2sbd!4v1710652730916!5m2!1sen!2sbd",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d184552.67411467596!2d-79.54286835206918!3d43.71812279997104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb90d7c63ba5%3A0x323555502ab4c477!2sToronto%2C%20ON%2C%20Canada!5e0!3m2!1sen!2sbd!4v1731333598576!5m2!1sen!2sbd",
   },
   {
-    title: "Queens",
+    title: "Barrie",
     iframeSrc:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d282591.6426865487!2d-74.04841253213657!3d40.68744007354902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24369470a592b%3A0x4109d18b6c5c7b05!2sQueens%2C%20NY%2C%USA!5e0!3m2!1sen!2sbd!4v1710652963610!5m2!1sen!2sbd",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d91283.44626604003!2d-79.7481233253357!3d44.359109630568966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882aa3371ad7206d%3A0x1d2e0f00a84b535a!2sBarrie%2C%20ON%2C%20Canada!5e0!3m2!1sen!2sbd!4v1731333675764!5m2!1sen!2sbd",
   },
   {
-    title: "Staten Island",
+    title: "Woodbridge",
     iframeSrc:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193980.89432907896!2d-74.31197899122276!3d40.564748848637244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c245ef79f4d4e7%3A0x50271f8534babc78!2sStaten%20Island%2C%20NY%2C%USA!5e0!3m2!1sen!2sbd!4v1710653173307!5m2!1sen!2sbd",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92146.1028615084!2d-79.6667384123388!3d43.802623849002906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b257a9ad0b911%3A0xecea3dfb3abd0ac2!2sWoodbridge%2C%20Vaughan%2C%20ON%2C%20Canada!5e0!3m2!1sen!2sbd!4v1731335202289!5m2!1sen!2sbd",
   },
   {
-    title: "Manhattan",
+    title: "Richmond Hill",
     iframeSrc:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193296.64126751295!2d-74.08426630631556!3d40.80027958810262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2588f046ee661%3A0xa0b3281fcecc08c!2sManhattan%2C%20New%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1710653064960!5m2!1sen!2sbd",
-  },
-  {
-    title: "Bronx",
-    iframeSrc:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193146.52505702147!2d-74.0060943983724!3d40.85180194863987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c28b553a697cb1%3A0x556e43a78ff15c77!2sBronx%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1710653132257!5m2!1sen!2sbd",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d91990.30790729084!2d-79.51070275565553!3d43.90353934483067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b2a4936291733%3A0x5201760ad6b142ed!2sRichmond%20Hill%2C%20ON%2C%20Canada!5e0!3m2!1sen!2sbd!4v1731335279989!5m2!1sen!2sbd",
   },
   {
     title: "Staten Island",
     iframeSrc:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193980.89432907896!2d-74.31197899122276!3d40.564748848637244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c245ef79f4d4e7%3A0x50271f8534babc78!2sStaten%20Island%2C%20NY%2C%USA!5e0!3m2!1sen!2sbd!4v1710653173307!5m2!1sen!2sbd",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193981.64887657942!2d-74.31162963036931!3d40.56448849786039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c245ef79f4d4e7%3A0x50271f8534babc78!2sStaten%20Island%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1731335339839!5m2!1sen!2sbd",
   },
   {
-    title: "Brooklyn",
+    title: "Toronto",
     iframeSrc:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193746.99686626304!2d-74.11015801519653!3d40.645386882912746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24416947c2109%3A0x82765c7404007886!2sBrooklyn%2C%20NY%2C%USA!5e0!3m2!1sen!2sbd!4v1710652730916!5m2!1sen!2sbd",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d184552.67411467596!2d-79.54286835206918!3d43.71812279997104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb90d7c63ba5%3A0x323555502ab4c477!2sToronto%2C%20ON%2C%20Canada!5e0!3m2!1sen!2sbd!4v1731333598576!5m2!1sen!2sbd",
   },
   {
-    title: "Queens",
+    title: "Barrie",
     iframeSrc:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d282591.6426865487!2d-74.04841253213657!3d40.68744007354902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24369470a592b%3A0x4109d18b6c5c7b05!2sQueens%2C%20NY%2C%USA!5e0!3m2!1sen!2sbd!4v1710652963610!5m2!1sen!2sbd",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d91283.44626604003!2d-79.7481233253357!3d44.359109630568966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882aa3371ad7206d%3A0x1d2e0f00a84b535a!2sBarrie%2C%20ON%2C%20Canada!5e0!3m2!1sen!2sbd!4v1731333675764!5m2!1sen!2sbd",
   },
+  {
+    title: "Woodbridge",
+    iframeSrc:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92146.1028615084!2d-79.6667384123388!3d43.802623849002906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b257a9ad0b911%3A0xecea3dfb3abd0ac2!2sWoodbridge%2C%20Vaughan%2C%20ON%2C%20Canada!5e0!3m2!1sen!2sbd!4v1731335202289!5m2!1sen!2sbd",
+  },
+  {
+    title: "Richmond Hill",
+    iframeSrc:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d91990.30790729084!2d-79.51070275565553!3d43.90353934483067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b2a4936291733%3A0x5201760ad6b142ed!2sRichmond%20Hill%2C%20ON%2C%20Canada!5e0!3m2!1sen!2sbd!4v1731335279989!5m2!1sen!2sbd",
+  },
+  {
+    title: "Staten Island",
+    iframeSrc:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193981.64887657942!2d-74.31162963036931!3d40.56448849786039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c245ef79f4d4e7%3A0x50271f8534babc78!2sStaten%20Island%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1731335339839!5m2!1sen!2sbd",
+  },
+  
 ];
 
 const LocationMap = ({ classNames }) => {

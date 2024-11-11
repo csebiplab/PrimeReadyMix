@@ -33,7 +33,7 @@ export default function ContactUs({ classNames }) {
                 <div className=" flex gap-2 my-auto items-center 5xl:text-[18px] md:text-base text-[14px] 5xl:py-8 py-4 justify-center md:justify-start">
                   <Image src="/homePage/icons/email_icon.png" alt="email icon" width={29} height={29}/>
 
-                  <Link href={`email:sampleit@gmail.com`}>
+                  <Link href={`mailto:sampleit@gmail.com`}>
                     <p className="text-white">sampleit@gmail.com</p>
                   </Link>
                 </div>
