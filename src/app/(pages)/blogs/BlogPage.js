@@ -18,7 +18,6 @@ async function getData() {
 const BlogPage = async () => {
     const data = await getData()
     const { blogContentData } = data ?? {};
-    console.log("--------------->", blogContentData)
 
     return (
         <>
