@@ -1,68 +1,85 @@
 import { Montserrat } from "next/font/google";
 import ProgressBar from "../../components/common/ProgressBar";
-// import Footer from "../../components/layout/Footer";
 import Header from "../../components/layout/Header";
-// import Script from "next/script";
 import { Suspense } from "react";
-import "./globals.css";
 import Footer from "@/components/layout/Footer/Footer";
+import { headers } from "next/headers";
+import { projectfor } from "@/constants/projectfor";
 
-
-export async function generateMetadata() {
-    try {
-        // Fetch metadata for the home route
-        const metaDataResponse = await fetch(`${process.env.NEXT_PUBLIC_LIVE_API}/api/home`);
-        const metaData = await metaDataResponse.json();
-
-        // Fetch Google site verification URL
-        const googleVerificationResponse = await fetch(`${process.env.NEXT_PUBLIC_LIVE_API}/api/verificationUrl`);
-        const googleVerification = await googleVerificationResponse.json();
-
-        // Extract Google console key from the meta tag content
-        const googleConsoleKey = extractGoogleConsoleKey(googleVerification);
-
-        return {
-            title: metaData?.homeRouteAllMetaData[0]?.title,
-            description: metaData?.homeRouteAllMetaData[0]?.description,
-            keywords: metaData?.homeRouteAllMetaData[0]?.keywords,
-            verification: {
-                google: googleConsoleKey,
-            }
-        };
-    } catch (error) {
-        console.error('Error generating metadata:', error);
-        throw error;
-    }
-}
-
-function extractGoogleConsoleKey(googleVerification) {
-    try {
-        const { verificationUrl } = googleVerification ?? {};
-        const metaTagContent = verificationUrl[0]?.title;
-        const consoleKey = metaTagContent.split(" ")[2]?.split("=")[1]?.slice(1, -1);
-        return consoleKey;
-    } catch (error) {
-        console.error('Error extracting Google console key:', error);
-        throw error;
-    }
-}
-
+import "./globals.css";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
-export default function RootLayout({ children }) {
-    return (
-        <html lang="en">
-            <body className={montserrat.className}>
-                <Suspense>
-                    <ProgressBar />
-                </Suspense>
+export async function generateMetadata() {
+  const headerList = headers();
+  const pathname = headerList.get("x-current-path");
+  const clientUrlWithPath = process.env.NEXT_PUBLIC_CLIENT_URL + pathname;
 
-                <Header />
-                {children}
-                {/* <Footer /> */}
-                <Footer/>
-            </body>
-        </html>
+  // console.log(clientUrlWithPath, 'clientUrlWithPath')
+
+  try {
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
+    const response = await fetch(
+      `${apiUrl}/api/metadata?projectFor=${projectfor}&pageLink=${clientUrlWithPath}`,
+      {
+        cache: "no-store",
+      }
     );
+    const data = await response.json();
+
+    const { title, description, keywords } = data?.data[0] ?? {};
+
+    const gglverificationResponse = await fetch(
+      `${apiUrl}/api/site-verification?projectFor=${projectfor}`,
+      {
+        cache: "no-store",
+      }
+    );
+
+    const gVerificationData = await gglverificationResponse.json();
+
+    const verificationContent = gVerificationData?.data?.[0]?.url;
+
+    return {
+      title: title || "",
+      description: description || "",
+      keywords: keywords || "",
+      openGraph: {
+        title: title || "",
+        description: description || "",
+      },
+      verification: {
+        google: verificationContent || "",
+      },
+      alternates: {
+        canonical: clientUrlWithPath,
+      },
+      robots:
+        "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    };
+  } catch (error) {
+    return {
+      title: "Home",
+      description: "Home",
+      keywords: "Home",
+    };
+  }
+}
+
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body className={montserrat.className}>
+        <Suspense>
+          <ProgressBar />
+        </Suspense>
+
+        <Header />
+        {children}
+        <Footer />
+      </body>
+    </html>
+  );
 }

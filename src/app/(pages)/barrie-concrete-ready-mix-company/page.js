@@ -8,28 +8,6 @@ const staticBackupMetadata = {
 }
 
 
-export async function generateMetadata() {
-    try {
-        const apiUrl = process.env.NEXT_PUBLIC_LIVE_API;
-
-        const metaDataResponse = await fetch(`${apiUrl}/api/barrie-concrete`, {
-            cache: "no-store",
-        });
-        const metaData = await metaDataResponse.json();
-
-
-        const { title, description, keywords } = metaData?.data?.[0] ?? {};
-
-        return {
-            title: title,
-            description: description,
-            keywords: keywords
-        }
-    } catch (error) {
-        return staticBackupMetadata;
-    }
-}
-
 const BarriePage = () => {
     return (
         <div>

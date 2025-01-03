@@ -6,17 +6,6 @@ import ProjectFrom from "./ProjectFrom";
 import { reviews } from "../Home";
 
 
-export async function generateMetadata() {
-
-    const metaData = await fetch(`${process.env.NEXT_PUBLIC_LIVE_API}/api/contactUs`).then((res) => res.json())
-
-    return {
-        title: metaData?.contactRouteAllMetaData[0]?.title,
-        description: metaData?.contactRouteAllMetaData[0]?.description,
-        keywords: metaData?.contactRouteAllMetaData[0]?.keywords
-
-    }
-}
 
 export default function ContactUsPage() {
     return (

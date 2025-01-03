@@ -1,36 +1,43 @@
-/*
-
-import axios from "axios";
-import {  siteMap } from "../redux/api/apiEndpoints";
+import { projectfor } from "@/constants/projectfor";
 
 export default async function sitemap() {
-    try {
-        const { data } = await axios.get(`${process.env.NEXT_PUBLIC_LIVE_API}/api${siteMap}`);
-        // console.log("object", data)
-        const sitemapData = data?.sitemap?.map((singleData) => ({
-            url: singleData.url,
-            // priority: singleData.priority,
+  try {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/api/sitemap?projectFor=${projectfor}`,
+      {
+        cache: "no-store",
+      }
+    );
+    const { data } = await response.json();
 
-            // Just Set Default Static Priority
-            priority: 1,
-            changeFrequency: "yearly",
-            lastModified: singleData.updatedAt,
-        }));
-        // console.log(sitemapData);
-        return sitemapData;
-    } catch (error) {
-        console.error("Error fetching sitemap data:", error);
-        return []; // Return empty array in case of error
-    }
-}
-*/
-export default function sitemap() {
-    return [
+    const sitemapData = data?.map((singleData) => ({
+      url: singleData?.loc,
+      priority: singleData?.priority,
+      changeFrequency: singleData?.changefreq,
+      lastModified: singleData?.updatedAt,
+    }));
+
+    if (sitemapData?.length > 0) {
+      return sitemapData;
+    } else {
+      return [
         {
-            url: 'https://primereadymix.ca/blogs',
-            lastModified: new Date(),
-            changeFrequency: 'yearly',
-            priority: 1,
+          url: `${process.env.NEXT_PUBLIC_CLIENT_URL}`,
+          lastModified: new Date().toISOString(),
+          changeFrequency: "yearly",
+          priority: 1,
         },
-    ]
+      ];
+    }
+  } catch (error) {
+    console.error("Error fetching sitemap data:", error);
+    return [
+      {
+        url: `${process.env.NEXT_PUBLIC_CLIENT_URL}`,
+        lastModified: new Date().toISOString(),
+        changeFrequency: "yearly",
+        priority: 1,
+      },
+    ];
+  }
 }
