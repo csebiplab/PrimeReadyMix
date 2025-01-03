@@ -1,7 +1,5 @@
 import BlogPage from "./BlogPage";
 
-
-
 const AllBlogsPage = () => {
     return (
         <div>
