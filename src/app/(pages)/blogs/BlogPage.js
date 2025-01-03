@@ -5,19 +5,9 @@ import Blogs from './Blogs';
 import Contact from '../../../components/common/Contact';
 import { Suspense } from "react";
 
-async function getData() {
-    const res = await fetch(process.env.NEXT_PUBLIC_LIVE_API + '/api/blogContent', { cache: 'no-store' })
-
-    if (!res.ok) {
-        throw new Error('Failed to fetch data')
-    }
-
-    return res.json()
-}
 
 const BlogPage = async () => {
-    const data = await getData()
-    const { blogContentData } = data ?? {};
+    const blogContentData = [];
 
     return (
         <>
