@@ -20,11 +20,22 @@
     background: #9C7066;
   }
 
-  .small_device_bg{
+  /* .small_device_bg {
     height: auto;
     background-image: url("/homePage/hero_bg.png");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+  } */
+  
+  @media (max-width: 768px) {
+    .small_device_bg {
+      height: auto;
+      background-image: url("/homePage/hero_bg.png"); /* Keep the background image */
+      background-position: center center; /* Center the image */
+      background-size: cover; /* Cover the entire area */
+      background-repeat: no-repeat; /* Prevent image repeat */
+    }
+
   }
   
